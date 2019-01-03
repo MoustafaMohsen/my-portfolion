@@ -1,0 +1,23 @@
+.skills-section {
+  color: #FEFEFE;
+  margin-top: 100px;
+  margin-left: 0px;
+  width: 100%;
+}
+
+.skills-header {
+  margin-bottom: 23px;
+}
+
+.skills-body {
+  background-color: #5E5E5E;
+}
+
+.skills-body .skills-main-images .skills-main-image-container .skills-main-image {
+  width: 100%;
+}
+
+.skills-body .skills-small-images .skills-small-image-container .skills-small-image {
+  width: 100%;
+}
+/*# sourceMappingURL=skills-section.component.css.map */

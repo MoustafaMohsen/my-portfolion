@@ -1,6 +1,6 @@
 .platforms-section {
   color: #FEFEFE;
-  margin-top: 100px;
+  margin-top: 250px;
   margin-left: 0px;
   width: 100%;
 }
@@ -11,6 +11,8 @@
 
 .platforms-body {
   background-color: #F9F9F9;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .platforms-body .platforms-main-images .platforms-main-image-container .platforms-main-image {

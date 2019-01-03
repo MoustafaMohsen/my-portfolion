@@ -1,17 +1,14 @@
-@import "../../variables.scss";
+@import "../../_variables";
+@import "../styles/_shared-sections";
 
 .work-section{
-    color: #FEFEFE;
-    margin-top: 100px;
-    margin-left: 0px;
-
-    width: 100%;
-    //height: 500px ;
+    @include section-container;
 }
 .work-header{ 
-    margin-bottom: 23px;
+    @include section-header;
 }
 .work-body{
+    @include section-body;
     background-color:$my-light-grey;
 
     .work-main-images{

@@ -1,0 +1,19 @@
+
+
+@mixin section-container {
+    color: #FEFEFE;
+    margin-top: 250px;
+    margin-left: 0px;
+
+    width: 100%;
+    //height: 500px ;
+
+}
+@mixin section-header {
+    margin-bottom: 23px;
+}
+
+@mixin section-body {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

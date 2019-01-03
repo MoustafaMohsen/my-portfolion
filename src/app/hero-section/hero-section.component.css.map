@@ -3,7 +3,8 @@
     "mappings": "",
     "sources": [
         "hero-section.component.scss",
-        "../../variables.scss"
+        "../../_variables.scss",
+        "../styles/_shared-sections.scss"
     ],
     "names": [],
     "file": "hero-section.component.css"

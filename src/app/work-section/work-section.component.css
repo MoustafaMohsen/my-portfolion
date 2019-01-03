@@ -1,6 +1,6 @@
 .work-section {
   color: #FEFEFE;
-  margin-top: 100px;
+  margin-top: 250px;
   margin-left: 0px;
   width: 100%;
 }
@@ -10,6 +10,8 @@
 }
 
 .work-body {
+  padding-top: 10px;
+  padding-bottom: 10px;
   background-color: #ACACAC;
 }
 

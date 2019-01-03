@@ -1,0 +1,612 @@
+$stop-time:0;
+
+$stop-time-2:1;
+
+$line-delay:1000ms  *$stop-time;
+
+$line-time:1000ms  *$stop-time;
+
+$m-Delay:(1000ms + $line-delay  )*$stop-time;
+
+$m-time:(5000ms     )*$stop-time;
+
+$word-Delay:($m-Delay+$m-time+500ms      )*$stop-time;
+
+$word-time:(500ms       )*$stop-time;
+
+
+
+$container-delay: ($word-time + $word-Delay + 1000ms    )*$stop-time-2;
+
+$container-time:(1000ms     )*$stop-time-2;
+
+
+$white-color:#FEFEFE;
+$word-size:2em;
+$my-blue:#16ADE3;
+$my-light-grey:#ACACAC;
+$my-light-grey-2:#707070;
+$my-black-2:#1B1C24;
+$my-white:#F9F9F9;
+@mixin m-moutafa-middle-final-frame {
+    left: 17%;
+    width: 23%;
+    top: 31%;
+    height: 35%;
+}
+@mixin m-mohsen-middle-final-frame {
+    left: 53%;
+    width: 23%;
+    top: 31%;
+    height: 35%;
+}
+
+// ==== TOP final frame //
+@mixin line-top-final-frame {
+    top: 64%;
+    left: 0%;
+    width: 100%;
+    height: 2px;
+    position: unset;//code-last
+}
+
+@mixin container-top-final-frame {
+    top: 0%;
+    left: 5%;
+    width: 90%;
+    height: 90px;
+}
+
+
+@mixin m-moustafa-top-final-frame {
+    left: 0%;
+    width: 6%;
+    top: 45%;
+    height: 39%;
+}
+
+@mixin m-mohsen-top-final-frame {
+    left: 15%;
+    width: 6%;
+    top: 45%;
+    height: 39%;
+}
+
+@mixin oustafa-top-final-frame {
+    left: 7%;
+    top: 45%;
+    font-size: 1em;
+}
+
+@mixin ohsen-top-final-frame {
+    left: 22%;
+    top: 45%;
+    font-size: 1em;
+}
+
+// TOP final frame ==== //
+
+
+@mixin word-part {
+    position: absolute;
+    font-family: Dosis;
+    font-size: $word-size;
+    font-weight: 800;
+    color: $white-color;
+    top: 41%;
+    
+    animation: fadeIn $word-time $word-Delay ease-in-out;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@mixin m-letter-part {
+    position: absolute;
+    animation-fill-mode: forwards;
+    top: 11%;
+    left: 25%;
+    width: 50%;
+    height: 0%;
+}
+@mixin line-middle {
+    position: absolute;
+    animation-fill-mode: forwards;
+    top: 50%;
+    left: 15%;
+    width: 70%;
+    height: 4px;
+    background-color: $white-color;
+    border-radius: 2px;
+}
+
+body{
+    background-color: #262626;
+    height: 2000px;
+}//body
+.nav-container{
+    top: 25%;
+    left: 10%;
+    height: 400px;
+    width: 80%;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    @include container-top-final-frame;
+    //animation: container-animate-to-top $container-time $container-delay ease-in-out;
+    //animation-fill-mode: forwards;
+      
+    .underline-nav-center{
+        //animation: nav-Container $line-time $line-delay ease-in-out;
+        @include line-middle;
+        // the top final farme
+        //height: 0px;
+        @include line-top-final-frame;
+        //animation: line-animate-to-top $line-time $line-delay ease-in-out;
+        //animation-fill-mode: forwards;
+    }
+
+    #m-moustafa{
+        //animation: m-moustafa-anim $m-time $m-Delay ease-in-out;//middle animation
+        @include m-letter-part;
+        
+        @include m-moustafa-top-final-frame;
+    }
+    #m-mohsen{
+        //animation: m-mohsen-anim $m-time $m-Delay ease-in-out;
+        @include m-letter-part;
+        @include m-mohsen-top-final-frame;
+    }
+
+    #ostafa-word{
+        @include word-part;
+        left: 41%; 
+        @include oustafa-top-final-frame;// top final frame
+    }
+    #ohsen-word{
+        @include word-part;
+        left: 77%;
+        @include ohsen-top-final-frame;// top final frame
+    }
+    
+}
+
+
+
+.nav-logo{
+    width: 56%;
+    margin-bottom: 7px;
+}
+ul{
+    margin: 0;
+}
+.nav-items{
+    li{
+        font-family: 'Courier New', Courier, monospace;
+        margin: 4px 0;
+        .nav-button{
+            color: #fff;
+            font-size: 35px;
+            font-size: 1.8em;
+            float: right;
+            &:hover{
+                color: $my-blue !important;
+                transition: all 200ms ease-in-out;
+                cursor: pointer;
+            }
+            
+        }
+        &:last-child{
+            .nav-button{
+                color: rgb(226, 13, 13);
+                float: left;
+            }
+        }
+    }
+
+}
+
+
+
+
+@mixin center-word {
+    margin-left: auto;
+    margin-right: auto;
+    width:fit-content;
+}
+
+.vertical-seperator{
+    position: absolute;
+    background-color: #fff;
+    width: 1px;
+    height: 70%;
+    top: 15%;
+    left: 50%;
+}
+
+
+.blue-underscore{
+    color:$my-blue !important;
+}
+
+.word-header{
+    @include center-word;
+}
+
+.header-description{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    @include center-word;
+}
+
+// ==== Skills
+.skills-section{
+    color: #FEFEFE;
+    margin-top: 100px;
+    margin-left: 0px;
+
+    width: 100%;
+    //height: 500px ;
+}
+
+.skills-header{ 
+    margin-bottom: 23px;
+}
+
+.skills-body{
+    background-color: #5E5E5E;
+
+    .skills-main-images{
+    
+        .skills-main-image-container{
+        
+            .skills-main-image{
+                width: 100%;
+            }//skills-main-image
+
+        }//skills-main-image-container
+
+    }//skills-main-images
+
+    .skills-small-images{
+    
+        .skills-small-image-container{
+        
+            .skills-small-image{
+                width: 100%;
+            }//skills-main-image
+
+        }//skills-main-image-container
+
+    }//skills-main-images
+}
+
+// ==== Platforms
+.platforms-section{
+    color: #FEFEFE;
+    margin-top: 100px;
+    margin-left: 0px;
+
+    width: 100%;
+    //height: 500px ;
+}
+.platforms-header{ 
+    margin-bottom: 23px;
+}
+
+.platforms-body{
+    background-color:#F9F9F9;
+
+    .platforms-main-images{
+    
+        .platforms-main-image-container{
+        
+            .platforms-main-image{
+                width: 100%;
+            }//platforms-main-image
+
+        }//platforms-main-image-container
+
+    }//platforms-main-images
+
+    .platforms-small-images{
+    
+        .platforms-small-image-container{
+        
+            .platforms-small-image{
+                width: 100%;
+            }//platforms-main-image
+
+        }//platforms-main-image-container
+
+    }//platforms-main-images
+}
+
+// ==== Work
+
+.work-section{
+    color: #FEFEFE;
+    margin-top: 100px;
+    margin-left: 0px;
+
+    width: 100%;
+    //height: 500px ;
+}
+.work-header{ 
+    margin-bottom: 23px;
+}
+.work-body{
+    background-color:$my-light-grey;
+
+    .work-main-images{
+    
+        .work-main-image-container{
+        
+            .work-main-image{
+                width: 100%;
+            }//work-main-image
+
+        }//work-main-image-container
+
+    }//work-main-images
+
+    .work-small-images{
+    
+        .work-small-image-container{
+        
+            .work-small-image{
+                width: 100%;
+            }//work-main-image
+
+        }//work-main-image-container
+
+    }//work-main-images
+}
+
+
+// === Contact Me
+.contact-section{
+    color: #FEFEFE;
+    margin-top: 100px;
+    margin-left: 0px;
+    width: 100%;
+    //height: 500px ;
+}
+.contact-header{ 
+    margin-bottom: 23px;
+}
+.contact-body{
+    background-color:$my-light-grey;
+    .contact-card-container{
+        position: relative;
+        padding: 20px 0px;
+        .contact-card{
+            //position: absolute;
+           // left: 0;
+            //right: 0;
+            //top: 0;
+            bottom: 0;
+            width: 100%;
+            min-height: 300px;
+            background-color: $my-black-2;
+            box-shadow: 0px 0px 14px 4px rgba(0,0,0,0.68);
+            padding: 35px 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            .inner-about-card{
+                $title-font-size:35px;
+                padding:50px  20px;
+                color: $my-black-2;
+                background-color:$my-white;
+                .about-title{
+                    p{
+                        font-weight: 200;
+                        font-size: $title-font-size;
+                        margin: 0;
+                        line-height: $title-font-size;
+                    }
+                }
+                .about-small-title{
+                    p{
+                        font-size: $title-font-size *0.5;
+                        
+                    }
+                }
+
+                .about-paragraph{
+                    p{
+                        font-size: $title-font-size *0.3 ;
+                        font-weight: 300;
+                    }
+                }
+            }//inner-about-card
+
+            .about-form{
+                $form-height:100%;
+
+                .input-text{
+                    display: block;
+                    position: relative;
+                    height: 25px;
+                    width: 100%;
+                    margin-bottom: 10px;
+                    border-bottom:1px solid  $my-light-grey-2;
+                }
+                .input-area{
+                    display: block;
+                    position: relative;
+                    height: 70px;
+                    width: 100%;
+                    border-bottom:1px solid  $my-light-grey-2;
+                }
+                .input-lable{
+                    font-size: 12px;
+                }
+                .name-input-form{
+                    height: $form-height;
+                    
+                }
+                .email-input-form{
+                    height: $form-height;
+                }
+                .message-input-form{
+                    height: $form-height;
+                }
+                .send-button{
+                    margin: 10px 0;
+                    display: block;
+                    position: relative;
+                    width:fit-content;
+                    padding: 10px;
+                    white-space: nowrap;
+                    color: $my-black-2;
+                    background-color: blanchedalmond;
+                    P{
+                        font-size: 20px;
+                        line-height: 20px;
+                        margin: 0;
+                    }
+                }
+
+            }//about-form
+        }//contact-card
+
+    }//contact-card-container
+}
+
+
+
+// ==== Footer 
+.footer-container{
+    .footer-content{
+        $margin-footer-content:90px;
+        margin-top:$margin-footer-content;
+        margin-bottom: $margin-footer-content ;
+    }
+    color: $my-white;
+    .footer-logo{
+        img{
+            display: block;
+            width: 100%;
+        }
+    }
+
+    .divider-horizontal{
+        position: relative;
+        width: 100%;
+        height: 1px;
+        background-color: $my-white;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+    }
+
+    .footer-list{
+        li{
+        display: block;
+            p{
+                @include center-word;            
+            }
+        }
+        
+    }
+
+    .footer-copyright{
+        display: block;
+        p{
+            @include center-word;
+            font-size: 10px;
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+
+
+
+// ======================= Animations ======================== //
+
+@keyframes nav-Container{
+    0%{
+        width: 0;
+        left: 50%;
+        height: 4px;
+    }
+    100%{
+        @include line-middle;
+        width: 70%;
+        left: 15%;
+    }
+}
+
+// word animation
+@mixin start-part {
+    top: 50%;
+    height: 0;
+
+    left: 25%;
+    width: 50%;
+}
+@mixin middle-part {
+    top: 11%;
+    height: 70%;
+
+    left: 25%;
+    width: 50%;
+}
+
+
+@keyframes m-moustafa-anim{
+    0%{
+        @include start-part;
+    }
+    30%{
+        @include middle-part;
+    }
+    80%{
+        @include middle-part;
+    }
+    100%{
+        @include m-moutafa-middle-final-frame;
+    }
+}
+
+@keyframes m-mohsen-anim{
+    0%{
+        @include start-part;
+    }
+    30%{
+        @include middle-part;
+    }
+    80%{
+        @include middle-part;
+    }
+    100%{
+        @include m-mohsen-middle-final-frame;
+    }
+}
+
+
+
+@keyframes container-animate-to-top{
+    100%{
+        @include container-top-final-frame;
+    }
+}
+
+@keyframes line-animate-to-top{
+    100%{
+        @include line-top-final-frame;
+    }
+}
+
+
+// =========================== General animations =========================== //
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

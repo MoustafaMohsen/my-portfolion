@@ -149,50 +149,6 @@ ul{
 // === Contact Me
 
 // ==== Footer 
-.footer-container{
-    .footer-content{
-        $margin-footer-content:90px;
-        margin-top:$margin-footer-content;
-        margin-bottom: $margin-footer-content ;
-    }
-    color: $my-white;
-    .footer-logo{
-        img{
-            display: block;
-            width: 100%;
-        }
-    }
-
-    .divider-horizontal{
-        position: relative;
-        width: 100%;
-        height: 1px;
-        background-color: $my-white;
-        margin-top: 20px;
-        margin-bottom: 20px;
-
-    }
-
-    .footer-list{
-        li{
-        display: block;
-            p{
-                @include center-word;            
-            }
-        }
-        
-    }
-
-    .footer-copyright{
-        display: block;
-        p{
-            @include center-word;
-            font-size: 10px;
-            margin-bottom: 0;
-        }
-    }
-}
-
 
 
 

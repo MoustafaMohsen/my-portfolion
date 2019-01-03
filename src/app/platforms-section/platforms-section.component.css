@@ -1,0 +1,23 @@
+.platforms-section {
+  color: #FEFEFE;
+  margin-top: 100px;
+  margin-left: 0px;
+  width: 100%;
+}
+
+.platforms-header {
+  margin-bottom: 23px;
+}
+
+.platforms-body {
+  background-color: #F9F9F9;
+}
+
+.platforms-body .platforms-main-images .platforms-main-image-container .platforms-main-image {
+  width: 100%;
+}
+
+.platforms-body .platforms-small-images .platforms-small-image-container .platforms-small-image {
+  width: 100%;
+}
+/*# sourceMappingURL=platforms-section.component.css.map */

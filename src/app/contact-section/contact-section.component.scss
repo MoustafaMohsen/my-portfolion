@@ -1,0 +1,109 @@
+.contact-section{
+    color: #FEFEFE;
+    margin-top: 100px;
+    margin-left: 0px;
+    width: 100%;
+    //height: 500px ;
+}
+.contact-header{ 
+    margin-bottom: 23px;
+}
+.contact-body{
+    background-color:$my-light-grey;
+    .contact-card-container{
+        position: relative;
+        padding: 20px 0px;
+        .contact-card{
+            //position: absolute;
+           // left: 0;
+            //right: 0;
+            //top: 0;
+            bottom: 0;
+            width: 100%;
+            min-height: 300px;
+            background-color: $my-black-2;
+            box-shadow: 0px 0px 14px 4px rgba(0,0,0,0.68);
+            padding: 35px 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            .inner-about-card{
+                $title-font-size:35px;
+                padding:50px  20px;
+                color: $my-black-2;
+                background-color:$my-white;
+                .about-title{
+                    p{
+                        font-weight: 200;
+                        font-size: $title-font-size;
+                        margin: 0;
+                        line-height: $title-font-size;
+                    }
+                }
+                .about-small-title{
+                    p{
+                        font-size: $title-font-size *0.5;
+                        
+                    }
+                }
+
+                .about-paragraph{
+                    p{
+                        font-size: $title-font-size *0.3 ;
+                        font-weight: 300;
+                    }
+                }
+            }//inner-about-card
+
+            .about-form{
+                $form-height:100%;
+
+                .input-text{
+                    display: block;
+                    position: relative;
+                    height: 25px;
+                    width: 100%;
+                    margin-bottom: 10px;
+                    border-bottom:1px solid  $my-light-grey-2;
+                }
+                .input-area{
+                    display: block;
+                    position: relative;
+                    height: 70px;
+                    width: 100%;
+                    border-bottom:1px solid  $my-light-grey-2;
+                }
+                .input-lable{
+                    font-size: 12px;
+                }
+                .name-input-form{
+                    height: $form-height;
+                    
+                }
+                .email-input-form{
+                    height: $form-height;
+                }
+                .message-input-form{
+                    height: $form-height;
+                }
+                .send-button{
+                    margin: 10px 0;
+                    display: block;
+                    position: relative;
+                    width:fit-content;
+                    padding: 10px;
+                    white-space: nowrap;
+                    color: $my-black-2;
+                    background-color: blanchedalmond;
+                    P{
+                        font-size: 20px;
+                        line-height: 20px;
+                        margin: 0;
+                    }
+                }
+
+            }//about-form
+        }//contact-card
+
+    }//contact-card-container
+}
+
+

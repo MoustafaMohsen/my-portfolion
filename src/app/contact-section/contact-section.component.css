@@ -1,0 +1,105 @@
+.contact-section {
+  color: #FEFEFE;
+  margin-top: 100px;
+  margin-left: 0px;
+  width: 100%;
+}
+
+.contact-header {
+  margin-bottom: 23px;
+}
+
+.contact-body {
+  background-color: #ACACAC;
+}
+
+.contact-body .contact-card-container {
+  position: relative;
+  padding: 20px 0px;
+}
+
+.contact-body .contact-card-container .contact-card {
+  bottom: 0;
+  width: 100%;
+  min-height: 300px;
+  background-color: #1B1C24;
+  -webkit-box-shadow: 0px 0px 14px 4px rgba(0, 0, 0, 0.68);
+          box-shadow: 0px 0px 14px 4px rgba(0, 0, 0, 0.68);
+  padding: 35px 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.contact-body .contact-card-container .contact-card .inner-about-card {
+  padding: 50px  20px;
+  color: #1B1C24;
+  background-color: #F9F9F9;
+}
+
+.contact-body .contact-card-container .contact-card .inner-about-card .about-title p {
+  font-weight: 200;
+  font-size: 35px;
+  margin: 0;
+  line-height: 35px;
+}
+
+.contact-body .contact-card-container .contact-card .inner-about-card .about-small-title p {
+  font-size: 17.5px;
+}
+
+.contact-body .contact-card-container .contact-card .inner-about-card .about-paragraph p {
+  font-size: 10.5px;
+  font-weight: 300;
+}
+
+.contact-body .contact-card-container .contact-card .about-form .input-text {
+  display: block;
+  position: relative;
+  height: 25px;
+  width: 100%;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #707070;
+}
+
+.contact-body .contact-card-container .contact-card .about-form .input-area {
+  display: block;
+  position: relative;
+  height: 70px;
+  width: 100%;
+  border-bottom: 1px solid #707070;
+}
+
+.contact-body .contact-card-container .contact-card .about-form .input-lable {
+  font-size: 12px;
+}
+
+.contact-body .contact-card-container .contact-card .about-form .name-input-form {
+  height: 100%;
+}
+
+.contact-body .contact-card-container .contact-card .about-form .email-input-form {
+  height: 100%;
+}
+
+.contact-body .contact-card-container .contact-card .about-form .message-input-form {
+  height: 100%;
+}
+
+.contact-body .contact-card-container .contact-card .about-form .send-button {
+  margin: 10px 0;
+  display: block;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px;
+  white-space: nowrap;
+  color: #1B1C24;
+  background-color: blanchedalmond;
+}
+
+.contact-body .contact-card-container .contact-card .about-form .send-button P {
+  font-size: 20px;
+  line-height: 20px;
+  margin: 0;
+}
+/*# sourceMappingURL=contact-section.component.css.map */

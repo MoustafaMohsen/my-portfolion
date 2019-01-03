@@ -1,10 +1,4 @@
-$white-color:#FEFEFE;
-$word-size:2em;
-$my-blue:#16ADE3;
-$my-light-grey:#ACACAC;
-$my-light-grey-2:#707070;
-$my-black-2:#1B1C24;
-$my-white:#F9F9F9;
+@import "../../variables.scss";
 
 // ==== TOP final frame //
 @mixin line-top-final-frame {
@@ -23,16 +17,6 @@ $my-white:#F9F9F9;
 }
 
 
-@mixin line-middle {
-    position: absolute;
-    animation-fill-mode: forwards;
-    top: 50%;
-    left: 15%;
-    width: 70%;
-    height: 4px;
-    background-color: $white-color;
-    border-radius: 2px;
-}
 
 .nav-container{
     top: 25%;

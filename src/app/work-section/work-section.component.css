@@ -1,1 +1,23 @@
-/* No CSS *//*# sourceMappingURL=work-section.component.css.map */
+.work-section {
+  color: #FEFEFE;
+  margin-top: 100px;
+  margin-left: 0px;
+  width: 100%;
+}
+
+.work-header {
+  margin-bottom: 23px;
+}
+
+.work-body {
+  background-color: #ACACAC;
+}
+
+.work-body .work-main-images .work-main-image-container .work-main-image {
+  width: 100%;
+}
+
+.work-body .work-small-images .work-small-image-container .work-small-image {
+  width: 100%;
+}
+/*# sourceMappingURL=work-section.component.css.map */

@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "hero-section.component.scss",
+        "../../variables.scss"
+    ],
+    "names": [],
+    "file": "hero-section.component.css"
+}

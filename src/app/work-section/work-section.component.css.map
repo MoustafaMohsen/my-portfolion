@@ -1,8 +1,9 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAEA,AAAA,aAAa,CAAA;EACT,KAAK,EAAE,OAAO;EACd,UAAU,EAAE,KAAK;EACjB,WAAW,EAAE,GAAG;EAEhB,KAAK,EAAE,IAAI;CAEd;;AACD,AAAA,YAAY,CAAA;EACR,aAAa,EAAE,IAAI;CACtB;;AACD,AAAA,UAAU,CAAA;EACN,gBAAgB,ECYL,OAAO;CDarB;;AA1BD,AAOY,UAPF,CAGN,iBAAiB,CAEb,0BAA0B,CAEtB,gBAAgB,CAAA;EACZ,KAAK,EAAE,IAAI;CACd;;AATb,AAmBY,UAnBF,CAeN,kBAAkB,CAEd,2BAA2B,CAEvB,iBAAiB,CAAA;EACb,KAAK,EAAE,IAAI;CACd",
     "sources": [
-        "work-section.component.scss"
+        "work-section.component.scss",
+        "../../variables.scss"
     ],
     "names": [],
     "file": "work-section.component.css"

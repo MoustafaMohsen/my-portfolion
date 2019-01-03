@@ -1,0 +1,92 @@
+$white-color:#FEFEFE;
+$word-size:2em;
+$my-blue:#16ADE3;
+$my-light-grey:#ACACAC;
+$my-light-grey-2:#707070;
+$my-black-2:#1B1C24;
+$my-white:#F9F9F9;
+
+// ==== TOP final frame //
+@mixin line-top-final-frame {
+    top: 64%;
+    left: 0%;
+    width: 100%;
+    height: 2px;
+    position: unset;//code-last
+}
+
+@mixin container-top-final-frame {
+    top: 0%;
+    left: 5%;
+    width: 90%;
+    height: 90px;
+}
+
+
+@mixin line-middle {
+    position: absolute;
+    animation-fill-mode: forwards;
+    top: 50%;
+    left: 15%;
+    width: 70%;
+    height: 4px;
+    background-color: $white-color;
+    border-radius: 2px;
+}
+
+.nav-container{
+    top: 25%;
+    left: 10%;
+    height: 400px;
+    width: 80%;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    @include container-top-final-frame;
+    //animation: container-animate-to-top $container-time $container-delay ease-in-out;
+    //animation-fill-mode: forwards;
+      
+    .underline-nav-center{
+        //animation: nav-Container $line-time $line-delay ease-in-out;
+        @include line-middle;
+        // the top final farme
+        //height: 0px;
+        @include line-top-final-frame;
+        //animation: line-animate-to-top $line-time $line-delay ease-in-out;
+        //animation-fill-mode: forwards;
+    }
+    
+}
+
+
+
+.nav-logo{
+    width: 56%;
+    margin-bottom: 7px;
+}
+
+.nav-items{
+    li{
+        font-family: 'Courier New', Courier, monospace;
+        margin: 4px 0;
+        .nav-button{
+            color: #fff;
+            font-size: 35px;
+            font-size: 1.8em;
+            float: right;
+            &:hover{
+                color: $my-blue !important;
+                transition: all 200ms ease-in-out;
+                cursor: pointer;
+            }
+            
+        }
+        &:last-child{
+            .nav-button{
+                color: rgb(226, 13, 13);
+                float: left;
+            }
+        }
+    }
+
+}

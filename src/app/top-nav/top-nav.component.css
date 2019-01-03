@@ -1,1 +1,60 @@
-/* No CSS *//*# sourceMappingURL=top-nav.component.css.map */
+.nav-container {
+  top: 25%;
+  left: 10%;
+  height: 400px;
+  width: 80%;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  top: 0%;
+  left: 5%;
+  width: 90%;
+  height: 90px;
+}
+
+.nav-container .underline-nav-center {
+  position: absolute;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  top: 50%;
+  left: 15%;
+  width: 70%;
+  height: 4px;
+  background-color: #FEFEFE;
+  border-radius: 2px;
+  top: 64%;
+  left: 0%;
+  width: 100%;
+  height: 2px;
+  position: unset;
+}
+
+.nav-logo {
+  width: 56%;
+  margin-bottom: 7px;
+}
+
+.nav-items li {
+  font-family: 'Courier New', Courier, monospace;
+  margin: 4px 0;
+}
+
+.nav-items li .nav-button {
+  color: #fff;
+  font-size: 35px;
+  font-size: 1.8em;
+  float: right;
+}
+
+.nav-items li .nav-button:hover {
+  color: #16ADE3 !important;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
+}
+
+.nav-items li:last-child .nav-button {
+  color: #e20d0d;
+  float: left;
+}
+/*# sourceMappingURL=top-nav.component.css.map */

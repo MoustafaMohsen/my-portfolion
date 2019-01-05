@@ -9,6 +9,8 @@ export class SkillsSectionComponent implements OnInit {
 
   constructor() { }
 
+  title:string="Skills";
+  description:string="s";
   ngOnInit() {
   }
 

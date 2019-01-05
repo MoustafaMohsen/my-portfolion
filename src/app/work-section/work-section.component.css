@@ -15,10 +15,6 @@
   background-color: #ACACAC;
 }
 
-.work-body .work-card-container {
-  padding: 20px;
-}
-
 .work-body .work-card-container .work-card {
   color: #F9F9F9;
   background-color: rgba(20, 20, 20, 0.5);
@@ -33,8 +29,6 @@
 }
 
 .work-body .work-card-container .work-card .word-card-background-image {
-  content: "";
-  background-image: url("http://localhost:4200/assets/img/Framworks and platforms/work-card/mockuper.png");
   background-size: cover;
   display: block;
   position: absolute;
@@ -129,5 +123,9 @@
   display: table-cell;
   text-align: center;
   vertical-align: middle;
+}
+
+.fridge-notes-background {
+  background-image: url("http://localhost:4200/assets/img/Framworks and platforms/work-card/mocks/fridgenotes-desktop.png");
 }
 /*# sourceMappingURL=work-section.component.css.map */

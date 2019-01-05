@@ -24,23 +24,26 @@
 
             <div class="col-1"></div>
             <div class="col-9">
+
+
+                <!-- ================================ Dynamic Card ================================== -->
                 <!-- work container -->
                 <div class="work-card-container">
                     <mat-card class="work-card">
 
-                        <div class="word-card-background-image">
+                        <div class="fridge-notes-background word-card-background-image">
                             <div class="word-card-background-overlay"></div>
                         </div>
 
                         <div class="row justify-content-start work-card-header">
                             <mat-card-title class="col">
-                            <p class=work-card-title> Fridge Notes</p>
+                            <p class=work-card-title> {{workcard.title}}</p>
                             </mat-card-title>
                         </div>
             
                         <mat-card-content class="row justify-content-start work-card-content">
                                     <p class="col-11 work-card-description">
-                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas voluptatem eveniet officiis maiores sit molestias architecto quae necessitatibus quidem veritatis iure voluptatum at, tempora tenetur non. Porro harum soluta fugiat.
+                                        {{workcard.description}}
                                     </p>
                         </mat-card-content>
             
@@ -59,9 +62,7 @@
                                                 </div>
                                                 <div class="resources-vertical-line"></div>
                                                 <div class="w-100 resources-content-images">
-                                                    <img src="./assets/img/Framworks and platforms/work-card/angular.png" alt="">
-                                                    <img src="./assets/img/Framworks and platforms/work-card/asp.net core.png" alt="">
-                                                    <img src="./assets/img/Framworks and platforms/work-card/mysql.png" alt="">
+                                                    <img alt="" *ngFor="let imgsrc of workcard.resources_Images" [src]="imgsrc">
                                                 </div>
                                             </div>
 
@@ -73,16 +74,14 @@
                                                 </div>
                                                 <div class="resources-vertical-line"></div>
                                                 <div class="w-100 resources-content-images">
-                                                    <img src="./assets/img/Framworks and platforms/work-card/angular.png" alt="">
-                                                    <img src="./assets/img/Framworks and platforms/work-card/asp.net core.png" alt="">
-                                                    <img src="./assets/img/Framworks and platforms/work-card/mysql.png" alt="">
-                                                </div>
+                                                        <img alt="" *ngFor="let imgsrc of workcard.deployment_Images" [src]="imgsrc">
+                                                    </div>
                                             </div>
 
                                         </div>
 
                                     <!-- languages -->
-                                    <div class="resources-languages"><p>Html, CSS, C#, TypeScript</p></div>
+                                    <div class="resources-languages"><p>{{workcard.languages}}</p></div>
                                 </mat-card>
                             </div>
             
@@ -90,7 +89,7 @@
             
                             <div class="col-auto align-self-end work-card-button-container">
                                 <div class="work-card-button">
-                                    <p>Visit Website -></p>
+                                    <p>{{workcard.buttonText}}</p>
                                 </div>
                             </div>
                             
@@ -98,6 +97,10 @@
             
                     </mat-card>
                 </div>
+                <!-- ================================ Dynamic Card ================================== -->
+
+                    
+
             </div>
             <div class="col"></div>
     

@@ -17,6 +17,7 @@ import {
   MatFormFieldModule,MatSlideToggleModule,MatSnackBarModule,MatDividerModule, MatMenuModule,
   MatIconModule, MatExpansionModule, MatListModule,MatTooltipModule,MatSidenavModule
 } from '@angular/material';
+import { ReactiveFormsModule } from '@angular/forms';
 const matrial = [
   MatButtonModule, MatCheckboxModule,MatButtonToggleModule,MatInputModule,MatSliderModule,
   MatCardModule,MatProgressBarModule,MatToolbarModule,MatAutocompleteModule,
@@ -38,7 +39,8 @@ const matrial = [
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    matrial
+    matrial,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

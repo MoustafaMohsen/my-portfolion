@@ -47,27 +47,49 @@
                     <!--==== contact form ===-->
                     <div class="col-5">
 
-                        <div class="about-form">
+                        <form class="about-form row" [formGroup]="contactForm">
+
+                            <!-- 
                                 <div class="name-input-form">
-                                        <div class="input-lable"><span>Name*</span></div>
-                                        <div class="input-text"></div>
-                                    </div>
-
-                                <div class="email-input-form">
-                                        <div class="input-lable"><span>Email*</span></div>
-                                        <div class="input-text"></div>
-                                    </div>
-
-                                <div class="message-input-form">
-                                        <div class="input-lable"><span>Message*</span></div>
-                                        <div class="input-area"></div>
-                                    </div>
-
-                                <div class="send-button">
-                                    <p>Send <span>--></span></p>
+                                    <div class="input-lable"><span>Name*</span></div>
+                                    <div class="input-text"></div>
                                 </div>
+                            -->
 
-                        </div>
+                            <mat-form-field class="col-12 my-input-form name-input-form">
+                                <input  class="input-text" matInput placeholder="Name*">
+                            </mat-form-field>
+
+                            <!-- 
+                                <div class="email-input-form" >
+                                    <div class="input-lable"><span>Email*</span></div>
+                                    <input class="input-text" formControlName="name" type="text">
+                                </div>
+                            -->
+                            <mat-form-field class="col-12 my-input-form email-input-form">
+                                <input  class="input-text" matInput placeholder="Email*">
+                            </mat-form-field>
+
+
+                            <!--  
+                                <div class="message-input-form">
+                                    <div class="input-lable"><span>Message*</span></div>
+                                    <div class="input-area"></div>
+                                </div>
+                            -->
+
+                            <mat-form-field class="col-12 my-input-form message-input-form">
+                                <textarea class="input-area" matInput 
+                                placeholder="Message*" cols="30" rows="10"></textarea>
+                            </mat-form-field>
+    
+
+                            <div class="col-12 send-button">
+                                <p>Send <span>--></span></p>
+                            </div>
+
+                        </form>
+
                     </div>
                         
 

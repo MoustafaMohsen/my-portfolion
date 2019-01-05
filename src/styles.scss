@@ -18,6 +18,22 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 
 // ==== TOP final frame //
+// ==== TOP final frame //
+@mixin line-top-final-frame {
+    top: 64%;
+    left: 0%;
+    width: 100%;
+    height: 2px;
+    position: unset;//code-last
+}
+
+@mixin container-top-final-frame {
+    top: 0%;
+    left: 5%;
+    width: 90%;
+    height: 90px;
+}
+
 //top-nav
 
 @mixin m-moustafa-top-final-frame {
@@ -119,6 +135,53 @@ ul{
 
 
 // === Contact Me
+/*
+.mat-form-field-appearance-legacy{
+
+    //.mat-form-field-label:not(.mat-empty):not(.mat-form-field-empty)
+    .mat-form-field-label
+     {
+        // color
+        color: red !important;
+        // scale or font-size
+    }
+}*//*
+.input-text.mat-input-element{
+        border-color: red;
+    
+}
+.mat-input-underline{
+    border-bottom: 1px solid red!important;
+}
+*/
+
+// ====== mat input form colors
+// lable color before focus
+.mat-form-field-appearance-legacy .mat-form-field-label {
+    color: #5cb53f;
+}
+
+// lable color after focus
+.mat-focused .mat-form-field-label {
+color: #5cb53f !important;
+}
+
+// under line before focus
+.mat-form-field-underline{
+    background-color: transparent !important;
+}
+
+// under line after focus
+.mat-form-field-ripple {
+background-color: #5cb53f !important;
+}
+
+// the insert line color (caret)
+.mat-input-element {
+    caret-color: #5cb53f;
+}
+
+
 
 // ==== Footer 
 

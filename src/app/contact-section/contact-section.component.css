@@ -59,7 +59,6 @@
   height: 25px;
   width: 100%;
   margin-bottom: 10px;
-  border-bottom: 1px solid #707070;
 }
 
 .contact-body .contact-card-container .contact-card .about-form .input-area {
@@ -67,7 +66,6 @@
   position: relative;
   height: 70px;
   width: 100%;
-  border-bottom: 1px solid #707070;
 }
 
 .contact-body .contact-card-container .contact-card .about-form .input-lable {

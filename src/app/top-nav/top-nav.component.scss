@@ -18,15 +18,29 @@
 
 
 
-.nav-container{
+.top-nav-container{
+    /*
     top: 25%;
     left: 10%;
     height: 400px;
     width: 80%;
+    */
+
     position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    @include container-top-final-frame;
+    //left: 5%;
+    //width: 90%;
+    &:before{
+        content: "";
+        position:absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width:100%;
+        background-color: $my-black-4;
+        opacity: 0.8;
+    }
+
+    //@include container-top-final-frame;
     //animation: container-animate-to-top $container-time $container-delay ease-in-out;
     //animation-fill-mode: forwards;
       
@@ -53,7 +67,7 @@
     li{
         font-family: 'Courier New', Courier, monospace;
         margin: 4px 0;
-        .nav-button{
+        .nav-button-span{
             color: #fff;
             font-size: 35px;
             font-size: 1.8em;
@@ -63,14 +77,13 @@
                 transition: all 200ms ease-in-out;
                 cursor: pointer;
             }
-            
         }
         &:last-child{
-            .nav-button{
+            .nav-button-span{
                 color: rgb(226, 13, 13);
                 float: left;
             }
         }
-    }
+    }//li
 
 }

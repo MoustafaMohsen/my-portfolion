@@ -8,30 +8,135 @@
     @include section-header;
 }
 .work-body{
+    $black-1:#141414;
+    $black-2:#707070;
+    $blue:#16ADE3;
+    $white:#F9F9F9;
+    $yellow:#E0FF4F;
     @include section-body;
     background-color:$my-light-grey;
 
-    .work-main-images{
-    
-        .work-main-image-container{
-        
-            .work-main-image{
+    .work-card-container{
+        padding: 20px;
+        .work-card{
+            color: $white;
+            background-color: rgba($color: $black-1, $alpha: 0.5);
+            border-radius: 0;
+            padding: 40px 50px 20px;
+            &:hover{
+                .word-card-background-overlay{
+                    width: 100% !important;
+                    transition: all ease-in-out 1000ms 200ms !important;
+                }
+            }
+
+            .word-card-background-image{
+                content: "";
+                background-image: url('http://localhost:4200/assets/img/Framworks and platforms/work-card/mockuper.png');
+                background-size: cover;
+                //background-repeat: no-repeat;
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
                 width: 100%;
-            }//work-main-image
+                height: 100%;
+                z-index: 0;
+                opacity: 0.4;
+                .word-card-background-overlay{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 0%;
+                    height: 100%;    
+                    z-index: 0;
+                    background-color: rgba(0,0,0,0.4);
+                    transition: all ease-in-out 500ms 100ms !important;
+                }
+            }
 
-        }//work-main-image-container
+            .work-card-header{
+                margin-bottom: 20px;
+                .work-card-title{
+                    font-size: 5rem;
+                }
+            }
 
-    }//work-main-images
+            .work-card-content{
+                margin-bottom: 2.5rem;
+                .work-card-description{
+                    font-size: 14px;
+                }
+            }
 
-    .work-small-images{
+
+            .work-card-footer{
+
+
+                .work-card-resources-container{
+                    width: 60%;
+                    .work-card-resources{
+                        color: $black-1;
+                        background-color: $white;
+                        border-radius: 0;
+                        padding: 5px 17px;
+                        .resources-content{
+                            .resources-content-title{
+                                p{
+                                    margin-bottom: 0;
+                                    font-size: 15px;
+                                }
+                            }
+
+                            .resources-vertical-line{
+                                display: block;
+                                width: 100%;
+                                height: 1px;
+                                background-color: $black-1;
+                            }
+
+                            .resources-content-images{
+                                img{
+                                    margin-top: 5px;
+                                    height: 30px;
+                                    margin-right: 5px;
+                                }
+                            }
+                        }
+
+                        .resources-languages{
+                            p{
+                                font-size: 10px;
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+
+                .work-card-button-container{
+                    $width:30%;
+                    width: $width;
+                    position: relative;
+                    right: - $width*0.4;
+                    .work-card-button{
+                        background-color: $yellow;
+                        color: $black-1;
+                        //padding: 1rem 0; 
+                        margin-right: auto;
+                        margin-left: auto;
+                        width: 100%;
+                        padding: 20px 0;
+                        display: table;
+                        p{
+                            font-size: 1rem;
     
-        .work-small-image-container{
-        
-            .work-small-image{
-                width: 100%;
-            }//work-main-image
-
-        }//work-main-image-container
-
-    }//work-main-images
+                            display: table-cell;
+                            text-align: center;
+                            vertical-align: middle;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

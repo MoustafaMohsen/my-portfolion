@@ -15,11 +15,119 @@
   background-color: #ACACAC;
 }
 
-.work-body .work-main-images .work-main-image-container .work-main-image {
-  width: 100%;
+.work-body .work-card-container {
+  padding: 20px;
 }
 
-.work-body .work-small-images .work-small-image-container .work-small-image {
+.work-body .work-card-container .work-card {
+  color: #F9F9F9;
+  background-color: rgba(20, 20, 20, 0.5);
+  border-radius: 0;
+  padding: 40px 50px 20px;
+}
+
+.work-body .work-card-container .work-card:hover .word-card-background-overlay {
+  width: 100% !important;
+  -webkit-transition: all ease-in-out 1000ms 200ms !important;
+  transition: all ease-in-out 1000ms 200ms !important;
+}
+
+.work-body .work-card-container .work-card .word-card-background-image {
+  content: "";
+  background-image: url("http://localhost:4200/assets/img/Framworks and platforms/work-card/mockuper.png");
+  background-size: cover;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.4;
+}
+
+.work-body .work-card-container .work-card .word-card-background-image .word-card-background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  z-index: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-transition: all ease-in-out 500ms 100ms !important;
+  transition: all ease-in-out 500ms 100ms !important;
+}
+
+.work-body .work-card-container .work-card .work-card-header {
+  margin-bottom: 20px;
+}
+
+.work-body .work-card-container .work-card .work-card-header .work-card-title {
+  font-size: 5rem;
+}
+
+.work-body .work-card-container .work-card .work-card-content {
+  margin-bottom: 2.5rem;
+}
+
+.work-body .work-card-container .work-card .work-card-content .work-card-description {
+  font-size: 14px;
+}
+
+.work-body .work-card-container .work-card .work-card-footer .work-card-resources-container {
+  width: 60%;
+}
+
+.work-body .work-card-container .work-card .work-card-footer .work-card-resources-container .work-card-resources {
+  color: #141414;
+  background-color: #F9F9F9;
+  border-radius: 0;
+  padding: 5px 17px;
+}
+
+.work-body .work-card-container .work-card .work-card-footer .work-card-resources-container .work-card-resources .resources-content .resources-content-title p {
+  margin-bottom: 0;
+  font-size: 15px;
+}
+
+.work-body .work-card-container .work-card .work-card-footer .work-card-resources-container .work-card-resources .resources-content .resources-vertical-line {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #141414;
+}
+
+.work-body .work-card-container .work-card .work-card-footer .work-card-resources-container .work-card-resources .resources-content .resources-content-images img {
+  margin-top: 5px;
+  height: 30px;
+  margin-right: 5px;
+}
+
+.work-body .work-card-container .work-card .work-card-footer .work-card-resources-container .work-card-resources .resources-languages p {
+  font-size: 10px;
+  margin-bottom: 0;
+}
+
+.work-body .work-card-container .work-card .work-card-footer .work-card-button-container {
+  width: 30%;
+  position: relative;
+  right: -12%;
+}
+
+.work-body .work-card-container .work-card .work-card-footer .work-card-button-container .work-card-button {
+  background-color: #E0FF4F;
+  color: #141414;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  padding: 20px 0;
+  display: table;
+}
+
+.work-body .work-card-container .work-card .work-card-footer .work-card-button-container .work-card-button p {
+  font-size: 1rem;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
 }
 /*# sourceMappingURL=work-section.component.css.map */

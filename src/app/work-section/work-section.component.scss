@@ -10,14 +10,16 @@
 .work-body{
     $black-1:#141414;
     $black-2:#707070;
+    $black-3:#3F3F3F;
     $blue:#16ADE3;
     $white:#F9F9F9;
     $yellow:#E0FF4F;
     @include section-body;
-    background-color:$my-light-grey;
+    background-color:$black-3;
 
     .work-card-container{
         //padding: 20px;
+        margin-bottom: 50px;
         .work-card{
             color: $white;
             background-color: rgba($color: $black-1, $alpha: 0.5);
@@ -142,5 +144,9 @@
 
 
 .fridge-notes-background{
+    background-image: url('http://localhost:4200/assets/img/Framworks and platforms/work-card/mocks/fridgenotes-desktop.png');
+}
+
+.islamic-search-background{
     background-image: url('http://localhost:4200/assets/img/Framworks and platforms/work-card/mocks/fridgenotes-desktop.png');
 }

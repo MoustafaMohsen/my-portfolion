@@ -12,7 +12,11 @@
 .work-body {
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: #ACACAC;
+  background-color: #3F3F3F;
+}
+
+.work-body .work-card-container {
+  margin-bottom: 50px;
 }
 
 .work-body .work-card-container .work-card {
@@ -126,6 +130,10 @@
 }
 
 .fridge-notes-background {
+  background-image: url("http://localhost:4200/assets/img/Framworks and platforms/work-card/mocks/fridgenotes-desktop.png");
+}
+
+.islamic-search-background {
   background-image: url("http://localhost:4200/assets/img/Framworks and platforms/work-card/mocks/fridgenotes-desktop.png");
 }
 /*# sourceMappingURL=work-section.component.css.map */

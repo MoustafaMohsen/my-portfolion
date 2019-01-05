@@ -9,6 +9,20 @@ import { PlatformsSectionComponent } from './platforms-section/platforms-section
 import { WorkSectionComponent } from './work-section/work-section.component';
 import { ContactSectionComponent } from './contact-section/contact-section.component';
 import { FooterSectionComponent } from './footer-section/footer-section.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import {
+  MatButtonModule, MatCheckboxModule,MatButtonToggleModule,MatInputModule,MatSliderModule,
+  MatCardModule,MatProgressBarModule,MatToolbarModule,MatAutocompleteModule,
+  MatFormFieldModule,MatSlideToggleModule,MatSnackBarModule,MatDividerModule, MatMenuModule,
+  MatIconModule, MatExpansionModule, MatListModule,MatTooltipModule,MatSidenavModule
+} from '@angular/material';
+const matrial = [
+  MatButtonModule, MatCheckboxModule,MatButtonToggleModule,MatInputModule,MatSliderModule,
+  MatCardModule,MatProgressBarModule,MatToolbarModule,MatAutocompleteModule,
+  MatFormFieldModule,MatSlideToggleModule,MatSnackBarModule,MatDividerModule, MatMenuModule,
+  MatIconModule, MatExpansionModule, MatListModule,MatTooltipModule,MatSidenavModule
+];
 
 @NgModule({
   declarations: [
@@ -22,7 +36,9 @@ import { FooterSectionComponent } from './footer-section/footer-section.componen
     FooterSectionComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    matrial
   ],
   providers: [],
   bootstrap: [AppComponent]

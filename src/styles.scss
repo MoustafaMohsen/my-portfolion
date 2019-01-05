@@ -1,5 +1,8 @@
 @import "./_variables.scss";
-
+// Matrial style
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+// Matrial style
 
 @mixin m-moutafa-middle-final-frame {
     left: 17%;

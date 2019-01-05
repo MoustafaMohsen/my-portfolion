@@ -1,1 +1,261 @@
-/* No CSS *//*# sourceMappingURL=hero-section.component.css.map */
+.hero-page {
+  height: 500px;
+}
+
+.nav-container {
+  top: 25%;
+  left: 10%;
+  height: 400px;
+  width: 80%;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav-container .underline-nav-center {
+  -webkit-animation: nav-Container 1000ms 1000ms ease-in-out;
+          animation: nav-Container 1000ms 1000ms ease-in-out;
+  position: absolute;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  top: 50%;
+  left: 15%;
+  width: 70%;
+  height: 4px;
+  background-color: #FEFEFE;
+  border-radius: 2px;
+  height: 0px;
+}
+
+.nav-container #m-moustafa {
+  -webkit-animation: m-moustafa-anim 5000ms 2000ms ease-in-out;
+          animation: m-moustafa-anim 5000ms 2000ms ease-in-out;
+  position: absolute;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  top: 11%;
+  left: 25%;
+  width: 50%;
+  height: 0%;
+}
+
+.nav-container #m-mohsen {
+  -webkit-animation: m-mohsen-anim 5000ms 2000ms ease-in-out;
+          animation: m-mohsen-anim 5000ms 2000ms ease-in-out;
+  position: absolute;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  top: 11%;
+  left: 25%;
+  width: 50%;
+  height: 0%;
+}
+
+.nav-container #ostafa-word {
+  position: absolute;
+  font-family: Dosis;
+  font-size: 2em;
+  font-weight: 800;
+  color: #FEFEFE;
+  top: 41%;
+  -webkit-animation: fadeIn 500ms 7500ms ease-in-out;
+          animation: fadeIn 500ms 7500ms ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+  left: 41%;
+}
+
+.nav-container #ohsen-word {
+  position: absolute;
+  font-family: Dosis;
+  font-size: 2em;
+  font-weight: 800;
+  color: #FEFEFE;
+  top: 41%;
+  -webkit-animation: fadeIn 500ms 7500ms ease-in-out;
+          animation: fadeIn 500ms 7500ms ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+  left: 77%;
+}
+
+@-webkit-keyframes nav-Container {
+  0% {
+    width: 0;
+    left: 50%;
+    height: 4px;
+  }
+  100% {
+    position: absolute;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    top: 50%;
+    left: 15%;
+    width: 70%;
+    height: 4px;
+    background-color: #FEFEFE;
+    border-radius: 2px;
+    width: 70%;
+    left: 15%;
+  }
+}
+
+@keyframes nav-Container {
+  0% {
+    width: 0;
+    left: 50%;
+    height: 4px;
+  }
+  100% {
+    position: absolute;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    top: 50%;
+    left: 15%;
+    width: 70%;
+    height: 4px;
+    background-color: #FEFEFE;
+    border-radius: 2px;
+    width: 70%;
+    left: 15%;
+  }
+}
+
+@-webkit-keyframes m-moustafa-anim {
+  0% {
+    top: 50%;
+    height: 0;
+    left: 25%;
+    width: 50%;
+  }
+  30% {
+    top: 11%;
+    height: 70%;
+    left: 25%;
+    width: 50%;
+  }
+  80% {
+    top: 11%;
+    height: 70%;
+    left: 25%;
+    width: 50%;
+  }
+  100% {
+    left: 17%;
+    width: 23%;
+    top: 31%;
+    height: 35%;
+  }
+}
+
+@keyframes m-moustafa-anim {
+  0% {
+    top: 50%;
+    height: 0;
+    left: 25%;
+    width: 50%;
+  }
+  30% {
+    top: 11%;
+    height: 70%;
+    left: 25%;
+    width: 50%;
+  }
+  80% {
+    top: 11%;
+    height: 70%;
+    left: 25%;
+    width: 50%;
+  }
+  100% {
+    left: 17%;
+    width: 23%;
+    top: 31%;
+    height: 35%;
+  }
+}
+
+@-webkit-keyframes m-mohsen-anim {
+  0% {
+    top: 50%;
+    height: 0;
+    left: 25%;
+    width: 50%;
+  }
+  30% {
+    top: 11%;
+    height: 70%;
+    left: 25%;
+    width: 50%;
+  }
+  80% {
+    top: 11%;
+    height: 70%;
+    left: 25%;
+    width: 50%;
+  }
+  100% {
+    left: 53%;
+    width: 23%;
+    top: 31%;
+    height: 35%;
+  }
+}
+
+@keyframes m-mohsen-anim {
+  0% {
+    top: 50%;
+    height: 0;
+    left: 25%;
+    width: 50%;
+  }
+  30% {
+    top: 11%;
+    height: 70%;
+    left: 25%;
+    width: 50%;
+  }
+  80% {
+    top: 11%;
+    height: 70%;
+    left: 25%;
+    width: 50%;
+  }
+  100% {
+    left: 53%;
+    width: 23%;
+    top: 31%;
+    height: 35%;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.hide-elements {
+  display: none !important;
+}
+
+.show-elements {
+  display: block;
+  -webkit-transition: all ease-in-out 1000ms;
+  transition: all ease-in-out 1000ms;
+}
+/*# sourceMappingURL=hero-section.component.css.map */

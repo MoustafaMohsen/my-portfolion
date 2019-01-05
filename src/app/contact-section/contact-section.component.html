@@ -6,7 +6,7 @@
         <!--contact header-->
         <div class="row justify-content-center">
             <div class="col-3 align-self-center">
-                <h3 class="word-header" >Contact <span class="blue-underscore">_</span></h3>
+                <h3 class="word-header" >{{title}} <span class="blue-underscore">_</span></h3>
                 
             </div>
             
@@ -15,7 +15,7 @@
         <!--contact description-->
         <div class="row justify-content-center">
             <div class="col-7 align-self-center">
-                <p class="header-description" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic amet consectetur cum labore libero odio, accusantium incidunt dolorem unde molestias quos odit nostrum, ducimus adipisci? Assumenda ullam nulla id natus!</p>
+                <p class="header-description" >{{description}}</p>
 
             </div>
         </div>
@@ -33,15 +33,13 @@
                     <div class="col-5 align-self-center">
                         <div class="inner-about-card">
                             <!--title-->
-                            <div class="about-title"><p>About Me.</p></div>
+                            <div class="about-title"><p>{{aboutMe.title}}</p></div>
 
                             <!--small-title-->
-                            <div class="about-small-title"><p>front-end/back-end developer</p></div>
+                            <div class="about-small-title"><p>{{aboutMe.subtitle}}</p></div>
 
                             <!--paragraph-->
-                            <div class="about-paragraph"><p>I'm Moustafa Mohsen, a 23 years-old software engineer student at al Azhar 
-                                    Cairo Engineering school, I'm very fond of code, Every type of it, I have been
-                                    coding since 19 and I'm not entinding to stop, I like to try new </p></div>
+                            <div class="about-paragraph"><p>{{aboutMe.description}} </p></div>
 
                         </div>
                     </div>

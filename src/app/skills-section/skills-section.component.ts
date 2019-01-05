@@ -1,17 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-skills-section',
-  templateUrl: './skills-section.component.html',
-  styleUrls: ['./skills-section.component.css']
+  selector: "app-skills-section",
+  templateUrl: "./skills-section.component.html",
+  styleUrls: ["./skills-section.component.css"]
 })
 export class SkillsSectionComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  title:string="Skills";
-  description:string="s";
+  title: string;
+  description: string;
   ngOnInit() {
+    this.title = "Skills";
+    this.description = "lorem";
   }
-
 }

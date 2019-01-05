@@ -10,11 +10,15 @@ import { Availableimages } from '../assets';
 export class WorkSectionComponent implements OnInit {
 
   constructor() { }
+  title:string;
+  description:string;
   Cards:workCard[]=[];
   ngOnInit() {
-
+    this.title="Work";
+    this.description="s";
+  
     let FridgeNotes:workCard={
-      title:"Fridge Nottes",
+      title:"Fridge Notes",
       description:`Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas voluptatem eveniet officiis maiores sit molestias architecto quae necessitatibus quidem veritatis iure voluptatum at, tempora tenetur non. Porro harum soluta fugiatt.`,
 
       backgroundClass:"fridge-notes-background",

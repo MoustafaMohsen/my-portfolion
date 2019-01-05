@@ -9,11 +9,12 @@ export class PlatformsSectionComponent implements OnInit {
 
   constructor() { }
   title:string;
-  description:string="lorem"
+  description:string;
   ngOnInit() {
-    setTimeout(() => {
-      this.title = "Platforms"
-    }, 3000);
+
+    this.title = "Platforms"
+    this.description="lorem"
+
   }
 
 }

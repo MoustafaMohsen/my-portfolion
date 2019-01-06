@@ -10,9 +10,11 @@
 }
 
 .skills-body{
+    background-color:#F9F9F9;
     @include section-body;
-    background-color: $my-black-3;
 
+    //background-color: $my-black-3;
+    //background-color:#1B1C24;
     .skills-main-images{
     
         .skills-main-image-container{

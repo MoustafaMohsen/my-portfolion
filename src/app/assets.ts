@@ -1,5 +1,8 @@
-export const AppHost = window.location.href//location.protocol.concat("//").concat(window.location.href);
+export const AppHost = location.href.split(/\?|#/)[0]
+//location.href.replace(location.hash,"")
+//location.protocol.concat("//").concat(window.location.href);
 
+//window.location.host+window.location.pathname
 
 const imagesPath="assets/img/Framworks and platforms/work-card/"
 const mocksPath=imagesPath+"mocks/";

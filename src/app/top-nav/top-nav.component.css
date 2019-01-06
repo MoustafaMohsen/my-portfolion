@@ -64,4 +64,57 @@
   color: #e20d0d;
   float: left;
 }
+
+.my-navbar {
+  background-color: #262626;
+  color: #fff !important;
+}
+
+.my-nav-expand-button {
+  float: right;
+}
+
+.my-nav-expand-button i {
+  color: #fff;
+}
+
+.my-nav-logo {
+  width: 25%;
+}
+
+.my-nav-logo img {
+  float: left;
+  width: 100%;
+}
+
+.my-nav-div {
+  float: right;
+  -webkit-box-flex: unset;
+      -ms-flex-positive: unset;
+          flex-grow: unset;
+}
+
+.my-nav-div ul li {
+  font-family: 'Courier New', Courier, monospace;
+  margin: 4px 0;
+}
+
+.my-nav-div ul li .nav-button-a {
+  color: #fff;
+  font-size: 35px;
+  font-size: 1.8em;
+  float: right;
+}
+
+.my-nav-div ul li .nav-button-a:hover {
+  color: #16ADE3 !important;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
+}
+
+.my-nav-div ul li:last-child .nav-button-span {
+  color: #e20d0d;
+  float: left;
+}
 /*# sourceMappingURL=top-nav.component.css.map */

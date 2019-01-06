@@ -87,3 +87,52 @@
     }//li
 
 }
+
+
+.my-navbar{
+    background-color: $my-black-4;
+    color: #fff !important;
+}
+
+.my-nav-expand-button{
+    float: right;
+    i{
+        color: #fff;
+    }
+}
+.my-nav-logo{
+    width:100%;
+    img{
+        float: left;
+        width: 100%;
+    }
+}
+
+.my-nav-div{
+    float: right;
+    flex-grow: unset;
+    ul{
+        li{
+            font-family: 'Courier New', Courier, monospace;
+            margin: 4px 0;
+            .nav-button-a{
+                color: #fff;
+                font-size: 35px;
+                font-size: 1.8em;
+                float: right;
+                &:hover{
+                    color: $my-blue !important;
+                    transition: all 200ms ease-in-out;
+                    cursor: pointer;
+                }
+            }
+            &:last-child{
+                .nav-button-span{
+                    color: rgb(226, 13, 13);
+                    float: left;
+                }
+            }
+        }//li
+    }
+}
+

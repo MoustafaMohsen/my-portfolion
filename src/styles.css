@@ -7,6 +7,30 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
+@media screen and (max-width: 1199.98px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 991.98px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  body {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  body {
+    font-size: 10px;
+  }
+}
+
 body {
   background-color: #3F3F3F;
   height: 2000px;

@@ -1,7 +1,31 @@
 @import "./_variables.scss";
 // Matrial style
+$break-x: 575.98px;
+$break-s: 767.98px;
+$break-m: 991.98px;
+$break-l: 1199.98px;
+
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+body {
+
+     margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; 
+
+     @media screen and (max-width:$break-l) {
+         font-size: 16px;
+     }
+     @media screen and (max-width:$break-m) {
+         font-size: 14px;
+     }
+     @media screen and (max-width:$break-s) {
+         font-size: 12px;
+     }
+    @media screen and (max-width:$break-x) {
+        font-size: 10px;
+    }
+
+}//body
+
 // Matrial style
 
 @mixin m-moutafa-middle-final-frame {

@@ -1,7 +1,7 @@
-export const AppHost = location.protocol.concat("//").concat(window.location.host);
+export const AppHost = window.location.href//location.protocol.concat("//").concat(window.location.href);
 
 
-const imagesPath="/assets/img/Framworks and platforms/work-card/"
+const imagesPath="assets/img/Framworks and platforms/work-card/"
 const mocksPath=imagesPath+"mocks/";
 
 const aspcore =`${AppHost}${imagesPath}`+ "angular.png";

@@ -55,9 +55,9 @@
                 .input-text{
                     display: block;
                     position: relative;
-                    height: 25px;
+                    height: 18px;
                     width: 100%;
-                    margin-bottom: 10px;
+                    margin-bottom: 1px;
                     //border-bottom:1px solid  $my-light-grey-2;
                 }
                 .input-area{
@@ -65,6 +65,7 @@
                     position: relative;
                     height: 70px;
                     width: 100%;
+                    resize:none;
                     //border-bottom:1px solid  $my-light-grey-2;
                 }
                 .input-lable{
@@ -89,11 +90,16 @@
                     white-space: nowrap;
                     color: $my-black-2;
                     background-color: blanchedalmond;
+                    border-radius: 5px;
                     P{
                         font-size: 20px;
                         line-height: 20px;
                         margin: 0;
                     }
+                    &[disabled]{
+                        color: #b3b3b3;
+                        background-color: #dbdbdb;
+                        }
                 }
 
 

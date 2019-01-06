@@ -56,8 +56,8 @@
                                 </div>
                             -->
 
-                            <mat-form-field class="col-12 my-input-form name-input-form">
-                                <input  class="input-text" matInput placeholder="Name*">
+                            <mat-form-field class="col-12 my-input-form name-input-form" >
+                                <input autocomplete="off" formControlName="name" class="input-text" matInput placeholder="Name *">
                             </mat-form-field>
 
                             <!-- 
@@ -66,8 +66,8 @@
                                     <input class="input-text" formControlName="name" type="text">
                                 </div>
                             -->
-                            <mat-form-field class="col-12 my-input-form email-input-form">
-                                <input  class="input-text" matInput placeholder="Email*">
+                            <mat-form-field class="col-12 my-input-form email-input-form" >
+                                <input autocomplete="off" formControlName="email" class="input-text" matInput placeholder="Email *">
                             </mat-form-field>
 
 
@@ -79,13 +79,13 @@
                             -->
 
                             <mat-form-field class="col-12 my-input-form message-input-form">
-                                <textarea class="input-area" matInput 
-                                placeholder="Message*" cols="30" rows="10"></textarea>
+                                <textarea autocomplete="off" formControlName="message" class="input-area" matInput 
+                                placeholder="Message *"></textarea>
                             </mat-form-field>
     
 
-                            <div class="col-12 send-button">
-                                <p>Send <span>--></span></p>
+                            <div class="col-12">
+                                <button mat-button class="send-button" (click)="submit()" [disabled]="contactForm.invalid" type="submit"><p >Send <span></span></p></button>
                             </div>
 
                         </form>

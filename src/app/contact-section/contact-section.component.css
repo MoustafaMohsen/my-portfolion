@@ -56,9 +56,9 @@
 .contact-body .contact-card-container .contact-card .about-form .input-text {
   display: block;
   position: relative;
-  height: 25px;
+  height: 18px;
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 1px;
 }
 
 .contact-body .contact-card-container .contact-card .about-form .input-area {
@@ -66,6 +66,7 @@
   position: relative;
   height: 70px;
   width: 100%;
+  resize: none;
 }
 
 .contact-body .contact-card-container .contact-card .about-form .input-lable {
@@ -95,11 +96,17 @@
   white-space: nowrap;
   color: #1B1C24;
   background-color: blanchedalmond;
+  border-radius: 5px;
 }
 
 .contact-body .contact-card-container .contact-card .about-form .send-button P {
   font-size: 20px;
   line-height: 20px;
   margin: 0;
+}
+
+.contact-body .contact-card-container .contact-card .about-form .send-button[disabled] {
+  color: #b3b3b3;
+  background-color: #dbdbdb;
 }
 /*# sourceMappingURL=contact-section.component.css.map */

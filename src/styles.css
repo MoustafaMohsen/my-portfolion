@@ -10,6 +10,7 @@ body {
 body {
   background-color: #3F3F3F;
   height: 2000px;
+  outline: none !important;
 }
 
 ul {
@@ -67,24 +68,42 @@ ul {
     border-bottom: 1px solid red!important;
 }
 */
-.mat-form-field-appearance-legacy .mat-form-field-label {
-  color: #5cb53f;
+.about-form .mat-form-field-appearance-legacy .mat-form-field-wrapper {
+  padding-bottom: 5px;
 }
 
-.mat-focused .mat-form-field-label {
-  color: #5cb53f !important;
+.about-form .mat-form-field-appearance-legacy .mat-form-field-wrapper .mat-form-field-label {
+  color: #F9F9F9;
 }
 
-.mat-form-field-underline {
+.about-form .mat-form-field.mat-form-field-invalid .mat-form-field-label {
+  color: #f44336;
+}
+
+.about-form .mat-focused .mat-form-field-label {
+  color: #F9F9F9 !important;
+}
+
+.about-form .mat-form-field-underline {
+  margin-top: 10px;
   background-color: transparent !important;
 }
 
-.mat-form-field-ripple {
-  background-color: #5cb53f !important;
+.about-form .mat-form-field-ripple {
+  margin-top: 10px;
+  background-color: #F9F9F9 !important;
 }
 
-.mat-input-element {
-  caret-color: #5cb53f;
+.about-form .mat-form-field.mat-form-field-invalid .mat-form-field-ripple, .about-form .mat-form-field.mat-form-field-invalid .mat-form-field-ripple.mat-accent {
+  background-color: #f44336 !important;
+}
+
+.about-form .mat-input-element {
+  caret-color: #F9F9F9;
+}
+
+.about-form .mat-form-field-invalid .mat-input-element {
+  caret-color: #f44336;
 }
 
 @-webkit-keyframes nav-Container {

@@ -156,29 +156,62 @@ ul{
 */
 
 // ====== mat input form colors
-// lable color before focus
-.mat-form-field-appearance-legacy .mat-form-field-label {
-    color: #5cb53f;
-}
+.about-form{
+    // lable color before focus
+    $form-height:10px;
+    $invalid-red:#f44336;
+    .mat-form-field-appearance-legacy{
+        .mat-form-field-wrapper{
+            padding-bottom: 5px;
+            .mat-form-field-label{
+                color: $my-white;
+            }
+        }//.mat-form-field-wrapper
+        
+    }//mat-form-field-appearance-legacy
+    //invalid
+    .mat-form-field.mat-form-field-invalid .mat-form-field-label{
+        color: $invalid-red;
+    }
+    
+    // lable color after focus
+    .mat-focused .mat-form-field-label {
+        color: $my-white !important;
+        //font-size: $form-height !important;
+        //height: $form-height !important;
 
-// lable color after focus
-.mat-focused .mat-form-field-label {
-color: #5cb53f !important;
-}
+    }
+    
+    
+    // under line before focus only
+    .mat-form-field-underline{
+        margin-top: 10px;
+        background-color: transparent !important;
+    }
+    
+    // under line after focus
+    .mat-form-field-ripple {
+        margin-top: 10px;
 
-// under line before focus
-.mat-form-field-underline{
-    background-color: transparent !important;
-}
-
-// under line after focus
-.mat-form-field-ripple {
-background-color: #5cb53f !important;
-}
-
-// the insert line color (caret)
-.mat-input-element {
-    caret-color: #5cb53f;
+        background-color: $my-white !important;
+    }
+    .mat-form-field.mat-form-field-invalid .mat-form-field-ripple, .mat-form-field.mat-form-field-invalid .mat-form-field-ripple.mat-accent{
+        background-color: $invalid-red !important;
+    }
+    
+    // the insert line color (caret)
+    .mat-input-element {
+        // input values style
+        caret-color: $my-white;
+        //font-size: $form-height !important;
+    }
+    // caret invalid
+    .mat-form-field-invalid{
+        .mat-input-element {
+            // input values style
+            caret-color: $invalid-red;
+        }
+    }
 }
 
 

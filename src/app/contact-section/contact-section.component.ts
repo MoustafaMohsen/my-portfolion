@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormBuilder, FormGroup } from '@angular/forms';
+import { FormControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-contact-section',
@@ -7,13 +7,13 @@ import { FormControl, FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./contact-section.component.css']
 })
 export class ContactSectionComponent implements OnInit {
-
+  FormSize=1;
   contactForm:FormGroup;
   constructor(formBuilder:FormBuilder) {
     this.contactForm=formBuilder.group({
-      name:[],
-      email:[],
-      message:[]
+      name:["",[Validators.required]],
+      email:["",[Validators.required]],
+      message:["",[Validators.required]]
     });
    }
 
@@ -36,5 +36,12 @@ export class ContactSectionComponent implements OnInit {
     
 
   }//ngOnInit
+  submit(){
+  console.log("submited",this.f.name.value,this.f.email.value,this.f.message.value);
+  
+  }
 
+  get f(){
+    return this.contactForm.controls
+  }
 }

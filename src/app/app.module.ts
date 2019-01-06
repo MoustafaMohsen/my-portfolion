@@ -18,6 +18,7 @@ import {
   MatIconModule, MatExpansionModule, MatListModule,MatTooltipModule,MatSidenavModule
 } from '@angular/material';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ImageGlareComponent } from './image-glare/image-glare.component';
 const matrial = [
   MatButtonModule, MatCheckboxModule,MatButtonToggleModule,MatInputModule,MatSliderModule,
   MatCardModule,MatProgressBarModule,MatToolbarModule,MatAutocompleteModule,
@@ -34,7 +35,8 @@ const matrial = [
     PlatformsSectionComponent,
     WorkSectionComponent,
     ContactSectionComponent,
-    FooterSectionComponent
+    FooterSectionComponent,
+    ImageGlareComponent
   ],
   imports: [
     BrowserModule,

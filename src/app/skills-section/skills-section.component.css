@@ -24,4 +24,10 @@
 .skills-body .skills-small-images .skills-small-image-container .skills-small-image {
   width: 100%;
 }
+
+.test-area {
+  position: relative;
+  height: 1000px;
+  width: 100%;
+}
 /*# sourceMappingURL=skills-section.component.css.map */

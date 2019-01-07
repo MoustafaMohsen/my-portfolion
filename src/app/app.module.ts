@@ -20,6 +20,10 @@ import {
 import { ReactiveFormsModule } from '@angular/forms';
 import { ImageGlareComponent } from './image-glare/image-glare.component';
 import { routes } from './routes';
+// scroll animation
+import { AnimateOnScrollModule } from 'ng2-animate-on-scroll';
+
+
 const matrial = [
   MatButtonModule, MatCheckboxModule,MatButtonToggleModule,MatInputModule,MatSliderModule,
   MatCardModule,MatProgressBarModule,MatToolbarModule,MatAutocompleteModule,
@@ -48,7 +52,8 @@ const matrial = [
       scrollPositionRestoration: 'enabled',
       anchorScrolling: 'enabled',
       scrollOffset: [0, 64] // [x, y]
-    })
+    }),
+    AnimateOnScrollModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

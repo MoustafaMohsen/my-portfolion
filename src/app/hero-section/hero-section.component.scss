@@ -112,6 +112,14 @@ $word-size:2em;
     }
 }
 
+.m-moustafa-animation{
+    animation: m-moustafa-anim $m-time $m-Delay ease-in-out;
+}
+
+.m-mohsen-animation{
+    animation: m-mohsen-anim $m-time $m-Delay ease-in-out;
+}
+
 
 @mixin start-part {
     top: 50%;

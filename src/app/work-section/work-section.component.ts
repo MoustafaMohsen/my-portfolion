@@ -10,11 +10,11 @@ import { Availableimages } from '../assets';
 export class WorkSectionComponent implements OnInit {
 
   constructor() { }
-  title:string;
+  title:string="";
   description:string;
   Cards:workCard[]=[];
   ngOnInit() {
-    this.title="Work";
+    let _title="Work";
     this.description="s";
   
     let FridgeNotes:workCard={
@@ -31,6 +31,7 @@ export class WorkSectionComponent implements OnInit {
       ],
       deployment_Images:[
         Availableimages.github,
+        Availableimages.heroku,
         Availableimages.digitalocean
       ],
     };
@@ -53,14 +54,38 @@ export class WorkSectionComponent implements OnInit {
       ],
     };
 
-    this.Cards=this.Cards.concat([FridgeNotes,IslamicSearch])
+    this.Cards=this.Cards.concat([FridgeNotes,IslamicSearch]);
+
+    this.typeEffect(_title,100);
   }//ngOnInit
 
   stringfy(ob){
     return JSON.stringify(ob)
   }
 
-}
+  typeEffect(_title,interval){
+    var stringToArray=(input:string):string[]=>{
+      if (input===null)
+        return [];
+      return input.split('');
+    }
+
+    let chars = stringToArray(_title);
+    chars = chars.reverse();
+
+    let i = chars.length - 1;
+    if(i>0){
+      let inter = setInterval(()=>{
+        this.title = this.title + chars[i];
+        if (i==0) {
+          clearInterval(inter);
+        }
+        i--;
+      },interval);
+    }
+  }//typeEffect
+
+}//class
 
 interface workCard{
   title:string;

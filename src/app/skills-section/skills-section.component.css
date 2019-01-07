@@ -32,4 +32,45 @@
   height: 1000px;
   width: 100%;
 }
+
+.blue-underscore.blue-underscore-hide-show {
+  -webkit-animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
+          animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
+}
+
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes blink-caret {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: #16ADE3;
+  }
+}
+
+@keyframes blink-caret {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: #16ADE3;
+  }
+}
 /*# sourceMappingURL=skills-section.component.css.map */

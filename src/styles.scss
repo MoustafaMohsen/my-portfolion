@@ -134,6 +134,11 @@ ul{
 .blue-underscore{
     color:$my-blue !important;
 }
+.blue-underscore.blue-underscore-hide-show{
+    animation: 
+    //typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
 
 .word-header{
     @include center-word;
@@ -328,3 +333,13 @@ ul{
         opacity: 1;
     }
 }
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { color:transparent }
+    50% {  color:$my-blue }
+}//blink-caret

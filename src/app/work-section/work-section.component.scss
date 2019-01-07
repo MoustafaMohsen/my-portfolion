@@ -75,7 +75,20 @@
 
 
                 .work-card-resources-container{
-                    width: 60%;
+                    $width:100%;
+                    width: $width;
+                    @media screen and (max-width:$break-l) {
+                        width: $width;
+                    }
+                    @media screen and (max-width:$break-m) {
+                        width: $width;
+                    }
+                    @media screen and (max-width:$break-s) {
+                        width: $width;
+                    }
+                    @media screen and (max-width:$break-x) {
+                        width: $width;
+                    }
                     .work-card-resources{
                         color: $black-1;
                         background-color: $white;
@@ -101,6 +114,26 @@
                                     margin-top: 5px;
                                     height: 30px;
                                     margin-right: 5px;
+                                    @media screen and (max-width:$break-l) {
+                                        height: 25px;
+                                        margin-right: 5px;
+                                        margin-bottom: 10px;
+                                    }
+                                    @media screen and (max-width:$break-m) {
+                                        height: 25px;
+                                        margin-right: 5px;
+                                        margin-bottom: 10px;
+                                    }
+                                    @media screen and (max-width:$break-s) {
+                                        height: 20px;
+                                        margin-right: 5px;
+                                        margin-bottom: 10px;
+                                    }
+                                    @media screen and (max-width:$break-x) {
+                                        height: 20px;
+                                        margin-right: 5px;
+                                        margin-bottom: 10px;
+                                    }
                                 }
                             }
                         }
@@ -115,19 +148,43 @@
                 }
 
                 .work-card-button-container{
-                    $width:30%;
+                    $width:100%;
                     width: $width;
                     position: relative;
-                    right: - $width*0.4;
+                    //right: - $width*0.4;
+                    @media screen and (max-width:$break-l) {
+                        right: -13%;
+                    }
+                    @media screen and (max-width:$break-m) {
+                    }
+                    @media screen and (max-width:$break-s) {
+                    }
+                    @media screen and (max-width:$break-x) {
+                        margin-top: 20px;
+                    }
                     .work-card-button{
                         background-color: $yellow;
                         color: $black-1;
                         //padding: 1rem 0; 
                         margin-right: auto;
                         margin-left: auto;
-                        width: 100%;
+                        width: 110%;
                         padding: 20px 0;
                         display: table;
+
+                        @media screen and (max-width:$break-l) {
+                            width: 150%;
+                        }
+                        @media screen and (max-width:$break-m) {
+                            width: 180%;
+                        }
+                        @media screen and (max-width:$break-s) {
+                            width: 200%;
+                        }
+                        @media screen and (max-width:$break-x) {
+                            width: 100%;
+                        }
+
                         p{
                             font-size: 1rem;
     

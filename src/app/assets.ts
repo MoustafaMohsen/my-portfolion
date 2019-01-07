@@ -23,3 +23,5 @@ export const  Availableimages={
     heroku :`${AppHost}${imagesPath}`+ "heroku.png",
     fridgenotes_desktop :`${AppHost}${mocksPath}`+"fridgenotes-desktop.png",
 }
+
+

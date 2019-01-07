@@ -10,7 +10,7 @@ import { WorkSectionComponent } from './work-section/work-section.component';
 import { ContactSectionComponent } from './contact-section/contact-section.component';
 import { FooterSectionComponent } from './footer-section/footer-section.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { RouterModule } from '@angular/router';
 import {
   MatButtonModule, MatCheckboxModule,MatButtonToggleModule,MatInputModule,MatSliderModule,
   MatCardModule,MatProgressBarModule,MatToolbarModule,MatAutocompleteModule,
@@ -19,6 +19,7 @@ import {
 } from '@angular/material';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ImageGlareComponent } from './image-glare/image-glare.component';
+import { routes } from './routes';
 const matrial = [
   MatButtonModule, MatCheckboxModule,MatButtonToggleModule,MatInputModule,MatSliderModule,
   MatCardModule,MatProgressBarModule,MatToolbarModule,MatAutocompleteModule,
@@ -42,7 +43,12 @@ const matrial = [
     BrowserModule,
     BrowserAnimationsModule,
     matrial,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule.forRoot(routes, {
+      scrollPositionRestoration: 'enabled',
+      anchorScrolling: 'enabled',
+      scrollOffset: [0, 64] // [x, y]
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

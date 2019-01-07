@@ -1,19 +1,19 @@
 <!--============== Work section ==============-->
-<section class="row work-section">
+<section class="row work-section" id="work">
         
     <div class="col-12">
 
         <!--work header-->
         <div class="row justify-content-center">
-            <div class="col-3 align-self-center">
-                <h3 class="word-header" >Work <span class="blue-underscore">_</span></h3>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-7 align-self-center">
+                <h3 class="word-header" >{{title}} <span class="blue-underscore blue-underscore-hide-show">_</span></h3>
             </div>
             
         </div>
     
         <!--work description-->
         <div class="row justify-content-center">
-            <div class="col-7 align-self-center">
+            <div class="col-lg-8 col-sm-9 col-9 align-self-center">
                 <p class="header-description" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic amet consectetur cum labore libero odio, accusantium incidunt dolorem unde molestias quos odit nostrum, ducimus adipisci? Assumenda ullam nulla id natus!</p>
     
             </div>
@@ -23,8 +23,8 @@
 
 
             <div class="col-12 row work-card-loop-item"  *ngFor="let workcard of Cards; let i = index">
-                <div [className]="i%2==0?'col-1':'col-2'"></div>
-                <div class="col-9">
+                <div [className]="i%2==0?'col-2':'col-1'"></div>
+                <div class="col-lg-9 col-md-9 col-sm-9 col-10">
                     <!-- ================================ Dynamic Card ================================== -->
                     <!-- work container -->
                     <div class="work-card-container">
@@ -41,21 +41,21 @@
                             </div>
                 
                             <mat-card-content class="row justify-content-start work-card-content">
-                                        <p class="col-11 work-card-description">
+                                        <p class="col-md-11 col-11 work-card-description">
                                             {{workcard.description}}
                                         </p>
                             </mat-card-content>
                 
-                            <div class="row work-card-footer">
+                            <div class="row justify-content-between work-card-footer">
                 
-                                <div class="col-auto work-card-resources-container">
+                                <div class="col-md-7 col-sm-8 col-12 work-card-resources-container">
                                     <mat-card class="work-card-resources">
     
                                         <!-- resources and deployment -->
                                         <div class="row">
     
                                                 <!-- Resources -->
-                                                <div class="col-6 resources-content">
+                                                <div class="col-lg-6 col-12 resources-content">
                                                     <div class="w-100 resources-content-title">
                                                         <p>Resources</p>
                                                     </div>
@@ -67,7 +67,7 @@
     
     
                                                 <!-- Deployment -->
-                                                <div class="col-6 resources-content">
+                                                <div class="col-lg-6 col-12 resources-content">
                                                     <div class="w-100 resources-content-title">
                                                         <p>Deployment</p>
                                                     </div>
@@ -84,9 +84,10 @@
                                     </mat-card>
                                 </div>
                 
+                                <!--  
                                 <div class="col"></div>
-                
-                                <div class="col-auto align-self-end work-card-button-container">
+                                -->
+                                <div class="col-md-3 col-sm-3 col-12 align-self-end work-card-button-container">
                                     <div class="work-card-button">
                                         <p>{{workcard.buttonText}}</p>
                                     </div>

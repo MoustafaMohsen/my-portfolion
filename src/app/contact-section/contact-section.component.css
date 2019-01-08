@@ -39,6 +39,14 @@
   background-color: #F9F9F9;
 }
 
+.contact-body .contact-card-container .contact-card .inner-about-card .about-back {
+  position: absolute;
+  font-size: 5em;
+  opacity: 0.5;
+  left: 55%;
+  top: -2%;
+}
+
 .contact-body .contact-card-container .contact-card .inner-about-card .about-title p {
   font-weight: 200;
   font-size: 35px;

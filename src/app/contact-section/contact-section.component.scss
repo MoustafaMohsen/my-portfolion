@@ -26,6 +26,13 @@
                 padding:50px  20px;
                 color: $my-black-2;
                 background-color:$my-white;
+                .about-back {
+                    position: absolute;
+                    font-size: 5em;
+                    opacity: 0.5;
+                    left: 55%;
+                    top: -2%;
+                }
                 .about-title{
                     p{
                         font-weight: 200;

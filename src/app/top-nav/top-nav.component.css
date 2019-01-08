@@ -67,6 +67,7 @@
 .my-navbar {
   background-color: #1B1C24;
   color: #fff !important;
+  border-bottom: solid 2px #16ade3;
 }
 
 .my-nav-expand-button {
@@ -94,7 +95,7 @@
 }
 
 .my-nav-div ul li {
-  font-family: 'Raleway';
+  font-family: 'Raleway','Cormorant Garamond', sans-serif;
   margin: 4px 0;
 }
 

@@ -2,12 +2,14 @@
 @import "../styles/_shared-sections";
 
 .footer-container{
+    color: $my-white;
+    background-color: #1b1c24;
+    border-top: solid 2px #16ade3;
     .footer-content{
         $margin-footer-content:90px;
         margin-top:$margin-footer-content;
         margin-bottom: $margin-footer-content ;
     }
-    color: $my-white;
     .footer-logo{
         img{
             display: block;

@@ -1,5 +1,7 @@
 .footer-container {
   color: #F9F9F9;
+  background-color: #1b1c24;
+  border-top: solid 2px #16ade3;
 }
 
 .footer-container .footer-content {

@@ -20,8 +20,9 @@ import {
 import { ReactiveFormsModule } from '@angular/forms';
 import { ImageGlareComponent } from './image-glare/image-glare.component';
 import { routes } from './routes';
+import {  AnimateOnScrollModule } from './animate-on-scroll';
 // scroll animation
-import { AnimateOnScrollModule } from 'ng2-animate-on-scroll';
+//import { AnimateOnScrollModule } from 'ng2-animate-on-scroll';
 
 
 const matrial = [

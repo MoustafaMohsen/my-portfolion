@@ -151,6 +151,16 @@
   }
 }
 
+.m-moustafa-animation {
+  -webkit-animation: m-moustafa-anim 5000ms 2000ms ease-in-out;
+          animation: m-moustafa-anim 5000ms 2000ms ease-in-out;
+}
+
+.m-mohsen-animation {
+  -webkit-animation: m-mohsen-anim 5000ms 2000ms ease-in-out;
+          animation: m-mohsen-anim 5000ms 2000ms ease-in-out;
+}
+
 @-webkit-keyframes m-moustafa-anim {
   0% {
     top: 50%;

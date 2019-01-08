@@ -154,7 +154,17 @@ ul{
 
 // ==== Platforms
 
-
+.animation-settings-1{
+    animation-delay: 0.2s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.animated{
+    opacity: 1 !important;
+}
+.opacity-0{
+    opacity: 0 ;
+}
 // ==== Work
 
 

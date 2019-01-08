@@ -76,6 +76,23 @@ ul {
   width: fit-content;
 }
 
+.animation-settings-1 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.animated {
+  opacity: 1 !important;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
 /*
 .mat-form-field-appearance-legacy{
 

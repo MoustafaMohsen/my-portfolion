@@ -171,7 +171,7 @@
                         width: 110%;
                         padding: 20px 0;
                         display: table;
-
+                        cursor: pointer;
                         @media screen and (max-width:$break-l) {
                             width: 150%;
                         }

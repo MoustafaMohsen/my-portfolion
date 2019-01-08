@@ -189,6 +189,7 @@
   width: 110%;
   padding: 20px 0;
   display: table;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1199.98px) {

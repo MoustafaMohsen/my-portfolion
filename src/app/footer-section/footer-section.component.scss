@@ -27,9 +27,14 @@
 
     .footer-list{
         li{
-        display: block;
+            display: block;
             p{
                 @include center-word;            
+                cursor: pointer;
+                &:hover{
+                    color: $my-blue;
+                    transition: 300ms;
+                }
             }
         }
         

@@ -86,11 +86,12 @@
                     display: block;
                     position: relative;
                     width:fit-content;
-                    padding: 10px;
+                    padding: 10px 20px;
                     white-space: nowrap;
-                    color: $my-black-2;
-                    background-color: blanchedalmond;
-                    border-radius: 5px;
+                    color: white;//$my-black-2;
+                    background-color: transparent;
+                    border-radius: 0px;
+                    border:2px solid white;
                     P{
                         font-size: 20px;
                         line-height: 20px;
@@ -99,6 +100,7 @@
                     &[disabled]{
                         color: #b3b3b3;
                         background-color: #dbdbdb;
+                        border-color: transparent;
                         }
                 }
 

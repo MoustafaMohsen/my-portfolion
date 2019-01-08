@@ -1,4 +1,4 @@
-import { Directive, Input, Renderer, ElementRef, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
+import { Directive, Input, Renderer, ElementRef, OnInit, OnDestroy, AfterViewInit, Output, EventEmitter } from '@angular/core';
 import { ScrollService } from './scroll.service';
 import { Subscription } from 'rxjs';
 
@@ -22,6 +22,8 @@ export class AnimateOnScrollDirective implements OnInit, OnDestroy, AfterViewIni
   @Input() offset: number = 80;
 
   @Input() beforeClass:string="";
+
+  @Output() func:EventEmitter<any> = new EventEmitter();
 
   constructor(private elementRef: ElementRef, private renderer: Renderer, private scroll: ScrollService) { }
 
@@ -78,6 +80,7 @@ export class AnimateOnScrollDirective implements OnInit, OnDestroy, AfterViewIni
 
     // using values updated in service
     if (this.scroll.pos >= scrollTrigger) {
+      this.func.emit();
       this.addAnimationClass();
     }
 

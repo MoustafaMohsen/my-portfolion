@@ -28,7 +28,7 @@ $my-light-grey:#ACACAC;
 $my-light-grey-2:#707070;
 $my-black-2:#1B1C24;
 $my-black-3:#3F3F3F;
-$my-black-4:#262626;
+$my-black-4:$my-black-2;//#262626;
 $my-white:#F9F9F9;
 
 @mixin line-middle {

@@ -9,13 +9,13 @@ export class PlatformsSectionComponent implements OnInit {
 
   constructor() { }
   title:string="";
+  _title:string="";
   description:string;
   ngOnInit() {
 
-    let _title = "Platforms"
+    this._title = "Platforms"
     this.description=`Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic amet consectetur cum labore libero odio, accusantium incidunt dolorem unde molestias quos odit nostrum, ducimus adipisci? Assumenda ullam nulla id natus!`;
 
-    this.typeEffect(_title,100)
   }
 
   typeEffect(_title,interval){
@@ -39,5 +39,6 @@ export class PlatformsSectionComponent implements OnInit {
       },interval);
     }
   }//typeEffect
+
 
 }//class

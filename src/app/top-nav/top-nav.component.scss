@@ -65,12 +65,12 @@
 
 .nav-items{
     li{
-        font-family: 'Courier New', Courier, monospace;
+        //font-family: 'Courier New', Courier, monospace;
         margin: 4px 0;
         .nav-button-span{
             color: #fff;
             font-size: 35px;
-            font-size: 1.8em;
+            font-size: 1.5em;
             float: right;
             &:hover{
                 color: $my-blue !important;
@@ -113,12 +113,12 @@
     flex-grow: unset;
     ul{
         li{
-            font-family: 'Courier New', Courier, monospace;
+            font-family: 'Raleway','Cormorant Garamond', sans-serif;
             margin: 4px 0;
             .nav-button-a{
                 color: #fff;
                 font-size: 35px;
-                font-size: 1.8em;
+                font-size: 1.5em;
                 float: right;
                 &:hover{
                     color: $my-blue !important;

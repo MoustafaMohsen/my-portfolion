@@ -9,13 +9,12 @@ export class SkillsSectionComponent implements OnInit {
   constructor() {}
 
   title: string="";
+  _title: string="";
   description: string;
   underscore:string;
   ngOnInit() {
-    let _title = "Skills";
+    this._title = "Skills";
     this.description = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic amet consectetur cum labore libero odio, accusantium incidunt dolorem unde molestias quos odit nostrum, ducimus adipisci? Assumenda ullam nulla id natus!`;
-    this.typeEffect(_title,100)
-    
 
   }//ngOnInit
 

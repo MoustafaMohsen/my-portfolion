@@ -4,7 +4,7 @@ html, body {
 
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: 'Raleway','Cormorant Garamond', "Helvetica Neue", sans-serif;
 }
 
 @media screen and (max-width: 1199.98px) {

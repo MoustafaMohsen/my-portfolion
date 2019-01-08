@@ -15,7 +15,7 @@
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: #262626;
+  background-color: #1B1C24;
   opacity: 0.8;
 }
 
@@ -42,14 +42,13 @@
 }
 
 .nav-items li {
-  font-family: 'Courier New', Courier, monospace;
   margin: 4px 0;
 }
 
 .nav-items li .nav-button-span {
   color: #fff;
   font-size: 35px;
-  font-size: 1.8em;
+  font-size: 1.5em;
   float: right;
 }
 
@@ -66,7 +65,7 @@
 }
 
 .my-navbar {
-  background-color: #262626;
+  background-color: #1B1C24;
   color: #fff !important;
 }
 
@@ -95,14 +94,14 @@
 }
 
 .my-nav-div ul li {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Raleway';
   margin: 4px 0;
 }
 
 .my-nav-div ul li .nav-button-a {
   color: #fff;
   font-size: 35px;
-  font-size: 1.8em;
+  font-size: 1.5em;
   float: right;
 }
 

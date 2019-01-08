@@ -24,7 +24,6 @@ import {  AnimateOnScrollModule } from './animate-on-scroll';
 // scroll animation
 //import { AnimateOnScrollModule } from 'ng2-animate-on-scroll';
 
-
 const matrial = [
   MatButtonModule, MatCheckboxModule,MatButtonToggleModule,MatInputModule,MatSliderModule,
   MatCardModule,MatProgressBarModule,MatToolbarModule,MatAutocompleteModule,
@@ -42,7 +41,11 @@ const matrial = [
     WorkSectionComponent,
     ContactSectionComponent,
     FooterSectionComponent,
-    ImageGlareComponent
+    ImageGlareComponent,
+
+    //test directive
+    //AppearDirective
+
   ],
   imports: [
     BrowserModule,
@@ -54,7 +57,8 @@ const matrial = [
       anchorScrolling: 'enabled',
       scrollOffset: [0, 64] // [x, y]
     }),
-    AnimateOnScrollModule.forRoot()
+    AnimateOnScrollModule.forRoot(),
+
   ],
   providers: [],
   bootstrap: [AppComponent]

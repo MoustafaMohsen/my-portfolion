@@ -94,11 +94,12 @@
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  padding: 10px;
+  padding: 10px 20px;
   white-space: nowrap;
-  color: #1B1C24;
-  background-color: blanchedalmond;
-  border-radius: 5px;
+  color: white;
+  background-color: transparent;
+  border-radius: 0px;
+  border: 2px solid white;
 }
 
 .contact-body .contact-card-container .contact-card .about-form .send-button P {
@@ -110,5 +111,6 @@
 .contact-body .contact-card-container .contact-card .about-form .send-button[disabled] {
   color: #b3b3b3;
   background-color: #dbdbdb;
+  border-color: transparent;
 }
 /*# sourceMappingURL=contact-section.component.css.map */

@@ -3,11 +3,11 @@
 
 $line-delay:1000ms;
 
-$line-time:1000ms;
+$line-time:500ms;
 
 $m-Delay:1000ms + $line-delay;
 
-$m-time:5000ms;
+$m-time:2000ms;
 
 
 $white-color:#FEFEFE;
@@ -18,9 +18,9 @@ $word-size:2em;
     position: absolute;
     font-family: Dosis;
     font-size: $word-size;
-    font-weight: 800;
+    font-weight: 100;
     color: $white-color;
-    top: 41%;
+    top: 40%;
     animation: fadeIn 500ms $m-Delay+$m-time+500ms ease-in-out;
     animation-fill-mode: forwards;
     opacity: 0;
@@ -40,9 +40,9 @@ $word-size:2em;
     top: 50%;
     left: 15%;
     width: 70%;
-    height: 4px;
+    height: 3px;
     background-color: $white-color;
-    border-radius: 2px;
+    //border-radius: 2px;
 }
 
 .hero-page{
@@ -90,7 +90,7 @@ $word-size:2em;
 
     #ostafa-word{
         @include word-part;
-        left: 41%; 
+        left: 40%; 
     }
     #ohsen-word{
         @include word-part;
@@ -103,7 +103,7 @@ $word-size:2em;
     0%{
         width: 0;
         left: 50%;
-        height: 4px;
+        height: 3px;
     }
     100%{
         @include line-middle;

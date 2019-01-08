@@ -41,23 +41,22 @@
 }
 
 .nav-container .underline-nav-center {
-  -webkit-animation: nav-Container 1000ms 1000ms ease-in-out;
-          animation: nav-Container 1000ms 1000ms ease-in-out;
+  -webkit-animation: nav-Container 500ms 1000ms ease-in-out;
+          animation: nav-Container 500ms 1000ms ease-in-out;
   position: absolute;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   top: 50%;
   left: 15%;
   width: 70%;
-  height: 4px;
+  height: 3px;
   background-color: #FEFEFE;
-  border-radius: 2px;
   height: 0px;
 }
 
 .nav-container #m-moustafa {
-  -webkit-animation: m-moustafa-anim 5000ms 2000ms ease-in-out;
-          animation: m-moustafa-anim 5000ms 2000ms ease-in-out;
+  -webkit-animation: m-moustafa-anim 2000ms 2000ms ease-in-out;
+          animation: m-moustafa-anim 2000ms 2000ms ease-in-out;
   position: absolute;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
@@ -68,8 +67,8 @@
 }
 
 .nav-container #m-mohsen {
-  -webkit-animation: m-mohsen-anim 5000ms 2000ms ease-in-out;
-          animation: m-mohsen-anim 5000ms 2000ms ease-in-out;
+  -webkit-animation: m-mohsen-anim 2000ms 2000ms ease-in-out;
+          animation: m-mohsen-anim 2000ms 2000ms ease-in-out;
   position: absolute;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
@@ -83,26 +82,26 @@
   position: absolute;
   font-family: Dosis;
   font-size: 2em;
-  font-weight: 800;
+  font-weight: 100;
   color: #FEFEFE;
-  top: 41%;
-  -webkit-animation: fadeIn 500ms 7500ms ease-in-out;
-          animation: fadeIn 500ms 7500ms ease-in-out;
+  top: 40%;
+  -webkit-animation: fadeIn 500ms 4500ms ease-in-out;
+          animation: fadeIn 500ms 4500ms ease-in-out;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   opacity: 0;
-  left: 41%;
+  left: 40%;
 }
 
 .nav-container #ohsen-word {
   position: absolute;
   font-family: Dosis;
   font-size: 2em;
-  font-weight: 800;
+  font-weight: 100;
   color: #FEFEFE;
-  top: 41%;
-  -webkit-animation: fadeIn 500ms 7500ms ease-in-out;
-          animation: fadeIn 500ms 7500ms ease-in-out;
+  top: 40%;
+  -webkit-animation: fadeIn 500ms 4500ms ease-in-out;
+          animation: fadeIn 500ms 4500ms ease-in-out;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   opacity: 0;
@@ -113,7 +112,7 @@
   0% {
     width: 0;
     left: 50%;
-    height: 4px;
+    height: 3px;
   }
   100% {
     position: absolute;
@@ -122,9 +121,8 @@
     top: 50%;
     left: 15%;
     width: 70%;
-    height: 4px;
+    height: 3px;
     background-color: #FEFEFE;
-    border-radius: 2px;
     width: 70%;
     left: 15%;
   }
@@ -134,7 +132,7 @@
   0% {
     width: 0;
     left: 50%;
-    height: 4px;
+    height: 3px;
   }
   100% {
     position: absolute;
@@ -143,22 +141,21 @@
     top: 50%;
     left: 15%;
     width: 70%;
-    height: 4px;
+    height: 3px;
     background-color: #FEFEFE;
-    border-radius: 2px;
     width: 70%;
     left: 15%;
   }
 }
 
 .m-moustafa-animation {
-  -webkit-animation: m-moustafa-anim 5000ms 2000ms ease-in-out;
-          animation: m-moustafa-anim 5000ms 2000ms ease-in-out;
+  -webkit-animation: m-moustafa-anim 2000ms 2000ms ease-in-out;
+          animation: m-moustafa-anim 2000ms 2000ms ease-in-out;
 }
 
 .m-mohsen-animation {
-  -webkit-animation: m-mohsen-anim 5000ms 2000ms ease-in-out;
-          animation: m-mohsen-anim 5000ms 2000ms ease-in-out;
+  -webkit-animation: m-mohsen-anim 2000ms 2000ms ease-in-out;
+          animation: m-mohsen-anim 2000ms 2000ms ease-in-out;
 }
 
 @-webkit-keyframes m-moustafa-anim {

@@ -17,24 +17,22 @@ export class ContactSectionComponent implements OnInit {
     });
    }
 
-  title:string="";
-  description:string;
+   title:string="";
+   _title:string="";
+   description:string;
   aboutMe:{
     title:string,
     subtitle:string,
     description:string;
   };
   ngOnInit() {
-    let _title="Contact Me";
+    this._title="Contact Me";
     this.description=`Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic amet consectetur cum labore libero odio, accusantium incidunt dolorem unde molestias quos odit nostrum, ducimus adipisci? Assumenda ullam nulla id natus!`;
     this.aboutMe={
       title:"About Me.",
       subtitle:"front-end/back-end developer",
-      description:`I'm Moustafa Mohsen, a 23 years-old software engineer student at al Azhar Cairo Engineering school, I'm very fond of code, Every type of it, I have been coding since 19 and I'm not entinding to stop, I like to try new`
-    }
-
-    this.typeEffect(_title,100)
-    
+      description:`I'm Moustafa Mohsen, a 23 years-old Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic amet consectetur cum labore libero odio, accusantium incidunt dolorem unde molestias quos odit nostrum, ducimus adipisci? Assumenda ullam nulla id natus!`
+    }    
 
   }//ngOnInit
   submit(){

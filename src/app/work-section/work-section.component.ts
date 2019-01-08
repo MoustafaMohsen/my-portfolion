@@ -11,10 +11,11 @@ export class WorkSectionComponent implements OnInit {
 
   constructor() { }
   title:string="";
+  _title:string="";
   description:string;
   Cards:workCard[]=[];
   ngOnInit() {
-    let _title="Work";
+    this._title="Work";
     this.description="s";
   
     let FridgeNotes:workCard={
@@ -56,7 +57,6 @@ export class WorkSectionComponent implements OnInit {
 
     this.Cards=this.Cards.concat([FridgeNotes,IslamicSearch]);
 
-    this.typeEffect(_title,100);
   }//ngOnInit
 
   stringfy(ob){

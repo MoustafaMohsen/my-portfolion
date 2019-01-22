@@ -34,7 +34,7 @@
                 @include center-word;            
                 cursor: pointer;
                 &:hover{
-                    color: $my-blue;
+                    color: $secondary;
                     transition: 300ms;
                 }
             }

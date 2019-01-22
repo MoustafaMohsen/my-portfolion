@@ -90,7 +90,7 @@ body {
     font-family: Dosis;
     font-size: $word-size;
     font-weight: 800;
-    color: $white-color;
+    color: $my-white;
     top: 41%;
     
     animation: fadeIn $word-time $word-Delay ease-in-out;
@@ -108,7 +108,7 @@ body {
 }
 
 body{
-    background-color: $my-black-3;
+    background-color: $primary-2;
     height: 2000px;
 }//body
 
@@ -132,7 +132,7 @@ ul{
 
 
 .blue-underscore{
-    color:$my-blue !important;
+    color:$secondary !important;
 }
 .blue-underscore.blue-underscore-hide-show{
     animation: 
@@ -362,5 +362,5 @@ ul{
 
 @keyframes blink-caret {
     from, to { color:transparent }
-    50% {  color:$my-blue }
+    50% {  color:$secondary }
 }//blink-caret

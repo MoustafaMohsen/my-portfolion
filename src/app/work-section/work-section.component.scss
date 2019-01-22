@@ -8,21 +8,15 @@
     @include section-header;
 }
 .work-body{
-    $black-1:#141414;
-    $black-2:#707070;
-    $black-3:#3F3F3F;
-    $blue:#16ADE3;
-    $white:#F9F9F9;
-    $yellow:#E0FF4F;
     @include section-body;
-    background-color:$black-3;
+    background-color:$primary-2;
 
     .work-card-container{
         //padding: 20px;
         margin-bottom: 50px;
         .work-card{
-            color: $white;
-            background-color: rgba($color: $black-1, $alpha: 0.5);
+            color: $compelmentary;
+            background-color: rgba($color: $primary, $alpha: 0.5);
             border-radius: 0;
             padding: 40px 50px 20px;
             &:hover{
@@ -90,8 +84,8 @@
                         width: $width;
                     }
                     .work-card-resources{
-                        color: $black-1;
-                        background-color: $white;
+                        color: $primary;
+                        background-color: $compelmentary;
                         border-radius: 0;
                         padding: 5px 17px;
                         .resources-content{
@@ -106,7 +100,7 @@
                                 display: block;
                                 width: 100%;
                                 height: 1px;
-                                background-color: $black-1;
+                                background-color: $primary;
                             }
 
                             .resources-content-images{
@@ -163,8 +157,8 @@
                         margin-top: 20px;
                     }
                     .work-card-button{
-                        background-color: $yellow;
-                        color: $black-1;
+                        background-color: $tertiary;
+                        color: $primary;
                         //padding: 1rem 0; 
                         margin-right: auto;
                         margin-left: auto;

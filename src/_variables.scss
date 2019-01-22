@@ -21,15 +21,23 @@ $container-delay: ($word-time + $word-Delay + 1000ms    )*$stop-time-2;
 $container-time:(1000ms     )*$stop-time-2;
 
 
-$white-color:#FEFEFE;
+
 $word-size:2em;
-$my-blue:#16ADE3;
-$my-light-grey:#ACACAC;
-$my-light-grey-2:#707070;
-$my-black-2:#1B1C24;
-$my-black-3:#3F3F3F;
-$my-black-4:$my-black-2;//#262626;
+//$my-light-grey:#ACACAC;
+//:#707070;
+
+//$my-black-3:#3F3F3F;
+
+
 $my-white:#F9F9F9;
+
+// work section
+$primary:#141414;
+$primary-2:#3F3F3F;
+$primary-3:#1B1C24;
+$secondary:#16ADE3;
+$compelmentary:#F9F9F9;
+$tertiary:#E0FF4F;
 
 @mixin line-middle {
     position: absolute;
@@ -38,7 +46,7 @@ $my-white:#F9F9F9;
     left: 15%;
     width: 70%;
     height: 4px;
-    background-color: $white-color;
+    background-color: white;
     border-radius: 2px;
 }
 

@@ -10,7 +10,7 @@ $m-Delay:1000ms + $line-delay;
 $m-time:2000ms;
 
 
-$white-color:#FEFEFE;
+$my-white:#FEFEFE;
 $word-size:2em;
 
  
@@ -19,7 +19,7 @@ $word-size:2em;
     font-family: Dosis;
     font-size: $word-size;
     font-weight: 100;
-    color: $white-color;
+    color: $my-white;
     top: 40%;
     animation: fadeIn 500ms $m-Delay+$m-time+500ms ease-in-out;
     animation-fill-mode: forwards;
@@ -41,7 +41,7 @@ $word-size:2em;
     left: 15%;
     width: 70%;
     height: 3px;
-    background-color: $white-color;
+    background-color: $my-white;
     //border-radius: 2px;
 }
 

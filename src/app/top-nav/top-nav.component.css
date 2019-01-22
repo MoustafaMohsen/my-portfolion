@@ -27,7 +27,7 @@
   left: 15%;
   width: 70%;
   height: 4px;
-  background-color: #FEFEFE;
+  background-color: white;
   border-radius: 2px;
   top: 64%;
   left: 0%;
@@ -46,7 +46,7 @@
 }
 
 .nav-items li .nav-button-span {
-  color: #fff;
+  color: #F9F9F9;
   font-size: 35px;
   font-size: 1.5em;
   float: right;
@@ -66,7 +66,7 @@
 
 .my-navbar {
   background-color: #1B1C24;
-  color: #fff !important;
+  color: #F9F9F9 !important;
   border-bottom: solid 2px #16ade3;
 }
 
@@ -75,7 +75,7 @@
 }
 
 .my-nav-expand-button i {
-  color: #fff;
+  color: #F9F9F9;
 }
 
 .my-nav-logo {
@@ -100,7 +100,7 @@
 }
 
 .my-nav-div ul li .nav-button-a {
-  color: #fff;
+  color: #F9F9F9;
   font-size: 35px;
   font-size: 1.5em;
   float: right;

@@ -1,5 +1,5 @@
 .contact-section {
-  color: #FEFEFE;
+  color: #F9F9F9;
   margin-top: 200px;
   margin-left: 0px;
   width: 100%;
@@ -14,7 +14,7 @@
 .contact-body {
   padding-top: 20px;
   padding-bottom: 20px;
-  background-color: #ACACAC;
+  background-color: #3F3F3F;
 }
 
 .contact-body .contact-card-container {
@@ -35,7 +35,7 @@
 
 .contact-body .contact-card-container .contact-card .inner-about-card {
   padding: 50px  20px;
-  color: #1B1C24;
+  color: #141414;
   background-color: #F9F9F9;
 }
 
@@ -108,6 +108,8 @@
   background-color: transparent;
   border-radius: 0px;
   border: 2px solid white;
+  -webkit-transition: 500ms;
+  transition: 500ms;
 }
 
 .contact-body .contact-card-container .contact-card .about-form .send-button P {
@@ -120,5 +122,12 @@
   color: #b3b3b3;
   background-color: #dbdbdb;
   border-color: transparent;
+}
+
+.contact-body .contact-card-container .contact-card .about-form .send-button:hover:not([disabled]) {
+  background-color: #16ade3 !important;
+  border-color: #16ade3 !important;
+  -webkit-transition: 500ms;
+  transition: 500ms;
 }
 /*# sourceMappingURL=contact-section.component.css.map */

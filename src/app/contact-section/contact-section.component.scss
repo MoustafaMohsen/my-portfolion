@@ -9,7 +9,7 @@
 }
 .contact-body{
     @include section-body;
-    background-color:$my-light-grey;
+    background-color:$primary-2;
     .contact-card-container{
         position: relative;
         padding: 20px 0px;
@@ -17,14 +17,14 @@
             bottom: 0;
             width: 100%;
             min-height: 300px;
-            background-color: $my-black-2;
+            background-color: $primary-3;
             box-shadow: 0px 0px 14px 4px rgba(0,0,0,0.68);
             padding: 35px 0;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             .inner-about-card{
                 $title-font-size:35px;
                 padding:50px  20px;
-                color: $my-black-2;
+                color: $primary;
                 background-color:$my-white;
                 .about-back {
                     position: absolute;
@@ -65,7 +65,7 @@
                     height: 18px;
                     width: 100%;
                     margin-bottom: 1px;
-                    //border-bottom:1px solid  $my-light-grey-2;
+                    //border-bottom:1px solid  $primary-2-2;
                 }
                 .input-area{
                     display: block;
@@ -73,7 +73,7 @@
                     height: 70px;
                     width: 100%;
                     resize:none;
-                    //border-bottom:1px solid  $my-light-grey-2;
+                    //border-bottom:1px solid  $primary-2-2;
                 }
                 .input-lable{
                     font-size: 12px;
@@ -89,16 +89,18 @@
                     height: $form-height;
                 }
                 .send-button{
+                    $transition-duration:500ms;
                     margin: 10px 0;
                     display: block;
                     position: relative;
                     width:fit-content;
                     padding: 10px 20px;
                     white-space: nowrap;
-                    color: white;//$my-black-2;
+                    color: white;//$primary;
                     background-color: transparent;
                     border-radius: 0px;
                     border:2px solid white;
+                    transition: $transition-duration;
                     P{
                         font-size: 20px;
                         line-height: 20px;
@@ -108,7 +110,12 @@
                         color: #b3b3b3;
                         background-color: #dbdbdb;
                         border-color: transparent;
-                        }
+                    }
+                    &:hover:not([disabled]) {
+                        background-color: #16ade3 !important;
+                        border-color: #16ade3 !important;
+                        transition: $transition-duration;
+                    }
                 }
 
 

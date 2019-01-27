@@ -13,6 +13,30 @@
           transform: translateY(-50%);
 }
 
+@media screen and (max-width: 1199.98px) {
+  .mmlogo {
+    height: 226px;
+  }
+}
+
+@media screen and (max-width: 991.98px) {
+  .mmlogo {
+    height: 203px;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .mmlogo {
+    height: 229px;
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  .mmlogo {
+    height: 170px;
+  }
+}
+
 .hero-background-text {
   opacity: 0;
   -webkit-animation: fadeIn 200ms 4000ms ease-in-out forwards;
@@ -22,17 +46,17 @@
 .hero-background-text p {
   color: #F9F9F9;
   position: absolute;
-  font-size: 3em;
+  font-size: 2.5em;
 }
 
 .hero-background-text p.first-back {
-  left: 15%;
-  top: 25%;
+  left: 0;
+  top: 18%;
 }
 
 .hero-background-text p.second-back {
-  left: 15%;
-  top: 64%;
+  left: 0;
+  top: 66%;
 }
 
 .hero-background-text p span {

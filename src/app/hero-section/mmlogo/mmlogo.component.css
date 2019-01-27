@@ -7,37 +7,27 @@
   height: 100%;
   left: 0%;
   width: 100%;
+  /*
+    @media screen and (max-width:$break-l) {
+        left: 10%;
+        width: 80%;
+    }
+    @media screen and (max-width:$break-m) {
+        left: 5%;
+        width: 90%;
+    }
+    @media screen and (max-width:$break-s) {
+        left: 2.5%;
+        width: 95%;
+    }
+    @media screen and (max-width:$break-x) {
+        left: 0%;
+        width: 100%;
+    }
+    */
   position: absolute;
   margin-left: auto;
   margin-right: auto;
-}
-
-@media screen and (max-width: 1199.98px) {
-  .nav-container {
-    left: 10%;
-    width: 80%;
-  }
-}
-
-@media screen and (max-width: 991.98px) {
-  .nav-container {
-    left: 5%;
-    width: 90%;
-  }
-}
-
-@media screen and (max-width: 767.98px) {
-  .nav-container {
-    left: 2.5%;
-    width: 95%;
-  }
-}
-
-@media screen and (max-width: 575.98px) {
-  .nav-container {
-    left: 0%;
-    width: 100%;
-  }
 }
 
 .nav-container .underline-nav-center {
@@ -47,8 +37,8 @@
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   top: 50%;
-  left: 15%;
-  width: 70%;
+  left: 0%;
+  width: 100%;
   height: 3px;
   background-color: #FEFEFE;
   border-radius: 2px;
@@ -59,7 +49,6 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  left: -1%;
 }
 
 .nav-container .img-box #m-moustafa {
@@ -69,7 +58,7 @@
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   top: 11%;
-  left: 25%;
+  left: 0%;
   width: 50%;
   height: 0%;
 }
@@ -81,7 +70,7 @@
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   top: 11%;
-  left: 25%;
+  left: 0%;
   width: 50%;
   height: 0%;
 }
@@ -89,39 +78,39 @@
 .nav-container .word-box {
   position: relative;
   height: 17.5%;
-  top: 20%;
+  top: 50%;
+  -webkit-transform: translateY(-96%);
+          transform: translateY(-96%);
 }
 
 .nav-container .word-box #ostafa-word {
   position: absolute;
   font-family: Dosis;
-  font-size: 2em;
   font-weight: 100;
   color: #FEFEFE;
-  top: 40%;
+  top: 0%;
   -webkit-animation: fadeIn 500ms 4500ms ease-in-out;
           animation: fadeIn 500ms 4500ms ease-in-out;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   opacity: 0;
-  left: 40%;
-  top: 100%;
+  left: 30%;
+  top: 0;
 }
 
 .nav-container .word-box #ohsen-word {
   position: absolute;
   font-family: Dosis;
-  font-size: 2em;
   font-weight: 100;
   color: #FEFEFE;
-  top: 40%;
+  top: 0%;
   -webkit-animation: fadeIn 500ms 4500ms ease-in-out;
           animation: fadeIn 500ms 4500ms ease-in-out;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   opacity: 0;
-  left: 77%;
-  top: 100%;
+  left: 80%;
+  top: 0;
 }
 
 @-webkit-keyframes nav-Container {
@@ -135,13 +124,11 @@
     -webkit-animation-fill-mode: forwards;
             animation-fill-mode: forwards;
     top: 50%;
-    left: 15%;
-    width: 70%;
+    left: 0%;
+    width: 100%;
     height: 3px;
     background-color: #FEFEFE;
     border-radius: 2px;
-    width: 74%;
-    left: 14%;
   }
 }
 
@@ -156,13 +143,11 @@
     -webkit-animation-fill-mode: forwards;
             animation-fill-mode: forwards;
     top: 50%;
-    left: 15%;
-    width: 70%;
+    left: 0%;
+    width: 100%;
     height: 3px;
     background-color: #FEFEFE;
     border-radius: 2px;
-    width: 74%;
-    left: 14%;
   }
 }
 
@@ -196,10 +181,10 @@
     width: 50%;
   }
   100% {
-    left: 17%;
     width: 23%;
-    top: 31%;
-    height: 35%;
+    top: 29%;
+    height: 38%;
+    left: 5%;
   }
 }
 
@@ -223,10 +208,10 @@
     width: 50%;
   }
   100% {
-    left: 17%;
     width: 23%;
-    top: 31%;
-    height: 35%;
+    top: 29%;
+    height: 38%;
+    left: 5%;
   }
 }
 
@@ -250,10 +235,10 @@
     width: 50%;
   }
   100% {
-    left: 53%;
     width: 23%;
-    top: 31%;
-    height: 35%;
+    top: 29%;
+    height: 38%;
+    left: 55%;
   }
 }
 
@@ -277,10 +262,10 @@
     width: 50%;
   }
   100% {
-    left: 53%;
     width: 23%;
-    top: 31%;
-    height: 35%;
+    top: 29%;
+    height: 38%;
+    left: 55%;
   }
 }
 

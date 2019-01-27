@@ -15,6 +15,18 @@ $fade-delay:4000ms *$disable-animation;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+    @media screen and (max-width:$break-l) {
+        height: 226px;
+    }
+    @media screen and (max-width:$break-m) {
+        height: 203px;
+    }
+    @media screen and (max-width:$break-s) {
+        height: 229px;
+    }
+   @media screen and (max-width:$break-x) {
+        height: 170px;
+   }
 }
 .hero-background-text{
     opacity: 0;
@@ -22,15 +34,15 @@ $fade-delay:4000ms *$disable-animation;
     p{
         color:$compelmentary;
         position: absolute;
-        font-size: 3em;
+        font-size: 2.5em;
         //opacity: 0.5;
         &.first-back{
-            left: 15%;
-            top: 25%;    
+            left: 0;
+            top: 18%;    
         }
         &.second-back{
-            left: 15%;
-            top: 64%;
+            left: 0;
+            top: 66%;
         }
         span{
             font-weight: bold;

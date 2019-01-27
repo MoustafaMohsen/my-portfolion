@@ -7,6 +7,10 @@
   margin-top: auto;
   margin-bottom: auto;
   height: 300px;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .hero-background-text {
@@ -22,13 +26,17 @@
 }
 
 .hero-background-text p.first-back {
-  left: 22%;
+  left: 15%;
   top: 25%;
 }
 
 .hero-background-text p.second-back {
-  left: 22%;
-  top: 68%;
+  left: 15%;
+  top: 64%;
+}
+
+.hero-background-text p span {
+  font-weight: bold;
 }
 
 @-webkit-keyframes fadeIn {

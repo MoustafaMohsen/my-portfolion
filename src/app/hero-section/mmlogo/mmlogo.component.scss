@@ -1,6 +1,6 @@
 @import "../../../_variables";
 @import "../../styles/_shared-sections";
-$disable-animation:0;
+$disable-animation:1;
 $line-delay:1000ms *$disable-animation;
 
 $line-time:500ms *$disable-animation;

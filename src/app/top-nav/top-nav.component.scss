@@ -93,8 +93,10 @@
     background-color: $primary-3;
     color: $my-white !important;
     border-bottom: solid 2px #16ade3;
+    padding: 0;
     //fix row overflow
     margin: 0;
+
 }
 
 .my-nav-expand-button{
@@ -121,7 +123,7 @@
             .nav-button-a{
                 color: $my-white;
                 font-size: 35px;
-                font-size: 1.5em;
+                font-size: 1.1em;
                 float: right;
                 &:hover{
                     color: $secondary !important;

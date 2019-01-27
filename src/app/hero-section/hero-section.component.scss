@@ -20,9 +20,10 @@ $fade-delay:4000ms *$disable-animation;
     opacity: 0;
     animation: fadeIn $fade-time $fade-delay ease-in-out forwards;
     p{
+        color:$compelmentary;
         position: absolute;
         font-size: 3em;
-        opacity: 0.5;
+        //opacity: 0.5;
         &.first-back{
             left: 15%;
             top: 25%;    
@@ -33,6 +34,7 @@ $fade-delay:4000ms *$disable-animation;
         }
         span{
             font-weight: bold;
+            color: $tertiary;
         }
     }
 }

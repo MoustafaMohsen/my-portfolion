@@ -9,8 +9,10 @@
 }
 
 .platforms-body{
-    background-color:#F9F9F9;
+    background-color:$compelmentary;
     @include section-body;
+    padding-top: 100px;
+    padding-bottom: 100px;
     .platforms-main-images{
     
         .platforms-main-image-container{

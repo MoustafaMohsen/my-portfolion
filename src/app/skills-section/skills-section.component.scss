@@ -3,8 +3,8 @@
 
 .skills-section{
     @include section-container;
-    margin-top: 79px;
-    padding-top: 81px;
+    margin-top: 50px;
+    padding-top: 50px;
 }
 
 .skills-header{ 
@@ -12,9 +12,11 @@
 }
 
 .skills-body{
-    background-color:#F9F9F9;
+    background-color:$compelmentary;
     @include section-body;
 
+    padding-top: 100px;
+    padding-bottom: 100px;
     //background-color: $primary-2;
     //background-color:#1B1C24;
     .skills-main-images{

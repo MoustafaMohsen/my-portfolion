@@ -20,9 +20,9 @@
 }
 
 .hero-background-text p {
+  color: #F9F9F9;
   position: absolute;
   font-size: 3em;
-  opacity: 0.5;
 }
 
 .hero-background-text p.first-back {
@@ -37,6 +37,7 @@
 
 .hero-background-text p span {
   font-weight: bold;
+  color: #E0FF4F;
 }
 
 @-webkit-keyframes fadeIn {

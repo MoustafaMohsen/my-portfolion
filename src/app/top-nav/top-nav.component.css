@@ -68,6 +68,7 @@
   background-color: #1B1C24;
   color: #F9F9F9 !important;
   border-bottom: solid 2px #16ade3;
+  padding: 0;
   margin: 0;
 }
 
@@ -103,7 +104,7 @@
 .my-nav-div ul li .nav-button-a {
   color: #F9F9F9;
   font-size: 35px;
-  font-size: 1.5em;
+  font-size: 1.1em;
   float: right;
 }
 

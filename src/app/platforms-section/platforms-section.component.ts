@@ -1,5 +1,5 @@
 import { Component, OnInit,HostListener } from '@angular/core';
-
+import { Availableimages } from "../assets";
 @Component({
   selector: 'app-platforms-section',
   templateUrl: './platforms-section.component.html',
@@ -11,12 +11,37 @@ export class PlatformsSectionComponent implements OnInit {
   title:string="";
   _title:string="";
   description:string;
+  servicesImages:string[];
+  smallImages:string[];
+  bigImages:string[];
   ngOnInit() {
 
     this._title = "Platforms"
     this.description=`Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic amet consectetur cum labore libero odio, accusantium incidunt dolorem unde molestias quos odit nostrum, ducimus adipisci? Assumenda ullam nulla id natus!`;
 
+    this.servicesImages=[
+      Availableimages.git,
+      Availableimages.npm,
+      Availableimages.nuget,
+      Availableimages.docker,
+      Availableimages.jquery,
+      Availableimages.rxjs,
+    ]
+
+    this.smallImages=[
+      Availableimages.wordpress,
+      Availableimages.nodejs,
+    ]
+
+    this.bigImages=[
+      Availableimages.workcard.angular,
+      Availableimages.workcard.aspcore,
+      Availableimages.dotnet,
+    ]
+
   }
+
+  
 
   typeEffect(_title,interval){
     var stringToArray=(input:string):string[]=>{

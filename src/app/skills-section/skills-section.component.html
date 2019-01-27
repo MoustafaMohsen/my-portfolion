@@ -23,55 +23,30 @@
 
     <div class="col-12 skills-body">
 
+
         <div class="row no-gutters justify-content-around skills-main-images">
 
-            <div class="col-2">
+            <div class="col-2" *ngFor="let image of bigImages">
                 <div class="skills-main-image-container">
-                    <img  class="skills-main-image" animateOnScroll beforeClass="opacity-0" animationName="fadeIn animation-settings-2" src="./assets/img/Programing languages/CSharp.png" alt="">
-                </div>
-            </div>
-
-            <div class="col-2">
-                <div class="skills-main-image-container">
-                    <img  class="skills-main-image" animateOnScroll beforeClass="opacity-0" animationName="fadeIn animation-settings-2" src="./assets/img/Programing languages/TS.png" alt="">
-                </div>
-            </div>
-
-            <div class="col-2">
-                <div class="skills-main-image-container">
-                    <img  class="skills-main-image" animateOnScroll beforeClass="opacity-0" animationName="fadeIn animation-settings-2" src="./assets/img/Programing languages/JavaScript-logo.png" alt="">
-                </div>
-            </div>
-
-            <div class="col-2">
-                <div class="skills-main-image-container">
-                    <img  class="skills-main-image" animateOnScroll beforeClass="opacity-0" animationName="fadeIn animation-settings-2" src="./assets/img/Programing languages/html5.png" alt="">
-                </div>
-            </div>
-
-            <div class="col-2">
-                <div class="skills-main-image-container">
-                    <img  class="skills-main-image" animateOnScroll beforeClass="opacity-0" animationName="fadeIn animation-settings-2" src="./assets/img/Programing languages/css3_squer.png" alt="">
+                    <img  class="skills-main-image" animateOnScroll beforeClass="opacity-0" 
+                    animationName="fadeIn animation-settings-2" [src]="image" alt="">
                 </div>
             </div>
                                 
         </div>
 
         <div class="row no-gutters justify-content-center skills-small-images">
-            <div class="col-lg-1 col-md-2 col-sm-2 col-2">
-                <div class="skills-small-image-container">
-                    <img  class="skills-small-image" animateOnScroll beforeClass="opacity-0" animationName="fadeIn animation-settings-2" src="./assets/img/Programing languages/postgresql_logo.png" alt="">
-                </div>
-            </div>
 
-            <div class="col-lg-1 col-md-2 col-sm-2 col-2">
+            <div class="col-lg-1 col-md-2 col-sm-2 col-2" *ngFor="let image of smallImages">
                 <div class="skills-small-image-container">
-                    <img  class="skills-small-image" animateOnScroll beforeClass="opacity-0" animationName="fadeIn animation-settings-2" src="./assets/img/Programing languages/sass.png" alt="">
+                    <img  class="skills-small-image" animateOnScroll beforeClass="opacity-0" 
+                    animationName="fadeIn animation-settings-2" [src]="image" alt="">
                 </div>
             </div>
             
         </div>
 
+        
     </div>
 
 </section>

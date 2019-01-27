@@ -16,7 +16,6 @@
   padding-top: 20px;
   padding-bottom: 20px;
   padding-top: 100px;
-  padding-bottom: 100px;
 }
 
 .platforms-body .platforms-main-images .platforms-main-image-container .platforms-main-image {
@@ -26,5 +25,84 @@
 .platforms-body .platforms-small-images .platforms-small-image-container .platforms-small-image {
   width: 100%;
   margin-top: 30px;
+}
+
+.other-services-text {
+  margin-top: 80px;
+}
+
+.other-services-text p {
+  color: #141414;
+  margin: 0;
+}
+
+.other-services-images {
+  margin-bottom: 20px;
+}
+
+.other-services-images .other-services-image-container {
+  display: inline;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+@media screen and (max-width: 1199.98px) {
+  .other-services-images .other-services-image-container {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
+@media screen and (max-width: 991.98px) {
+  .other-services-images .other-services-image-container {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .other-services-images .other-services-image-container {
+    margin-left: 13px;
+    margin-right: 13px;
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  .other-services-images .other-services-image-container {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+}
+
+.other-services-images .other-services-image-container:nth-child(1) {
+  margin-left: 0 !important;
+}
+
+.other-services-images .other-services-image-container img {
+  width: 6%;
+}
+
+@media screen and (max-width: 1199.98px) {
+  .other-services-images .other-services-image-container img {
+    width: 6%;
+  }
+}
+
+@media screen and (max-width: 991.98px) {
+  .other-services-images .other-services-image-container img {
+    width: 8%;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .other-services-images .other-services-image-container img {
+    width: 6%;
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  .other-services-images .other-services-image-container img {
+    width: 6%;
+  }
 }
 /*# sourceMappingURL=platforms-section.component.css.map */

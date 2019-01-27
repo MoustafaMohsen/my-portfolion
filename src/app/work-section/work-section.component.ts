@@ -26,14 +26,14 @@ export class WorkSectionComponent implements OnInit {
       languages:"Html, CSS, C#, TypeScript",
       buttonText:"Visit Website",
       resources_Images:[
-        Availableimages.angular,
-        Availableimages.aspcore,
-        Availableimages.mysql
+        Availableimages.workcard.angular,
+        Availableimages.workcard.aspcore,
+        Availableimages.workcard.mysql
       ],
       deployment_Images:[
-        Availableimages.github,
-        Availableimages.heroku,
-        Availableimages.digitalocean
+        Availableimages.workcard.github,
+        Availableimages.workcard.heroku,
+        Availableimages.workcard.digitalocean
       ],
     };
 
@@ -45,13 +45,13 @@ export class WorkSectionComponent implements OnInit {
       languages:"Html, CSS, C#, TypeScript",
       buttonText:"Visit Website",
       resources_Images:[
-        Availableimages.angular,
-        Availableimages.aspcore,
-        Availableimages.sqlite
+        Availableimages.workcard.angular,
+        Availableimages.workcard.aspcore,
+        Availableimages.workcard.sqlite
       ],
       deployment_Images:[
-        Availableimages.github,
-        Availableimages.heroku
+        Availableimages.workcard.github,
+        Availableimages.workcard.heroku
       ],
     };
 

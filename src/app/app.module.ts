@@ -21,8 +21,12 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ImageGlareComponent } from './image-glare/image-glare.component';
 import { routes } from './routes';
 import {  AnimateOnScrollModule } from './animate-on-scroll';
+import { MMLogoComponent } from './hero-section/mmlogo/mmlogo.component';
+import { StickyHeaderDirective } from './directives/sticky-header.directive';
+import { OnView } from './directives/OnView.directive';
 // scroll animation
 //import { AnimateOnScrollModule } from 'ng2-animate-on-scroll';
+import {AngularStickyThingsModule} from '@w11k/angular-sticky-things';
 
 const matrial = [
   MatButtonModule, MatCheckboxModule,MatButtonToggleModule,MatInputModule,MatSliderModule,
@@ -42,9 +46,13 @@ const matrial = [
     ContactSectionComponent,
     FooterSectionComponent,
     ImageGlareComponent,
+    MMLogoComponent,
 
     //test directive
     //AppearDirective
+    //directives
+    StickyHeaderDirective,
+    OnView
 
   ],
   imports: [
@@ -58,6 +66,7 @@ const matrial = [
       scrollOffset: [0, 64] // [x, y]
     }),
     AnimateOnScrollModule.forRoot(),
+    AngularStickyThingsModule
 
   ],
   providers: [],

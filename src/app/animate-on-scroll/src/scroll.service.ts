@@ -1,6 +1,7 @@
 import { Injectable, OnDestroy } from '@angular/core';
 import { Observable, Subscription } from 'rxjs';
 import { fromEvent } from 'rxjs';
+import { throttleTime } from 'rxjs/operators';
 
 @Injectable()
 export class ScrollService implements OnDestroy {
@@ -17,14 +18,18 @@ export class ScrollService implements OnDestroy {
     this.manageScrollPos();
 
     // create observable that we can subscribe to from component or directive
-    this.scrollObs = fromEvent(window, 'scroll');
+    this.scrollObs = fromEvent(window, 'scroll').pipe(
+      throttleTime(10),
+    );
 
     // initiate subscription to update values
     this.scrollSub = this.scrollObs
       .subscribe(() => this.manageScrollPos());
 
     // create observable for changes in screen size
-    this.resizeObs = fromEvent(window, 'resize');
+    this.resizeObs = fromEvent(window, 'resize').pipe(
+      throttleTime(10),
+    );
 
     // initiate subscription to update values
     this.resizeSub = this.resizeObs

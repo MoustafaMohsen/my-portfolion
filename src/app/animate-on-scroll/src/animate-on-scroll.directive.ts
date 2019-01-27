@@ -109,6 +109,7 @@ export class AnimateOnScrollDirective implements OnInit, OnDestroy, AfterViewIni
    */
   private setClass(classes: string): void {
 
+    if(classes)
     for (const c of classes.split(' ')) {
       this.renderer.setElementClass(this.elementRef.nativeElement, c, true);
     }

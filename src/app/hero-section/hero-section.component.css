@@ -2,268 +2,32 @@
   height: 500px;
 }
 
-.nav-container {
+.mmlogo {
+  margin-top: auto;
+  margin-bottom: auto;
+  height: 300px;
+}
+
+.hero-background-text {
+  opacity: 0;
+  -webkit-animation: fadeIn 200ms 4000ms ease-in-out forwards;
+          animation: fadeIn 200ms 4000ms ease-in-out forwards;
+}
+
+.hero-background-text p {
+  position: absolute;
+  font-size: 3em;
+  opacity: 0.5;
+}
+
+.hero-background-text p.first-back {
+  left: 22%;
   top: 25%;
-  height: 400px;
-  left: 10%;
-  width: 80%;
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
 }
 
-@media screen and (max-width: 1199.98px) {
-  .nav-container {
-    left: 10%;
-    width: 80%;
-  }
-}
-
-@media screen and (max-width: 991.98px) {
-  .nav-container {
-    left: 5%;
-    width: 90%;
-  }
-}
-
-@media screen and (max-width: 767.98px) {
-  .nav-container {
-    left: 2.5%;
-    width: 95%;
-  }
-}
-
-@media screen and (max-width: 575.98px) {
-  .nav-container {
-    left: 0%;
-    width: 100%;
-  }
-}
-
-.nav-container .underline-nav-center {
-  -webkit-animation: nav-Container 500ms 1000ms ease-in-out;
-          animation: nav-Container 500ms 1000ms ease-in-out;
-  position: absolute;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  top: 50%;
-  left: 15%;
-  width: 70%;
-  height: 3px;
-  background-color: #FEFEFE;
-  height: 0px;
-}
-
-.nav-container #m-moustafa {
-  -webkit-animation: m-moustafa-anim 2000ms 2000ms ease-in-out;
-          animation: m-moustafa-anim 2000ms 2000ms ease-in-out;
-  position: absolute;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  top: 11%;
-  left: 25%;
-  width: 50%;
-  height: 0%;
-}
-
-.nav-container #m-mohsen {
-  -webkit-animation: m-mohsen-anim 2000ms 2000ms ease-in-out;
-          animation: m-mohsen-anim 2000ms 2000ms ease-in-out;
-  position: absolute;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  top: 11%;
-  left: 25%;
-  width: 50%;
-  height: 0%;
-}
-
-.nav-container #ostafa-word {
-  position: absolute;
-  font-family: Dosis;
-  font-size: 2em;
-  font-weight: 100;
-  color: #FEFEFE;
-  top: 40%;
-  -webkit-animation: fadeIn 500ms 4500ms ease-in-out;
-          animation: fadeIn 500ms 4500ms ease-in-out;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  opacity: 0;
-  left: 40%;
-}
-
-.nav-container #ohsen-word {
-  position: absolute;
-  font-family: Dosis;
-  font-size: 2em;
-  font-weight: 100;
-  color: #FEFEFE;
-  top: 40%;
-  -webkit-animation: fadeIn 500ms 4500ms ease-in-out;
-          animation: fadeIn 500ms 4500ms ease-in-out;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  opacity: 0;
-  left: 77%;
-}
-
-@-webkit-keyframes nav-Container {
-  0% {
-    width: 0;
-    left: 50%;
-    height: 3px;
-  }
-  100% {
-    position: absolute;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-    top: 50%;
-    left: 15%;
-    width: 70%;
-    height: 3px;
-    background-color: #FEFEFE;
-    width: 70%;
-    left: 15%;
-  }
-}
-
-@keyframes nav-Container {
-  0% {
-    width: 0;
-    left: 50%;
-    height: 3px;
-  }
-  100% {
-    position: absolute;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-    top: 50%;
-    left: 15%;
-    width: 70%;
-    height: 3px;
-    background-color: #FEFEFE;
-    width: 70%;
-    left: 15%;
-  }
-}
-
-.m-moustafa-animation {
-  -webkit-animation: m-moustafa-anim 2000ms 2000ms ease-in-out;
-          animation: m-moustafa-anim 2000ms 2000ms ease-in-out;
-}
-
-.m-mohsen-animation {
-  -webkit-animation: m-mohsen-anim 2000ms 2000ms ease-in-out;
-          animation: m-mohsen-anim 2000ms 2000ms ease-in-out;
-}
-
-@-webkit-keyframes m-moustafa-anim {
-  0% {
-    top: 50%;
-    height: 0;
-    left: 25%;
-    width: 50%;
-  }
-  30% {
-    top: 11%;
-    height: 70%;
-    left: 25%;
-    width: 50%;
-  }
-  80% {
-    top: 11%;
-    height: 70%;
-    left: 25%;
-    width: 50%;
-  }
-  100% {
-    left: 17%;
-    width: 23%;
-    top: 31%;
-    height: 35%;
-  }
-}
-
-@keyframes m-moustafa-anim {
-  0% {
-    top: 50%;
-    height: 0;
-    left: 25%;
-    width: 50%;
-  }
-  30% {
-    top: 11%;
-    height: 70%;
-    left: 25%;
-    width: 50%;
-  }
-  80% {
-    top: 11%;
-    height: 70%;
-    left: 25%;
-    width: 50%;
-  }
-  100% {
-    left: 17%;
-    width: 23%;
-    top: 31%;
-    height: 35%;
-  }
-}
-
-@-webkit-keyframes m-mohsen-anim {
-  0% {
-    top: 50%;
-    height: 0;
-    left: 25%;
-    width: 50%;
-  }
-  30% {
-    top: 11%;
-    height: 70%;
-    left: 25%;
-    width: 50%;
-  }
-  80% {
-    top: 11%;
-    height: 70%;
-    left: 25%;
-    width: 50%;
-  }
-  100% {
-    left: 53%;
-    width: 23%;
-    top: 31%;
-    height: 35%;
-  }
-}
-
-@keyframes m-mohsen-anim {
-  0% {
-    top: 50%;
-    height: 0;
-    left: 25%;
-    width: 50%;
-  }
-  30% {
-    top: 11%;
-    height: 70%;
-    left: 25%;
-    width: 50%;
-  }
-  80% {
-    top: 11%;
-    height: 70%;
-    left: 25%;
-    width: 50%;
-  }
-  100% {
-    left: 53%;
-    width: 23%;
-    top: 31%;
-    height: 35%;
-  }
+.hero-background-text p.second-back {
+  left: 22%;
+  top: 68%;
 }
 
 @-webkit-keyframes fadeIn {
@@ -271,7 +35,7 @@
     opacity: 0;
   }
   to {
-    opacity: 1;
+    opacity: 0.5;
   }
 }
 
@@ -280,17 +44,7 @@
     opacity: 0;
   }
   to {
-    opacity: 1;
+    opacity: 0.5;
   }
-}
-
-.hide-elements {
-  display: none !important;
-}
-
-.show-elements {
-  display: block;
-  -webkit-transition: all ease-in-out 1000ms;
-  transition: all ease-in-out 1000ms;
 }
 /*# sourceMappingURL=hero-section.component.css.map */

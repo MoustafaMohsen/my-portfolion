@@ -1,182 +1,31 @@
 @import "../../_variables";
 @import "../styles/_shared-sections";
 
-$line-delay:1000ms;
-
-$line-time:500ms;
-
-$m-Delay:1000ms + $line-delay;
-
-$m-time:2000ms;
-
-
-$my-white:#FEFEFE;
-$word-size:2em;
-
- 
-@mixin word-part {
-    position: absolute;
-    font-family: Dosis;
-    font-size: $word-size;
-    font-weight: 100;
-    color: $my-white;
-    top: 40%;
-    animation: fadeIn 500ms $m-Delay+$m-time+500ms ease-in-out;
-    animation-fill-mode: forwards;
-    opacity: 0;
-}
-
-@mixin m-letter-part {
-    position: absolute;
-    animation-fill-mode: forwards;
-    top: 11%;
-    left: 25%;
-    width: 50%;
-    height: 0%;
-}
-@mixin line-middle {
-    position: absolute;
-    animation-fill-mode: forwards;
-    top: 50%;
-    left: 15%;
-    width: 70%;
-    height: 3px;
-    background-color: $my-white;
-    //border-radius: 2px;
-}
-
 .hero-page{
     height: 500px;
 }
-.nav-container{
-    top: 25%;
-    height: 400px;
-    left: 10%;
-    width: 80%;
-    @media screen and (max-width:$break-l) {
-        left: 10%;
-        width: 80%;
-    }
-    @media screen and (max-width:$break-m) {
-        left: 5%;
-        width: 90%;
-    }
-    @media screen and (max-width:$break-s) {
-        left: 2.5%;
-        width: 95%;
-    }
-    @media screen and (max-width:$break-x) {
-        left: 0%;
-        width: 100%;
-    }
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-
-    .underline-nav-center{
-        animation: nav-Container $line-time $line-delay ease-in-out;
-        @include line-middle;
-        height: 0px;
-    }
-
-    #m-moustafa{
-        animation: m-moustafa-anim $m-time $m-Delay ease-in-out;
-        @include m-letter-part;
-    }
-    #m-mohsen{
-        animation: m-mohsen-anim $m-time $m-Delay ease-in-out;
-        @include m-letter-part;
-    }
-
-    #ostafa-word{
-        @include word-part;
-        left: 40%; 
-    }
-    #ohsen-word{
-        @include word-part;
-        left: 77%;
+.mmlogo{
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 300px;
+}
+.hero-background-text{
+    opacity: 0;
+    animation: fadeIn 200ms 4000ms ease-in-out forwards;
+    p{
+        position: absolute;
+        font-size: 3em;
+        opacity: 0.5;
+        &.first-back{
+            left: 22%;
+            top: 25%;    
+        }
+        &.second-back{
+            left: 22%;
+            top: 68%;
+        }
     }
 }
-
-
-@keyframes nav-Container{
-    0%{
-        width: 0;
-        left: 50%;
-        height: 3px;
-    }
-    100%{
-        @include line-middle;
-        width: 70%;
-        left: 15%;
-    }
-}
-
-.m-moustafa-animation{
-    animation: m-moustafa-anim $m-time $m-Delay ease-in-out;
-}
-
-.m-mohsen-animation{
-    animation: m-mohsen-anim $m-time $m-Delay ease-in-out;
-}
-
-
-@mixin start-part {
-    top: 50%;
-    height: 0;
-
-    left: 25%;
-    width: 50%;
-}
-@mixin middle-part {
-    top: 11%;
-    height: 70%;
-
-    left: 25%;
-    width: 50%;
-
-}
-
-
-@keyframes m-moustafa-anim{
-    0%{
-        @include start-part;
-    }
-    30%{
-        @include middle-part;
-    }
-    80%{
-        @include middle-part;
-    }
-
-    100%{
-        left: 17%;
-        width: 23%;
-        top: 31%;
-        height: 35%;
-    }
-}
-
-
-@keyframes m-mohsen-anim{
-    0%{
-        @include start-part;
-    }
-    30%{
-        @include middle-part;
-    }
-    80%{
-        @include middle-part;
-    }
-    100%{
-        left: 53%;
-        width: 23%;
-        top: 31%;
-        height: 35%;
-    }
-}
-
-
 
 @keyframes fadeIn {
     from {
@@ -184,15 +33,6 @@ $word-size:2em;
     }
 
     to {
-        opacity: 1;
+        opacity: 0.5;
     }
-}
-
-.hide-elements{
-    display: none !important;
-}
-
-.show-elements{
-    display: block;
-    transition: all ease-in-out 1000ms;
 }

@@ -8,15 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class HeroSectionComponent implements OnInit {
 
   constructor() { }
-  showElements=false;
   ngOnInit() {
-    console.log("show elements =",this.showElements);
 
-    setTimeout(() => {
-      
-      this.showElements=true;
-      console.log("show elements =",this.showElements);
-    }, 10000);
   }
-
+  getheight(){
+    let style={
+      height:window.innerHeight+'px'
+    }
+    return style
+  }
 }

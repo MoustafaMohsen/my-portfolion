@@ -1,84 +1,40 @@
 <!--======= Nav bar ========
-    <div class="top-nav-container">
-        
-        
-        <div class="row">
-            
-            <div class="col-5 align-self-end">
-                <img src="./assets/img/My name (1).png" class="nav-logo" alt="">
-            </div>
-            
-            <div class="col"></div>
-            <div class="col-6">
-                
-                <ul class="row justify-content-end nav-items list-unstyled">
-                    
-                    <li class="col-5 align-self-center nav-button">
-                        <span class="nav-button-span">Recent Work</span>
-                    </li>
-                    
-                    <div class="col-1">
-                        <div class="vertical-seperator"></div>
-                    </div>
-                    
-                    <li class="col-3 align-self-center nav-button">
-                        <span class="nav-button-span">Say Hi</span>
-                    </li>
-                    
-                </ul>
-                
-            </div>
-            
-            
-        </div>
-    </div>
 -->
-    
-    <!--
-        <div class="underline-nav-center"></div>
-    -->
 
-    <!---
-        <img src="./assets/img/m-logo.png" alt="Moustafa" id="m-moustafa">
-        <img src="./assets/img/m-logo.png" alt="Moustafa" id="m-mohsen">
-        <span id="ostafa-word">oustafa</span>
-        <span id="ohsen-word">ohsen</span>
-    -->
-
-
-
-
-<nav class="row justify-content-between navbar navbar-expand-lg navbar-light my-navbar">
-    <a class="col-lg-4 col-md-4 col-sm-5 col-6 navbar-brand my-nav-logo" href="#">        
-        <div class="align-self-end">
-            <img src="./assets/img/My name (1).png" class="" alt="">
-        </div>
-    </a>
-    <!---
-        <button class="col-auto navbar-toggler my-nav-expand-button" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+<div #spacer></div>
+<div class="sticky-nav" stickyThing  [ngClass]="viewclass">
+    <nav class="row justify-content-between navbar navbar-expand-lg navbar-light my-navbar">
+        <a class="col-lg-4 col-md-4 col-sm-5 col-6 navbar-brand my-nav-logo" href="#">        
+            <div class="align-self-end">
+                <img src="./assets/img/My name (1).png" class="" alt="">
+            </div>
+        </a>
+        <!---
+            <button class="col-auto navbar-toggler my-nav-expand-button" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        -->
+        <button mat-button class="col-auto navbar-toggler my-nav-expand-button" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="material-icons">menu</i>
         </button>
-    -->
-    <button mat-button class="col-auto navbar-toggler my-nav-expand-button" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="material-icons">menu</i>
-    </button>
+        
     
+        <div class="col-auto collapse navbar-collapse my-nav-div" id="navbarNav">
+            <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link nav-button-a" href="#skills">Skills </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link nav-button-a" href="#platforms">Platforms</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link nav-button-a" href="#work">Work</a>
+            </li>        
+            <li class="nav-item">
+                <a class="nav-link nav-button-a" href="#contact">Contact</a>
+            </li>
+            </ul>
+        </div>
+    </nav>
 
-    <div class="col-auto collapse navbar-collapse my-nav-div" id="navbarNav">
-        <ul class="navbar-nav">
-        <li class="nav-item active">
-            <a class="nav-link nav-button-a" href="#skills">Skills </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link nav-button-a" href="#platforms">Platforms</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link nav-button-a" href="#work">Work</a>
-        </li>        
-        <li class="nav-item">
-            <a class="nav-link nav-button-a" href="#contact">Contact</a>
-        </li>
-        </ul>
-    </div>
-</nav>
-
+</div>

@@ -93,6 +93,8 @@
     background-color: $primary-3;
     color: $my-white !important;
     border-bottom: solid 2px #16ade3;
+    //fix row overflow
+    margin: 0;
 }
 
 .my-nav-expand-button{

@@ -4,10 +4,10 @@
   width: 100%;
   background-color: #1B1C24;
   padding: 125px 0 0;
-  padding-top: 10px;
+  padding-top: 0px;
 }
 
-.work-header {
+.section-header-title {
   margin-bottom: 23px;
 }
 
@@ -135,7 +135,7 @@
 
 .work-body .work-card-container .work-card .work-card-header .work-card-uderline {
   position: absolute;
-  height: 1px;
+  height: 2px;
   width: 60%;
   left: 0%;
   background-color: #F9F9F9;
@@ -150,6 +150,16 @@
 .work-body .work-card-container .work-card .work-card-content .work-card-description {
   font-size: 1em;
   color: #F9F9F9;
+}
+
+.mar-top--20 {
+  margin-top: -20px !important;
+}
+
+@media screen and (max-width: 991.98px) {
+  .mar-top--20 {
+    margin-top: -10px !important;
+  }
 }
 
 /*
@@ -329,19 +339,19 @@ $break-l: 1199.98px;
 
 @media screen and (max-width: 767.98px) {
   .small-cards-container .small-work-card-container {
-    height: 150px;
+    height: 180px;
   }
 }
 
 @media screen and (max-width: 575.98px) {
   .small-cards-container .small-work-card-container {
-    height: 100px;
+    height: 150px;
   }
 }
 
 @media screen and (max-width: 300.98px) {
   .small-cards-container .small-work-card-container {
-    height: 80px;
+    height: 100px;
   }
 }
 
@@ -416,41 +426,5 @@ $break-l: 1199.98px;
   -webkit-transition: all 200ms ease-in-out !important;
   transition: all 200ms ease-in-out !important;
   opacity: 0.8 !important;
-}
-
-.my-button {
-  margin: 10px 0;
-  display: block;
-  position: relative;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 10px 20px;
-  white-space: nowrap;
-  color: white;
-  background-color: transparent;
-  border-radius: 0px;
-  border: 2px solid #F9F9F9;
-  -webkit-transition: 500ms;
-  transition: 500ms;
-}
-
-.my-button P {
-  font-size: 20px;
-  line-height: 20px;
-  margin: 0;
-}
-
-.my-button[disabled] {
-  color: #b3b3b3;
-  background-color: #dbdbdb;
-  border-color: transparent;
-}
-
-.my-button:hover:not([disabled]) {
-  background-color: #16ade3 !important;
-  border-color: #16ade3 !important;
-  -webkit-transition: 500ms;
-  transition: 500ms;
 }
 /*# sourceMappingURL=work-section.component.css.map */

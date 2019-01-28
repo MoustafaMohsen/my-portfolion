@@ -19,9 +19,70 @@
             width: 100%;
             min-height: 300px;
             background-color: $primary-3;
-            box-shadow: 0px 0px 14px 4px rgba(0,0,0,0.68);
+            box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.68);
             padding: 35px 0;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+            @media screen and (max-width:$break-x) {
+                padding: 35px 0 0;
+            }
+            .about-back {
+                position: absolute;
+                font-size: 5em;
+                opacity: 0.5;
+                left: 100%;
+                transform: translateX(-77%);
+                top: -2%;
+            }
+            .about-col{
+                margin-right: 5%;
+             }
+            @media screen and (min-width:$break-l) {
+                .about-col{
+                   .about-back {
+                       font-size: 5em;
+                   }
+                   //margin-right: 5%;
+                }
+                .form-col{
+                    margin-left: 0;
+                }
+            }
+            @media screen and (max-width:$break-m) {
+                .about-col{
+                    .about-back {
+                       font-size: 5.5em;
+                   }
+                   //margin-right: 0;
+                }
+                .form-col{
+                    margin-left: 0;
+                }
+            }
+            @media screen and (max-width:$break-s) {
+                .about-col{
+                    .about-back {
+                       font-size: 6em;
+                    }
+                    //margin-right: 0;
+                }
+                .form-col{
+                    margin-left: 0;
+                }
+            }
+
+           @media screen and (max-width:$break-x) {
+                .about-col{
+                    .about-back {
+                       font-size: 8.5em;
+                    }
+                    margin-right: 0;
+                }
+                .form-col{
+                    margin: 5% 5% 5%;
+                }
+            }
+
             .inner-about-card{
                 $title-font-size:35px;
                 padding:50px  20px;
@@ -29,13 +90,7 @@
                 background-color:$my-white;
                 overflow: hidden;
                 position: relative;
-                .about-back {
-                    position: absolute;
-                    font-size: 5em;
-                    opacity: 0.5;
-                    left: 55%;
-                    top: -2%;
-                }
+
                 .about-title{
                     p{
                         font-weight: 200;
@@ -139,4 +194,22 @@ section#contact::before {
     //clip-path: polygon(0 0, 0% 100%, 100% 100%);
     clip-path: polygon(50% 98%, 100% 0, 100% 100%, 0 100%, 0 0);
     background-color: #1b1c24;
+    @media screen and (min-width:$break-l) {
+        height: 150px !important;
+    }
+    @media screen and (max-width:$break-l) {
+        height: 140px !important;
+    }
+    @media screen and (max-width:$break-m) {
+        height: 120px !important;  
+    }
+    @media screen and (max-width:$break-s) {
+        height: 100px !important;   
+    }
+    @media screen and (max-width:$break-x) {
+        height: 60px !important;
+    }
+    @media screen and (max-width:300.98px) {
+        height: 50px !important;
+    }
 }

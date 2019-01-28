@@ -148,6 +148,13 @@ ul {
   color: #F9F9F9 !important;
 }
 
+.about-form .mat-form-field-ripple {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  height: 1px !important;
+}
+
 .about-form .mat-form-field-underline {
   margin-top: 10px;
   background-color: transparent !important;
@@ -168,6 +175,89 @@ ul {
 
 .about-form .mat-form-field-invalid .mat-input-element {
   caret-color: #f44336;
+}
+
+.my-button {
+  margin: 10px 0 !important;
+  display: block !important;
+  position: relative !important;
+  width: -webkit-fit-content !important;
+  width: -moz-fit-content !important;
+  width: fit-content !important;
+  padding: 10px 20px !important;
+  white-space: nowrap !important;
+  color: white !important;
+  background-color: transparent !important;
+  border-radius: 0px !important;
+  border: 2px solid #F9F9F9 !important;
+  -webkit-transition: 500ms !important !important;
+  transition: 500ms !important !important;
+}
+
+.my-button P {
+  font-size: 20px !important;
+  line-height: 20px !important;
+  margin: 0 !important;
+}
+
+.my-button[disabled] {
+  color: #b3b3b3 !important;
+  background-color: #dbdbdb !important;
+  border-color: transparent !important;
+}
+
+.my-button:hover:not([disabled]) {
+  background-color: #16ade3 !important;
+  border-color: #16ade3 !important;
+  -webkit-transition: 500ms !important !important;
+  transition: 500ms !important !important;
+}
+
+@media screen and (max-width: 767.98px) {
+  .my-button-xs-scall {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+  }
+}
+
+.after-before-height::after, .after-before-height::before {
+  height: 100px !important;
+}
+
+@media screen and (min-width: 1199.98px) {
+  .after-before-height::after, .after-before-height::before {
+    height: 110px !important;
+  }
+}
+
+@media screen and (max-width: 1199.98px) {
+  .after-before-height::after, .after-before-height::before {
+    height: 110px !important;
+  }
+}
+
+@media screen and (max-width: 991.98px) {
+  .after-before-height::after, .after-before-height::before {
+    height: 100px !important;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .after-before-height::after, .after-before-height::before {
+    height: 80px !important;
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  .after-before-height::after, .after-before-height::before {
+    height: 60px !important;
+  }
+}
+
+@media screen and (max-width: 300.98px) {
+  .after-before-height::after, .after-before-height::before {
+    height: 50px !important;
+  }
 }
 
 @-webkit-keyframes nav-Container {
@@ -413,11 +503,11 @@ ul {
 }
 
 .pad-0 {
-  padding: 0;
+  padding: 0 !important;
 }
 
 .mar-0 {
-  padding: 0;
+  margin: 0 !important;
 }
 
 .relative {

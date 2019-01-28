@@ -230,8 +230,14 @@ ul{
 
     }
     
+    // the under line ripplq
+    .mat-form-field-ripple{
+        opacity: 1;
+        transform: scale(1);
+        height: 1px !important;
+    }
     
-    // under line before focus only
+    // small under line before focus only
     .mat-form-field-underline{
         margin-top: 10px;
         background-color: transparent !important;
@@ -264,12 +270,66 @@ ul{
 
 
 
-// ==== Footer 
+.my-button{
+    $transition-duration:500ms !important;
+    margin: 10px 0 !important;
+    display: block !important;
+    position: relative !important;
+    width:fit-content !important;
+    padding: 10px 20px !important;
+    white-space: nowrap !important;
+    color: white !important;//$primary !important;
+    background-color: transparent !important;
+    border-radius: 0px !important;
+    border:2px solid $compelmentary !important;
+    transition: $transition-duration !important;
+    P{
+        font-size: 20px !important;
+        line-height: 20px !important;
+        margin: 0 !important;
+    }
+    &[disabled]{
+        color: #b3b3b3 !important;
+        background-color: #dbdbdb !important;
+        border-color: transparent !important;
+    }
+    &:hover:not([disabled]) {
+        background-color: #16ade3 !important;
+        border-color: #16ade3 !important;
+        transition: $transition-duration !important;
+    }
+}
+.my-button-xs-scall{
+    @media screen and (max-width:$break-s) {
+        transform: scale(0.6);
+    }
+} 
+
+// ============= class settings
+
+.after-before-height::after,.after-before-height::before{
+    height: 100px !important;
+    @media screen and (min-width:$break-l) {
+        height: 110px !important;
+    }
+    @media screen and (max-width:$break-l) {
+        height: 110px !important;
+    }
+    @media screen and (max-width:$break-m) {
+        height: 100px !important;  
+    }
+    @media screen and (max-width:$break-s) {
+        height: 80px !important;   
+    }
+    @media screen and (max-width:$break-x) {
+        height: 60px !important;
+    }
+    @media screen and (max-width:300.98px) {
+        height: 50px !important;
+    }
+}
 
 
-// ============= effects 
-
-// shine effect
 
 
 
@@ -377,10 +437,10 @@ ul{
 
 //================= General classess
 .pad-0{
-    padding: 0
+    padding: 0 !important;
 }
 .mar-0{
-    padding: 0
+    margin: 0 !important;
 }
 .relative{
     position: relative;

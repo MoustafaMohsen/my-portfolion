@@ -27,10 +27,69 @@
   width: 100%;
   min-height: 300px;
   background-color: #1B1C24;
-  -webkit-box-shadow: 0px 0px 14px 4px rgba(0, 0, 0, 0.68);
-          box-shadow: 0px 0px 14px 4px rgba(0, 0, 0, 0.68);
+  -webkit-box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.68);
+          box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.68);
   padding: 35px 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@media screen and (max-width: 575.98px) {
+  .contact-body .contact-card-container .contact-card {
+    padding: 35px 0 0;
+  }
+}
+
+.contact-body .contact-card-container .contact-card .about-back {
+  position: absolute;
+  font-size: 5em;
+  opacity: 0.5;
+  left: 100%;
+  -webkit-transform: translateX(-77%);
+          transform: translateX(-77%);
+  top: -2%;
+}
+
+.contact-body .contact-card-container .contact-card .about-col {
+  margin-right: 5%;
+}
+
+@media screen and (min-width: 1199.98px) {
+  .contact-body .contact-card-container .contact-card .about-col .about-back {
+    font-size: 5em;
+  }
+  .contact-body .contact-card-container .contact-card .form-col {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 991.98px) {
+  .contact-body .contact-card-container .contact-card .about-col .about-back {
+    font-size: 5.5em;
+  }
+  .contact-body .contact-card-container .contact-card .form-col {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .contact-body .contact-card-container .contact-card .about-col .about-back {
+    font-size: 6em;
+  }
+  .contact-body .contact-card-container .contact-card .form-col {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  .contact-body .contact-card-container .contact-card .about-col {
+    margin-right: 0;
+  }
+  .contact-body .contact-card-container .contact-card .about-col .about-back {
+    font-size: 8.5em;
+  }
+  .contact-body .contact-card-container .contact-card .form-col {
+    margin: 5% 5% 5%;
+  }
 }
 
 .contact-body .contact-card-container .contact-card .inner-about-card {
@@ -39,14 +98,6 @@
   background-color: #F9F9F9;
   overflow: hidden;
   position: relative;
-}
-
-.contact-body .contact-card-container .contact-card .inner-about-card .about-back {
-  position: absolute;
-  font-size: 5em;
-  opacity: 0.5;
-  left: 55%;
-  top: -2%;
 }
 
 .contact-body .contact-card-container .contact-card .inner-about-card .about-title p {
@@ -144,5 +195,41 @@ section#contact::before {
   -webkit-clip-path: polygon(50% 98%, 100% 0, 100% 100%, 0 100%, 0 0);
           clip-path: polygon(50% 98%, 100% 0, 100% 100%, 0 100%, 0 0);
   background-color: #1b1c24;
+}
+
+@media screen and (min-width: 1199.98px) {
+  section#contact::before {
+    height: 150px !important;
+  }
+}
+
+@media screen and (max-width: 1199.98px) {
+  section#contact::before {
+    height: 140px !important;
+  }
+}
+
+@media screen and (max-width: 991.98px) {
+  section#contact::before {
+    height: 120px !important;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  section#contact::before {
+    height: 100px !important;
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  section#contact::before {
+    height: 60px !important;
+  }
+}
+
+@media screen and (max-width: 300.98px) {
+  section#contact::before {
+    height: 50px !important;
+  }
 }
 /*# sourceMappingURL=contact-section.component.css.map */

@@ -22,6 +22,9 @@ body {
 
 }//body
 
+button{
+    outline: none !important;
+}
 // Matrial style
 
 @mixin m-moutafa-middle-final-frame {
@@ -364,6 +367,7 @@ ul{
     from, to { color:transparent }
     50% {  color:$secondary }
 }//blink-caret
+
 
 
 //================= General classess

@@ -106,7 +106,7 @@
   color: white;
   background-color: transparent;
   border-radius: 0px;
-  border: 2px solid white;
+  border: 2px solid #F9F9F9;
   -webkit-transition: 500ms;
   transition: 500ms;
 }

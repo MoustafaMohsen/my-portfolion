@@ -14,6 +14,9 @@ export class WorkSectionComponent implements OnInit {
   _title:string="";
   description:string;
   Cards:workCard[]=[];
+  smallCards:workCard[]=[];
+
+  smallCardFooterClass="csdfaf";
   ngOnInit() {
     this._title="Work";
     this.description="s";
@@ -56,6 +59,15 @@ export class WorkSectionComponent implements OnInit {
     };
 
     this.Cards=this.Cards.concat([FridgeNotes,IslamicSearch]);
+    this.smallCards=this.Cards.map(x=>{
+      x.backgroundImage = Availableimages.fridgenotes_desktop;
+      x.style={
+        'background-image':`url(${x.backgroundImage})`
+      }
+      
+      return x;
+    });
+    this.smallCards = this.smallCards.concat(this.smallCards,this.smallCards,this.smallCards)
 
   }//ngOnInit
 
@@ -84,7 +96,7 @@ export class WorkSectionComponent implements OnInit {
       },interval);
     }
   }//typeEffect
-
+  
 }//class
 
 interface workCard{
@@ -92,9 +104,13 @@ interface workCard{
   description:string;
   resources_Images:string[];
   deployment_Images:string[];
-  backgroundClass:string;
+  backgroundClass?:string;
+  backgroundImage?:string;
+  style?:any;
   languages:string;
   buttonText:string;
+
+  viewclass?:string;
 }
 
 

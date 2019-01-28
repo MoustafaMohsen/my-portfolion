@@ -1,16 +1,14 @@
 <!--============== Work section ==============-->
-<section class="row work-section" id="work">
+<section class="row work-section relative" id="work">
         
-    <div class="col-12">
-
-        <!--work header-->
+    <!--work header-->
+    <div class="col-12 work-header">
         <div class="row justify-content-center">
             <div class="col-lg-3 col-md-3 col-sm-6 col-7 align-self-center">
-                <h3 class="word-header" >{{title}} <span class="blue-underscore blue-underscore-hide-show">_</span></h3>
+                <h3 class="work-header" >{{title}} <span class="blue-underscore blue-underscore-hide-show">_</span></h3>
             </div>
             
         </div>
-    
         <!--work description-->
         <div class="row justify-content-center">
             <div class="col-lg-8 col-sm-9 col-9 align-self-center">
@@ -18,99 +16,147 @@
     
             </div>
         </div>
+    </div>
+    
 
-        <div class="row work-body">
+    <!--work body-->
+    <div class="col-12 work-body">
 
-
-            <div class="col-12 row justify-content-center work-card-loop-item"  *ngFor="let workcard of Cards; let i = index">
-                <!-- 
-                    <div [className]="i%2==0?'col-2':'col-1'"></div>
-                -->
-                <div class="col-lg-9 col-md-9 col-sm-9 col-10">
-                    <!-- ================================ Dynamic Card ================================== -->
-                    <!-- work container -->
-                    <div class="work-card-container">
-                        <mat-card class="work-card">
+  
+            <div class="row">
+                <div class="col-12" *ngFor="let workcard of Cards; let i = index">
+                    <div class="row justify-content-center work-card-loop-item"  >
     
-                            <div [ngClass]="workcard.backgroundClass" class=" word-card-background-image">
-                                <div class="word-card-background-overlay"></div>
-                            </div>
-    
-                            <div class="row justify-content-start work-card-header">
-                                <mat-card-title class="col">
-                                <p class=work-card-title> {{workcard.title}}</p>
-                                </mat-card-title>
-                            </div>
-                
-                            <mat-card-content class="row justify-content-start work-card-content">
-                                        <p class="col-md-11 col-11 work-card-description">
-                                            {{workcard.description}}
-                                        </p>
-                            </mat-card-content>
-                
-                            <div class="row justify-content-between work-card-footer">
-                
-                                <div class="col-md-7 col-sm-8 col-12 work-card-resources-container">
-                                    <mat-card class="work-card-resources">
-    
-                                        <!-- resources and deployment -->
-                                        <div class="row">
-    
-                                                <!-- Resources -->
-                                                <div class="col-lg-6 col-12 resources-content">
-                                                    <div class="w-100 resources-content-title">
-                                                        <p>Resources</p>
-                                                    </div>
-                                                    <div class="resources-vertical-line"></div>
-                                                    <div class="w-100 resources-content-images">
-                                                        <img alt="" *ngFor="let imgsrc of workcard.resources_Images" [src]="imgsrc">
-                                                    </div>
-                                                </div>
-    
-    
-                                                <!-- Deployment -->
-                                                <div class="col-lg-6 col-12 resources-content">
-                                                    <div class="w-100 resources-content-title">
-                                                        <p>Deployment</p>
-                                                    </div>
-                                                    <div class="resources-vertical-line"></div>
-                                                    <div class="w-100 resources-content-images">
-                                                            <img alt="" *ngFor="let imgsrc of workcard.deployment_Images" [src]="imgsrc">
-                                                        </div>
-                                                </div>
-    
-                                            </div>
-    
-                                        <!-- languages -->
-                                        <div class="resources-languages"><p>{{workcard.languages}}</p></div>
-                                    </mat-card>
-                                </div>
-                
-                                <!--  
-                                <div class="col"></div>
-                                -->
-                                <div class="col-md-3 col-sm-3 col-12 align-self-end work-card-button-container">
-                                    <div class="work-card-button">
-                                        <p>{{workcard.buttonText}}</p>
+                        <div class="col-lg-12 col-md-10 col-sm-11 col-12">
+                            <!-- ================================ Dynamic Card ================================== -->
+                            <!-- work container -->
+                            <div class="work-card-container">
+                                <mat-card class="work-card">
+            
+                                    <div [ngClass]="workcard.backgroundClass" class=" work-card-background-image">
+                                        <div class="work-card-background-overlay"></div>
                                     </div>
-                                </div>
-                                
-                            </div>
-                
-                        </mat-card>
-                    </div>
-                    <!-- ================================ Dynamic Card ================================== -->
-    
+            
+                                    <div class="row justify-content-start work-card-header">
+                                        <mat-card-title class="col">
+                                        <p class=work-card-title> {{workcard.title}}</p>
+                                        </mat-card-title>
+                                    </div>
                         
-    
+                                    <mat-card-content class="row justify-content-start work-card-content">
+                                                <p class="col-md-11 col-11 work-card-description">
+                                                    {{workcard.description}}
+                                                </p>
+                                    </mat-card-content>
+                        
+                                    <div class="row justify-content-between work-card-footer">
+                        
+                                        <div class="col-md-7 col-sm-8 col-12 work-card-resources-container">
+                                            <mat-card class="work-card-resources">
+            
+                                                <!-- resources and deployment -->
+                                                <div class="row">
+            
+                                                        <!-- Resources -->
+                                                        <div class="col-lg-6 col-12 resources-content">
+                                                            <div class="w-100 resources-content-title">
+                                                                <p>Resources</p>
+                                                            </div>
+                                                            <div class="resources-vertical-line"></div>
+                                                            <div class="w-100 resources-content-images">
+                                                                <img alt="" *ngFor="let imgsrc of workcard.resources_Images" [src]="imgsrc">
+                                                            </div>
+                                                        </div>
+            
+            
+                                                        <!-- Deployment -->
+                                                        <div class="col-lg-6 col-12 resources-content">
+                                                            <div class="w-100 resources-content-title">
+                                                                <p>Deployment</p>
+                                                            </div>
+                                                            <div class="resources-vertical-line"></div>
+                                                            <div class="w-100 resources-content-images">
+                                                                    <img alt="" *ngFor="let imgsrc of workcard.deployment_Images" [src]="imgsrc">
+                                                                </div>
+                                                        </div>
+            
+                                                    </div>
+            
+                                                <!-- languages -->
+                                                <div class="resources-languages"><p>{{workcard.languages}}</p></div>
+                                            </mat-card>
+                                        </div>
+                        
+                                        <!--  
+                                        <div class="col"></div>
+                                        -->
+                                        <div class="col-md-3 col-sm-3 col-12 align-self-end work-card-button-container">
+                                            <div class="work-card-button">
+                                                <p>{{workcard.buttonText}}</p>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                        
+                                </mat-card>
+                            </div>
+                            <!-- ================================ Dynamic Card ================================== -->
+                        </div>
+        
+                    </div>
                 </div>
-                <!-- 
-                    <div class="col"></div>
-                 -->
-
             </div>
+
+            <!-- ============= Small Cards ============= -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="row justify-content-center">
+
+                        <div class="col-lg-12 col-md-10 col-sm-11 col-12">
+        
+                                <div class="row small-cards-container">
+                    
+                                    <div class="col-6" *ngFor="let smallcard of smallCards; let i = index">
+                                        <div class="row small-work-card-container" >
+                    
+                                            <!-- background image -->
+                                            <div class="small-work-card-background-image" 
+                                            [ngClass]="smallcard.backgroundClass">
+                                                <div class="small-work-card-background-overlay"></div>
+                                            </div>
+                    
+                                            <div class="small-work-card-body">
+                                                <!-- title -->
+                                                <div class="row justify-content-center">
+                                                    <div class="small-work-card-header relative">
+                                                        <div class="col-auto small-work-card-title"><p>{{smallcard.title}}</p></div>
+                                                        <div class="small-work-card-title-underline"></div>
+                                                    </div>
+                                                </div>
+                        
+                                                <!-- button -->
+                                                <div class="row justify-content-center">
+                                                    <div class="small-work-card-footer" >
+                                                        <button mat-button class="col-auto small-work-card-button" [disabled]="false" type="submit"><p >{{smallcard.buttonText}} <span></span></p></button>
+                                                    </div>
+                                                        
+                                                </div>
+                    
+                                            </div>
+                        
+                                        </div>
+                                    </div>
+                    
+                                </div>
+        
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
     
-        </div>
+
         
 
     </div>

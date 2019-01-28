@@ -1,32 +1,68 @@
 @import "../../_variables";
 @import "../styles/_shared-sections";
 
+$hide-time:500ms;
+@mixin hide-up {
+    opacity: 0;
+    transform: translateY(-60%);
+    transition: all $hide-time ease-in-out;
+}
+@mixin hide-down {
+    opacity: 0;
+    transform: translateY(60%);
+    transition: all $hide-time ease-in-out;
+}
+@mixin show {
+    opacity: 1;
+    transform: translateY(0%);
+    transition: all $hide-time ease-in-out;
+}
+
 .work-section{
     @include section-container;
+    padding-top:10px;
 }
 .work-header{ 
     @include section-header;
 }
 .work-body{
     @include section-body;
-    background-color:$primary-2;
-
+    background-color:$compelmentary;
+    
     .work-card-container{
         //padding: 20px;
         margin-bottom: 50px;
+        box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.42);
         .work-card{
             color: $compelmentary;
             background-color: rgba($color: $primary, $alpha: 0.5);
             border-radius: 0;
             padding: 40px 50px 20px;
+            .work-card-background-overlay{
+                width: 100% !important;
+                opacity: 0;
+            }
+            //on hover
             &:hover{
-                .word-card-background-overlay{
-                    width: 100% !important;
+                .work-card-header{
+                    @include show;
+                    display: flex;
+                }
+                .work-card-content{
+                    @include show;
+                }
+                .work-card-footer{
+                    @include show;
+                    display: flex;
+                }
+
+                .work-card-background-overlay{
+                    opacity: 1;
                     transition: all ease-in-out 1000ms 200ms !important;
                 }
             }
 
-            .word-card-background-image{
+            .work-card-background-image{
                 //content: "";
                 background-size: cover;
                 //background-repeat: no-repeat;
@@ -37,37 +73,39 @@
                 width: 100%;
                 height: 100%;
                 z-index: 0;
-                opacity: 0.4;
-                .word-card-background-overlay{
+                opacity: 1;//0.4;
+                .work-card-background-overlay{
                     position: absolute;
                     top: 0;
                     left: 0;
                     width: 0%;
                     height: 100%;    
                     z-index: 0;
-                    background-color: rgba(0,0,0,0.4);
+                    background-color: rgba(255, 255, 255, 0.8);
                     transition: all ease-in-out 500ms 100ms !important;
                 }
             }
 
             .work-card-header{
+                @include hide-up;
                 margin-bottom: 20px;
                 .work-card-title{
                     font-size: 5rem;
+                    color:$primary;
                 }
             }
 
             .work-card-content{
+                @include hide-up;
                 margin-bottom: 2.5rem;
                 .work-card-description{
                     font-size: 14px;
+                    color:$primary;
                 }
             }
 
-
             .work-card-footer{
-
-
+                @include hide-down;
                 .work-card-resources-container{
                     $width:100%;
                     width: $width;
@@ -147,7 +185,7 @@
                     position: relative;
                     //right: - $width*0.4;
                     @media screen and (max-width:$break-l) {
-                        right: -13%;
+                        //right: -13%;
                     }
                     @media screen and (max-width:$break-m) {
                     }
@@ -157,26 +195,27 @@
                         margin-top: 20px;
                     }
                     .work-card-button{
+                        position: absolute;
                         background-color: $tertiary;
                         color: $primary;
                         //padding: 1rem 0; 
                         margin-right: auto;
                         margin-left: auto;
-                        width: 110%;
+                        //width: 110%;
                         padding: 20px 0;
                         display: table;
                         cursor: pointer;
                         @media screen and (max-width:$break-l) {
-                            width: 150%;
+                            //width: 150%;
                         }
                         @media screen and (max-width:$break-m) {
-                            width: 180%;
+                            //width: 180%;
                         }
                         @media screen and (max-width:$break-s) {
-                            width: 200%;
+                            //width: 200%;
                         }
                         @media screen and (max-width:$break-x) {
-                            width: 100%;
+                            //width: 100%;
                         }
 
                         p{
@@ -200,4 +239,162 @@
 
 .islamic-search-background{
     background-image: url('http://localhost:4200/assets/img/Framworks and platforms/work-card/mocks/fridgenotes-desktop.png');
+}
+
+section#work::before {
+    content: "";
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    transform: translateY(-99%);
+    -webkit-clip-path: polygon(0 0, 0% 100%, 100% 100%);
+    clip-path: polygon(0 0, 0% 100%, 100% 100%);
+    background-color: #1b1c24;
+}
+
+/*
+$break-x: 575.98px;
+$break-s: 767.98px;
+$break-m: 991.98px;
+$break-l: 1199.98px;
+*/
+.small-cards-container{
+    padding-left: 15px;
+    padding-right: 15px;
+
+    $small-card-time:200ms;
+    .small-work-card-container{
+        position:relative;
+        
+        //margin-left: auto;
+        //margin-right: auto;
+
+        //width:550px;
+        height:450px;
+        @media screen and (max-width:$break-l) {
+            //width:450px;
+            height:350px;    
+        }
+        @media screen and (max-width:$break-m) {
+            //width:350;
+            height:250px;    
+        }
+        @media screen and (max-width:$break-s) {
+            //width:250px;
+            height:150px;    
+        }
+        @media screen and (max-width:$break-x) {
+            //width:150px;
+            height:100px;    
+        }
+        @media screen and (max-width:300.98px) {
+            //width:90%;
+            height:80px;    
+        }
+        
+        //image
+        .small-work-card-background-image{
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100%;
+            width:100%;
+            position: absolute;
+            .small-work-card-background-overlay{
+                height: 100%;
+                width: 100%;
+                background-color: $primary;
+                opacity: 0.5;
+                transition: all $small-card-time ease-in-out !important;
+            }
+        }
+    
+        //body
+        .small-work-card-body{
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-left: auto;
+            margin-right: auto;
+
+            .small-work-card-header{
+
+                .small-work-card-title-underline{
+                    position: absolute;
+                    height: 1px;
+                    width: 80%;
+                    left: 10%;
+                    background-color: $compelmentary;
+                    transition: all $small-card-time ease-in-out !important;
+                }
+
+                //title
+                .small-work-card-title{
+                    padding: 0;
+                    p{
+                        color: $compelmentary;
+                        font-size: 2em;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        
+            .small-work-card-footer{
+                transform: translate3d(0,100%,0);
+                opacity: 0;
+                transition: all $small-card-time ease-in-out;
+                //button
+                .small-work-card-button{
+                    $transition-duration:500ms;
+                    margin: 10px 0;
+                    display: block;
+                    position: relative;
+                    width:fit-content;
+                    padding: 10px 20px;
+                    white-space: nowrap;
+                    color: white;//$primary;
+                    background-color: transparent;
+                    border-radius: 0px;
+                    border:2px solid $compelmentary;
+                    transition: $transition-duration;
+                    P{
+                        font-size: 20px;
+                        line-height: 20px;
+                        margin: 0;
+                    }
+                    &[disabled]{
+                        color: #b3b3b3;
+                        background-color: #dbdbdb;
+                        border-color: transparent;
+                    }
+                    &:hover:not([disabled]) {
+                        background-color: #16ade3 !important;
+                        border-color: #16ade3 !important;
+                        transition: $transition-duration;
+                    }
+                }
+            }
+        }//small-work-card-body
+    
+        &:hover{
+            .small-work-card-body{
+                .small-work-card-header{
+                    .small-work-card-title-underline{
+                        left: 5%;
+                        width: 90%;
+                        transition: all $small-card-time ease-in-out ;
+                    }
+                }
+                .small-work-card-footer{
+                    opacity: 1 ;
+                    transform: translate3d(0,0,0) ;
+                    transition: all $small-card-time ease-in-out ;
+                }
+            }
+
+            .small-work-card-background-overlay{
+                transition: all $small-card-time ease-in-out !important;
+                opacity: 0.8 !important;
+            }
+        }
+    }//small card container
 }

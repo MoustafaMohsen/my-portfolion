@@ -38,9 +38,10 @@
                                     </div>
             
                                     <div class="row justify-content-start work-card-header">
-                                        <mat-card-title class="col">
+                                        <div class="col-auto relative pad-0">
                                         <p class=work-card-title> {{workcard.title}}</p>
-                                        </mat-card-title>
+                                        <div class="work-card-uderline"></div>
+                                        </div>
                                     </div>
                         
                                     <mat-card-content class="row justify-content-start work-card-content">
@@ -48,55 +49,12 @@
                                                     {{workcard.description}}
                                                 </p>
                                     </mat-card-content>
-                        
-                                    <div class="row justify-content-between work-card-footer">
-                        
-                                        <div class="col-md-7 col-sm-8 col-12 work-card-resources-container">
-                                            <mat-card class="work-card-resources">
-            
-                                                <!-- resources and deployment -->
-                                                <div class="row">
-            
-                                                        <!-- Resources -->
-                                                        <div class="col-lg-6 col-12 resources-content">
-                                                            <div class="w-100 resources-content-title">
-                                                                <p>Resources</p>
-                                                            </div>
-                                                            <div class="resources-vertical-line"></div>
-                                                            <div class="w-100 resources-content-images">
-                                                                <img alt="" *ngFor="let imgsrc of workcard.resources_Images" [src]="imgsrc">
-                                                            </div>
-                                                        </div>
-            
-            
-                                                        <!-- Deployment -->
-                                                        <div class="col-lg-6 col-12 resources-content">
-                                                            <div class="w-100 resources-content-title">
-                                                                <p>Deployment</p>
-                                                            </div>
-                                                            <div class="resources-vertical-line"></div>
-                                                            <div class="w-100 resources-content-images">
-                                                                    <img alt="" *ngFor="let imgsrc of workcard.deployment_Images" [src]="imgsrc">
-                                                                </div>
-                                                        </div>
-            
-                                                    </div>
-            
-                                                <!-- languages -->
-                                                <div class="resources-languages"><p>{{workcard.languages}}</p></div>
-                                            </mat-card>
-                                        </div>
-                        
-                                        <!--  
-                                        <div class="col"></div>
-                                        -->
-                                        <div class="col-md-3 col-sm-3 col-12 align-self-end work-card-button-container">
-                                            <div class="work-card-button">
-                                                <p>{{workcard.buttonText}}</p>
-                                            </div>
-                                        </div>
-                                        
+
+                                    <div class="row work-card-footer">
+                                        <button mat-button class="col-auto my-button" [disabled]="false" type="submit"><p >{{workcard.buttonText}} <span></span></p></button>
                                     </div>
+                        
+
                         
                                 </mat-card>
                             </div>
@@ -137,7 +95,7 @@
                                                 <!-- button -->
                                                 <div class="row justify-content-center">
                                                     <div class="small-work-card-footer" >
-                                                        <button mat-button class="col-auto small-work-card-button" [disabled]="false" type="submit"><p >{{smallcard.buttonText}} <span></span></p></button>
+                                                        <button mat-button class="col-auto my-button" [disabled]="false" type="submit"><p >{{smallcard.buttonText}} <span></span></p></button>
                                                     </div>
                                                         
                                                 </div>

@@ -28,7 +28,8 @@ $hide-time:500ms;
 .work-body{
     @include section-body;
     background-color:$compelmentary;
-    
+    $card-time:200ms;
+    $card-delay:0ms;
     .work-card-container{
         //padding: 20px;
         margin-bottom: 50px;
@@ -38,11 +39,16 @@ $hide-time:500ms;
             background-color: rgba($color: $primary, $alpha: 0.5);
             border-radius: 0;
             padding: 40px 50px 20px;
-            .work-card-background-overlay{
-                width: 100% !important;
-                opacity: 0;
+            &:hover{
+                .work-card-header .work-card-uderline{
+                    width: 80%;
+                }
+                .work-card-background-image .work-card-background-overlay{
+                    background-color: rgba(0, 0, 0, 0.7);
+                }
             }
             //on hover
+            /*
             &:hover{
                 .work-card-header{
                     @include show;
@@ -61,6 +67,7 @@ $hide-time:500ms;
                     transition: all ease-in-out 1000ms 200ms !important;
                 }
             }
+            */
 
             .work-card-background-image{
                 //content: "";
@@ -78,34 +85,43 @@ $hide-time:500ms;
                     position: absolute;
                     top: 0;
                     left: 0;
-                    width: 0%;
+                    width: 100%;
                     height: 100%;    
                     z-index: 0;
-                    background-color: rgba(255, 255, 255, 0.8);
-                    transition: all ease-in-out 500ms 100ms !important;
+                    background-color: rgba(0, 0, 0, 0.4);
+                    transition: all ease-in-out $card-time $card-delay !important;
                 }
             }
 
             .work-card-header{
-                @include hide-up;
+                //@include hide-up;
                 margin-bottom: 20px;
                 .work-card-title{
                     font-size: 5rem;
-                    color:$primary;
+                    color:$compelmentary;
+                }
+                .work-card-uderline{
+                    position: absolute;
+                    height: 1px;
+                    width: 60%;
+                    left: 0%;
+                    background-color: $compelmentary;
+                    transition: all $card-time ease-in-out !important;
+
                 }
             }
 
             .work-card-content{
-                @include hide-up;
+                //@include hide-up;
                 margin-bottom: 2.5rem;
                 .work-card-description{
                     font-size: 14px;
-                    color:$primary;
+                    color:$compelmentary;
                 }
             }
 
             .work-card-footer{
-                @include hide-down;
+                //@include hide-down;
                 .work-card-resources-container{
                     $width:100%;
                     width: $width;
@@ -342,36 +358,7 @@ $break-l: 1199.98px;
                 transform: translate3d(0,100%,0);
                 opacity: 0;
                 transition: all $small-card-time ease-in-out;
-                //button
-                .small-work-card-button{
-                    $transition-duration:500ms;
-                    margin: 10px 0;
-                    display: block;
-                    position: relative;
-                    width:fit-content;
-                    padding: 10px 20px;
-                    white-space: nowrap;
-                    color: white;//$primary;
-                    background-color: transparent;
-                    border-radius: 0px;
-                    border:2px solid $compelmentary;
-                    transition: $transition-duration;
-                    P{
-                        font-size: 20px;
-                        line-height: 20px;
-                        margin: 0;
-                    }
-                    &[disabled]{
-                        color: #b3b3b3;
-                        background-color: #dbdbdb;
-                        border-color: transparent;
-                    }
-                    &:hover:not([disabled]) {
-                        background-color: #16ade3 !important;
-                        border-color: #16ade3 !important;
-                        transition: $transition-duration;
-                    }
-                }
+                
             }
         }//small-work-card-body
     
@@ -397,4 +384,34 @@ $break-l: 1199.98px;
             }
         }
     }//small card container
+}
+
+.my-button{
+    $transition-duration:500ms;
+    margin: 10px 0;
+    display: block;
+    position: relative;
+    width:fit-content;
+    padding: 10px 20px;
+    white-space: nowrap;
+    color: white;//$primary;
+    background-color: transparent;
+    border-radius: 0px;
+    border:2px solid $compelmentary;
+    transition: $transition-duration;
+    P{
+        font-size: 20px;
+        line-height: 20px;
+        margin: 0;
+    }
+    &[disabled]{
+        color: #b3b3b3;
+        background-color: #dbdbdb;
+        border-color: transparent;
+    }
+    &:hover:not([disabled]) {
+        background-color: #16ade3 !important;
+        border-color: #16ade3 !important;
+        transition: $transition-duration;
+    }
 }

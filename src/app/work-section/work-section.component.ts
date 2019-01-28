@@ -27,7 +27,7 @@ export class WorkSectionComponent implements OnInit {
 
       backgroundClass:"fridge-notes-background",
       languages:"Html, CSS, C#, TypeScript",
-      buttonText:"Visit Website",
+      buttonText:"LEARN MORE",
       resources_Images:[
         Availableimages.workcard.angular,
         Availableimages.workcard.aspcore,
@@ -46,7 +46,7 @@ export class WorkSectionComponent implements OnInit {
 
       backgroundClass:"islamic-search-background",
       languages:"Html, CSS, C#, TypeScript",
-      buttonText:"Visit Website",
+      buttonText:"LEARN MORE",
       resources_Images:[
         Availableimages.workcard.angular,
         Availableimages.workcard.aspcore,

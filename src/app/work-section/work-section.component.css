@@ -28,47 +28,34 @@
   background-color: rgba(20, 20, 20, 0.5);
   border-radius: 0;
   padding: 40px 50px 20px;
+  /*
+            &:hover{
+                .work-card-header{
+                    @include show;
+                    display: flex;
+                }
+                .work-card-content{
+                    @include show;
+                }
+                .work-card-footer{
+                    @include show;
+                    display: flex;
+                }
+
+                .work-card-background-overlay{
+                    opacity: 1;
+                    transition: all ease-in-out 1000ms 200ms !important;
+                }
+            }
+            */
 }
 
-.work-body .work-card-container .work-card .work-card-background-overlay {
-  width: 100% !important;
-  opacity: 0;
+.work-body .work-card-container .work-card:hover .work-card-header .work-card-uderline {
+  width: 80%;
 }
 
-.work-body .work-card-container .work-card:hover .work-card-header {
-  opacity: 1;
-  -webkit-transform: translateY(0%);
-          transform: translateY(0%);
-  -webkit-transition: all 500ms ease-in-out;
-  transition: all 500ms ease-in-out;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.work-body .work-card-container .work-card:hover .work-card-content {
-  opacity: 1;
-  -webkit-transform: translateY(0%);
-          transform: translateY(0%);
-  -webkit-transition: all 500ms ease-in-out;
-  transition: all 500ms ease-in-out;
-}
-
-.work-body .work-card-container .work-card:hover .work-card-footer {
-  opacity: 1;
-  -webkit-transform: translateY(0%);
-          transform: translateY(0%);
-  -webkit-transition: all 500ms ease-in-out;
-  transition: all 500ms ease-in-out;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.work-body .work-card-container .work-card:hover .work-card-background-overlay {
-  opacity: 1;
-  -webkit-transition: all ease-in-out 1000ms 200ms !important;
-  transition: all ease-in-out 1000ms 200ms !important;
+.work-body .work-card-container .work-card:hover .work-card-background-image .work-card-background-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .work-body .work-card-container .work-card .work-card-background-image {
@@ -87,48 +74,40 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 0%;
+  width: 100%;
   height: 100%;
   z-index: 0;
-  background-color: rgba(255, 255, 255, 0.8);
-  -webkit-transition: all ease-in-out 500ms 100ms !important;
-  transition: all ease-in-out 500ms 100ms !important;
+  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-transition: all ease-in-out 200ms 0ms !important;
+  transition: all ease-in-out 200ms 0ms !important;
 }
 
 .work-body .work-card-container .work-card .work-card-header {
-  opacity: 0;
-  -webkit-transform: translateY(-60%);
-          transform: translateY(-60%);
-  -webkit-transition: all 500ms ease-in-out;
-  transition: all 500ms ease-in-out;
   margin-bottom: 20px;
 }
 
 .work-body .work-card-container .work-card .work-card-header .work-card-title {
   font-size: 5rem;
-  color: #141414;
+  color: #F9F9F9;
+}
+
+.work-body .work-card-container .work-card .work-card-header .work-card-uderline {
+  position: absolute;
+  height: 1px;
+  width: 60%;
+  left: 0%;
+  background-color: #F9F9F9;
+  -webkit-transition: all 200ms ease-in-out !important;
+  transition: all 200ms ease-in-out !important;
 }
 
 .work-body .work-card-container .work-card .work-card-content {
-  opacity: 0;
-  -webkit-transform: translateY(-60%);
-          transform: translateY(-60%);
-  -webkit-transition: all 500ms ease-in-out;
-  transition: all 500ms ease-in-out;
   margin-bottom: 2.5rem;
 }
 
 .work-body .work-card-container .work-card .work-card-content .work-card-description {
   font-size: 14px;
-  color: #141414;
-}
-
-.work-body .work-card-container .work-card .work-card-footer {
-  opacity: 0;
-  -webkit-transform: translateY(60%);
-          transform: translateY(60%);
-  -webkit-transition: all 500ms ease-in-out;
-  transition: all 500ms ease-in-out;
+  color: #F9F9F9;
 }
 
 .work-body .work-card-container .work-card .work-card-footer .work-card-resources-container {
@@ -369,42 +348,6 @@ $break-l: 1199.98px;
   transition: all 200ms ease-in-out;
 }
 
-.small-cards-container .small-work-card-container .small-work-card-body .small-work-card-footer .small-work-card-button {
-  margin: 10px 0;
-  display: block;
-  position: relative;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 10px 20px;
-  white-space: nowrap;
-  color: white;
-  background-color: transparent;
-  border-radius: 0px;
-  border: 2px solid #F9F9F9;
-  -webkit-transition: 500ms;
-  transition: 500ms;
-}
-
-.small-cards-container .small-work-card-container .small-work-card-body .small-work-card-footer .small-work-card-button P {
-  font-size: 20px;
-  line-height: 20px;
-  margin: 0;
-}
-
-.small-cards-container .small-work-card-container .small-work-card-body .small-work-card-footer .small-work-card-button[disabled] {
-  color: #b3b3b3;
-  background-color: #dbdbdb;
-  border-color: transparent;
-}
-
-.small-cards-container .small-work-card-container .small-work-card-body .small-work-card-footer .small-work-card-button:hover:not([disabled]) {
-  background-color: #16ade3 !important;
-  border-color: #16ade3 !important;
-  -webkit-transition: 500ms;
-  transition: 500ms;
-}
-
 .small-cards-container .small-work-card-container:hover .small-work-card-body .small-work-card-header .small-work-card-title-underline {
   left: 5%;
   width: 90%;
@@ -424,5 +367,41 @@ $break-l: 1199.98px;
   -webkit-transition: all 200ms ease-in-out !important;
   transition: all 200ms ease-in-out !important;
   opacity: 0.8 !important;
+}
+
+.my-button {
+  margin: 10px 0;
+  display: block;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px 20px;
+  white-space: nowrap;
+  color: white;
+  background-color: transparent;
+  border-radius: 0px;
+  border: 2px solid #F9F9F9;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+
+.my-button P {
+  font-size: 20px;
+  line-height: 20px;
+  margin: 0;
+}
+
+.my-button[disabled] {
+  color: #b3b3b3;
+  background-color: #dbdbdb;
+  border-color: transparent;
+}
+
+.my-button:hover:not([disabled]) {
+  background-color: #16ade3 !important;
+  border-color: #16ade3 !important;
+  -webkit-transition: 500ms;
+  transition: 500ms;
 }
 /*# sourceMappingURL=work-section.component.css.map */

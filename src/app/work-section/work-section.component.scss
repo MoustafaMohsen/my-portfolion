@@ -22,7 +22,7 @@ $hide-time:500ms;
     @include section-container;
     padding-top:10px;
 }
-.work-header{ 
+.section-header-title{ 
     @include section-header;
 }
 .work-body{
@@ -30,6 +30,9 @@ $hide-time:500ms;
     background-color:$compelmentary;
     $card-time:200ms;
     $card-delay:0ms;
+    //contact shape
+    padding-bottom: 180px;
+
     .work-card-container{
         //padding: 20px;
         margin-bottom: 50px;
@@ -39,6 +42,28 @@ $hide-time:500ms;
             background-color: rgba($color: $primary, $alpha: 0.5);
             border-radius: 0;
             padding: 40px 50px 20px;
+            font-size: 5rem;
+
+            @media screen and (min-width:$break-l) {
+                padding: 40px 50px 20px;
+            }
+
+            @media screen and (max-width:$break-l) {
+                padding: 40px 50px 20px;
+            }
+
+            @media screen and (max-width:$break-m) {
+                padding: 20px 50px 20px; 
+            }
+
+            @media screen and (max-width:$break-s) {
+                padding: 5px 25px 5px;   
+            }
+
+            @media screen and (max-width:$break-x) {
+                padding: 5px 25px 5px; 
+            }
+
             &:hover{
                 .work-card-header .work-card-uderline{
                     width: 80%;
@@ -48,26 +73,6 @@ $hide-time:500ms;
                 }
             }
             //on hover
-            /*
-            &:hover{
-                .work-card-header{
-                    @include show;
-                    display: flex;
-                }
-                .work-card-content{
-                    @include show;
-                }
-                .work-card-footer{
-                    @include show;
-                    display: flex;
-                }
-
-                .work-card-background-overlay{
-                    opacity: 1;
-                    transition: all ease-in-out 1000ms 200ms !important;
-                }
-            }
-            */
 
             .work-card-background-image{
                 //content: "";
@@ -98,6 +103,21 @@ $hide-time:500ms;
                 margin-bottom: 20px;
                 .work-card-title{
                     font-size: 5rem;
+                    @media screen and (max-width:$break-l) {
+                        font-size: 4.5rem; 
+                    }
+                    @media screen and (max-width:$break-m) {
+                        font-size: 4rem;   
+                    }
+                    @media screen and (max-width:$break-s) {
+                        font-size: 3.5rem;   
+                    }
+                    @media screen and (max-width:$break-x) {
+                        font-size: 3rem;   
+                    }
+                    @media screen and (max-width:300.98px) {
+                        font-size: 1.5rem;   
+                    }
                     color:$compelmentary;
                 }
                 .work-card-uderline{
@@ -115,11 +135,15 @@ $hide-time:500ms;
                 //@include hide-up;
                 margin-bottom: 2.5rem;
                 .work-card-description{
-                    font-size: 14px;
+                    font-size: 1em;//14px;
                     color:$compelmentary;
                 }
             }
+        }
+    }
+}
 
+/*
             .work-card-footer{
                 //@include hide-down;
                 .work-card-resources-container{
@@ -244,10 +268,7 @@ $hide-time:500ms;
                     }
                 }
             }
-        }
-    }
-}
-
+*/
 
 .fridge-notes-background{
     background-image: url('http://localhost:4200/assets/img/Framworks and platforms/work-card/mocks/fridgenotes-desktop.png');

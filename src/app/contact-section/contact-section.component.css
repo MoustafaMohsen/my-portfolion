@@ -4,6 +4,7 @@
   width: 100%;
   background-color: #1B1C24;
   padding: 125px 0 0;
+  padding-top: 20px;
 }
 
 .contact-header {
@@ -36,6 +37,8 @@
   padding: 50px  20px;
   color: #141414;
   background-color: #F9F9F9;
+  overflow: hidden;
+  position: relative;
 }
 
 .contact-body .contact-card-container .contact-card .inner-about-card .about-back {
@@ -128,5 +131,18 @@
   border-color: #16ade3 !important;
   -webkit-transition: 500ms;
   transition: 500ms;
+}
+
+section#contact::before {
+  content: "";
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  -webkit-transform: translateY(-99%);
+          transform: translateY(-99%);
+  -webkit-clip-path: polygon(50% 98%, 100% 0, 100% 100%, 0 100%, 0 0);
+          clip-path: polygon(50% 98%, 100% 0, 100% 100%, 0 100%, 0 0);
+  background-color: #1b1c24;
 }
 /*# sourceMappingURL=contact-section.component.css.map */

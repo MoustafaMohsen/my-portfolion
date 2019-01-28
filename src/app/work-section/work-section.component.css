@@ -15,6 +15,7 @@
   padding-top: 20px;
   padding-bottom: 20px;
   background-color: #F9F9F9;
+  padding-bottom: 180px;
 }
 
 .work-body .work-card-container {
@@ -28,26 +29,37 @@
   background-color: rgba(20, 20, 20, 0.5);
   border-radius: 0;
   padding: 40px 50px 20px;
-  /*
-            &:hover{
-                .work-card-header{
-                    @include show;
-                    display: flex;
-                }
-                .work-card-content{
-                    @include show;
-                }
-                .work-card-footer{
-                    @include show;
-                    display: flex;
-                }
+  font-size: 5rem;
+}
 
-                .work-card-background-overlay{
-                    opacity: 1;
-                    transition: all ease-in-out 1000ms 200ms !important;
-                }
-            }
-            */
+@media screen and (min-width: 1199.98px) {
+  .work-body .work-card-container .work-card {
+    padding: 40px 50px 20px;
+  }
+}
+
+@media screen and (max-width: 1199.98px) {
+  .work-body .work-card-container .work-card {
+    padding: 40px 50px 20px;
+  }
+}
+
+@media screen and (max-width: 991.98px) {
+  .work-body .work-card-container .work-card {
+    padding: 20px 50px 20px;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .work-body .work-card-container .work-card {
+    padding: 5px 25px 5px;
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  .work-body .work-card-container .work-card {
+    padding: 5px 25px 5px;
+  }
 }
 
 .work-body .work-card-container .work-card:hover .work-card-header .work-card-uderline {
@@ -91,6 +103,36 @@
   color: #F9F9F9;
 }
 
+@media screen and (max-width: 1199.98px) {
+  .work-body .work-card-container .work-card .work-card-header .work-card-title {
+    font-size: 4.5rem;
+  }
+}
+
+@media screen and (max-width: 991.98px) {
+  .work-body .work-card-container .work-card .work-card-header .work-card-title {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .work-body .work-card-container .work-card .work-card-header .work-card-title {
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  .work-body .work-card-container .work-card .work-card-header .work-card-title {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 300.98px) {
+  .work-body .work-card-container .work-card .work-card-header .work-card-title {
+    font-size: 1.5rem;
+  }
+}
+
 .work-body .work-card-container .work-card .work-card-header .work-card-uderline {
   position: absolute;
   height: 1px;
@@ -106,129 +148,136 @@
 }
 
 .work-body .work-card-container .work-card .work-card-content .work-card-description {
-  font-size: 14px;
+  font-size: 1em;
   color: #F9F9F9;
 }
 
-.work-body .work-card-container .work-card .work-card-footer .work-card-resources-container {
-  width: 100%;
-}
+/*
+            .work-card-footer{
+                //@include hide-down;
+                .work-card-resources-container{
+                    $width:100%;
+                    width: $width;
+                    @media screen and (max-width:$break-l) {
+                        width: $width;
+                    }
+                    @media screen and (max-width:$break-m) {
+                        width: $width;
+                    }
+                    @media screen and (max-width:$break-s) {
+                        width: $width;
+                    }
+                    @media screen and (max-width:$break-x) {
+                        width: $width;
+                    }
+                    .work-card-resources{
+                        color: $primary;
+                        background-color: $compelmentary;
+                        border-radius: 0;
+                        padding: 5px 17px;
+                        .resources-content{
+                            .resources-content-title{
+                                p{
+                                    margin-bottom: 0;
+                                    font-size: 15px;
+                                }
+                            }
 
-@media screen and (max-width: 1199.98px) {
-  .work-body .work-card-container .work-card .work-card-footer .work-card-resources-container {
-    width: 100%;
-  }
-}
+                            .resources-vertical-line{
+                                display: block;
+                                width: 100%;
+                                height: 1px;
+                                background-color: $primary;
+                            }
 
-@media screen and (max-width: 991.98px) {
-  .work-body .work-card-container .work-card .work-card-footer .work-card-resources-container {
-    width: 100%;
-  }
-}
+                            .resources-content-images{
+                                img{
+                                    margin-top: 5px;
+                                    height: 30px;
+                                    margin-right: 5px;
+                                    @media screen and (max-width:$break-l) {
+                                        height: 25px;
+                                        margin-right: 5px;
+                                        margin-bottom: 10px;
+                                    }
+                                    @media screen and (max-width:$break-m) {
+                                        height: 25px;
+                                        margin-right: 5px;
+                                        margin-bottom: 10px;
+                                    }
+                                    @media screen and (max-width:$break-s) {
+                                        height: 20px;
+                                        margin-right: 5px;
+                                        margin-bottom: 10px;
+                                    }
+                                    @media screen and (max-width:$break-x) {
+                                        height: 20px;
+                                        margin-right: 5px;
+                                        margin-bottom: 10px;
+                                    }
+                                }
+                            }
+                        }
 
-@media screen and (max-width: 767.98px) {
-  .work-body .work-card-container .work-card .work-card-footer .work-card-resources-container {
-    width: 100%;
-  }
-}
+                        .resources-languages{
+                            p{
+                                font-size: 10px;
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
 
-@media screen and (max-width: 575.98px) {
-  .work-body .work-card-container .work-card .work-card-footer .work-card-resources-container {
-    width: 100%;
-  }
-}
+                .work-card-button-container{
+                    $width:100%;
+                    width: $width;
+                    position: relative;
+                    //right: - $width*0.4;
+                    @media screen and (max-width:$break-l) {
+                        //right: -13%;
+                    }
+                    @media screen and (max-width:$break-m) {
+                    }
+                    @media screen and (max-width:$break-s) {
+                    }
+                    @media screen and (max-width:$break-x) {
+                        margin-top: 20px;
+                    }
+                    .work-card-button{
+                        position: absolute;
+                        background-color: $tertiary;
+                        color: $primary;
+                        //padding: 1rem 0; 
+                        margin-right: auto;
+                        margin-left: auto;
+                        //width: 110%;
+                        padding: 20px 0;
+                        display: table;
+                        cursor: pointer;
+                        @media screen and (max-width:$break-l) {
+                            //width: 150%;
+                        }
+                        @media screen and (max-width:$break-m) {
+                            //width: 180%;
+                        }
+                        @media screen and (max-width:$break-s) {
+                            //width: 200%;
+                        }
+                        @media screen and (max-width:$break-x) {
+                            //width: 100%;
+                        }
 
-.work-body .work-card-container .work-card .work-card-footer .work-card-resources-container .work-card-resources {
-  color: #141414;
-  background-color: #F9F9F9;
-  border-radius: 0;
-  padding: 5px 17px;
-}
-
-.work-body .work-card-container .work-card .work-card-footer .work-card-resources-container .work-card-resources .resources-content .resources-content-title p {
-  margin-bottom: 0;
-  font-size: 15px;
-}
-
-.work-body .work-card-container .work-card .work-card-footer .work-card-resources-container .work-card-resources .resources-content .resources-vertical-line {
-  display: block;
-  width: 100%;
-  height: 1px;
-  background-color: #141414;
-}
-
-.work-body .work-card-container .work-card .work-card-footer .work-card-resources-container .work-card-resources .resources-content .resources-content-images img {
-  margin-top: 5px;
-  height: 30px;
-  margin-right: 5px;
-}
-
-@media screen and (max-width: 1199.98px) {
-  .work-body .work-card-container .work-card .work-card-footer .work-card-resources-container .work-card-resources .resources-content .resources-content-images img {
-    height: 25px;
-    margin-right: 5px;
-    margin-bottom: 10px;
-  }
-}
-
-@media screen and (max-width: 991.98px) {
-  .work-body .work-card-container .work-card .work-card-footer .work-card-resources-container .work-card-resources .resources-content .resources-content-images img {
-    height: 25px;
-    margin-right: 5px;
-    margin-bottom: 10px;
-  }
-}
-
-@media screen and (max-width: 767.98px) {
-  .work-body .work-card-container .work-card .work-card-footer .work-card-resources-container .work-card-resources .resources-content .resources-content-images img {
-    height: 20px;
-    margin-right: 5px;
-    margin-bottom: 10px;
-  }
-}
-
-@media screen and (max-width: 575.98px) {
-  .work-body .work-card-container .work-card .work-card-footer .work-card-resources-container .work-card-resources .resources-content .resources-content-images img {
-    height: 20px;
-    margin-right: 5px;
-    margin-bottom: 10px;
-  }
-}
-
-.work-body .work-card-container .work-card .work-card-footer .work-card-resources-container .work-card-resources .resources-languages p {
-  font-size: 10px;
-  margin-bottom: 0;
-}
-
-.work-body .work-card-container .work-card .work-card-footer .work-card-button-container {
-  width: 100%;
-  position: relative;
-}
-
-@media screen and (max-width: 575.98px) {
-  .work-body .work-card-container .work-card .work-card-footer .work-card-button-container {
-    margin-top: 20px;
-  }
-}
-
-.work-body .work-card-container .work-card .work-card-footer .work-card-button-container .work-card-button {
-  position: absolute;
-  background-color: #E0FF4F;
-  color: #141414;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 20px 0;
-  display: table;
-  cursor: pointer;
-}
-
-.work-body .work-card-container .work-card .work-card-footer .work-card-button-container .work-card-button p {
-  font-size: 1rem;
-  display: table-cell;
-  text-align: center;
-  vertical-align: middle;
-}
-
+                        p{
+                            font-size: 1rem;
+    
+                            display: table-cell;
+                            text-align: center;
+                            vertical-align: middle;
+                        }
+                    }
+                }
+            }
+*/
 .fridge-notes-background {
   background-image: url("http://localhost:4200/assets/img/Framworks and platforms/work-card/mocks/fridgenotes-desktop.png");
 }

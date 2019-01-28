@@ -143,8 +143,13 @@ ul{
     blink-caret .5s step-end infinite;
 }
 
-.word-header{
+.section-header-title{
     @include center-word;
+    font-size: 3em;
+}
+.section-header-description{
+    @include center-word;
+    font-size: 1.5em;
 }
 
 .header-description{
@@ -158,12 +163,12 @@ ul{
 // ==== Platforms
 
 .animation-settings-1{
-    animation-delay: 0.2s;
+    //animation-delay: 0.2s;
     animation-duration: 1s;
     animation-fill-mode: forwards;
 }
 .animation-settings-2{
-    animation-delay: 0.2s;
+    //animation-delay: 0.2s;
     animation-duration: 1.5s;
     animation-fill-mode: forwards;
 }

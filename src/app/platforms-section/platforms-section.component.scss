@@ -3,9 +3,11 @@
 
 .platforms-section{
     @include section-container;
+    padding-top:0px;
 }
 .platforms-header{ 
     @include section-header;
+    margin-bottom: 0;
 }
 
 .platforms-body{
@@ -46,6 +48,30 @@
         margin: 0;
     }
 }
+section#platforms::before {
+    content: "";
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-99%);
+    clip-path: polygon(0 0, 0% 100%, 100% 100%);
+    background-color: #1b1c24;
+}
+section #platforms-header::after {
+    content: "";
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transform: translateY(-0.5%);
+    clip-path: polygon(0 0, 0 100%, 100% 0);
+    background-color: #1b1c24;
+    z-index: 1;
+}
+
 .other-services-images{
     .other-services-image-container{
         display: inline;

@@ -186,12 +186,12 @@ ul {
   width: fit-content !important;
   padding: 10px 20px !important;
   white-space: nowrap !important;
-  color: white !important;
+  color: #F9F9F9 !important;
   background-color: transparent !important;
   border-radius: 0px !important;
   border: 2px solid #F9F9F9 !important;
-  -webkit-transition: 500ms !important !important;
-  transition: 500ms !important !important;
+  -webkit-transition: 200ms !important;
+  transition: 200ms !important;
 }
 
 .my-button P {
@@ -207,10 +207,10 @@ ul {
 }
 
 .my-button:hover:not([disabled]) {
-  background-color: #16ade3 !important;
-  border-color: #16ade3 !important;
-  -webkit-transition: 500ms !important !important;
-  transition: 500ms !important !important;
+  background-color: #16ADE3 !important;
+  border-color: #16ADE3 !important;
+  -webkit-transition: 200ms !important;
+  transition: 200ms !important;
 }
 
 @media screen and (max-width: 767.98px) {

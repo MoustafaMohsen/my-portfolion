@@ -271,14 +271,14 @@ ul{
 
 
 .my-button{
-    $transition-duration:500ms !important;
+    $transition-duration:200ms ;
     margin: 10px 0 !important;
     display: block !important;
     position: relative !important;
     width:fit-content !important;
     padding: 10px 20px !important;
     white-space: nowrap !important;
-    color: white !important;//$primary !important;
+    color: $compelmentary !important;
     background-color: transparent !important;
     border-radius: 0px !important;
     border:2px solid $compelmentary !important;
@@ -294,8 +294,8 @@ ul{
         border-color: transparent !important;
     }
     &:hover:not([disabled]) {
-        background-color: #16ade3 !important;
-        border-color: #16ade3 !important;
+        background-color: $secondary !important;
+        border-color: $secondary !important;
         transition: $transition-duration !important;
     }
 }

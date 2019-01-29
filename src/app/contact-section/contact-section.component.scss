@@ -11,6 +11,7 @@
 .contact-body{
     @include section-body;
     background-color:$primary-2;
+    transition: all 200ms ease-in-out;
     .contact-card-container{
         position: relative;
         padding: 20px 0px;

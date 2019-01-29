@@ -14,8 +14,11 @@
 .work-body {
   padding-top: 20px;
   padding-bottom: 20px;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
   background-color: #F9F9F9;
   padding-bottom: 180px;
+  transition: all 200ms ease-in-out;
 }
 
 .work-body .work-card-container {

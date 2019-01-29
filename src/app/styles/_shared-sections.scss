@@ -18,4 +18,5 @@
 @mixin section-body {
     padding-top: 20px;
     padding-bottom: 20px;
+    transition: all 200ms ease-in-out;
 }

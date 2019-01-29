@@ -32,7 +32,7 @@ $hide-time:500ms;
     $card-delay:0ms;
     //contact shape
     padding-bottom: 180px;
-
+    transition: all 200ms ease-in-out;
     .work-card-container{
         //padding: 20px;
         margin-bottom: 50px;

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Availableimages } from '../assets';
+import { Availableimages, workCard, workSection } from '../assets';
 
 @Component({
   selector: 'app-work-section',
@@ -10,55 +10,24 @@ import { Availableimages } from '../assets';
 export class WorkSectionComponent implements OnInit {
 
   constructor() { }
+
   title:string="";
   _title:string="";
   description:string;
+
   Cards:workCard[]=[];
   smallCards:workCard[]=[];
 
-  smallCardFooterClass="csdfaf";
+  project:workCard;
+
   ngOnInit() {
-    this._title="Work";
-    this.description="s";
-  
-    let FridgeNotes:workCard={
-      title:"Fridge Notes",
-      description:`Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas voluptatem eveniet officiis maiores sit molestias architecto quae necessitatibus quidem veritatis iure voluptatum at, tempora tenetur non. Porro harum soluta fugiatt.`,
+    this._title=workSection.title;
+    this.description=workSection.description;
 
-      backgroundClass:"fridge-notes-background",
-      languages:"Html, CSS, C#, TypeScript",
-      buttonText:"LEARN MORE",
-      resources_Images:[
-        Availableimages.workcard.angular,
-        Availableimages.workcard.aspcore,
-        Availableimages.workcard.mysql
-      ],
-      deployment_Images:[
-        Availableimages.workcard.github,
-        Availableimages.workcard.heroku,
-        Availableimages.workcard.digitalocean
-      ],
-    };
+    this.Cards=workSection.mainProjects;
+    this.smallCards=workSection.otherProjects;
 
-    let IslamicSearch:workCard={
-      title:"Islamic Search",
-      description:`Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas voluptatem eveniet officiis maiores sit molestias architecto quae necessitatibus quidem veritatis iure voluptatum at, tempora tenetur non. Porro harum soluta fugiatt.`,
-
-      backgroundClass:"islamic-search-background",
-      languages:"Html, CSS, C#, TypeScript",
-      buttonText:"LEARN MORE",
-      resources_Images:[
-        Availableimages.workcard.angular,
-        Availableimages.workcard.aspcore,
-        Availableimages.workcard.sqlite
-      ],
-      deployment_Images:[
-        Availableimages.workcard.github,
-        Availableimages.workcard.heroku
-      ],
-    };
-
-    this.Cards=this.Cards.concat([FridgeNotes,IslamicSearch]);
+    // ====== small cards filler
     this.smallCards=this.Cards.map(x=>{
       x.backgroundImage = Availableimages.fridgenotes_desktop;
       x.style={
@@ -67,7 +36,9 @@ export class WorkSectionComponent implements OnInit {
       
       return x;
     });
-    this.smallCards = this.smallCards.concat(this.smallCards,this.smallCards,this.smallCards)
+    this.smallCards = this.smallCards.concat(this.smallCards,this.smallCards,this.smallCards);
+    // small cards filler =========
+
 
   }//ngOnInit
 
@@ -97,27 +68,21 @@ export class WorkSectionComponent implements OnInit {
     }
   }//typeEffect
 
-  openDialog(){
+  openDialog(workcard:workCard){
+    this.setproject(workcard);
     let $_ = $ as any;
     $_("#exampleModal").modal('show');
+    
+  }
+
+  setproject(workcard:workCard){
+    this.project = workcard;
+    console.log(this.project);
     
   }
   
 }//class
 
-interface workCard{
-  title:string;
-  description:string;
-  resources_Images:string[];
-  deployment_Images:string[];
-  backgroundClass?:string;
-  backgroundImage?:string;
-  style?:any;
-  languages:string;
-  buttonText:string;
-
-  viewclass?:string;
-}
 
 
 

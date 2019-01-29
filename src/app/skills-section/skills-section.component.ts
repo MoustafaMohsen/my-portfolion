@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { Availableimages } from "../assets";
+import { Availableimages, skillsSection } from "../assets";
 @Component({
   selector: "app-skills-section",
   templateUrl: "./skills-section.component.html",
@@ -17,22 +17,13 @@ export class SkillsSectionComponent implements OnInit {
   bigImages:string[];
 
   ngOnInit() {
-    this._title = "Skills";
-    this.description = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic amet consectetur cum labore libero odio, accusantium incidunt dolorem unde molestias quos odit nostrum, ducimus adipisci? Assumenda ullam nulla id natus!`;
+    this._title = skillsSection.title;
+    this.description = skillsSection.description;
 
 
-    this.smallImages=[
-      Availableimages.php,
-      Availableimages.sass,
-    ]
+    this.smallImages=skillsSection.smallImages
 
-    this.bigImages=[
-      Availableimages.csharp,
-      Availableimages.ts,
-      Availableimages.js,
-      Availableimages.html,
-      Availableimages.css,
-    ]
+    this.bigImages=skillsSection.bigImages
 
   }//ngOnInit
 

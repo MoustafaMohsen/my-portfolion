@@ -289,11 +289,11 @@
             }
 */
 .fridge-notes-background {
-  background-image: url("http://localhost:4200/assets/img/Framworks and platforms/work-card/mocks/fridgenotes-desktop.png");
+  background-image: url("/assets/img/Framworks and platforms/work-card/mocks/fridgenotes-desktop.png");
 }
 
 .islamic-search-background {
-  background-image: url("http://localhost:4200/assets/img/Framworks and platforms/work-card/mocks/fridgenotes-desktop.png");
+  background-image: url("/assets/img/Framworks and platforms/work-card/mocks/fridgenotes-desktop.png");
 }
 
 section#work::before {
@@ -426,5 +426,54 @@ $break-l: 1199.98px;
   -webkit-transition: all 200ms ease-in-out !important;
   transition: all 200ms ease-in-out !important;
   opacity: 0.8 !important;
+}
+
+.model-project-card {
+  border-radius: 0;
+  padding: 0px 0px 10px;
+}
+
+.model-project-card .modal-project-header .modal-image {
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 300px;
+}
+
+.model-project-card .modal-project-header .modal-image img {
+  width: 100%;
+}
+
+.model-project-card .modal-project-content {
+  padding: 20px 20px 20px;
+}
+
+.model-project-card .modal-project-content .modal-title h4 {
+  color: #141414;
+  font-weight: bold;
+  margin: 0;
+}
+
+.model-project-card .modal-project-content .modal-subtitle p {
+  color: #797979;
+  font-weight: bold;
+}
+
+.model-project-card .modal-project-content .modal-description p {
+  color: #141414;
+  overflow-y: auto;
+  max-height: 100px;
+}
+
+.model-project-card .modal-project-footer .visit-site-button {
+  padding: 0 !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: 100% !important;
+}
+
+.model-project-card .modal-project-footer .visit-site-button i {
+  font-size: 0.9em;
 }
 /*# sourceMappingURL=work-section.component.css.map */

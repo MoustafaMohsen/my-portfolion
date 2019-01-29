@@ -303,7 +303,40 @@ ul{
     @media screen and (max-width:$break-s) {
         transform: scale(0.6);
     }
-} 
+}
+
+.my-button-secondary{
+    color: $secondary !important;
+    border:2px solid $secondary !important;
+
+    &:hover:not([disabled]) {
+        background-color: $secondary !important;
+        border-color: $secondary !important;
+        color: $compelmentary !important;
+    }
+}
+
+.my-button-tertiary{
+    color: $tertiary !important;
+    border:2px solid $tertiary !important;
+
+    &:hover:not([disabled]) {
+        background-color: $tertiary !important;
+        border-color: $tertiary !important;
+        color: $compelmentary !important;
+    }
+}
+
+.my-button-primary{
+    color: $primary !important;
+    border:2px solid $primary !important;
+
+    &:hover:not([disabled]) {
+        background-color: $primary !important;
+        border-color: $primary !important;
+        color: $compelmentary !important;
+    }
+}
 
 // ============= class settings
 

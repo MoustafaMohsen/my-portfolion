@@ -96,6 +96,12 @@ export class WorkSectionComponent implements OnInit {
       },interval);
     }
   }//typeEffect
+
+  openDialog(){
+    let $_ = $ as any;
+    $_("#exampleModal").modal('show');
+    
+  }
   
 }//class
 

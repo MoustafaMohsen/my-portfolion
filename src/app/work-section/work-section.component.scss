@@ -276,13 +276,13 @@ $hide-time:500ms;
                 }
             }
 */
-
+$fidge-notes-path:url("/assets/img/Framworks and platforms/work-card/mocks/fridgenotes-desktop.png");
 .fridge-notes-background{
-    background-image: url('http://localhost:4200/assets/img/Framworks and platforms/work-card/mocks/fridgenotes-desktop.png');
+    background-image: $fidge-notes-path;
 }
 
 .islamic-search-background{
-    background-image: url('http://localhost:4200/assets/img/Framworks and platforms/work-card/mocks/fridgenotes-desktop.png');
+    background-image: $fidge-notes-path;
 }
 
 section#work::before {
@@ -414,3 +414,61 @@ $break-l: 1199.98px;
     }//small card container
 }
 
+
+.model-project-card{
+    border-radius: 0;
+    padding: 0px 0px 10px;
+
+
+    .modal-project-header{
+        .modal-image{
+            overflow: hidden;
+            position: relative;
+            top: 0;
+            left: 0;
+            height: 300px;
+            img{
+                width: 100%;
+            }
+        }
+    }
+
+
+    .modal-project-content{
+        padding: 20px 20px 20px;
+        .modal-title{
+            h4{
+                color: $primary;
+                font-weight: bold;
+                margin: 0;
+            }
+        }
+        .modal-subtitle{
+            p{
+                color: #797979;
+                font-weight: bold;
+            }
+        }
+        .modal-description{
+            p{
+                color: $primary;
+                overflow-y: auto;
+                max-height: 100px;
+            }
+        }
+    }
+
+    .modal-project-footer{
+        .visit-site-button{
+            padding:0 !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            width: 100% !important;
+            i{
+                font-size: 0.9em;
+            }
+        }
+    }
+
+
+}

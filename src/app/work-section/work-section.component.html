@@ -51,7 +51,8 @@
                                     </mat-card-content>
 
                                     <div class="row work-card-footer">
-                                        <button mat-button class="col-auto my-button" [disabled]="false" type="submit"><p >{{workcard.buttonText}} <span></span></p></button>
+                                        <button mat-button class="col-auto my-button" 
+                                        (click)="openDialog()" type="submit"><p >{{workcard.buttonText}} <span></span></p></button>
                                     </div>
                         
 
@@ -122,3 +123,63 @@
 
     
 </section>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ====================================== Model ======================================== -->
+<!-- Button trigger modal -->
+
+      
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+    <div class="modal-content container-fluid model-project-card">
+
+
+        <div class="row modal-project-header">
+            <div class="col-12">
+                <div class="modal-image">
+                    <img src="/assets/img/Framworks and platforms/work-card/mocks/fridgenotes-desktop.png">
+                </div>
+            </div>
+
+        </div>
+        <div class="row modal-project-content relative">
+            <div class="col-12 modal-title">
+                    <h4>This is project number one</h4>
+            </div>
+
+            <div class="col-12 modal-subtitle">
+                    <p>C# class liberary</p>
+            </div>
+
+            <div class="moda-project-seperator"></div>
+
+            <div class="col-12 modal-description">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus expedita a, deserunt culpa molestiae inventore libero numquam alias consectetur maxime accusamus suscipit nostrum autem repellat impedit obcaecati optio! Perferendis, molestias.</p>
+            </div>
+        </div>
+
+        <div class="moda-project-seperator"></div>
+
+        <div class="row justify-content-center modal-project-footer relative">
+
+            <div class="col-4"> <button class="my-button my-button-primary visit-site-button" mat-button>Visit site <i class="fas fa-external-link-alt"></i></button> </div>
+
+            <div class="col-4"> <button class="my-button my-button-secondary visit-site-button" mat-button>Visit Project page <i class="fas fa-external-link-alt"></i></button> </div>
+
+        </div>
+
+
+    </div>
+</div>
+</div>

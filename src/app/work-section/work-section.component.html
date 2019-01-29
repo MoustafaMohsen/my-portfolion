@@ -33,7 +33,9 @@
                             <div class="work-card-container">
                                 <mat-card class="work-card">
             
-                                    <div [ngClass]="workcard.backgroundClass" class=" work-card-background-image">
+                                    <div 
+                                    [ngStyle]="{'background-image': ' url(\''  +workcard.backgroundImage+  '\') '}"
+                                     class=" work-card-background-image">
                                         <div class="work-card-background-overlay"></div>
                                     </div>
             
@@ -80,7 +82,8 @@
                     
                                             <!-- background image -->
                                             <div class="small-work-card-background-image" 
-                                            [ngClass]="smallcard.backgroundClass">
+                                            [ngStyle]="{'background-image': ' url(\''  +smallcard.backgroundImage+  '\') '}"
+                                            >
                                                 <div class="small-work-card-background-overlay"></div>
                                             </div>
                     
@@ -148,7 +151,7 @@
         <div class="row modal-project-header">
             <div class="col-12">
                 <div class="modal-image">
-                    <img src="/assets/img/Framworks and platforms/work-card/mocks/fridgenotes-desktop.png">
+                    <img [src]="project.backgroundImage">
                 </div>
             </div>
 

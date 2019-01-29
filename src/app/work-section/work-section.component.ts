@@ -20,24 +20,35 @@ export class WorkSectionComponent implements OnInit {
 
   project:workCard;
 
+  test:string="";
+
   ngOnInit() {
     this._title=workSection.title;
     this.description=workSection.description;
 
+    this.test=Availableimages.test;
     this.Cards=workSection.mainProjects;
     this.smallCards=workSection.otherProjects;
 
     // ====== small cards filler
+    
+    /*
     this.smallCards=this.Cards.map(x=>{
-      x.backgroundImage = Availableimages.fridgenotes_desktop;
-      x.style={
-        'background-image':`url(${x.backgroundImage})`
-      }
+      x.backgroundImage = Availableimages.test;
+      //x.style={'background-image':`url(${x.backgroundImage})`}
+      console.log(x.backgroundImage);
       
       return x;
     });
-    this.smallCards = this.smallCards.concat(this.smallCards,this.smallCards,this.smallCards);
+    */
+
+    this.smallCards.map(x=>{
+      console.log(x.backgroundImage); 
+    })
+    
+    //this.smallCards = this.smallCards.concat(this.smallCards,this.smallCards,this.smallCards);
     // small cards filler =========
+    
 
 
   }//ngOnInit

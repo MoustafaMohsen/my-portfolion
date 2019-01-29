@@ -20,7 +20,13 @@ export const Availableimages = {
   },
 
   fridgenotes_desktop: `${AppHost}${mocksPath}` + "fridgenotes-desktop.png",
-
+  islamic_search_desktop: `${AppHost}${mocksPath}` + "islamic-search-laptop.png",
+  email_verfication_desktop: `${AppHost}${mocksPath}` + "email-verfication.jpg",
+  class_library_desktop: `${AppHost}${mocksPath}` + "csharp_window.png",
+  string_comaprator_desktop: `${AppHost}${mocksPath}` + "arrays.png",
+  core_identity_desktop: `${AppHost}${mocksPath}` + "jwt.jpg",
+  test:"https://www.gettyimages.ie/gi-resources/images/Homepage/Hero/UK/CMS_Creative_164657191_Kingfisher.jpg",
+  
   dotnet: `${AppHost}${PlatformsPath}` + "dotnet.png",
   wordpress: `${AppHost}${PlatformsPath}` + "wordpress.png",
   nodejs: `${AppHost}${PlatformsPath}` + "nodejs.png",
@@ -73,12 +79,12 @@ let platformsBigImages = [
   Availableimages.dotnet
 ];
 
-let Projects: workCard[] = [
+let mainProjects: workCard[] = [
   {
-    title: "Islamic Search",
+    title: "Fridge Notes",
     subtitle: "Angular project",
     description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas voluptatem eveniet officiis maiores sit molestias architecto quae necessitatibus quidem veritatis iure voluptatum at, tempora tenetur non. Porro harum soluta fugiatt.`,
-
+    backgroundImage:Availableimages.fridgenotes_desktop,
     backgroundClass: "islamic-search-background",
     languages: "Html, CSS, C#, TypeScript",
     buttonText: "LEARN MORE",
@@ -105,10 +111,11 @@ let Projects: workCard[] = [
     ]
   },
   {
-    title: "Fridge Notes",
-    subtitle: "C# class liberary",
+    title: "Islamic Search",
+    subtitle: "Angular project",
     description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas voluptatem eveniet officiis maiores sit molestias architecto quae necessitatibus quidem veritatis iure voluptatum at, tempora tenetur non. Porro harum soluta fugiatt.`,
 
+    backgroundImage:Availableimages.islamic_search_desktop,    
     backgroundClass: "fridge-notes-background",
     languages: "Html, CSS, C#, TypeScript",
     buttonText: "LEARN MORE",
@@ -137,6 +144,124 @@ let Projects: workCard[] = [
   }
 ];
 
+let otherProjects: workCard[] = [
+  {
+    title: "Core User Identity",
+    subtitle: "Angular project",
+    description: `Class liberary to end a Voluptas voluptatem eveniet officiis maiores sit molestias architecto quae necessitatibus quidem veritatis iure voluptatum at, tempora tenetur non. Porro harum soluta fugiat`,
+    backgroundImage:Availableimages.core_identity_desktop,
+    //backgroundClass: "islamic-search-background",
+    languages: "Html, CSS, C#, TypeScript",
+    buttonText: "LEARN MORE",
+    resources_Images: [
+      Availableimages.workcard.angular,
+      Availableimages.workcard.aspcore,
+      Availableimages.workcard.sqlite
+    ],
+    deployment_Images: [
+      Availableimages.workcard.github,
+      Availableimages.workcard.heroku
+    ],
+    buttonsText: [
+      {
+        link: "",
+        text: "Visit site",
+        type: "project"
+      },
+      {
+        link: "",
+        text: "Project page",
+        type: "website"
+      }
+    ]
+  },
+  {
+    title: "MLiberary",
+    subtitle: "C# class liberary",
+    description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas voluptatem eveniet officiis maiores sit molestias architecto quae necessitatibus quidem veritatis iure voluptatum at, tempora tenetur non. Porro harum soluta fugiatt.`,
+
+    backgroundImage:Availableimages.class_library_desktop,    
+    languages: "Html, CSS, C#, TypeScript",
+    buttonText: "LEARN MORE",
+    resources_Images: [
+      Availableimages.workcard.angular,
+      Availableimages.workcard.aspcore,
+      Availableimages.workcard.mysql
+    ],
+    deployment_Images: [
+      Availableimages.workcard.github,
+      Availableimages.workcard.heroku,
+      Availableimages.workcard.digitalocean
+    ],
+    buttonsText: [
+      {
+        link: "https://google.com",
+        text: "Visit site",
+        type: "website"
+      },
+      {
+        link: "https://google.com",
+        text: "Project page",
+        type: "project"
+      }
+    ]
+  },
+  {
+    title: "String Comparator",
+    subtitle: "Node.js",
+    description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas voluptatem eveniet officiis maiores sit molestias architecto quae necessitatibus quidem veritatis iure voluptatum at, tempora tenetur non. Porro harum soluta fugiatt.`,
+
+    backgroundImage:Availableimages.string_comaprator_desktop,    
+    languages: "Html, CSS, C#, TypeScript",
+    buttonText: "LEARN MORE",
+    resources_Images: [
+      Availableimages.workcard.angular,
+      Availableimages.workcard.aspcore,
+      Availableimages.workcard.mysql
+    ],
+    deployment_Images: [
+      Availableimages.workcard.github,
+      Availableimages.workcard.heroku,
+      Availableimages.workcard.digitalocean
+    ],
+    buttonsText: [
+      {
+        link: "https://google.com",
+        text: "Project page",
+        type: "project"
+      }
+    ]
+  },
+  {
+    title: "Email Verfication Sender",
+    subtitle: "C# Class liberary",
+    description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas voluptatem eveniet officiis maiores sit molestias architecto quae necessitatibus quidem veritatis iure voluptatum at, tempora tenetur non. Porro harum soluta fugiatt.`,
+
+    backgroundImage:Availableimages.email_verfication_desktop,    
+    languages: "Html, CSS, C#, TypeScript",
+    buttonText: "LEARN MORE",
+    resources_Images: [
+      Availableimages.workcard.angular,
+      Availableimages.workcard.aspcore,
+      Availableimages.workcard.mysql
+    ],
+    deployment_Images: [
+      Availableimages.workcard.github,
+      Availableimages.workcard.heroku,
+      Availableimages.workcard.digitalocean
+    ],
+    buttonsText: [
+      {
+        link: "https://google.com",
+        text: "Project page",
+        type: "project"
+      }
+    ]
+  }
+];
+
+
+
 //contact
 let aboutMeCard={
     title:"About Me.",
@@ -151,8 +276,8 @@ export const workSection: WorkSection = {
   title: "Work",
   description:
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic amet consectetur cum labore libero odio, accusantium incidunt dolorem unde molestias quos",
-  mainProjects: Projects,
-  otherProjects: null
+  mainProjects: mainProjects,
+  otherProjects: otherProjects
 };
 
 export const platformsSection: PlatformsSection = {

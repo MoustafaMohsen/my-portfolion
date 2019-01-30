@@ -1,7 +1,9 @@
 .footer-container {
   color: #F9F9F9;
-  background-color: #1b1c24;
-  border-top: solid 2px #16ade3;
+  background-color: #1B1C24;
+  border-top: solid 2px #16ADE3;
+  -webkit-box-shadow: 0px 0px 17px -1px #16ade3;
+          box-shadow: 0px 0px 17px -1px #16ade3;
 }
 
 .footer-container .footer-content {

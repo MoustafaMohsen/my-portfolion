@@ -17,6 +17,7 @@
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
   background-color: #3F3F3F;
+  transition: all 200ms ease-in-out;
 }
 
 .contact-body .contact-card-container {
@@ -180,8 +181,8 @@
 }
 
 .contact-body .contact-card-container .contact-card .about-form .send-button:hover:not([disabled]) {
-  background-color: #16ade3 !important;
-  border-color: #16ade3 !important;
+  background-color: #16ADE3 !important;
+  border-color: #16ADE3 !important;
   -webkit-transition: 500ms;
   transition: 500ms;
 }
@@ -196,7 +197,7 @@ section#contact::before {
           transform: translateY(-99%);
   -webkit-clip-path: polygon(50% 98%, 100% 0, 100% 100%, 0 100%, 0 0);
           clip-path: polygon(50% 98%, 100% 0, 100% 100%, 0 100%, 0 0);
-  background-color: #1b1c24;
+  background-color: #1B1C24;
 }
 
 @media screen and (min-width: 1199.98px) {

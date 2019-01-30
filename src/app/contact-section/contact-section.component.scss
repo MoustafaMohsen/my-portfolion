@@ -171,8 +171,8 @@
                         border-color: transparent;
                     }
                     &:hover:not([disabled]) {
-                        background-color: #16ade3 !important;
-                        border-color: #16ade3 !important;
+                        background-color: $secondary !important;
+                        border-color: $secondary !important;
                         transition: $transition-duration;
                     }
                 }
@@ -194,7 +194,7 @@ section#contact::before {
     transform: translateY(-99%);
     //clip-path: polygon(0 0, 0% 100%, 100% 100%);
     clip-path: polygon(50% 98%, 100% 0, 100% 100%, 0 100%, 0 0);
-    background-color: #1b1c24;
+    background-color: $primary-3;
     @media screen and (min-width:$break-l) {
         height: 150px !important;
     }

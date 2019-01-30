@@ -54,7 +54,7 @@
 
                                     <div class="row work-card-footer">
                                         <button mat-button class="col-auto my-button" 
-                                        (click)="openDialog(workcard)" type="submit"><p >{{workcard.buttonText}} <span></span></p></button>
+                                        (click)="openModal(workcard)" type="submit"><p >{{workcard.buttonText}} <span></span></p></button>
                                     </div>
                         
 
@@ -99,7 +99,7 @@
                                                 <!-- button -->
                                                 <div class="row justify-content-center">
                                                     <div class="small-work-card-footer" >
-                                                        <button mat-button class="col-auto my-button my-button-xs-scall" (click)="openDialog(smallcard)" type="submit"><p >{{smallcard.buttonText}} <span></span></p></button>
+                                                        <button mat-button class="col-auto my-button my-button-xs-scall" (click)="openModal(smallcard)" type="submit"><p >{{smallcard.buttonText}} <span></span></p></button>
                                                     </div>
                                                         
                                                 </div>
@@ -145,6 +145,7 @@
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+
     <div class="modal-content container-fluid model-project-card" *ngIf="project">
 
 
@@ -191,6 +192,9 @@
         </div>
 
 
+        <div class="modal-project-close">
+            <button (click)="closeModal()"><i class="fas fa-times"></i></button>
+        </div>
     </div>
 </div>
 </div>

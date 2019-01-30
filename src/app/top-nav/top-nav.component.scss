@@ -92,7 +92,8 @@
 .my-navbar{
     background-color: $primary-3;
     color: $my-white !important;
-    border-bottom: solid 2px #16ade3;
+    border-bottom: solid 2px $secondary;
+    //box-shadow: 0px 3px 8px -2px rgba($color: $secondary, $alpha: 1.0);
     padding: 0;
     min-height: 50px;
     //fix row overflow

@@ -479,4 +479,30 @@ $break-l: 1199.98px;
 .model-project-card .modal-project-footer .visit-site-button i {
   font-size: 0.9em;
 }
+
+.model-project-card .modal-project-close button {
+  background: none;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0px;
+  background-color: rgba(255, 255, 255, 0.4);
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+}
+
+.model-project-card .modal-project-close button i {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}
 /*# sourceMappingURL=work-section.component.css.map */

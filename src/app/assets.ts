@@ -95,16 +95,17 @@ let mainProjects: workCard[] = [
     ],
     deployment_Images: [
       Availableimages.workcard.github,
-      Availableimages.workcard.heroku
+      Availableimages.workcard.heroku,
+      Availableimages.workcard.digitalocean,
     ],
     buttonsText: [
       {
-        link: "",
+        link: "https://mydevenv.tk",
         text: "Visit site",
         type: "project"
       },
       {
-        link: "",
+        link: "https://github.com/MoustafaMohsen/fridge-notes-front",
         text: "Project page",
         type: "website"
       }
@@ -113,7 +114,7 @@ let mainProjects: workCard[] = [
   {
     title: "Islamic Search",
     subtitle: "Angular project",
-    description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas voluptatem eveniet officiis maiores sit molestias architecto quae necessitatibus quidem veritatis iure voluptatum at, tempora tenetur non. Porro harum soluta fugiatt.`,
+    description: `I created the project to solve the problem of multiple refrences to the same content or hadith, it uses angular as front-end and asp.net core as backend`,
 
     backgroundImage:Availableimages.islamic_search_desktop,    
     backgroundClass: "fridge-notes-background",
@@ -126,17 +127,16 @@ let mainProjects: workCard[] = [
     ],
     deployment_Images: [
       Availableimages.workcard.github,
-      Availableimages.workcard.heroku,
-      Availableimages.workcard.digitalocean
+      Availableimages.workcard.heroku
     ],
     buttonsText: [
       {
-        link: "https://google.com",
+        link: "https://moustafamohsen.github.io/islame-search/",
         text: "Visit site",
         type: "website"
       },
       {
-        link: "https://google.com",
+        link: "https://github.com/MoustafaMohsen/islame-search",
         text: "Project page",
         type: "project"
       }
@@ -164,14 +164,9 @@ let otherProjects: workCard[] = [
     ],
     buttonsText: [
       {
-        link: "",
-        text: "Visit site",
-        type: "project"
-      },
-      {
-        link: "",
+        link: "https://github.com/MoustafaMohsen/CoreUserIdentity",
         text: "Project page",
-        type: "website"
+        type: "project"
       }
     ]
   },
@@ -195,12 +190,7 @@ let otherProjects: workCard[] = [
     ],
     buttonsText: [
       {
-        link: "https://google.com",
-        text: "Visit site",
-        type: "website"
-      },
-      {
-        link: "https://google.com",
+        link: "https://github.com/MoustafaMohsen/MLiberary",
         text: "Project page",
         type: "project"
       }
@@ -226,7 +216,7 @@ let otherProjects: workCard[] = [
     ],
     buttonsText: [
       {
-        link: "https://google.com",
+        link: "https://github.com/MoustafaMohsen/string-array-comparator",
         text: "Project page",
         type: "project"
       }
@@ -252,7 +242,7 @@ let otherProjects: workCard[] = [
     ],
     buttonsText: [
       {
-        link: "https://google.com",
+        link: "https://github.com/MoustafaMohsen/VerficationEmailSender",
         text: "Project page",
         type: "project"
       }
@@ -266,7 +256,7 @@ let otherProjects: workCard[] = [
 let aboutMeCard={
     title:"About Me.",
     subtitle:"front-end/back-end developer",
-    description:`I'm Moustafa Mohsen, a 23 years-old Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic amet consectetur cum labore libero odio, accusantium incidunt dolorem unde molestias quos odit nostrum, ducimus adipisci? Assumenda ullam nulla id natus!`,
+    description:`I'm Moustafa Mohsen, a 23 years-old Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic amet consectetur cum labore libero odio, accusantium incidunt dolorem unde molestias quos odit nostrum, ducimus adipisci? Assumenda ullam nulla id natus! Conact@moustafamohsen.com`,
     backtext:'About'
 }
 
@@ -297,7 +287,7 @@ export const skillsSection: SkillsSection = {
 
 export const contactSection : ContactSection={
     title:"Contact Me",
-    description:`Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic amet consectetur cum labore libero odio, accusantium incidunt dolorem unde molestias quos odit nostrum, ducimus adipisci? Assumenda ullam nulla id natus`,
+    description:`Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic amet consectetur cum labore libero odio, accusantium incidunt dolorem unde molestias quos odit nostrum, ducimus adipisci? Assumenda ullam nulla id natus, Email: Conact@moustafamohsen.com `,
     aboutMeCard:aboutMeCard
 }
 

@@ -3,8 +3,10 @@
 
 .footer-container{
     color: $my-white;
-    background-color: #1b1c24;
-    border-top: solid 2px #16ade3;
+    background-color: $primary-3;
+    border-top: solid 2px $secondary;
+    box-shadow: 0px 0px 17px -1px rgba($color: $secondary, $alpha: 1.0);
+
     .footer-content{
         $margin-footer-content:90px;
         margin-top:$margin-footer-content;

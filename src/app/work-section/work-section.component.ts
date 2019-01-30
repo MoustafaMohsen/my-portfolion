@@ -79,11 +79,15 @@ export class WorkSectionComponent implements OnInit {
     }
   }//typeEffect
 
-  openDialog(workcard:workCard){
+  openModal(workcard:workCard){
     this.setproject(workcard);
     let $_ = $ as any;
     $_("#exampleModal").modal('show');
     
+  }
+  closeModal(){
+    let $_ = $ as any;
+    $_("#exampleModal").modal('hide');
   }
 
   setproject(workcard:workCard){

@@ -84,7 +84,11 @@ let mainProjects: workCard[] = [
     title: "Fridge Notes",
     subtitle: "Angular project",
     description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas voluptatem eveniet officiis maiores sit molestias architecto quae necessitatibus quidem veritatis iure voluptatum at, tempora tenetur non. Porro harum soluta fugiatt.`,
-    backgroundImage:Availableimages.fridgenotes_desktop,
+    backgroundImages:[
+      Availableimages.fridgenotes_desktop,
+      Availableimages.islamic_search_desktop,
+      Availableimages.string_comaprator_desktop,
+    ],
     backgroundClass: "islamic-search-background",
     languages: "Html, CSS, C#, TypeScript",
     buttonText: "LEARN MORE",
@@ -116,7 +120,7 @@ let mainProjects: workCard[] = [
     subtitle: "Angular project",
     description: `I created the project to solve the problem of multiple refrences to the same content or hadith, it uses angular as front-end and asp.net core as backend`,
 
-    backgroundImage:Availableimages.islamic_search_desktop,    
+    backgroundImages:[Availableimages.islamic_search_desktop],    
     backgroundClass: "fridge-notes-background",
     languages: "Html, CSS, C#, TypeScript",
     buttonText: "LEARN MORE",
@@ -149,7 +153,7 @@ let otherProjects: workCard[] = [
     title: "Core User Identity",
     subtitle: "Angular project",
     description: `Class liberary to end a Voluptas voluptatem eveniet officiis maiores sit molestias architecto quae necessitatibus quidem veritatis iure voluptatum at, tempora tenetur non. Porro harum soluta fugiat`,
-    backgroundImage:Availableimages.core_identity_desktop,
+    backgroundImages:[Availableimages.core_identity_desktop],
     //backgroundClass: "islamic-search-background",
     languages: "Html, CSS, C#, TypeScript",
     buttonText: "LEARN MORE",
@@ -175,7 +179,7 @@ let otherProjects: workCard[] = [
     subtitle: "C# class liberary",
     description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas voluptatem eveniet officiis maiores sit molestias architecto quae necessitatibus quidem veritatis iure voluptatum at, tempora tenetur non. Porro harum soluta fugiatt.`,
 
-    backgroundImage:Availableimages.class_library_desktop,    
+    backgroundImages:[Availableimages.class_library_desktop],    
     languages: "Html, CSS, C#, TypeScript",
     buttonText: "LEARN MORE",
     resources_Images: [
@@ -201,7 +205,7 @@ let otherProjects: workCard[] = [
     subtitle: "Node.js",
     description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas voluptatem eveniet officiis maiores sit molestias architecto quae necessitatibus quidem veritatis iure voluptatum at, tempora tenetur non. Porro harum soluta fugiatt.`,
 
-    backgroundImage:Availableimages.string_comaprator_desktop,    
+    backgroundImages:[Availableimages.string_comaprator_desktop],    
     languages: "Html, CSS, C#, TypeScript",
     buttonText: "LEARN MORE",
     resources_Images: [
@@ -227,7 +231,7 @@ let otherProjects: workCard[] = [
     subtitle: "C# Class liberary",
     description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas voluptatem eveniet officiis maiores sit molestias architecto quae necessitatibus quidem veritatis iure voluptatum at, tempora tenetur non. Porro harum soluta fugiatt.`,
 
-    backgroundImage:Availableimages.email_verfication_desktop,    
+    backgroundImages:[Availableimages.email_verfication_desktop],    
     languages: "Html, CSS, C#, TypeScript",
     buttonText: "LEARN MORE",
     resources_Images: [
@@ -300,7 +304,7 @@ export interface workCard {
   resources_Images: string[];
   deployment_Images: string[];
   backgroundClass?: string;
-  backgroundImage?: string;
+  backgroundImages?: string[];
   style?: any;
   languages: string;
   buttonText: string;

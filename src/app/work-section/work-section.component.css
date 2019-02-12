@@ -507,4 +507,8 @@ $break-l: 1199.98px;
   margin-top: auto;
   margin-bottom: auto;
 }
+
+.model-project-card #modal-carousel {
+  height: 100%;
+}
 /*# sourceMappingURL=work-section.component.css.map */

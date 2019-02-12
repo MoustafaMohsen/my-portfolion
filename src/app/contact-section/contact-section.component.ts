@@ -30,6 +30,10 @@ export class ContactSectionComponent implements OnInit {
 
   }//ngOnInit
   submit(){
+  if (this.contactForm.invalid) {
+    this.contactForm.markAsDirty();
+    return;
+  }
   console.log("submited",this.f.name.value,this.f.email.value,this.f.message.value);
   
   }

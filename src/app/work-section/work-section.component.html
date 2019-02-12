@@ -34,7 +34,7 @@
                                 <mat-card class="work-card">
             
                                     <div 
-                                    [ngStyle]="{'background-image': ' url(\''  +workcard.backgroundImage+  '\') '}"
+                                    [ngStyle]="{'background-image': ' url(\''  +workcard.backgroundImages[0]+  '\') '}"
                                      class=" work-card-background-image">
                                         <div class="work-card-background-overlay"></div>
                                     </div>
@@ -82,7 +82,7 @@
                     
                                             <!-- background image -->
                                             <div class="small-work-card-background-image" 
-                                            [ngStyle]="{'background-image': ' url(\''  +smallcard.backgroundImage+  '\') '}"
+                                            [ngStyle]="{'background-image': ' url(\''  +smallcard.backgroundImages[0]+  '\') '}"
                                             >
                                                 <div class="small-work-card-background-overlay"></div>
                                             </div>
@@ -152,7 +152,34 @@
         <div class="row modal-project-header">
             <div class="col-12">
                 <div class="modal-image">
-                    <img [src]="project.backgroundImage">
+                    <!-- 
+                        <img [src]="project.backgroundImage">
+                     -->
+                     <!-- ===== slider -->
+                     <div id="modal-carousel" class="carousel slide" data-ride="carousel">
+
+                            <ol class="carousel-indicators" *ngIf="project.backgroundImages.length > 1">
+                                <div *ngFor="let img of project.backgroundImages;let i = index">
+                                    <li data-target="#modal-carousel" [attr.data-slide-to]="i" class="active"></li>
+                                </div>
+                            </ol>
+                        <div class="carousel-inner">
+                            <ng-container *ngFor="let img of project.backgroundImages;let i = index">
+                                <div  class="carousel-item " [ngClass]="i==0?'active':''">
+                                    <img [src]="img">
+                                </div>
+                            </ng-container>
+                        </div>
+                        <a class="carousel-control-prev" href="#modal-carousel" role="button" data-slide="prev"  *ngIf="project.backgroundImages.length > 1">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#modal-carousel" role="button" data-slide="next"  *ngIf="project.backgroundImages.length > 1">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                    <!-- slider ===== -->
                 </div>
             </div>
 

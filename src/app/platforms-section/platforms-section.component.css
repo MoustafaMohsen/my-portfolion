@@ -20,6 +20,14 @@
   transition: all 200ms ease-in-out;
   padding-top: 100px;
   padding-bottom: 80px;
+  transition: all 200ms ease-in-out;
+}
+
+@media screen and (max-width: 575.98px) {
+  .platforms-body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
 }
 
 .platforms-body .platforms-main-images .platforms-main-image-container .platforms-main-image {
@@ -51,7 +59,7 @@ section#platforms::before {
           transform: translateY(-99%);
   -webkit-clip-path: polygon(0 0, 0% 100%, 100% 100%);
           clip-path: polygon(0 0, 0% 100%, 100% 100%);
-  background-color: #1b1c24;
+  background-color: #1B1C24;
 }
 
 section #platforms-header::after {
@@ -65,7 +73,7 @@ section #platforms-header::after {
           transform: translateY(-0.5%);
   -webkit-clip-path: polygon(0 0, 0 100%, 100% 0);
           clip-path: polygon(0 0, 0 100%, 100% 0);
-  background-color: #1b1c24;
+  background-color: #1B1C24;
   z-index: 1;
 }
 

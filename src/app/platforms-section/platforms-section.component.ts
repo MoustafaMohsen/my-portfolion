@@ -13,6 +13,7 @@ export class PlatformsSectionComponent implements OnInit {
   description:string;
   servicesImages:string[];
   smallImages:string[];
+  smallImagesTitle:string;
   bigImages:string[];
   ngOnInit() {
 
@@ -20,7 +21,7 @@ export class PlatformsSectionComponent implements OnInit {
     this.description=platformsSection.description;
 
     this.servicesImages=platformsSection.servicesImages;
-
+    this.smallImagesTitle = platformsSection.smallImagesTitle;
     this.smallImages=platformsSection.smallImages;
 
     this.bigImages=platformsSection.bigImages;

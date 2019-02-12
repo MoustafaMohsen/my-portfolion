@@ -190,48 +190,58 @@
 section#contact::before {
   content: "";
   width: 100%;
-  height: 100px;
+  height: 0px;
   position: absolute;
   top: 0;
-  -webkit-transform: translateY(-99%);
-          transform: translateY(-99%);
+  -webkit-transform: translateY(-90%);
+          transform: translateY(-90%);
   -webkit-clip-path: polygon(50% 98%, 100% 0, 100% 100%, 0 100%, 0 0);
           clip-path: polygon(50% 98%, 100% 0, 100% 100%, 0 100%, 0 0);
   background-color: #1B1C24;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+section#contact.active-contact::before {
+  height: 100px;
+  -webkit-transform: translateY(-99%);
+          transform: translateY(-99%);
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 @media screen and (min-width: 1199.98px) {
-  section#contact::before {
+  section#contact.active-contact::before {
     height: 150px !important;
   }
 }
 
 @media screen and (max-width: 1199.98px) {
-  section#contact::before {
+  section#contact.active-contact::before {
     height: 140px !important;
   }
 }
 
 @media screen and (max-width: 991.98px) {
-  section#contact::before {
+  section#contact.active-contact::before {
     height: 120px !important;
   }
 }
 
 @media screen and (max-width: 767.98px) {
-  section#contact::before {
+  section#contact.active-contact::before {
     height: 100px !important;
   }
 }
 
 @media screen and (max-width: 575.98px) {
-  section#contact::before {
+  section#contact.active-contact::before {
     height: 60px !important;
   }
 }
 
 @media screen and (max-width: 300.98px) {
-  section#contact::before {
+  section#contact.active-contact::before {
     height: 50px !important;
   }
 }

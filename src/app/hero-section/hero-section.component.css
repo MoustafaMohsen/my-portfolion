@@ -59,11 +59,6 @@
   top: 66%;
 }
 
-.hero-background-text p span {
-  font-weight: bold;
-  color: #E0FF4F;
-}
-
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0;

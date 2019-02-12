@@ -273,6 +273,7 @@ export const workSection: WorkSection = {
 export const platformsSection: PlatformsSection = {
   title: "Platforms",
   description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic amet consectetur cum labore libero odio, accusantium incidunt dolorem unde molestias quos odit nostrum, ducimus adipisci? Assumenda ullam nulla id natus!? `,
+  smallImagesTitle:`also other services & libraries like:`,
   bigImages: platformsBigImages,
   smallImages: platformsSmallImages,
   servicesImages: platformsServicesImages
@@ -287,7 +288,7 @@ export const skillsSection: SkillsSection = {
 
 export const contactSection : ContactSection={
     title:"Contact Me",
-    description:`Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic amet consectetur cum labore libero odio, accusantium incidunt dolorem unde molestias quos odit nostrum, ducimus adipisci? Assumenda ullam nulla id natus, Email: Conact@moustafamohsen.com `,
+    description:`Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic amet consectetur cum labore libero odio, accusantium incidunt dolorem unde molestias quos odit nostrum, ducimus adipisci? Assumenda ullam nulla id natus, Email: <span class="highlight"> Conact@moustafamohsen.com </span> `,
     aboutMeCard:aboutMeCard
 }
 
@@ -329,6 +330,7 @@ export interface PlatformsSection {
   title: string;
   description: string;
   servicesImages: string[];
+  smallImagesTitle:string;
   smallImages: string[];
   bigImages: string[];
 }

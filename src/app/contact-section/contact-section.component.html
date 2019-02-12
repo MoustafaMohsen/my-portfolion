@@ -1,6 +1,6 @@
 <!--============== Contact Me section ================-->
 
-<section class="row contact-section relative" id="contact">
+<section class="row contact-section relative" id="contact" animateOnScroll animationName="active-contact">
     <div class="col-12 justify-content-center contact-header">
         
         <!--contact header-->
@@ -15,7 +15,7 @@
         <!--contact description-->
         <div class="row justify-content-center">
             <div class="col-lg-8 col-sm-10 col-12  align-self-center">
-                <p class="header-description section-header-description" animateOnScroll (func)="typeEffect(_title,100)" beforeClass="opacity-0" animationName="fadeInUp animation-settings-1">{{description}}</p>
+                <p class="header-description section-header-description" animateOnScroll (func)="typeEffect(_title,100)" beforeClass="opacity-0" animationName="fadeInUp animation-settings-1" [innerHTML]="description"></p>
 
             </div>
         </div>

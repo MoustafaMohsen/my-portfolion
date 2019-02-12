@@ -16,6 +16,10 @@
     padding-top: 100px;
     padding-bottom: 80px;
     transition: all 200ms ease-in-out;
+    @media screen and (max-width:$break-x) {
+        padding-top: 60px;
+        padding-bottom: 40px;  
+    }
     .platforms-main-images{
     
         .platforms-main-image-container{

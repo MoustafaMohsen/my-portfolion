@@ -17,7 +17,7 @@ body {
          font-size: 12px;
      }
     @media screen and (max-width:$break-x) {
-        font-size: 10px;
+        font-size: 9px;
     }
 
 }//body
@@ -362,6 +362,10 @@ ul{
     }
 }
 
+.highlight{
+    font-weight: bold;
+    color: $tertiary;
+}
 
 
 
@@ -369,7 +373,7 @@ ul{
 
 
 // ======================= Animations ======================== //
-
+/*
 @keyframes nav-Container{
     0%{
         width: 0;
@@ -382,6 +386,7 @@ ul{
         left: 15%;
     }
 }
+*/
 
 // word animation
 @mixin start-part {

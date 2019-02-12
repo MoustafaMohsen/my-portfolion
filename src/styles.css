@@ -27,7 +27,7 @@ body {
 
 @media screen and (max-width: 575.98px) {
   body {
-    font-size: 10px;
+    font-size: 9px;
   }
 }
 
@@ -293,48 +293,25 @@ ul {
   }
 }
 
-@-webkit-keyframes nav-Container {
-  0% {
-    width: 0;
-    left: 50%;
-    height: 4px;
-  }
-  100% {
-    position: absolute;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-    top: 50%;
-    left: 15%;
-    width: 70%;
-    height: 4px;
-    background-color: white;
-    border-radius: 2px;
-    width: 70%;
-    left: 15%;
-  }
+.highlight {
+  font-weight: bold;
+  color: #E0FF4F;
 }
 
-@keyframes nav-Container {
-  0% {
-    width: 0;
-    left: 50%;
-    height: 4px;
-  }
-  100% {
-    position: absolute;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-    top: 50%;
-    left: 15%;
-    width: 70%;
-    height: 4px;
-    background-color: white;
-    border-radius: 2px;
-    width: 70%;
-    left: 15%;
-  }
+/*
+@keyframes nav-Container{
+    0%{
+        width: 0;
+        left: 50%;
+        height: 4px;
+    }
+    100%{
+        @include line-middle;
+        width: 70%;
+        left: 15%;
+    }
 }
-
+*/
 @-webkit-keyframes m-moustafa-anim {
   0% {
     top: 50%;
@@ -361,7 +338,6 @@ ul {
     height: 35%;
   }
 }
-
 @keyframes m-moustafa-anim {
   0% {
     top: 50%;

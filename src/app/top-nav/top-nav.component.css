@@ -68,9 +68,15 @@
   background-color: #1B1C24;
   color: #F9F9F9 !important;
   border-bottom: solid 2px #16ADE3;
-  padding: 0;
-  min-height: 50px;
+  padding: 0px 5px 0px 0px;
+  min-height: 40px;
   margin: 0;
+}
+
+@media screen and (max-width: 575.98px) {
+  .my-navbar {
+    min-height: 35px;
+  }
 }
 
 .my-nav-expand-button {

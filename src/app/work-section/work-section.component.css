@@ -126,7 +126,7 @@
 
 @media screen and (max-width: 575.98px) {
   .work-body .work-card-container .work-card .work-card-header .work-card-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 }
 
@@ -309,7 +309,7 @@ section#work::before {
           transform: translateY(-99%);
   -webkit-clip-path: polygon(0 0, 0% 100%, 100% 100%);
   clip-path: polygon(0 0, 0% 100%, 100% 100%);
-  background-color: #1b1c24;
+  background-color: #1B1C24;
 }
 
 /*
@@ -399,6 +399,7 @@ $break-l: 1199.98px;
 .small-cards-container .small-work-card-container .small-work-card-body .small-work-card-header .small-work-card-title p {
   color: #F9F9F9;
   font-size: 2em;
+  text-align: center;
   margin-bottom: 0;
 }
 
@@ -497,6 +498,7 @@ $break-l: 1199.98px;
 }
 
 .model-project-card .modal-project-close button i {
+  font-size: 20px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;

@@ -113,7 +113,7 @@ $hide-time:500ms;
                         font-size: 3.5rem;   
                     }
                     @media screen and (max-width:$break-x) {
-                        font-size: 3rem;   
+                        font-size: 2.5rem;   
                     }
                     @media screen and (max-width:300.98px) {
                         font-size: 1.5rem;   
@@ -377,6 +377,7 @@ $break-l: 1199.98px;
                     p{
                         color: $compelmentary;
                         font-size: 2em;
+                        text-align: center;
                         margin-bottom: 0;
                     }
                 }
@@ -486,6 +487,7 @@ $break-l: 1199.98px;
             position: absolute;
             top: 0;
             i{
+                font-size: 20px;
                 width: fit-content;
                 margin-left: auto;
                 margin-right: auto;

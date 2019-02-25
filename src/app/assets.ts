@@ -1,3 +1,5 @@
+import { workCard, WorkSection, PlatformsSection, SkillsSection, ContactSection } from "./models";
+
 // app host
 export const AppHost = location.href.split(/\?|#/)[0];
 
@@ -296,59 +298,3 @@ export const contactSection : ContactSection={
     aboutMeCard:aboutMeCard
 }
 
-// =================  interfaces
-export interface workCard {
-  title: string;
-  subtitle?: string;
-  description: string;
-  resources_Images: string[];
-  deployment_Images: string[];
-  backgroundClass?: string;
-  backgroundImages?: string[];
-  style?: any;
-  languages: string;
-  buttonText: string;
-
-  viewclass?: string;
-
-  buttonsText: {
-    link: string;
-    text: string;
-    type: string;
-  }[];
-}
-export interface AboutMeCard{
-    title:string;
-    subtitle:string;
-    description:string;
-    backtext:string;
-}
-export interface WorkSection {
-  title: string;
-  description: string;
-  mainProjects: workCard[];
-  otherProjects: workCard[];
-}
-
-export interface PlatformsSection {
-  title: string;
-  description: string;
-  servicesImages: string[];
-  smallImagesTitle:string;
-  smallImages: string[];
-  bigImages: string[];
-}
-
-export interface SkillsSection {
-  title: string;
-  description: string;
-  smallImages: string[];
-  bigImages: string[];
-}
-
-export interface ContactSection {
-    title: string;
-    description: string;
-    aboutMeCard: AboutMeCard;
-}
-  

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AboutMeCard, contactSection } from '../assets';
+import {  contactSection } from '../assets';
+import { AboutMeCard } from '../models';
 
 @Component({
   selector: 'app-contact-section',

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Availableimages, workCard, workSection } from '../assets';
+import { Availableimages, workSection } from '../assets';
+import { workCard } from '../models';
 
 @Component({
   selector: 'app-work-section',

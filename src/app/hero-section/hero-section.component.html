@@ -17,6 +17,11 @@
           <p class="second-back">a <span class="highlight">Full stack web developer</span></p>
       </div>
 
+
+      <div *ngIf="loading&&!windowLoaded" class="fadeIn animation-settings-3 lds-roller bottom-abs"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+
+      <div *ngIf="!(loading&&!windowLoaded)" class="fadeIn animation-settings-3 down-icon bottom-abs"><i class="fas fa-angle-down"></i></div>
+
     </div>
 
     <div class="col-md col"></div>

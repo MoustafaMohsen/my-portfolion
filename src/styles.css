@@ -104,6 +104,20 @@ ul {
           animation-fill-mode: forwards;
 }
 
+.animation-settings-3 {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.animation-settings-4 {
+  -webkit-animation-duration: 0.2s;
+          animation-duration: 0.2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
 .animated {
   opacity: 1 !important;
 }
@@ -251,6 +265,10 @@ ul {
   background-color: #141414 !important;
   border-color: #141414 !important;
   color: #F9F9F9 !important;
+}
+
+.hero-spinner circle {
+  stroke: whitesmoke !important;
 }
 
 .after-before-height::after, .after-before-height::before {

@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 import { Title } from '@angular/platform-browser';
 import { siteTitle } from '../assets';
-
 @Component({
   selector: 'app-hero-section',
   templateUrl: './hero-section.component.html',
@@ -10,9 +9,25 @@ import { siteTitle } from '../assets';
 })
 export class HeroSectionComponent implements OnInit {
 
+  loading=false;
+  windowLoaded=false;
   constructor(private titleService:Title) { }
   ngOnInit() {
-    this.titleService.setTitle(siteTitle)
+    this.titleService.setTitle(siteTitle);
+
+    setTimeout(() => {
+      this.loading=true;
+    }, 5000);
+    
+    this.disableScroll();
+    
+    var loaded = ()=>{
+      console.log("window loaded");
+      this.enableScroll();
+      this.loading = false;
+      this.windowLoaded = true;
+    }
+    window.onload=loaded
   }
   getheight(){
     let style={
@@ -29,5 +44,11 @@ export class HeroSectionComponent implements OnInit {
     }
     return style;
     //mmlogo.css(style)
+  }
+  disableScroll(){
+    document.body.style.cssText = "overflow: hidden;"
+  }
+  enableScroll(){
+    document.body.style.cssText = "overflow: unset;"
   }
 }

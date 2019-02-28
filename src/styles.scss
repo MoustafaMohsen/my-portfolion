@@ -172,6 +172,16 @@ ul{
     animation-duration: 1.5s;
     animation-fill-mode: forwards;
 }
+.animation-settings-3{
+    //animation-delay: 0.2s;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+.animation-settings-4{
+    //animation-delay: 0.2s;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
 .animated{
     opacity: 1 !important;
 }
@@ -337,6 +347,14 @@ ul{
         color: $compelmentary !important;
     }
 }
+
+
+.hero-spinner{
+    circle {
+       stroke: rgb(245, 245, 245)!important;
+   }
+}
+
 
 // ============= class settings
 

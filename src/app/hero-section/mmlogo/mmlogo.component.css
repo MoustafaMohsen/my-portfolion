@@ -31,8 +31,8 @@
 }
 
 .nav-container .underline-nav-center {
-  -webkit-animation: nav-Container 500ms 1000ms ease-in-out;
-          animation: nav-Container 500ms 1000ms ease-in-out;
+  -webkit-animation: nav-Container 500ms 1500ms ease-in-out;
+          animation: nav-Container 500ms 1500ms ease-in-out;
   position: absolute;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
@@ -52,8 +52,8 @@
 }
 
 .nav-container .img-box #m-moustafa {
-  -webkit-animation: m-moustafa-anim 2000ms 2000ms ease-in-out;
-          animation: m-moustafa-anim 2000ms 2000ms ease-in-out;
+  -webkit-animation: m-moustafa-anim 2000ms 2500ms ease-in-out;
+          animation: m-moustafa-anim 2000ms 2500ms ease-in-out;
   position: absolute;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
@@ -64,8 +64,8 @@
 }
 
 .nav-container .img-box #m-mohsen {
-  -webkit-animation: m-mohsen-anim 2000ms 2000ms ease-in-out;
-          animation: m-mohsen-anim 2000ms 2000ms ease-in-out;
+  -webkit-animation: m-mohsen-anim 2000ms 2500ms ease-in-out;
+          animation: m-mohsen-anim 2000ms 2500ms ease-in-out;
   position: absolute;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
@@ -89,8 +89,8 @@
   font-weight: 100;
   color: #FEFEFE;
   top: 0%;
-  -webkit-animation: fadeIn 500ms 4500ms ease-in-out;
-          animation: fadeIn 500ms 4500ms ease-in-out;
+  -webkit-animation: fadeIn 500ms 5000ms ease-in-out;
+          animation: fadeIn 500ms 5000ms ease-in-out;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   opacity: 0;
@@ -104,8 +104,8 @@
   font-weight: 100;
   color: #FEFEFE;
   top: 0%;
-  -webkit-animation: fadeIn 500ms 4500ms ease-in-out;
-          animation: fadeIn 500ms 4500ms ease-in-out;
+  -webkit-animation: fadeIn 500ms 5000ms ease-in-out;
+          animation: fadeIn 500ms 5000ms ease-in-out;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   opacity: 0;
@@ -152,13 +152,13 @@
 }
 
 .m-moustafa-animation {
-  -webkit-animation: m-moustafa-anim 2000ms 2000ms ease-in-out;
-          animation: m-moustafa-anim 2000ms 2000ms ease-in-out;
+  -webkit-animation: m-moustafa-anim 2000ms 2500ms ease-in-out;
+          animation: m-moustafa-anim 2000ms 2500ms ease-in-out;
 }
 
 .m-mohsen-animation {
-  -webkit-animation: m-mohsen-anim 2000ms 2000ms ease-in-out;
-          animation: m-mohsen-anim 2000ms 2000ms ease-in-out;
+  -webkit-animation: m-mohsen-anim 2000ms 2500ms ease-in-out;
+          animation: m-mohsen-anim 2000ms 2500ms ease-in-out;
 }
 
 @-webkit-keyframes m-moustafa-anim {

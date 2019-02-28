@@ -58,9 +58,14 @@ export class HeroSectionComponent implements OnInit {
   }
 
   logoLoad(Func:Function){
-    document.getElementById('logoload').addEventListener('load',()=>{
+    let img = document.getElementById('logoload') as HTMLImageElement;
+    if (img.complete) {
       Func();
-    })
+    } else {
+      img.addEventListener('load',()=>{
+        Func();
+      })
+    }
 
 
   }

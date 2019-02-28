@@ -6,7 +6,10 @@ import {
   Validators
 } from "@angular/forms";
 import { contactSection } from "../assets";
-import { AboutMeCard } from "../models";
+import { AboutMeCard, Ipdata } from "../models";
+import { HttpClient } from "@angular/common/http";
+import { MatSnackBar } from "@angular/material";
+import { throwError } from "rxjs";
 
 @Component({
   selector: "app-contact-section",
@@ -16,10 +19,10 @@ import { AboutMeCard } from "../models";
 export class ContactSectionComponent implements OnInit {
   FormSize = 1;
   contactForm: FormGroup;
-  constructor(formBuilder: FormBuilder) {
+  constructor(formBuilder: FormBuilder, private http:HttpClient, private snake:MatSnackBar) {
     this.contactForm = formBuilder.group({
       name: ["", [Validators.required]],
-      email: ["", [Validators.required]],
+      email: ["", [Validators.required,Validators.email]],
       message: ["", [Validators.required]]
     });
   }
@@ -29,6 +32,7 @@ export class ContactSectionComponent implements OnInit {
   description: string;
   email: string;
   aboutMe: AboutMeCard;
+  loading:boolean=false;
 
   ngOnInit() {
     this._title = contactSection.title;
@@ -37,16 +41,57 @@ export class ContactSectionComponent implements OnInit {
     this.email= contactSection.email;
   } //ngOnInit
   submit() {
+    if (this.loading) {
+      return;
+    }
     if (this.contactForm.invalid) {
       this.contactForm.markAsDirty();
       return;
     }
+    this.loading=true
     console.log(
       "submited",
       this.f.name.value,
       this.f.email.value,
       this.f.message.value
     );
+    this.getIp().subscribe(
+      response=>{
+        let data = response as Ipdata.Ipdata
+        console.log(data);
+        this.loading=true;
+
+        let filterThreats = contactSection.filterThreats;
+        if ( filterThreats && this.isAny(data.threat) ) {
+          // block access for attackers
+          let errorMessage="Service error, please use email instead";
+          this.snake.open(errorMessage,'X',{duration:10000})  
+          return ;
+        }
+
+        let successMessage="Sending Message";
+        this.snake.open(successMessage,'X',{duration:10000});
+
+        //submit form
+        this.submitForm(JSON.stringify(data));
+
+      },
+      err=>{
+        let errorMessage="Service error, please use email instead";
+        this.snake.open(errorMessage,'X',{duration:10000})
+        this.loading=true;
+      }
+    )
+  }
+
+  isAny(obj){
+    for (const state in obj) {
+      let value = obj[state];
+      if (value && typeof value === "boolean") {
+        return true;
+      }
+    }
+    return false;
   }
 
   get f() {
@@ -73,4 +118,21 @@ export class ContactSectionComponent implements OnInit {
       }, interval);
     }
   } //typeEffect
+
+  getIp(){
+    let key=contactSection.formspreeapikey;
+    let lookupUrl=`https://api.ipdata.co/es?api-key=${key}`;
+    return this.http.get(lookupUrl)
+  }
+
+  submitForm(clientdata:string){
+    let url = `https://formspree.io/${contactSection.formEmail}`;
+    let form = document.getElementById('contact_form') as HTMLFormElement;
+    form.action = url;
+    let data = document.getElementById('contact_form_data') as HTMLInputElement;
+    data.value = clientdata;
+    data.name = "client_data";
+    form.submit();
+  }
+
 } //class

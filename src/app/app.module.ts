@@ -27,6 +27,7 @@ import { OnView } from './directives/OnView.directive';
 // scroll animation
 //import { AnimateOnScrollModule } from 'ng2-animate-on-scroll';
 import {AngularStickyThingsModule} from '@w11k/angular-sticky-things';
+import { HttpClientModule } from '@angular/common/http';
 document.title = "Welcome"
 
 const matrial = [
@@ -59,6 +60,7 @@ const matrial = [
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     matrial,
     ReactiveFormsModule,
     RouterModule.forRoot(routes, {

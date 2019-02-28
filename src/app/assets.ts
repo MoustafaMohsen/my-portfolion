@@ -347,7 +347,10 @@ export const contactSection : ContactSection={
     title:"Contact Me",
     description:ContactDescription,
     aboutMeCard:aboutMeCard,
-    email:"Contact@moustafamohsen.com"
+    email:"Contact@moustafamohsen.com",
+    formspreeapikey:"401b90c214b7672aa7633e3cff57cbd639e7456401f8c00cdc3c3f9e",
+    formEmail:"hiphusk@gmail.com",
+    filterThreats:false
 }
 
 export const footerSection:FooterSection={

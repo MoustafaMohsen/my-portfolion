@@ -48,7 +48,7 @@
                     <!--==== contact form ===-->
                     <div class="col-sm-5 pad-0 form-col">
 
-                        <form class="about-form row" [formGroup]="contactForm">
+                        <form method="POST" class="about-form row" id="contact_form" [formGroup]="contactForm">
 
                             <!-- 
                                 <div class="name-input-form">
@@ -58,7 +58,7 @@
                             -->
 
                             <mat-form-field class="col-12 my-input-form name-input-form" >
-                                <input autocomplete="off" formControlName="name" class="input-text" matInput placeholder="Name *">
+                                <input autocomplete="off" name="name" formControlName="name" class="input-text" matInput placeholder="Name *">
                             </mat-form-field>
 
                             <!-- 
@@ -68,7 +68,7 @@
                                 </div>
                             -->
                             <mat-form-field class="col-12 my-input-form email-input-form" >
-                                <input autocomplete="off" formControlName="email" class="input-text" matInput placeholder="Your Email *">
+                                <input autocomplete="off" name="email" formControlName="email" class="input-text" matInput placeholder="Your Email *">
                             </mat-form-field>
 
 
@@ -80,13 +80,14 @@
                             -->
 
                             <mat-form-field class="col-12 my-input-form message-input-form">
-                                <textarea autocomplete="off" formControlName="message" class="input-area" matInput 
+                                <textarea autocomplete="off" name="message" formControlName="message" class="input-area" matInput 
                                 placeholder="Message *"></textarea>
                             </mat-form-field>
     
+                            <input type="hidden" name="data" id="contact_form_data">
 
                             <div class="col-12">
-                                <button mat-button class="send-button" (click)="submit()" type="submit"><p >Send <span></span></p></button>
+                                <button mat-button class="send-button" (click)="submit()" type="submit" [disabled]="loading"><p >Send <span></span></p></button>
                             </div>
 
                         </form>

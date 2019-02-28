@@ -549,4 +549,8 @@ ul {
   text-decoration: none;
   color: inherit;
 }
+
+.hidden {
+  display: none !important;
+}
 /*# sourceMappingURL=styles.css.map */

@@ -1,32 +1,46 @@
 <div class="row no-gutters hero-page" [ngStyle]="getheight()">
-    <div class="col-md col"></div>
+  <div class="col-md col"></div>
 
-
-    <div class="col-md-8 col-11 relative">
-<!---
+  <div class="col-md-8 col-11 relative">
+    <!---
 -->
-      <div class="hero-background-text">
-        <p class="first-back">Hello I'm</p>
-      </div>
-
-      <div class="mmlogo" id="mmlogo" [ngStyle]="logoheight()">
-        <app-mmlogo ></app-mmlogo>
-      </div>
-
-      <div class="hero-background-text">
-          <p class="second-back">a <span class="highlight">Full stack web developer</span></p>
-      </div>
-
-
-      <div *ngIf="loading&&!windowLoaded" class="fadeIn animation-settings-3 lds-roller bottom-abs"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
-
-      <div *ngIf="windowLoaded" class="fadeIn animation-settings-3 down-icon bottom-abs"><i class="fas fa-angle-down"></i></div>
-
+    <div class="hero-background-text">
+      <p class="first-back">Hello I'm</p>
     </div>
 
-    <div class="col-md col"></div>
+    <div class="mmlogo" id="mmlogo" [ngStyle]="logoheight()">
+      <app-mmlogo></app-mmlogo>
+    </div>
 
+    <div class="hero-background-text">
+      <p class="second-back">
+        a <span class="highlight">Full stack web developer</span>
+      </p>
+    </div>
 
+    <div
+      *ngIf="loading && !windowLoaded"
+      class="fadeIn animation-settings-3 lds-roller bottom-abs"
+    >
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
 
+    <div
+      *ngIf="windowLoaded"
+      class="fadeIn animation-settings-3 down-icon bottom-abs"
+    >
+      <i class="fas fa-angle-down"></i>
+    </div>
+  </div>
 
+  <div class="col-md col"></div>
 </div>
+
+<img class="hidden" src="./assets/img/m-logo.png" alt="Moustafa" id="logoload">

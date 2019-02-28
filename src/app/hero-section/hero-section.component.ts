@@ -12,23 +12,28 @@ export class HeroSectionComponent implements OnInit {
   loading=false;
   windowLoaded=false;
   constructor(private titleService:Title) { }
+
   ngOnInit() {
     this.titleService.setTitle(siteTitle);
 
-    setTimeout(() => {
-      this.loading=true;
-    }, 5000);
-    
     this.disableScroll();
     
-    var loaded = ()=>{
-      console.log("window loaded");
-      this.enableScroll();
-      this.loading = false;
-      this.windowLoaded = true;
+    var OnHeroLoad=()=>{
+      setTimeout(() => {
+        this.loading=true;
+      }, 5000);
+      
+      var loaded = ()=>{
+        console.log("window loaded");
+        this.enableScroll();
+        this.loading = false;
+        this.windowLoaded = true;
+      }
+      window.onload=loaded
     }
-    window.onload=loaded
+    this.logoLoad(OnHeroLoad)
   }
+
   getheight(){
     let style={
       height:window.innerHeight+'px'
@@ -50,5 +55,13 @@ export class HeroSectionComponent implements OnInit {
   }
   enableScroll(){
     document.body.style.cssText = "overflow: unset;"
+  }
+
+  logoLoad(Func:Function){
+    document.getElementById('logoload').addEventListener('load',()=>{
+      Func();
+    })
+
+
   }
 }

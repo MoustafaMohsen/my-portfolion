@@ -68,7 +68,7 @@
                                 </div>
                             -->
                             <mat-form-field class="col-12 my-input-form email-input-form" >
-                                <input autocomplete="off" formControlName="email" class="input-text" matInput placeholder="Email *">
+                                <input autocomplete="off" formControlName="email" class="input-text" matInput placeholder="Your Email *">
                             </mat-form-field>
 
 
@@ -90,7 +90,13 @@
                             </div>
 
                         </form>
+                        <span>
+                            Email:
+                            <span class="highlight">
+                                <a class="highlight normalize-anchor" [href]="'mailto:'+email">{{email}}</a>
+                            </span>
 
+                        </span>
                     </div>
                         
 

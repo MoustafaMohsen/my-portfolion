@@ -1,4 +1,4 @@
-import { workCard, WorkSection, PlatformsSection, SkillsSection, ContactSection } from "./models";
+import { workCard, WorkSection, PlatformsSection, SkillsSection, ContactSection, FooterSection } from "./models";
 
 // app host
 export const AppHost = location.href.split(/\?|#/)[0];
@@ -52,9 +52,22 @@ export const Availableimages = {
 
 // ================== variables
 
+
+let skillsDescription=`Creative, Adaptable and diligent, Always updated with the latest industry standards and coding principles and best practices`
+
+let platformsDescription=`Previously I worked with wordpress developing themes and plugins, then I started using Angular and ASP.Net core, I found them interesting and can solve alot of problems, yet with more knowledge comes more creativity and tools to use, here is my toolkit`
+
+let WorkDescription=`Here is some of my recent projects`
+
+let ContactDescription=`I can help you make your website or webapp come to life, just let me handle it
+<br>
+<span class="highlight"><a class="highlight normalize-anchor" href="mailto:contact@moustafamohsen.com" >Contact@moustafamohsen.com</a></span>
+`
+
+let aboutMeCardDescription=`I'm Moustafa Mohsen, a 23-year-old Creative full-stack developer and Problem Solver,with 4-year background in building and implmenting web applications, I worked with many people and started my own business, I'm self motivated because I'm genuinley passionated about programing, resolving challenges is thrilling, Organized and Effective.`
+
 //skills
 let skillsSmallImages = [Availableimages.php, Availableimages.sass];
-
 let skillsBigImages = [
   Availableimages.csharp,
   Availableimages.ts,
@@ -81,11 +94,25 @@ let platformsBigImages = [
   Availableimages.dotnet
 ];
 
+
+
+
+
 let mainProjects: workCard[] = [
   {
     title: "Fridge Notes",
-    subtitle: "Angular project",
-    description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas voluptatem eveniet officiis maiores sit molestias architecto quae necessitatibus quidem veritatis iure voluptatum at, tempora tenetur non. Porro harum soluta fugiatt.`,
+    subtitle: "Angular + ASP.NET CORE",
+    description: `Have you ever forgot your usual grocery, this project can help you, just add your grocery once and share them with your roommate or family so they know what to buy in their way home, you remember your grocery are next time.`,
+    innerDescription:
+`- Uses Angular 7 as front end designed with Material Design concepts in mind
+- ASP.NET Core 2.1 as a backend and Docker Container
+- The ability to register users, implementing ASP.NET Identity
+- Users and friends to synchronize the list with them
+- Friends manage page to Delete, Invite or add friends to your FridgeNotes account
+- OAuth2 to login using Facebook or Google account
+- MySQL Database to stores the user’s items
+- Registration email confirmation to prevent spam
+- Angular Animations to improve the user experience`,
     backgroundImages:[
       Availableimages.fridgenotes_desktop,
       Availableimages.islamic_search_desktop,
@@ -119,9 +146,13 @@ let mainProjects: workCard[] = [
   },
   {
     title: "Islamic Search",
-    subtitle: "Angular project",
-    description: `I created the project to solve the problem of multiple refrences to the same content or hadith, it uses angular as front-end and asp.net core as backend`,
-
+    subtitle: "Angular + ASP.NET CORE",
+    description: `Search any references or sources from different books, one place that connects all the different book references`,
+    innerDescription:
+`- uses Angular 7 as front end and Material Design concepts
+- ASP.NET Core 2.1, LINQ Query SQLite as Database in the backend
+- Many-to-many relationships database to store multiple references of multiple blocks of text
+- Angular Reactive Forms and Form Validation to check the references against local rules and a small database`,
     backgroundImages:[Availableimages.islamic_search_desktop],    
     backgroundClass: "fridge-notes-background",
     languages: "Html, CSS, C#, TypeScript",
@@ -153,8 +184,15 @@ let mainProjects: workCard[] = [
 let otherProjects: workCard[] = [
   {
     title: "Core User Identity",
-    subtitle: "Angular project",
-    description: `Class liberary to end a Voluptas voluptatem eveniet officiis maiores sit molestias architecto quae necessitatibus quidem veritatis iure voluptatum at, tempora tenetur non. Porro harum soluta fugiat`,
+    subtitle: ".NET Class library",
+    description: `open-source .NET Class library and NuGet Package that helps in the implementation of ASP.NET Identity`,
+    innerDescription:
+    `- Helper service to handle login, register, update, delete, roles and other functionalities
+- JWT tokens authentication, JWT tokens reader
+- Controller attributes for authentication with roles
+- OAuth2 Login with Facebook or Google
+- User Roles management Service to add, remove or update user Roles
+- Email verification sender with VerficationEmailSender Package`,
     backgroundImages:[Availableimages.core_identity_desktop],
     //backgroundClass: "islamic-search-background",
     languages: "Html, CSS, C#, TypeScript",
@@ -178,9 +216,13 @@ let otherProjects: workCard[] = [
   },
   {
     title: "MLiberary",
-    subtitle: "C# class liberary",
-    description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas voluptatem eveniet officiis maiores sit molestias architecto quae necessitatibus quidem veritatis iure voluptatum at, tempora tenetur non. Porro harum soluta fugiatt.`,
-
+    subtitle: ".NET Class library",
+    description: `open-source C# .NET Class library and NuGet Package with static methods that is used alot across different applications.`,
+    innerDescription:
+    `- Encryption and Decryption Helper
+- DateTime Converter helpers (e.g. Unix Time to DateTime and reverse)
+- Other functions like file Reader, Random string generator, Base64DecodeEncode, etc.
+- Updated every time I think a new function could be helpful in general`,
     backgroundImages:[Availableimages.class_library_desktop],    
     languages: "Html, CSS, C#, TypeScript",
     buttonText: "LEARN MORE",
@@ -205,8 +247,15 @@ let otherProjects: workCard[] = [
   {
     title: "String Comparator",
     subtitle: "Node.js",
-    description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas voluptatem eveniet officiis maiores sit molestias architecto quae necessitatibus quidem veritatis iure voluptatum at, tempora tenetur non. Porro harum soluta fugiatt.`,
-
+    description: `open-source TypeScript Node.js module to compare an arrays of string against another, and return the matching results of each element.`,
+    innerDescription:
+`- compare each element of the master array to a slave array and save the matching result if general similarities reached a custom threshold
+- Similarities are determined by the percentage of words found in both strings being compared, and the skew if of words in slave string
+- Custom Index, Range Index and Dynamic Index that could be helpful if the two array are very large and the similarities are usually together, like different versions of the same book.
+- Range index to set the max and minimum index to search in the slave index relative to the current master index
+- Dynamic range that changes the relative index based on similarities found in previous matches
+- Ignore Custom words and not match it in the search results
+`,
     backgroundImages:[Availableimages.string_comaprator_desktop],    
     languages: "Html, CSS, C#, TypeScript",
     buttonText: "LEARN MORE",
@@ -230,9 +279,12 @@ let otherProjects: workCard[] = [
   },
   {
     title: "Email Verfication Sender",
-    subtitle: "C# Class liberary",
-    description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas voluptatem eveniet officiis maiores sit molestias architecto quae necessitatibus quidem veritatis iure voluptatum at, tempora tenetur non. Porro harum soluta fugiatt.`,
-
+    subtitle: ".NET Class library",
+    description: `open-source .NET Class library and NuGet Package to send confirmation email to users.`,
+    innerDescription:
+`- Custom Email Template
+- Uses SendGrid Email API
+- Response Result`,
     backgroundImages:[Availableimages.email_verfication_desktop],    
     languages: "Html, CSS, C#, TypeScript",
     buttonText: "LEARN MORE",
@@ -262,7 +314,7 @@ let otherProjects: workCard[] = [
 let aboutMeCard={
     title:"About Me.",
     subtitle:"front-end/back-end developer",
-    description:`I'm Moustafa Mohsen, a 23 years-old Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic amet consectetur cum labore libero odio, accusantium incidunt dolorem unde molestias quos odit nostrum, ducimus adipisci? Assumenda ullam nulla id natus! Conact@moustafamohsen.com`,
+    description:aboutMeCardDescription,
     backtext:'About'
 }
 
@@ -270,15 +322,14 @@ let aboutMeCard={
 // export variables
 export const workSection: WorkSection = {
   title: "Work",
-  description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic amet consectetur cum labore libero odio, accusantium incidunt dolorem unde molestias quos",
+  description:WorkDescription,
   mainProjects: mainProjects,
   otherProjects: otherProjects
 };
 
 export const platformsSection: PlatformsSection = {
   title: "Platforms",
-  description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic amet consectetur cum labore libero odio, accusantium incidunt dolorem unde molestias quos odit nostrum, ducimus adipisci? Assumenda ullam nulla id natus!? `,
+  description: platformsDescription,
   smallImagesTitle:`also other services & libraries like:`,
   bigImages: platformsBigImages,
   smallImages: platformsSmallImages,
@@ -287,14 +338,21 @@ export const platformsSection: PlatformsSection = {
 
 export const skillsSection: SkillsSection = {
   title: "Skills",
-  description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic amet consectetur cum labore libero odio, accusantium incidunt dolorem unde molestias quos odit nostrum, ducimus adipisci? Assumenda ullam nulla id natus!? `,
+  description: skillsDescription,
   bigImages: skillsBigImages,
   smallImages: skillsSmallImages
 };
 
 export const contactSection : ContactSection={
     title:"Contact Me",
-    description:`Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic amet consectetur cum labore libero odio, accusantium incidunt dolorem unde molestias quos odit nostrum, ducimus adipisci? Assumenda ullam nulla id natus, Email: <span class="highlight"> Conact@moustafamohsen.com </span> `,
-    aboutMeCard:aboutMeCard
+    description:ContactDescription,
+    aboutMeCard:aboutMeCard,
+    email:"Contact@moustafamohsen.com"
 }
 
+export const footerSection:FooterSection={
+  github:"https://github.com/moustafamohsen",
+  linkedin:"https://www.linkedin.com/in/moustafamohsen/",
+  rights: `©${new Date().getFullYear()} Moustafa Mohsen`
+}
+export const siteTitle:string="Moustafa Mohsen | Full stack web developer"

@@ -175,6 +175,9 @@
                         border-color: $secondary !important;
                         transition: $transition-duration;
                     }
+                    @media screen and (max-width:$break-x) {
+                        width: 100% !important;  
+                    }
                 }
 
 

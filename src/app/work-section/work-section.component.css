@@ -470,6 +470,12 @@ $break-l: 1199.98px;
   max-height: 100px;
 }
 
+.model-project-card .modal-project-content .modal-inner-description pre {
+  color: #141414;
+  overflow-y: auto;
+  white-space: pre-wrap;
+}
+
 .model-project-card .modal-project-footer .visit-site-button {
   padding: 0 !important;
   margin-left: auto !important;

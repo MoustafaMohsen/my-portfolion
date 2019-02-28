@@ -522,4 +522,13 @@ ul {
 .relative {
   position: relative;
 }
+
+.smaller-font {
+  font-size: 0.8em;
+}
+
+.normalize-anchor:hover {
+  text-decoration: none;
+  color: inherit;
+}
 /*# sourceMappingURL=styles.css.map */

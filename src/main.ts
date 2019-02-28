@@ -8,6 +8,8 @@ import { environment } from './environments/environment';
 if (environment.production) {
   enableProdMode();
 }
+//change title
+document.title = "Welcome";
 
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));

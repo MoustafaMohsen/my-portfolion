@@ -1,5 +1,6 @@
 @import "../../_variables";
 @import "../styles/_shared-sections";
+// TODO: flip the words up instead of fading in
 $disable-animation:1;
 $fade-time:200ms *$disable-animation;
 $fade-delay:4000ms *$disable-animation;

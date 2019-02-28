@@ -457,6 +457,14 @@ $break-l: 1199.98px;
                 max-height: 100px;
             }
         }
+        .modal-inner-description{
+            pre{
+                color: $primary;
+                overflow-y: auto;
+                white-space:pre-wrap;
+                //max-height: 100px;
+            }
+        }
     }
 
     .modal-project-footer{

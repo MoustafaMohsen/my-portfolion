@@ -187,6 +187,12 @@
   transition: 500ms;
 }
 
+@media screen and (max-width: 575.98px) {
+  .contact-body .contact-card-container .contact-card .about-form .send-button {
+    width: 100% !important;
+  }
+}
+
 section#contact::before {
   content: "";
   width: 100%;

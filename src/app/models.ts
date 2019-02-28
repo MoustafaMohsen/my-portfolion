@@ -20,6 +20,7 @@ export interface workCard {
   title: string;
   subtitle?: string;
   description: string;
+  innerDescription?:string;
   resources_Images: string[];
   deployment_Images: string[];
   backgroundClass?: string;
@@ -69,4 +70,10 @@ export interface ContactSection {
   title: string;
   description: string;
   aboutMeCard: AboutMeCard;
+  email:string;
+}
+export interface FooterSection{
+  github:string;
+  linkedin:string;
+  rights:string;
 }

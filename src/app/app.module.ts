@@ -27,6 +27,7 @@ import { OnView } from './directives/OnView.directive';
 // scroll animation
 //import { AnimateOnScrollModule } from 'ng2-animate-on-scroll';
 import {AngularStickyThingsModule} from '@w11k/angular-sticky-things';
+document.title = "Welcome"
 
 const matrial = [
   MatButtonModule, MatCheckboxModule,MatButtonToggleModule,MatInputModule,MatSliderModule,

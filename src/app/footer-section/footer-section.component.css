@@ -35,10 +35,13 @@
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  cursor: pointer;
 }
 
-.footer-container .footer-list li p:hover {
+.footer-container .footer-list li p a {
+  color: white;
+}
+
+.footer-container .footer-list li p a:hover {
   color: #16ADE3;
   -webkit-transition: 300ms;
   transition: 300ms;

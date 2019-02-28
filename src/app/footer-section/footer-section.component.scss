@@ -33,11 +33,13 @@
         li{
             display: block;
             p{
-                @include center-word;            
-                cursor: pointer;
-                &:hover{
-                    color: $secondary;
-                    transition: 300ms;
+                @include center-word;
+                a{
+                    color: white;
+                    &:hover{
+                        color: $secondary;
+                        transition: 300ms;
+                    }
                 }
             }
         }

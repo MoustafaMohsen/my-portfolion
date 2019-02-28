@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
+import { Title } from '@angular/platform-browser';
+import { siteTitle } from '../assets';
 
 @Component({
   selector: 'app-hero-section',
@@ -8,8 +10,9 @@ import * as $ from 'jquery';
 })
 export class HeroSectionComponent implements OnInit {
 
-  constructor() { }
+  constructor(private titleService:Title) { }
   ngOnInit() {
+    this.titleService.setTitle(siteTitle)
   }
   getheight(){
     let style={

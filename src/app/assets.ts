@@ -1,5 +1,6 @@
 import { workCard, WorkSection, PlatformsSection, SkillsSection, ContactSection, FooterSection } from "./models";
-
+//TODO: change email to some gmail account , it's visable
+//TODO: add your eduaction
 // app host
 export const AppHost = location.href.split(/\?|#/)[0];
 
@@ -53,18 +54,18 @@ export const Availableimages = {
 // ================== variables
 
 
-let skillsDescription=`Creative, Adaptable and diligent, Always updated with the latest industry standards and coding principles and best practices`
+let skillsDescription=`Creative, Adaptable and Diligent, always updated with the latest industry standards and coding principles and best practices`
 
-let platformsDescription=`Previously I worked with wordpress developing themes and plugins, then I started using Angular and ASP.Net core, I found them interesting and can solve alot of problems, yet with more knowledge comes more creativity and tools to use, here is my toolkit`
+let platformsDescription=`Previously I worked with WordPress developing themes and plugins, then I started using Angular and ASP.Net core, I found them interesting and can solve alot of problems, yet with more knowledge comes more creativity and tools to use, here is my toolkit`
 
 let WorkDescription=`Here is some of my recent projects`
 
-let ContactDescription=`I can help you make your website or webapp come to life, just let me handle it
+let ContactDescription=`I can help you make your Website or Web App come to life, just let me handle it
 <br>
 <span class="highlight"><a class="highlight normalize-anchor" href="mailto:contact@moustafamohsen.com" >Contact@moustafamohsen.com</a></span>
 `
 
-let aboutMeCardDescription=`I'm Moustafa Mohsen, a 23-year-old Creative full-stack developer and Problem Solver,with 4-year background in building and implmenting web applications, I worked with many people and started my own business, I'm self motivated because I'm genuinley passionated about programing, resolving challenges is thrilling, Organized and Effective.`
+let aboutMeCardDescription=`I'm Moustafa Mohsen, a 23-year-old creative full-stack developer and problem solver, with a 4-year background in building and implementing web applications, I worked with many people and started my own business, I'm self-motivated because I'm genuinely passionate about programming, resolving challenges is thrilling, Organized and Effective.`
 
 //skills
 let skillsSmallImages = [Availableimages.php, Availableimages.sass];
@@ -108,7 +109,7 @@ let mainProjects: workCard[] = [
 - ASP.NET Core 2.1 as a backend and Docker Container
 - The ability to register users, implementing ASP.NET Identity
 - Users and friends to synchronize the list with them
-- Friends manage page to Delete, Invite or add friends to your FridgeNotes account
+- Manage friends page to Delete, Invite or add friends to your FridgeNotes account
 - OAuth2 to login using Facebook or Google account
 - MySQL Database to stores the user’s items
 - Registration email confirmation to prevent spam
@@ -249,12 +250,12 @@ let otherProjects: workCard[] = [
     subtitle: "Node.js",
     description: `open-source TypeScript Node.js module to compare an arrays of string against another, and return the matching results of each element.`,
     innerDescription:
-`- compare each element of the master array to a slave array and save the matching result if general similarities reached a custom threshold
+`- Compare each element of the master array to a slave array and save the matching result if general similarities reached a custom threshold
 - Similarities are determined by the percentage of words found in both strings being compared, and the skew if of words in slave string
-- Custom Index, Range Index and Dynamic Index that could be helpful if the two array are very large and the similarities are usually together, like different versions of the same book.
+- Custom Index, Range Index and Dynamic Index, that could be helpful if the two arrays are very large and the similarities are usually together, like different versions of the same book.
 - Range index to set the max and minimum index to search in the slave index relative to the current master index
 - Dynamic range that changes the relative index based on similarities found in previous matches
-- Ignore Custom words and not match it in the search results
+- Ignore Custom words and not match it in the search results.
 `,
     backgroundImages:[Availableimages.string_comaprator_desktop],    
     languages: "Html, CSS, C#, TypeScript",

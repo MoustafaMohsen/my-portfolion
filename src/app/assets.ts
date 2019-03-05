@@ -169,12 +169,17 @@ let mainProjects: workCard[] = [
     ],
     buttonsText: [
       {
-        link: "https://moustafamohsen.github.io/islame-search/",
+        link: "https://moustafamohsen.github.io/islamic-search/",
         text: "Visit site",
         type: "website"
       },
       {
-        link: "https://github.com/MoustafaMohsen/islame-search",
+        link: "https://github.com/MoustafaMohsen/islamic-search",
+        text: "Project page",
+        type: "project"
+      },
+      {
+        link: "https://github.com/MoustafaMohsen/islamic-search",
         text: "Project page",
         type: "project"
       }

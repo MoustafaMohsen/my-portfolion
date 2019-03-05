@@ -136,12 +136,17 @@ let mainProjects: workCard[] = [
       {
         link: "https://mydevenv.tk",
         text: "Visit site",
-        type: "project"
+        type: "website"
       },
       {
         link: "https://github.com/MoustafaMohsen/fridge-notes-front",
-        text: "Project page",
-        type: "website"
+        text: "Github Front-end page",
+        type: "project"
+      },
+      {
+        link: "https://github.com/MoustafaMohsen/fridge-notes-api",
+        text: "Github Back-end",
+        type: "project"
       }
     ]
   },
@@ -175,12 +180,12 @@ let mainProjects: workCard[] = [
       },
       {
         link: "https://github.com/MoustafaMohsen/islamic-search",
-        text: "Project page",
+        text: "Github Front-end",
         type: "project"
       },
       {
-        link: "https://github.com/MoustafaMohsen/islamic-search",
-        text: "Project page",
+        link: "https://github.com/MoustafaMohsen/islamic-search-api",
+        text: "Github Back-end",
         type: "project"
       }
     ]

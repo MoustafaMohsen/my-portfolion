@@ -4,19 +4,21 @@
   <div class="col-md-8 col-11 relative">
     <!---
 -->
-    <div class="hero-background-text">
+ 
+    <div class="hero-background-text" *ngIf="imageLoaded">
       <p class="first-back">Hello I'm</p>
     </div>
 
     <div class="mmlogo" id="mmlogo" [ngStyle]="logoheight()">
-      <app-mmlogo></app-mmlogo>
+      <app-mmlogo *ngIf="imageLoaded"></app-mmlogo>
     </div>
 
-    <div class="hero-background-text">
+    <div class="hero-background-text" *ngIf="imageLoaded">
       <p class="second-back">
         a <span class="highlight">Full stack web developer</span>
       </p>
     </div>
+
 
     <div
       *ngIf="loading && !windowLoaded"

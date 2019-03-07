@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 import { Title } from '@angular/platform-browser';
 import { siteTitle } from '../assets';
+import { Subject } from "rxjs";
 @Component({
   selector: 'app-hero-section',
   templateUrl: './hero-section.component.html',
@@ -9,29 +10,36 @@ import { siteTitle } from '../assets';
 })
 export class HeroSectionComponent implements OnInit {
 
+  logo$:Subject<boolean> = new Subject();
+  window$:Subject<boolean> = new Subject();
   loading=false;
   windowLoaded=false;
+  imageLoaded=false;
   constructor(private titleService:Title) { }
 
   ngOnInit() {
     this.titleService.setTitle(siteTitle);
 
     this.disableScroll();
-    
-    var OnHeroLoad=()=>{
+
+    this.logo$.subscribe( v=>{
+      console.log("Image loaded");
+      this.imageLoaded = true;
       setTimeout(() => {
         this.loading=true;
-      }, 5000);
-      
-      var loaded = ()=>{
-        console.log("window loaded");
-        this.enableScroll();
-        this.loading = false;
-        this.windowLoaded = true;
-      }
-      window.onload=loaded
-    }
-    this.logoLoad(OnHeroLoad)
+      }, 6000);
+    });
+
+    this.window$.subscribe( v=>{
+      console.log("window loaded");
+      this.loading = false;
+      this.windowLoaded = true;
+      this.enableScroll();
+    })
+    
+    this.onLogoLoad( ()=>this.logo$.next(true) );
+    window.onload = ()=> this.window$.next(true);
+
   }
 
   getheight(){
@@ -57,16 +65,14 @@ export class HeroSectionComponent implements OnInit {
     document.body.style.cssText = "overflow: unset;"
   }
 
-  logoLoad(Func:Function){
-    let img = document.getElementById('logoload') as HTMLImageElement;
-    if (img.complete) {
-      Func();
-    } else {
-      img.addEventListener('load',()=>{
-        Func();
-      })
+  onLogoLoad(Func:Function){
+    let src = `${window.location.href}/assets/img/m-logo.png`;
+    var imge = new Image();
+    imge.onload = ()=>{
+      console.log("imge.onload");
+      Func()
     }
-
-
+    imge.src = src;
   }
+
 }

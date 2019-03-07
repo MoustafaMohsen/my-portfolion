@@ -86,7 +86,7 @@
 
             .inner-about-card{
                 $title-font-size:35px;
-                padding:50px  20px;
+                padding:45px  20px 20px;
                 color: $primary;
                 background-color:$my-white;
                 overflow: hidden;
@@ -183,6 +183,10 @@
 
 
             }//about-form
+            .email-sec{
+                margin: 29px 0 0px;
+                line-height: 1em;
+            }
         }//contact-card
 
     }//contact-card-container

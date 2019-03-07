@@ -41,7 +41,7 @@
                             <div class="about-small-title"><p>{{aboutMe.subtitle}}</p></div>
 
                             <!--paragraph-->
-                            <div class="about-paragraph"><p>{{aboutMe.description}} </p></div>
+                            <div class="about-paragraph"><p [innerHTML]="aboutMe.description"></p></div>
 
                         </div>
                     </div>
@@ -91,13 +91,17 @@
                             </div>
 
                         </form>
-                        <span>
-                            Email:
-                            <span class="highlight">
-                                <a class="highlight normalize-anchor" [href]="'mailto:'+email">{{email}}</a>
-                            </span>
+                        <div class="row">
+                            <div class="col-12 email-sec">
+                                <span>
+                                    Email:
+                                    <span class="highlight">
+                                        <a class="highlight normalize-anchor" [href]="'mailto:'+email">{{email}}</a>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
 
-                        </span>
                     </div>
                         
 

@@ -1,4 +1,4 @@
-import { Directive, Input, Renderer, ElementRef, OnInit, OnDestroy, AfterViewInit, Output, EventEmitter } from '@angular/core';
+import { Directive, Input, Renderer, ElementRef, OnInit, OnDestroy, AfterViewInit, Output, EventEmitter, NgZone } from '@angular/core';
 import { ScrollService } from './scroll.service';
 import { Subscription } from 'rxjs';
 
@@ -25,7 +25,7 @@ export class AnimateOnScrollDirective implements OnInit, OnDestroy, AfterViewIni
 
   @Output() func:EventEmitter<any> = new EventEmitter();
 
-  constructor(private elementRef: ElementRef, private renderer: Renderer, private scroll: ScrollService) { }
+  constructor(private elementRef: ElementRef, private renderer: Renderer, private scroll: ScrollService,private zone: NgZone) { }
 
   ngOnInit(): void {
     if (!this.animationName) {
@@ -38,12 +38,14 @@ export class AnimateOnScrollDirective implements OnInit, OnDestroy, AfterViewIni
     this.setClass(this.beforeClass)
 
     // subscribe to scroll event using service
-    this.scrollSub = this.scroll.scrollObs
-      .subscribe(() => this.manageVisibility());
-
-    // subscribe to resize event using service so scrolling position is always accurate
-    this.resizeSub = this.scroll.resizeObs
-      .subscribe(() => this.manageVisibility());
+    this.zone.runOutsideAngular(()=>{
+      this.scrollSub = this.scroll.scrollObs
+        .subscribe(() => this.manageVisibility());
+  
+      // subscribe to resize event using service so scrolling position is always accurate
+      this.resizeSub = this.scroll.resizeObs
+        .subscribe(() => this.manageVisibility());
+    })
 
   }
 
@@ -80,8 +82,10 @@ export class AnimateOnScrollDirective implements OnInit, OnDestroy, AfterViewIni
 
     // using values updated in service
     if (this.scroll.pos >= scrollTrigger) {
-      this.func.emit();
-      this.addAnimationClass();
+      this.zone.run(()=>{
+        this.func.emit();
+        this.addAnimationClass();
+      })
     }
 
   }
@@ -92,13 +96,11 @@ export class AnimateOnScrollDirective implements OnInit, OnDestroy, AfterViewIni
    * @returns void
    */
   private addAnimationClass(): void {
-
     // mark this element visible, we won't remove the class after this
     this.isVisible = true;
 
     // use default for animate.css if no value provided
     this.setClass(this.animationName);
-
   }
 
   /**

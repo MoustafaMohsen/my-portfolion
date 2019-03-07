@@ -38,7 +38,7 @@ export class HeroSectionComponent implements OnInit {
     })
     
     this.onLogoLoad( ()=>this.logo$.next(true) );
-    window.onload = ()=> this.window$.next(true);
+    window.onpageshow  = ()=> this.window$.next(true);
 
   }
 

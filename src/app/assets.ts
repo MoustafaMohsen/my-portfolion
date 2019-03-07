@@ -52,13 +52,14 @@ export const Availableimages = {
 };
 
 // ================== variables
+/*
 setTimeout(() => {
   document.querySelectorAll('.section-header-description').forEach(x=>{
     x.setAttribute("contenteditable","true")
     });
     document.querySelectorAll('.inner-about-card')[0].setAttribute("contenteditable","true")
 }, 3000);
-
+*/
 let skillsDescription=`Creative, Adaptable and Diligent, always updated with the latest industry standards and best practices`
 
 let platformsDescription=`Previously I worked with WordPress developing themes and plugins, then I started using Angular and ASP.Net core which pushed out of my comfort zone, but I found them more interesting and can solve a lot of problems, yet with more tools to use comes more creativity and skills, so here's my toolkit`

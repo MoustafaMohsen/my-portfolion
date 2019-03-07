@@ -52,20 +52,29 @@ export const Availableimages = {
 };
 
 // ================== variables
+setTimeout(() => {
+  document.querySelectorAll('.section-header-description').forEach(x=>{
+    x.setAttribute("contenteditable","true")
+    });
+    document.querySelectorAll('.inner-about-card')[0].setAttribute("contenteditable","true")
+}, 3000);
 
+let skillsDescription=`Creative, Adaptable and Diligent, always updated with the latest industry standards and best practices`
 
-let skillsDescription=`Creative, Adaptable and Diligent, always updated with the latest industry standards and coding principles and best practices`
+let platformsDescription=`Previously I worked with WordPress developing themes and plugins, then I started using Angular and ASP.Net core which pushed out of my comfort zone, but I found them more interesting and can solve a lot of problems, yet with more tools to use comes more creativity and skills, so here's my toolkit`
 
-let platformsDescription=`Previously I worked with WordPress developing themes and plugins, then I started using Angular and ASP.Net core, I found them interesting and can solve alot of problems, yet with more knowledge comes more creativity and tools to use, here is my toolkit`
+let WorkDescription=`I've been working on a few side projects that I felt passionate about to solve problems that I have encountered.
+there're some of my projects`
 
-let WorkDescription=`Here is some of my recent projects`
-
-let ContactDescription=`I can help you make your Website or Web App come to life, just let me handle it
+let ContactDescription=`I can help you make your Idea or Web App come to life, just let me handle it 
 <br>
 <span class="highlight"><a class="highlight normalize-anchor" href="mailto:contact@moustafamohsen.com" >Contact@moustafamohsen.com</a></span>
 `
 
-let aboutMeCardDescription=`I'm Moustafa Mohsen, a 23-year-old creative full-stack developer and problem solver, with a 4-year background in building and implementing web applications, I worked with many people and started my own business, I'm self-motivated because I'm genuinely passionate about programming, resolving challenges is thrilling, Organized and Effective.`
+let aboutMeCardDescription=
+`I'm Moustafa Mohsen, a 23-year-old creative full-stack developer and problem solver, with a 4-year background in building and implementing web applications, I've worked with many people and started my own business, Self-motivated because I'm genuinely passionate about programming, resolving challenges is thrilling.
+<br/><br/>
+If you would like to find out more about me or my work proccess please reach out by sending me an email at contact@moustafamohsen.com or using this contact form, Currently I'm available  for freelance work as well as contract hiring and am actively pursuing projects.`
 
 //skills
 let skillsSmallImages = [Availableimages.php, Availableimages.sass];
@@ -134,7 +143,7 @@ let mainProjects: workCard[] = [
     ],
     buttonsText: [
       {
-        link: "https://mydevenv.tk",
+        link: "https://fridgenotes.moustafamohsen.com",
         text: "Visit site",
         type: "website"
       },
@@ -174,7 +183,7 @@ let mainProjects: workCard[] = [
     ],
     buttonsText: [
       {
-        link: "https://moustafamohsen.github.io/islamic-search/",
+        link: "https://islamicsearch.moustafamohsen.com",
         text: "Visit site",
         type: "website"
       },

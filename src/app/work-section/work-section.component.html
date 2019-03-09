@@ -40,16 +40,17 @@
                                     </div>
             
                                     <div class="row justify-content-start work-card-header">
-                                        <div class="col-auto relative pad-0">
+                                        <div class="col-auto relative pad-0 work-card-title-container">
                                         <p class=work-card-title> {{workcard.title}}</p>
                                         <div class="work-card-uderline"></div>
                                         </div>
                                     </div>
+                                    <div class="row work-card-subtitle">
+                                        <div class="col-12"><p>{{workcard.subtitle}}</p></div>
+                                    </div>
                         
-                                    <mat-card-content class="row justify-content-start work-card-content">
-                                                <p class="col-md-11 col-11 work-card-description">
-                                                    {{workcard.description}}
-                                                </p>
+                                    <mat-card-content class="row no-gutters justify-content-start work-card-content">
+                                                <p class="col-md-11 col-11 work-card-description" [innerHTML]="workcard.description"></p>
                                     </mat-card-content>
 
                                     <div class="row work-card-footer">
@@ -75,7 +76,7 @@
 
                         <div class="col-lg-12 col-md-10 col-sm-11 col-12">
         
-                                <div class="row small-cards-container">
+                                <div class="row justify-content-center no-gutters small-cards-container">
                     
                                     <div class="col-6" *ngFor="let smallcard of smallCards; let i = index">
                                         <div class="row small-work-card-container" >
@@ -166,7 +167,8 @@
                         <div class="carousel-inner">
                             <ng-container *ngFor="let img of project.backgroundImages;let i = index">
                                 <div  class="carousel-item " [ngClass]="i==0?'active':''">
-                                    <img [src]="img">
+                                    <!-- <img [src]="img"> -->
+                                    <div class="modal-background-image" [ngStyle]="getBackgroundImage(i)" ></div>
                                 </div>
                             </ng-container>
                         </div>
@@ -196,7 +198,7 @@
             <div class="moda-project-seperator"></div>
 
             <div class="col-12 modal-description">
-                <p>{{project.description}}</p>
+                <p [innerHTML]="project.description"></p>
             </div>
             <div class="col-12 modal-inner-description">
                 <pre>{{project.innerDescription}}</pre>

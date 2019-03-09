@@ -33,6 +33,7 @@
   border-radius: 0;
   padding: 40px 50px 20px;
   font-size: 5rem;
+  min-height: 300px;
 }
 
 @media screen and (min-width: 1199.98px) {
@@ -65,8 +66,26 @@
   }
 }
 
+@media screen and (min-width: 575.98px) {
+  .work-body .work-card-container .work-card {
+    min-height: 300px;
+  }
+}
+
+@media screen and (min-width: 767.98px) {
+  .work-body .work-card-container .work-card {
+    min-height: 350px;
+  }
+}
+
+@media screen and (min-width: 991.98px) {
+  .work-body .work-card-container .work-card {
+    min-height: 360px;
+  }
+}
+
 .work-body .work-card-container .work-card:hover .work-card-header .work-card-uderline {
-  width: 80%;
+  width: 100% !important;
 }
 
 .work-body .work-card-container .work-card:hover .work-card-background-image .work-card-background-overlay {
@@ -75,6 +94,7 @@
 
 .work-body .work-card-container .work-card .work-card-background-image {
   background-size: cover;
+  background-position: center;
   display: block;
   position: absolute;
   top: 0;
@@ -97,49 +117,55 @@
   transition: all ease-in-out 200ms 0ms !important;
 }
 
-.work-body .work-card-container .work-card .work-card-header {
+.work-body .work-card-container .work-card .work-card-header .work-card-title-container {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   margin-bottom: 20px;
 }
 
-.work-body .work-card-container .work-card .work-card-header .work-card-title {
+.work-body .work-card-container .work-card .work-card-header .work-card-title-container .work-card-title {
   font-size: 5rem;
   color: #F9F9F9;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 @media screen and (max-width: 1199.98px) {
-  .work-body .work-card-container .work-card .work-card-header .work-card-title {
+  .work-body .work-card-container .work-card .work-card-header .work-card-title-container .work-card-title {
     font-size: 4.5rem;
   }
 }
 
 @media screen and (max-width: 991.98px) {
-  .work-body .work-card-container .work-card .work-card-header .work-card-title {
+  .work-body .work-card-container .work-card .work-card-header .work-card-title-container .work-card-title {
     font-size: 4rem;
   }
 }
 
 @media screen and (max-width: 767.98px) {
-  .work-body .work-card-container .work-card .work-card-header .work-card-title {
+  .work-body .work-card-container .work-card .work-card-header .work-card-title-container .work-card-title {
     font-size: 3.5rem;
   }
 }
 
 @media screen and (max-width: 575.98px) {
-  .work-body .work-card-container .work-card .work-card-header .work-card-title {
+  .work-body .work-card-container .work-card .work-card-header .work-card-title-container .work-card-title {
     font-size: 2.5rem;
   }
 }
 
 @media screen and (max-width: 300.98px) {
-  .work-body .work-card-container .work-card .work-card-header .work-card-title {
+  .work-body .work-card-container .work-card .work-card-header .work-card-title-container .work-card-title {
     font-size: 1.5rem;
   }
 }
 
-.work-body .work-card-container .work-card .work-card-header .work-card-uderline {
+.work-body .work-card-container .work-card .work-card-header .work-card-title-container .work-card-uderline {
   position: absolute;
   height: 2px;
-  width: 60%;
+  width: 80%;
   left: 0%;
   background-color: #F9F9F9;
   -webkit-transition: all 200ms ease-in-out !important;
@@ -153,6 +179,16 @@
 .work-body .work-card-container .work-card .work-card-content .work-card-description {
   font-size: 1em;
   color: #F9F9F9;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.work-body .work-card-container .work-card .work-card-subtitle p {
+  color: #797979;
+  font-weight: bold;
+  font-size: 0.2em;
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
 .mar-top--20 {
@@ -361,6 +397,7 @@ $break-l: 1199.98px;
 .small-cards-container .small-work-card-container .small-work-card-background-image {
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   height: 100%;
   width: 100%;
   position: absolute;
@@ -442,11 +479,36 @@ $break-l: 1199.98px;
   position: relative;
   top: 0;
   left: 0;
-  height: 300px;
 }
 
-.model-project-card .modal-project-header .modal-image img {
+.model-project-card .modal-project-header .modal-image .carousel {
   width: 100%;
+}
+
+@media screen and (min-width: 991.98px) {
+  .model-project-card .modal-project-header .modal-image .carousel {
+    width: 800px;
+  }
+}
+
+@media screen and (min-width: 575.98px) {
+  .model-project-card .modal-project-header .modal-image .carousel {
+    width: 100%;
+  }
+}
+
+.model-project-card .modal-project-header .modal-image .modal-background-image {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media screen and (min-width: 991.98px) {
+  .model-project-card .modal-project-header .modal-image .modal-background-image {
+    height: 480px;
+  }
 }
 
 .model-project-card .modal-project-content {

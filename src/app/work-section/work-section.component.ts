@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgZone } from '@angular/core';
 import { Availableimages, workSection } from '../assets';
 import { workCard } from '../models';
 
@@ -10,7 +10,7 @@ import { workCard } from '../models';
 
 export class WorkSectionComponent implements OnInit {
 
-  constructor() { }
+  constructor(private zone:NgZone) { }
 
   title:string="";
   _title:string="";
@@ -30,7 +30,6 @@ export class WorkSectionComponent implements OnInit {
     this.test=Availableimages.test;
     this.Cards=workSection.mainProjects;
     this.smallCards=workSection.otherProjects;
-
   }//ngOnInit
 
   stringfy(ob){
@@ -65,15 +64,31 @@ export class WorkSectionComponent implements OnInit {
     $_("#exampleModal").modal('show');
     
   }
+
   closeModal(){
     let $_ = $ as any;
     $_("#exampleModal").modal('hide');
   }
 
+  getHeight(width:number,ratio:number){
+      let height =  width/ratio;
+      return {
+        'height':height+'px'
+      }
+  }
+
+
   setproject(workcard:workCard){
     this.project = workcard;
     console.log(this.project);
     
+  }
+  getBackgroundImage(index:number){
+    let src = this.project.backgroundImages[index];
+    let style = {
+      'background-image':`url('${src}')`
+    }
+    return style;
   }
   
 }//class

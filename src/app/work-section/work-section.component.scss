@@ -63,10 +63,24 @@ $hide-time:500ms;
             @media screen and (max-width:$break-x) {
                 padding: 5px 25px 5px; 
             }
+            // Min heights
+            // small
+            min-height: 300px;
+            @media screen and (min-width:$break-x) {
+                min-height: 300px;   
+            }
+            // medium
+            @media screen and (min-width:$break-s) {
+                min-height:350px;   
+            }
+            // large
+            @media screen and (min-width:$break-m) {
+                min-height: 360px; 
+            }
 
             &:hover{
                 .work-card-header .work-card-uderline{
-                    width: 80%;
+                    width: 100% !important;
                 }
                 .work-card-background-image .work-card-background-overlay{
                     background-color: rgba(0, 0, 0, 0.7);
@@ -77,6 +91,7 @@ $hide-time:500ms;
             .work-card-background-image{
                 //content: "";
                 background-size: cover;
+                background-position: center;
                 //background-repeat: no-repeat;
                 display: block;
                 position: absolute;
@@ -99,35 +114,39 @@ $hide-time:500ms;
             }
 
             .work-card-header{
-                //@include hide-up;
-                margin-bottom: 20px;
-                .work-card-title{
-                    font-size: 5rem;
-                    @media screen and (max-width:$break-l) {
-                        font-size: 4.5rem; 
+                .work-card-title-container{
+                    width: fit-content;
+                    //@include hide-up;
+                    margin-bottom: 20px;
+                    .work-card-title{
+                        font-size: 5rem;
+                        color:$compelmentary;
+                        width: fit-content;
+                        @media screen and (max-width:$break-l) {
+                            font-size: 4.5rem; 
+                        }
+                        @media screen and (max-width:$break-m) {
+                            font-size: 4rem;   
+                        }
+                        @media screen and (max-width:$break-s) {
+                            font-size: 3.5rem;   
+                        }
+                        @media screen and (max-width:$break-x) {
+                            font-size: 2.5rem;   
+                        }
+                        @media screen and (max-width:300.98px) {
+                            font-size: 1.5rem;   
+                        }
                     }
-                    @media screen and (max-width:$break-m) {
-                        font-size: 4rem;   
+                    .work-card-uderline{
+                        position: absolute;
+                        height: 2px;
+                        width: 80%;
+                        left: 0%;
+                        background-color: $compelmentary;
+                        transition: all $card-time ease-in-out !important;
+    
                     }
-                    @media screen and (max-width:$break-s) {
-                        font-size: 3.5rem;   
-                    }
-                    @media screen and (max-width:$break-x) {
-                        font-size: 2.5rem;   
-                    }
-                    @media screen and (max-width:300.98px) {
-                        font-size: 1.5rem;   
-                    }
-                    color:$compelmentary;
-                }
-                .work-card-uderline{
-                    position: absolute;
-                    height: 2px;
-                    width: 60%;
-                    left: 0%;
-                    background-color: $compelmentary;
-                    transition: all $card-time ease-in-out !important;
-
                 }
             }
 
@@ -137,6 +156,17 @@ $hide-time:500ms;
                 .work-card-description{
                     font-size: 1em;//14px;
                     color:$compelmentary;
+                    margin-left: -15px;
+                    margin-right: -15px;
+                }
+            }
+            .work-card-subtitle{
+                p{
+                    color: #797979;
+                    font-weight: bold;
+                    font-size: 0.2em;
+                    margin-left: -15px;
+                    margin-right: -15px;
                 }
             }
         }
@@ -341,6 +371,7 @@ $break-l: 1199.98px;
         .small-work-card-background-image{
             background-size: cover;
             background-repeat: no-repeat;
+            background-position: center;
             height: 100%;
             width:100%;
             position: absolute;
@@ -427,9 +458,24 @@ $break-l: 1199.98px;
             position: relative;
             top: 0;
             left: 0;
-            height: 300px;
-            img{
-                width: 100%;
+            .carousel{
+                width: 100%;;
+                @media screen and (min-width:$break-m) {
+                    width:800px;
+                }
+                @media screen and (min-width:$break-x) {
+                    width:100%;
+                }
+            }
+            .modal-background-image{
+                width: 100%;;
+                height: 300px;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                @media screen and (min-width:$break-m) {
+                    height: 480px;
+                }
             }
         }
     }

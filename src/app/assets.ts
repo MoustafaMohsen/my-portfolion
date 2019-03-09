@@ -23,11 +23,25 @@ export const Availableimages = {
   },
 
   fridgenotes_desktop: `${AppHost}${mocksPath}` + "fridgenotes-desktop.png",
+  fn_1: `${AppHost}${mocksPath}` + "fn_1.jpg",
+  fn_2: `${AppHost}${mocksPath}` + "fn_2.jpg",
+  fn_3: `${AppHost}${mocksPath}` + "fn_3.jpg",
   islamic_search_desktop: `${AppHost}${mocksPath}` + "islamic-search-laptop.png",
+  is_1: `${AppHost}${mocksPath}` + "is_1.jpg",
+  is_2: `${AppHost}${mocksPath}` + "is_2.jpg",
+  ca_1: `${AppHost}${mocksPath}` + "css-angular/ca_1.jpg",
+  ca_2: `${AppHost}${mocksPath}` + "css-angular/ca_2.jpg",
+  ca_3: `${AppHost}${mocksPath}` + "css-angular/ca_3.jpg",
   email_verfication_desktop: `${AppHost}${mocksPath}` + "email-verfication.jpg",
   class_library_desktop: `${AppHost}${mocksPath}` + "csharp_window.png",
-  string_comaprator_desktop: `${AppHost}${mocksPath}` + "arrays.png",
-  core_identity_desktop: `${AppHost}${mocksPath}` + "jwt.jpg",
+  string_comaprator_desktop_1: `${AppHost}${mocksPath}` + "array-comparator.jpg",
+  string_comaprator_desktop_2: `${AppHost}${mocksPath}` + "arrays.png",
+  jwt: `${AppHost}${mocksPath}` + "jwt.jpg",
+  core_identity_desktop_1: `${AppHost}${mocksPath}` + "core_identity_1.jpg",
+  core_identity_desktop_2: `${AppHost}${mocksPath}` + "core_identity_2.jpg",
+  core_identity_desktop_3: `${AppHost}${mocksPath}` + "core_identity_3.jpg",
+
+  site_reader_1: `${AppHost}${mocksPath}` + "site-reader_1.jpg",
   test:"https://www.gettyimages.ie/gi-resources/images/Homepage/Hero/UK/CMS_Creative_164657191_Kingfisher.jpg",
   
   dotnet: `${AppHost}${PlatformsPath}` + "dotnet.png",
@@ -125,9 +139,9 @@ let mainProjects: workCard[] = [
 - Registration email confirmation to prevent spam
 - Angular Animations to improve the user experience`,
     backgroundImages:[
-      Availableimages.fridgenotes_desktop,
-      Availableimages.islamic_search_desktop,
-      Availableimages.string_comaprator_desktop,
+      Availableimages.fn_1,
+      Availableimages.fn_2,
+      Availableimages.fn_3,
     ],
     backgroundClass: "islamic-search-background",
     languages: "Html, CSS, C#, TypeScript",
@@ -169,7 +183,47 @@ let mainProjects: workCard[] = [
 - ASP.NET Core 2.1, LINQ Query SQLite as Database in the backend
 - Many-to-many relationships database to store multiple references of multiple blocks of text
 - Angular Reactive Forms and Form Validation to check the references against local rules and a small database`,
-    backgroundImages:[Availableimages.islamic_search_desktop],    
+    backgroundImages:[Availableimages.is_1,Availableimages.is_2],    
+    backgroundClass: "fridge-notes-background",
+    languages: "Html, CSS, C#, TypeScript",
+    buttonText: "LEARN MORE",
+    resources_Images: [
+      Availableimages.workcard.angular,
+      Availableimages.workcard.aspcore,
+      Availableimages.workcard.mysql
+    ],
+    deployment_Images: [
+      Availableimages.workcard.github,
+      Availableimages.workcard.heroku
+    ],
+    buttonsText: [
+      {
+        link: "https://islamicsearch.moustafamohsen.com",
+        text: "Visit site",
+        type: "website"
+      },
+      {
+        link: "https://github.com/MoustafaMohsen/islamic-search",
+        text: "Github Front-end",
+        type: "project"
+      },
+      {
+        link: "https://github.com/MoustafaMohsen/islamic-search-api",
+        text: "Github Back-end",
+        type: "project"
+      }
+    ]
+  },
+  {
+    title: "css-to-angular-animations",
+    subtitle: "Node.js",
+    description: `use <code>npx css-angular animate.css</code> to convert .css file to .ts angular animation file`,
+    innerDescription:
+`-Reads CSS file and extract css @keyframes and classes
+-converts the @keyframes to angular animations methods keyframes([...])
+-converts the css classes to angular styles methods style({...})
+-saves both angular animations and styles as as const in the output .ts file ready to use in your angular app.`,
+    backgroundImages:[Availableimages.ca_3],    
     backgroundClass: "fridge-notes-background",
     languages: "Html, CSS, C#, TypeScript",
     buttonText: "LEARN MORE",
@@ -214,7 +268,7 @@ let otherProjects: workCard[] = [
 - OAuth2 Login with Facebook or Google
 - User Roles management Service to add, remove or update user Roles
 - Email verification sender with VerficationEmailSender Package`,
-    backgroundImages:[Availableimages.core_identity_desktop],
+    backgroundImages:[Availableimages.core_identity_desktop_3],
     //backgroundClass: "islamic-search-background",
     languages: "Html, CSS, C#, TypeScript",
     buttonText: "LEARN MORE",
@@ -277,7 +331,7 @@ let otherProjects: workCard[] = [
 - Dynamic range that changes the relative index based on similarities found in previous matches
 - Ignore Custom words and not match it in the search results.
 `,
-    backgroundImages:[Availableimages.string_comaprator_desktop],    
+    backgroundImages:[Availableimages.string_comaprator_desktop_1],    
     languages: "Html, CSS, C#, TypeScript",
     buttonText: "LEARN MORE",
     resources_Images: [
@@ -299,7 +353,7 @@ let otherProjects: workCard[] = [
     ]
   },
   {
-    title: "Email Verfication Sender",
+    title: "Email Verification Sender",
     subtitle: ".NET Class library",
     description: `open-source .NET Class library and NuGet Package to send confirmation email to users.`,
     innerDescription:
@@ -322,6 +376,37 @@ let otherProjects: workCard[] = [
     buttonsText: [
       {
         link: "https://github.com/MoustafaMohsen/VerficationEmailSender",
+        text: "Project page",
+        type: "project"
+      }
+    ]
+  },
+  {
+    title: "Sites Reader",
+    subtitle: "Node.js",
+    description: `Sites Reader is TypeScript Node.js module that recursively looks through thousands of web pages and it's html content to find an id in each page and save every matching content in an easy to use json format, it looks through the specified html element and pulls out it's text content to an object that contains the text's parent class, id, styles and other attributes, then add this object to the results array, thus converting a recursive html element to simple text object array`,
+    innerDescription:
+`- looks through thousands of webpages based on URL query function as a parameter
+- Stops looking based on URL query function as a parameter
+- parse the the html content and find the specified id in the html file for save
+- returns a CustomHTMLObjectArray with refrences of each url used to generate this object
+- can save the original html text for each match`,
+    backgroundImages:[Availableimages.site_reader_1],    
+    languages: "Html, CSS, C#, TypeScript",
+    buttonText: "LEARN MORE",
+    resources_Images: [
+      Availableimages.workcard.angular,
+      Availableimages.workcard.aspcore,
+      Availableimages.workcard.mysql
+    ],
+    deployment_Images: [
+      Availableimages.workcard.github,
+      Availableimages.workcard.heroku,
+      Availableimages.workcard.digitalocean
+    ],
+    buttonsText: [
+      {
+        link: "https://github.com/MoustafaMohsen/sites-reader",
         text: "Project page",
         type: "project"
       }

@@ -22,13 +22,13 @@ export const Availableimages = {
     heroku: `${AppHost}${PlatformsCardPath}` + "heroku.png"
   },
 
-  fridgenotes_desktop: `${AppHost}${mocksPath}` + "fridgenotes-desktop.png",
-  fn_1: `${AppHost}${mocksPath}` + "fn_1.jpg",
-  fn_2: `${AppHost}${mocksPath}` + "fn_2.jpg",
-  fn_3: `${AppHost}${mocksPath}` + "fn_3.jpg",
+  fridgenotes_desktop: `${AppHost}${mocksPath}` + "fridgenotes-desktop.jpg",
+  fn_1: `${AppHost}${mocksPath}` + "fn/fn_1.jpg",
+  fn_2: `${AppHost}${mocksPath}` + "fn/fn_2.jpg",
+  fn_3: `${AppHost}${mocksPath}` + "fn/fn_3.jpg",
   islamic_search_desktop: `${AppHost}${mocksPath}` + "islamic-search-laptop.png",
-  is_1: `${AppHost}${mocksPath}` + "is_1.jpg",
-  is_2: `${AppHost}${mocksPath}` + "is_2.jpg",
+  is_1: `${AppHost}${mocksPath}` + "is/is_1.jpg",
+  is_2: `${AppHost}${mocksPath}` + "is/is_2.jpg",
   ca_1: `${AppHost}${mocksPath}` + "css-angular/ca_1.jpg",
   ca_2: `${AppHost}${mocksPath}` + "css-angular/ca_2.jpg",
   ca_3: `${AppHost}${mocksPath}` + "css-angular/ca_3.jpg",
@@ -139,7 +139,7 @@ let mainProjects: workCard[] = [
 - Registration email confirmation to prevent spam
 - Angular Animations to improve the user experience`,
     backgroundImages:[
-      Availableimages.fn_1,
+      Availableimages.fridgenotes_desktop,
       Availableimages.fn_2,
       Availableimages.fn_3,
     ],

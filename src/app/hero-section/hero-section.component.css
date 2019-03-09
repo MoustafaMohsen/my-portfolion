@@ -59,7 +59,7 @@
   top: 66%;
 }
 
-@-webkit-keyframes fadeIn {
+@-webkit-keyframes fadeIn-5 {
   from {
     opacity: 0;
   }
@@ -68,7 +68,7 @@
   }
 }
 
-@keyframes fadeIn {
+@keyframes fadeIn-5 {
   from {
     opacity: 0;
   }

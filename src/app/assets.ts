@@ -469,3 +469,5 @@ export const footerSection:FooterSection={
   rights: `©${new Date().getFullYear()} Moustafa Mohsen`
 }
 export const siteTitle:string="Moustafa Mohsen | Full stack web developer"
+
+export const traceId = "UA-135974249-1";

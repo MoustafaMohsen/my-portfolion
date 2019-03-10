@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 import { Title } from '@angular/platform-browser';
-import { siteTitle } from '../assets';
+import { siteTitle, traceId } from '../assets';
 import { Subject } from "rxjs";
+import { GoogleService } from '../google.service';
 @Component({
   selector: 'app-hero-section',
   templateUrl: './hero-section.component.html',
@@ -15,7 +16,9 @@ export class HeroSectionComponent implements OnInit {
   loading=false;
   windowLoaded=false;
   imageLoaded=false;
-  constructor(private titleService:Title) { }
+  constructor(private titleService:Title,private googleSrv:GoogleService) { 
+    googleSrv.Script(traceId);
+  }
 
   ngOnInit() {
     this.titleService.setTitle(siteTitle);

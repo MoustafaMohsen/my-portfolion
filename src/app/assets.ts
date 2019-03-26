@@ -127,6 +127,42 @@ let platformsBigImages = [
 
 
 let mainProjects: workCard[] = [
+  
+  {
+    title: "css-to-angular-animations",
+    subtitle: "Node.js",
+    description: `use <code>npx css-angular animate.css</code> to convert .css file to .ts angular animation file`,
+    innerDescription:
+`-Reads CSS file and extract css @keyframes and classes
+-converts the @keyframes to angular animations methods keyframes([...])
+-converts the css classes to angular styles methods style({...})
+-saves both angular animations and styles as as const in the output .ts file ready to use in your angular app.`,
+    backgroundImages:[Availableimages.ca_3],    
+    backgroundClass: "fridge-notes-background",
+    languages: "Html, CSS, C#, TypeScript",
+    buttonText: "LEARN MORE",
+    resources_Images: [
+      Availableimages.workcard.angular,
+      Availableimages.workcard.aspcore,
+      Availableimages.workcard.mysql
+    ],
+    deployment_Images: [
+      Availableimages.workcard.github,
+      Availableimages.workcard.heroku
+    ],
+    buttonsText: [
+      {
+        link: "https://github.com/MoustafaMohsen/css-to-angular-animations-and-styles",
+        text: "Github",
+        type: "project"
+      },
+      {
+        link: "https://www.npmjs.com/package/css-angular",
+        text: "NPM",
+        type: "project"
+      }
+    ]
+  },
   {
     title: "Fridge Notes",
     subtitle: "Angular + ASP.NET CORE",
@@ -216,41 +252,6 @@ let mainProjects: workCard[] = [
       {
         link: "https://github.com/MoustafaMohsen/islamic-search-api",
         text: "Github Back-end",
-        type: "project"
-      }
-    ]
-  },
-  {
-    title: "css-to-angular-animations",
-    subtitle: "Node.js",
-    description: `use <code>npx css-angular animate.css</code> to convert .css file to .ts angular animation file`,
-    innerDescription:
-`-Reads CSS file and extract css @keyframes and classes
--converts the @keyframes to angular animations methods keyframes([...])
--converts the css classes to angular styles methods style({...})
--saves both angular animations and styles as as const in the output .ts file ready to use in your angular app.`,
-    backgroundImages:[Availableimages.ca_3],    
-    backgroundClass: "fridge-notes-background",
-    languages: "Html, CSS, C#, TypeScript",
-    buttonText: "LEARN MORE",
-    resources_Images: [
-      Availableimages.workcard.angular,
-      Availableimages.workcard.aspcore,
-      Availableimages.workcard.mysql
-    ],
-    deployment_Images: [
-      Availableimages.workcard.github,
-      Availableimages.workcard.heroku
-    ],
-    buttonsText: [
-      {
-        link: "https://github.com/MoustafaMohsen/css-to-angular-animations-and-styles",
-        text: "Github",
-        type: "project"
-      },
-      {
-        link: "https://www.npmjs.com/package/css-angular",
-        text: "NPM",
         type: "project"
       }
     ]

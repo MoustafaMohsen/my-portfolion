@@ -1,6 +1,7 @@
-import { Component, OnInit, ElementRef } from '@angular/core';
+import { Component, OnInit, ElementRef, NgZone } from '@angular/core';
 import { map, pairwise, throttleTime, distinctUntilChanged } from 'rxjs/operators';
-import { Subscription, fromEvent } from 'rxjs';
+import { Subscription, fromEvent, Observable } from 'rxjs';
+import { StylerService } from '../styler.service';
 
 @Component({
   selector: 'app-top-nav',
@@ -9,61 +10,72 @@ import { Subscription, fromEvent } from 'rxjs';
 })
 export class TopNavComponent implements OnInit {
 
-  scroll$= fromEvent(window,'scroll').pipe(
-    throttleTime(10),
-    map(()=>window.pageYOffset),
-    distinctUntilChanged(),
-    pairwise(),
-    map(([y1, y2]): scrollObject => {
-        if(y2 < y1)
-        {
-            let sc:scrollObject = {
-                down:false,
-                up:true,
-                position:y2
-            }
-            return sc;
-        }
-        else
-        {
-            let sc:scrollObject = {
-                down:true,
-                up:false,
-                position:y2
-            }
-            return sc;
-        }
+  scrollObs: Observable<any>;
+  highlightedbutton:string;
+  lastElementsInView;
+  constructor(private elementRef: ElementRef,private zone: NgZone, public styler:StylerService) {
+    this.scrollObs = fromEvent(window, 'scroll').pipe(
+      throttleTime(20),
+      distinctUntilChanged()
+    );
+   }
 
-    }),
-)
-  constructor(private elementRef: ElementRef) { }
-
-  viewclass = ""
+  viewclass = "";
   ngOnInit() {
-    let oldElementPos:number;
 
-    if(false)
-    this.scroll$.subscribe(s=>{
-      let customOffset = 80;
-      //set initial old element position
-      if(!oldElementPos){
-        let el = this.elementRef.nativeElement
-        const viewportTop = el.getBoundingClientRect().top;
-        const clientTop = el.clientTop;
-    
-        oldElementPos=viewportTop-clientTop ;
-        console.log("offsettop",oldElementPos);
-      }
-      let scrollPos = s.position;
+    this.zone.runOutsideAngular(()=>{
+      this.scrollObs.subscribe( 
+        (v)=>{
+          console.log(v);
+          let ids = ["#skills","#platforms","#work","#contact"];
+          let elementsInView = this.ElementInView(ids,50);
+          if (elementsInView.length>0) {
+            let Hightligh = elementsInView[elementsInView.length-1];
+            if(Hightligh && Hightligh !== this.highlightedbutton){
+              // detect change
+              this.highlightedbutton = Hightligh;
+              ids.forEach(id=>{
+                if(id != Hightligh)
+                $(id+'-link').removeClass('active');
+              })
+              $(Hightligh+'-link').addClass('active');
+            }
+          }
+          else{
+            ids.forEach(id=>{
+              $(id+'-link').removeClass('active');
+            });
+            this.highlightedbutton = "";
+          }
 
-      if (scrollPos>= oldElementPos+customOffset) {
-        this.viewclass="nav-after"
-      }
-      if (scrollPos < oldElementPos){
-        this.viewclass=""
-      }
+
+
+        }
+      )
 
     });
+  }// ngOnInit
+
+  IsElementAfterView(EleHandler:string,offset:number){
+    const WinPos = window.pageYOffset;
+    const ElePos = $(EleHandler).position().top;
+    let AfterView = WinPos + offset >= ElePos ;
+    return AfterView;
+  }
+
+  ElementInView(arr:string[],offset:number){
+    let elements = []
+    for (let i = 0; i < arr.length; i++) {
+      const str = arr[i];
+      if (this.IsElementAfterView(str,offset)) {
+        elements.push(str);
+      }
+    }
+    return elements;
+  }
+
+  scrollTo(){
+
   }
 
 }

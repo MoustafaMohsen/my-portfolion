@@ -135,6 +135,11 @@
                     transition: all 200ms ease-in-out;
                     cursor: pointer;
                 }
+                transition: all 200ms ease-in-out;
+            }
+            .active{
+                color: $secondary !important;
+                transition: all 200ms ease-in-out;
             }
             &:last-child{
                 .nav-button-span{

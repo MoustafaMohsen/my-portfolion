@@ -385,9 +385,16 @@ ul{
     color: $tertiary;
 }
 
-
-
-
+.description-a{
+    color: $secondary;
+    text-decoration: none;
+    transition: color 200ms;
+    &:hover{
+        text-decoration: none;
+        color: darken($color: $secondary, $amount: 10%);
+        transition: color 200ms;
+    }
+}
 
 
 // ======================= Animations ======================== //

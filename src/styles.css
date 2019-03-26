@@ -317,6 +317,20 @@ ul {
   color: #E0FF4F;
 }
 
+.description-a {
+  color: #16ADE3;
+  text-decoration: none;
+  -webkit-transition: color 200ms;
+  transition: color 200ms;
+}
+
+.description-a:hover {
+  text-decoration: none;
+  color: #118ab5;
+  -webkit-transition: color 200ms;
+  transition: color 200ms;
+}
+
 /*
 @keyframes nav-Container{
     0%{

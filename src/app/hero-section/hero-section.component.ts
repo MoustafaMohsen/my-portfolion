@@ -75,4 +75,9 @@ export class HeroSectionComponent implements OnInit {
     imge.src = src;
   }
 
+  scrollDown(){
+    let halfHeight = window.innerHeight / 2;
+    window.scrollTo(0,halfHeight);
+  }
+
 }

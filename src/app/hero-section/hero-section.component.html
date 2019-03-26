@@ -38,7 +38,9 @@
       *ngIf="windowLoaded"
       class="fadeIn animation-settings-3 down-icon bottom-abs"
     >
-      <i class="fas fa-angle-down"></i>
+      <button mat-icon-button (click)="scrollDown()">
+        <i class="fas fa-angle-down"></i>
+      </button>
     </div>
   </div>
 

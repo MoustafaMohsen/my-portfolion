@@ -82,7 +82,8 @@ let skillsDescription=`I Speak`
 
 let platformsDescription=`I have working experience with different frameworks which allow me to work with the best suited framework for your project.`;
 
-let WorkDescription=`Here are some of my projects I'm passionate about`
+let WorkDescription=`Here are some of my projects I'm passionate about, More at my 
+<a class="description-a" target="_blank" href="https://github.com/moustafamohsen"> GitHub </a>`
 
 let ContactDescription=`I can help you make your Idea or Web App come to life, just let me handle it 
 <br>

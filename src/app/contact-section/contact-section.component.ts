@@ -49,16 +49,9 @@ export class ContactSectionComponent implements OnInit {
       return;
     }
     this.loading=true
-    console.log(
-      "submited",
-      this.f.name.value,
-      this.f.email.value,
-      this.f.message.value
-    );
     this.getIp().subscribe(
       response=>{
         let data = response as Ipdata.Ipdata
-        console.log(data);
         this.loading=true;
 
         let filterThreats = contactSection.filterThreats;

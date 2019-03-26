@@ -35,12 +35,8 @@ import { map, pairwise, throttleTime, distinctUntilChanged } from 'rxjs/operator
         //distinctUntilChanged()
     )
 
-    ngOnInit() {
-        console.log("OnView here");
-        
+    ngOnInit() {        
         this.scroll$.subscribe(s=>{
-            console.log(s);
-            
         });
     }
 

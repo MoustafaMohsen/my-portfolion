@@ -27,10 +27,10 @@ export class AppComponent implements OnInit{
     */
    
    this.winHeight = window.innerHeight;
-   console.log(this.winHeight);
+   //console.log(this.winHeight);
   }
 
   log(){
-    console.log("fixnav")
+    //console.log("fixnav")
   }
 }

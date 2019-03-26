@@ -25,8 +25,7 @@ export class TopNavComponent implements OnInit {
 
     this.zone.runOutsideAngular(()=>{
       this.scrollObs.subscribe( 
-        (v)=>{
-          console.log(v);
+        ()=>{
           let ids = ["#skills","#platforms","#work","#contact"];
           let elementsInView = this.ElementInView(ids,150);
           if (elementsInView.length>0) {

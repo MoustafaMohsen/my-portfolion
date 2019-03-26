@@ -12,7 +12,7 @@
         <!--work description-->
         <div class="row justify-content-center">
             <div class="col-lg-8 col-sm-10 col-12 align-self-center">
-                <p class="header-description section-header-description" animateOnScroll (func)="typeEffect(_title,100)" beforeClass="opacity-0" animationName="fadeInUp animation-settings-1">{{description}}</p>
+                <p class="header-description section-header-description" animateOnScroll (func)="typeEffect(_title,100)" beforeClass="opacity-0" animationName="fadeInUp animation-settings-1" [innerHTML]="description"></p>
     
             </div>
         </div>

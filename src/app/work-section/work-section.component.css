@@ -583,4 +583,8 @@ $break-l: 1199.98px;
 .model-project-card #modal-carousel {
   height: 100%;
 }
+
+.description-a {
+  color: #16ADE3;
+}
 /*# sourceMappingURL=work-section.component.css.map */

@@ -28,7 +28,7 @@ export class TopNavComponent implements OnInit {
         (v)=>{
           console.log(v);
           let ids = ["#skills","#platforms","#work","#contact"];
-          let elementsInView = this.ElementInView(ids,50);
+          let elementsInView = this.ElementInView(ids,150);
           if (elementsInView.length>0) {
             let Hightligh = elementsInView[elementsInView.length-1];
             if(Hightligh && Hightligh !== this.highlightedbutton){

@@ -77,7 +77,11 @@ export class HeroSectionComponent implements OnInit {
 
   scrollDown(){
     let halfHeight = window.innerHeight / 2;
-    window.scrollTo(0,halfHeight);
+    window.scrollTo({
+      top: halfHeight,
+      left:0,
+      behavior: 'smooth'
+    });
   }
 
 }

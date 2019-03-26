@@ -79,9 +79,7 @@ export class WorkSectionComponent implements OnInit {
 
 
   setproject(workcard:workCard){
-    this.project = workcard;
-    console.log(this.project);
-    
+    this.project = workcard;    
   }
   getBackgroundImage(index:number){
     let src = this.project.backgroundImages[index];

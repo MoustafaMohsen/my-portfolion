@@ -15,7 +15,7 @@ import {
   
     @HostListener("window:scroll", ["$event"])
     public windowScrolled($event) {
-      console.log(this.isContent);
+      //console.log(this.isContent);
       if (this.isContent) {
         this.windowScrollEventContent($event);
       } else {

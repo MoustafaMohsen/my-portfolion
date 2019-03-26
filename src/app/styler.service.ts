@@ -9,7 +9,6 @@ export class StylerService {
   constructor() { }
   scrollById(elId:string,delay=100) {
     setTimeout(() => {
-      console.log("scrolling to",elId);
       const element = document.getElementById(elId);
       if(element === null)
         return
@@ -20,7 +19,6 @@ export class StylerService {
   focusById(elId:string,delay=600){
     
     setTimeout(() => {
-      console.log("focusById",elId);
       const element = document.getElementById(elId);      
       if(element === null)
         return
@@ -31,7 +29,6 @@ export class StylerService {
   click(elId:string,delay=600){
     
     setTimeout(() => {
-      console.log("click",elId);
       const element = document.getElementById(elId);
       if(element === null)
         return
@@ -70,9 +67,6 @@ export class StylerService {
 
   getNavHeight(){
     let height = $('#navbar').height();
-    console.log("======Body Hieght");
-    console.log("body-container",height);
-    console.log("Body Hieght======");
     return height;
   }
 

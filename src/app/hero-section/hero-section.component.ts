@@ -26,7 +26,6 @@ export class HeroSectionComponent implements OnInit {
     this.disableScroll();
 
     this.logo$.subscribe( v=>{
-      console.log("Image loaded");
       this.imageLoaded = true;
       setTimeout(() => {
         this.loading=true;
@@ -34,7 +33,6 @@ export class HeroSectionComponent implements OnInit {
     });
 
     this.window$.subscribe( v=>{
-      console.log("window loaded");
       this.loading = false;
       this.windowLoaded = true;
       this.enableScroll();
@@ -72,7 +70,6 @@ export class HeroSectionComponent implements OnInit {
     let src = `${window.location.href}/assets/img/m-logo.png`;
     var imge = new Image();
     imge.onload = ()=>{
-      console.log("imge.onload");
       Func()
     }
     imge.src = src;

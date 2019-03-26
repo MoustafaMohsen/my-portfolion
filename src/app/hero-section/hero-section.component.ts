@@ -4,6 +4,7 @@ import { Title } from '@angular/platform-browser';
 import { siteTitle, traceId } from '../assets';
 import { Subject } from "rxjs";
 import { GoogleService } from '../google.service';
+import { StylerService } from '../styler.service';
 @Component({
   selector: 'app-hero-section',
   templateUrl: './hero-section.component.html',
@@ -16,7 +17,7 @@ export class HeroSectionComponent implements OnInit {
   loading=false;
   windowLoaded=false;
   imageLoaded=false;
-  constructor(private titleService:Title,private googleSrv:GoogleService) { 
+  constructor(private titleService:Title,private googleSrv:GoogleService,private styler:StylerService) { 
     googleSrv.Script(traceId);
   }
 
@@ -76,12 +77,7 @@ export class HeroSectionComponent implements OnInit {
   }
 
   scrollDown(){
-    let halfHeight = window.innerHeight / 2;
-    window.scrollTo({
-      top: halfHeight,
-      left:0,
-      behavior: 'smooth'
-    });
+    this.styler.scrollById("skills",0)
   }
 
 }

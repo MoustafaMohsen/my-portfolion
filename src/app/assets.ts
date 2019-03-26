@@ -23,11 +23,12 @@ export const Availableimages = {
   },
 
   fridgenotes_desktop: `${AppHost}${mocksPath}` + "fridgenotes-desktop.jpg",
-  fn_1: `${AppHost}${mocksPath}` + "fn/fn_1.jpg",
-  fn_2: `${AppHost}${mocksPath}` + "fn/fn_2.jpg",
-  fn_3: `${AppHost}${mocksPath}` + "fn/fn_3.jpg",
-  fn_4: `${AppHost}${mocksPath}` + "fn/fn_4.jpg",
-  fn_5: `${AppHost}${mocksPath}` + "fn/fn_5.jpg",
+  fn_1: `${AppHost}${mocksPath}` + "fn/2/fn_1.jpg",
+  fn_2: `${AppHost}${mocksPath}` + "fn/2/fn_2.jpg",
+  fn_3: `${AppHost}${mocksPath}` + "fn/2/fn_3.jpg",
+  fn_4: `${AppHost}${mocksPath}` + "fn/2/fn_4.jpg",
+  fn_5: `${AppHost}${mocksPath}` + "fn/2/fn_5.jpg",
+  fn_6: `${AppHost}${mocksPath}` + "fn/2/fn_6.jpg",
   islamic_search_desktop: `${AppHost}${mocksPath}` + "islamic-search-laptop.png",
   is_1: `${AppHost}${mocksPath}` + "is/is_1.jpg",
   is_2: `${AppHost}${mocksPath}` + "is/is_2.jpg",
@@ -68,20 +69,19 @@ export const Availableimages = {
 };
 
 // ================== variables
-/*
+
 setTimeout(() => {
   document.querySelectorAll('.section-header-description').forEach(x=>{
     x.setAttribute("contenteditable","true")
     });
     document.querySelectorAll('.inner-about-card')[0].setAttribute("contenteditable","true")
 }, 3000);
-*/
-let skillsDescription=`Creative, Adaptable and Diligent, always updated with the latest industry standards and best practices`
 
-let platformsDescription=`Previously I worked with WordPress developing themes and plugins, then I started using Angular and ASP.Net core which pushed out of my comfort zone, but I found them more interesting and can solve a lot of problems, yet with more tools to use comes more creativity and skills, so here's my toolkit`
+let skillsDescription=`I Speak`
 
-let WorkDescription=`I've been working on a few side projects that I felt passionate about to solve problems that I have encountered.
-there're some of my projects`
+let platformsDescription=`I have working experience with different frameworks which allow me to work with the best suited framework for your project.`;
+
+let WorkDescription=`Here are some of my projects I'm passionate about`
 
 let ContactDescription=`I can help you make your Idea or Web App come to life, just let me handle it 
 <br>
@@ -141,11 +141,12 @@ let mainProjects: workCard[] = [
 - Registration email confirmation to prevent spam
 - Angular Animations to improve the user experience`,
     backgroundImages:[
-      Availableimages.fridgenotes_desktop,
+      Availableimages.fn_1,
       Availableimages.fn_2,
       Availableimages.fn_3,
       Availableimages.fn_4,
       Availableimages.fn_5,
+      Availableimages.fn_6
     ],
     backgroundClass: "islamic-search-background",
     languages: "Html, CSS, C#, TypeScript",
@@ -242,18 +243,13 @@ let mainProjects: workCard[] = [
     ],
     buttonsText: [
       {
-        link: "https://islamicsearch.moustafamohsen.com",
-        text: "Visit site",
-        type: "website"
-      },
-      {
-        link: "https://github.com/MoustafaMohsen/islamic-search",
-        text: "Github Front-end",
+        link: "https://github.com/MoustafaMohsen/css-to-angular-animations-and-styles",
+        text: "Github",
         type: "project"
       },
       {
-        link: "https://github.com/MoustafaMohsen/islamic-search-api",
-        text: "Github Back-end",
+        link: "https://www.npmjs.com/package/css-angular",
+        text: "NPM",
         type: "project"
       }
     ]

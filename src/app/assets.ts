@@ -69,13 +69,14 @@ export const Availableimages = {
 };
 
 // ================== variables
-
+/*
 setTimeout(() => {
   document.querySelectorAll('.section-header-description').forEach(x=>{
     x.setAttribute("contenteditable","true")
     });
     document.querySelectorAll('.inner-about-card')[0].setAttribute("contenteditable","true")
 }, 3000);
+*/
 
 let skillsDescription=`I Speak`
 

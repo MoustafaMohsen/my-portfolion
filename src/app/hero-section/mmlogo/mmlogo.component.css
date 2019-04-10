@@ -31,8 +31,8 @@
 }
 
 .nav-container .underline-nav-center {
-  -webkit-animation: nav-Container 500ms 1000ms ease-in-out;
-          animation: nav-Container 500ms 1000ms ease-in-out;
+  -webkit-animation: nav-Container 500ms 0ms ease-in-out;
+          animation: nav-Container 500ms 0ms ease-in-out;
   position: absolute;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
@@ -52,27 +52,19 @@
 }
 
 .nav-container .img-box #m-moustafa {
-  -webkit-animation: m-moustafa-anim 2000ms 2000ms ease-in-out;
-          animation: m-moustafa-anim 2000ms 2000ms ease-in-out;
   position: absolute;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  top: 11%;
-  left: 0%;
+  top: 50%;
+  left: 25%;
+  height: 0;
   width: 50%;
-  height: 0%;
 }
 
 .nav-container .img-box #m-mohsen {
-  -webkit-animation: m-mohsen-anim 2000ms 2000ms ease-in-out;
-          animation: m-mohsen-anim 2000ms 2000ms ease-in-out;
   position: absolute;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  top: 11%;
-  left: 0%;
+  top: 50%;
+  left: 25%;
+  height: 0;
   width: 50%;
-  height: 0%;
 }
 
 .nav-container .word-box {
@@ -88,13 +80,8 @@
   font-family: Dosis;
   font-weight: 100;
   color: #FEFEFE;
-  top: 0%;
-  -webkit-animation: fadeIn 500ms 4500ms ease-in-out;
-          animation: fadeIn 500ms 4500ms ease-in-out;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
   opacity: 0;
-  left: 30%;
+  left: 35%;
   top: 0;
 }
 
@@ -103,14 +90,14 @@
   font-family: Dosis;
   font-weight: 100;
   color: #FEFEFE;
-  top: 0%;
-  -webkit-animation: fadeIn 500ms 4500ms ease-in-out;
-          animation: fadeIn 500ms 4500ms ease-in-out;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
   opacity: 0;
-  left: 80%;
+  left: 85%;
   top: 0;
+}
+
+.part-word {
+  font-size: 1em;
+  line-height: 1em;
 }
 
 @-webkit-keyframes nav-Container {
@@ -152,13 +139,13 @@
 }
 
 .m-moustafa-animation {
-  -webkit-animation: m-moustafa-anim 2000ms 2000ms ease-in-out;
-          animation: m-moustafa-anim 2000ms 2000ms ease-in-out;
+  -webkit-animation: m-moustafa-anim 2000ms 1000ms ease-in-out;
+          animation: m-moustafa-anim 2000ms 1000ms ease-in-out;
 }
 
 .m-mohsen-animation {
-  -webkit-animation: m-mohsen-anim 2000ms 2000ms ease-in-out;
-          animation: m-mohsen-anim 2000ms 2000ms ease-in-out;
+  -webkit-animation: m-mohsen-anim 2000ms 1000ms ease-in-out;
+          animation: m-mohsen-anim 2000ms 1000ms ease-in-out;
 }
 
 @-webkit-keyframes m-moustafa-anim {
@@ -182,8 +169,8 @@
   }
   100% {
     width: 23%;
-    top: 29%;
-    height: 38%;
+    top: 28%;
+    height: auto;
     left: 5%;
   }
 }
@@ -209,8 +196,8 @@
   }
   100% {
     width: 23%;
-    top: 29%;
-    height: 38%;
+    top: 28%;
+    height: auto;
     left: 5%;
   }
 }
@@ -236,8 +223,8 @@
   }
   100% {
     width: 23%;
-    top: 29%;
-    height: 38%;
+    top: 28%;
+    height: auto;
     left: 55%;
   }
 }
@@ -263,8 +250,8 @@
   }
   100% {
     width: 23%;
-    top: 29%;
-    height: 38%;
+    top: 28%;
+    height: auto;
     left: 55%;
   }
 }

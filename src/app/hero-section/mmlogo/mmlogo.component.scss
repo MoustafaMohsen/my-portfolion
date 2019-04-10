@@ -1,7 +1,7 @@
 @import "../../../_variables";
 @import "../../styles/_shared-sections";
 $disable-animation:1;
-$line-delay:1000ms *$disable-animation;
+$line-delay:000ms *$disable-animation;
 
 $line-time:500ms *$disable-animation;
 
@@ -94,12 +94,23 @@ $word-to-m-mar:2%;
         height: 100%;
         //left: -1%;
         #m-moustafa{
-            animation: m-moustafa-anim $m-time $m-Delay ease-in-out;
-            @include m-letter-part;
+            //animation: m-moustafa-anim $m-time $m-Delay ease-in-out;
+            //@include m-letter-part;
+            position: absolute;
+            top: 50%;
+            left: 25%;
+            height: 0;
+            width: 50%;
         }
         #m-mohsen{
-            animation: m-mohsen-anim $m-time $m-Delay ease-in-out;
-            @include m-letter-part;
+            //animation: m-mohsen-anim $m-time $m-Delay ease-in-out;
+            //@include m-letter-part;
+            position: absolute;
+            top: 50%;
+            left: 25%;
+            height: 0;
+            width: 50%;
+
         }
     }
 
@@ -109,13 +120,27 @@ $word-to-m-mar:2%;
         top: 50%;
         transform: translateY(-96%);
         #ostafa-word{
-            @include word-part;
-            left: $word-to-m-mar + $m-left-mar + $m-width;
+            //@include word-part;
+            position: absolute;
+            font-family: Dosis;
+            //font-size: $word-size;
+            font-weight: 100;
+            color: $my-white;
+            opacity: 0;
+        
+            left: $word-to-m-mar + $m-left-mar + $m-width +5%;
             top: 0;//100%;
         }
         #ohsen-word{
-            @include word-part;
-            left: $word-to-m-mar + $m-left-mar + $m-width +50%;
+            //@include word-part;
+            position: absolute;
+            font-family: Dosis;
+            //font-size: $word-size;
+            font-weight: 100;
+            color: $my-white;
+            opacity: 0;
+            
+            left: $word-to-m-mar + $m-left-mar + $m-width +50% +5%;
             top: 0;//100%;
 
         }
@@ -123,7 +148,10 @@ $word-to-m-mar:2%;
     }
 }
 
-
+.part-word{
+    font-size: 1em;
+    line-height:1em;
+}
 @keyframes nav-Container{
     0%{
         width: 0;
@@ -150,22 +178,19 @@ $word-to-m-mar:2%;
 @mixin start-part {
     top: 50%;
     height: 0;
-
     left: 25%;
     width: 50%;
 }
 @mixin middle-part {
     top: 11%;
     height: 70%;
-
     left: 25%;
     width: 50%;
-
 }
 @mixin final-part {
     width: $m-width;
-    top: 29%;
-    height: 38%;
+    top: 28%;
+    height: auto;
 }
 
 @keyframes m-moustafa-anim{

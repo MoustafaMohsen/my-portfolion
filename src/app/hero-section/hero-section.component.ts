@@ -45,25 +45,25 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
     this.disableScroll();
 
     this.logo$.subscribe( v=>{
-      this.imageLoaded = true;
+      this.imageLoaded = v;
       setTimeout(() => {
         this.loading=true;
-      }, 6000);
+      }, 5000);
     });
 
     this.window$.subscribe( v=>{
-      this.loading = false;
-      this.windowLoaded = true;
+      this.loading = !v;
+      this.windowLoaded = v;
       this.enableScroll();
     })
     
-    this.onLogoLoad( ()=>this.logo$.next(true) );
-    window.onpageshow  = ()=> this.window$.next(true);
 
   }
 
   ngAfterViewInit(): void {
-    this.zone.runOutsideAngular(()=>{
+    this.onLogoLoad( ()=>this.logo$.next(true) );
+    window.onpageshow  = ()=> this.window$.next(true);
+    this.zone.runOutsideAngular(()=>{  
       setTimeout(() => {
         this.startanimation();
         this.scrollHandler();
@@ -87,6 +87,7 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
     //mmlogo.css(style)
   }
   disableScroll(){
+    window.scrollTo(0,0);
     document.body.style.cssText = "overflow: hidden;"
   }
   enableScroll(){
@@ -112,12 +113,13 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
 
     var tlLogo = new TimelineMax();
     tlLogo
-    .to('#mmlogo',0.7,{scale:0.25, x:'-37.5%', top:"3.65%", ease: Power0.easeNone})
+    .to('#mmlogo',0.6,{scale:0.5, x:'0%', top:"22%", ease: Power0.easeNone})
+    .to('#mmlogo',0.4,{scale:0.25, x:'-37.5%', top:"3.65%", ease: Power0.easeNone})
   
     var sceneMMlogo = new ScrollMagic.Scene({
       triggerElement: '.nav-col',
       triggerHook: 0,
-      duration:'70%'
+      duration:'100%'
     })
     .setTween(tlLogo)
       .addTo(controller);

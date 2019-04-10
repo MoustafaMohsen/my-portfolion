@@ -52,11 +52,11 @@ $fade-delay:4000ms *$disable-animation;
         transition: all 0.5s;
         //opacity: 0.5;
         &.first-back{
-            left: 0;
+            left: 5%;
             top: 18%;    
         }
         &.second-back{
-            left: 0;
+            left: 5%;
             top: 66%;
         }
 
@@ -72,16 +72,120 @@ $fade-delay:4000ms *$disable-animation;
         opacity: 0.5;
     }
 }
-
 .bottom-abs{
     position: absolute !important;
     left: 50%;
     transform: translateX(-50%);
     bottom: 5px;
     z-index: 3;
-    button{
-      transition: all 0.5s;
+}
+/*
+.arrow{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  span{
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-bottom: 5px solid $secondary;
+    border-right: 5px solid $secondary;
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: animate 2s infinite;
+  }
+  span:nth-child(2){
+    animation-delay: -0.2s;
+  }
+  span:nth-child(3){
+    animation-delay: -0.4s;
+  }
+}
+*/
+
+.scroll-arrows{
+  button{
+    transition: all 0.5s;
+    padding: 0;
+    width: 40px;
+    height: 54px;
+    position: relative;
+    //border: solid 1px red;
+    border-radius: 18px;
+    min-width: unset;
+    &:hover{
+      background-color: transparent !important;
     }
+    span {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 18px;
+      height: 18px;
+      margin-left: -9px;
+      border-left: 1px solid #fff;
+      border-bottom: 1px solid #fff;
+      transform: rotate(-45deg);
+      animation: sdb07 2s infinite forwards;
+      opacity: 0;
+      box-sizing: border-box;
+    }
+    span:nth-of-type(1) {
+      animation-delay: 0s;
+    }
+    span:nth-of-type(2) {
+      top: 12px;
+      animation-delay: 0.15s;
+    }
+    span:nth-of-type(3) {
+      top: 24px;
+      animation-delay: 0.3s;
+    }
+  }
+}
+
+@keyframes sdb07 {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+@keyframes animate {
+  0%{
+      opacity: 0;
+      transform: rotate(45deg) translate(-20px,-20px);
+  }
+  50%{
+      opacity: 1;
+  }
+  100%{
+      opacity: 0;
+      transform: rotate(45deg) translate(20px,20px);
+  }
+}
+
+
+@keyframes scrolldow-image{
+  0%{
+    margin-top: 0%;
+  }
+  50%{
+    margin-top: 20%;
+  }
+  100%{
+    margin-top: 0%;
+  }
 }
 .down-icon{
   font-size: 15px;

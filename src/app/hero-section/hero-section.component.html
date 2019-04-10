@@ -41,9 +41,17 @@
       *ngIf="windowLoaded"
       class="fadeIn animation-settings-3 down-icon bottom-abs"
     >
-      <button mat-icon-button (click)="scrollDown()">
-        <i class="fas fa-angle-down"></i>
-      </button>
+      <!-- <button mat-button (click)="scrollDown()">
+        <!-- <i class="fas fa-chevron-down"></i> -->
+        <!-- <img src="assets/img/down-arrow.svg" alt=""> -
+        <div class="scroll-arrows">
+
+          <a href="#section08"><span></span><span></span><span></span></a>
+        </div> 
+      </button>  -->
+      <div class="scroll-arrows">
+        <button mat-button (click)="scrollDown()"><span></span><span></span><span></span></button>
+      </div> 
     </div>
     
   </div>

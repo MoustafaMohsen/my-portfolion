@@ -41,23 +41,18 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
     this.titleService.setTitle(siteTitle);
-
     this.disableScroll();
-
     this.logo$.subscribe( v=>{
       this.imageLoaded = v;
       setTimeout(() => {
         this.loading=true;
       }, 5000);
     });
-
     this.window$.subscribe( v=>{
       this.loading = !v;
       this.windowLoaded = v;
       this.enableScroll();
     })
-    
-
   }
 
   ngAfterViewInit(): void {
@@ -70,6 +65,7 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
       }, 1000);
     })
   }
+
   getheight(){
     let style={
       height:window.innerHeight+'px'
@@ -94,38 +90,25 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
     document.body.style.cssText = "overflow: unset;"
   }
 
-  onLogoLoad(Func:Function){
-    console.log("onLogoLoad");
-    
+  onLogoLoad(Func:Function){    
     let src = `${window.location.href}/assets/img/m-logo.png`;
     var imge = new Image();
     let that = this
      $(imge).one("load", function() {
-      console.log(" $.one");
       if(!that.imageLoaded)
         Func();
     })
     .each(function() {
       if(this.complete) {
-        console.log(" $.complete");
         if(!that.imageLoaded)
           setTimeout(() => {
             Func();
           }, 100);
-        //$(this).load(src); // For jQuery < 3.0 
-        // $(this).trigger('load'); // For jQuery >= 3.0 
       }
     });
-    
     imge.src = src;
     imge.id = "pseudo-logo";
-    /*
-    let intervale = setInterval(()=>{
-      $('#pseudo-logo').load(()=>{
 
-      })
-    },100)
-    */
   }
 
   scrollDown(){
@@ -133,11 +116,13 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
   }
 
   startanimation(){
-    this.styler.Controller = new ScrollMagic.Controller();
-    var controller = this.styler.Controller;
     let windowWidth = window.innerWidth;
     let navHeight = windowWidth < 500? 6 : 7 ;
+    
+    this.styler.Controller = new ScrollMagic.Controller();
+    var controller = this.styler.Controller;
 
+    // == logo
     var tlLogo = new TimelineMax();
     tlLogo
     .to('#mmlogo',0.6,{scale:0.5, x:'0%', top:"22%", ease: Power0.easeNone})
@@ -151,25 +136,25 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
     })
     .setTween(tlLogo)
       .addTo(controller);
-      // under line
-      var tlUnderLine = new TimelineMax();
-      tlUnderLine
-      .to('.underline-nav-center-container',1,{width:'100%', left:0, top:navHeight*0.95+"%", ease: Power0.easeNone})
-      .to('.underline-nav-center-container>div',1,{backgroundColor:'#16ADE3',borderRadius:'0px', ease: Power0.easeNone},"-=1")
-    
-      var sceneMMlogo = new ScrollMagic.Scene({
-        triggerElement: '.nav-col',
-        triggerHook: 0,
-        duration:'100%'
-      })
-      .setTween(tlUnderLine)
-        .addTo(controller);
+
+    // == under line
+    var tlUnderLine = new TimelineMax();
+    tlUnderLine
+    .to('.underline-nav-center-container',1,{width:'100%', left:0, top:navHeight*0.95+"%", ease: Power0.easeNone})
+    .to('.underline-nav-center-container>div',1,{backgroundColor:'#16ADE3',borderRadius:'0px', ease: Power0.easeNone},"-=1")
   
-      // navbar
+    var sceneMMlogo = new ScrollMagic.Scene({
+      triggerElement: '.nav-col',
+      triggerHook: 0,
+      duration:'100%'
+    })
+    .setTween(tlUnderLine)
+      .addTo(controller);
+  
+      // == navbar
       var tlNavBackground = new TimelineMax();
       tlNavBackground
       .to('.navbar-sticky',1,{height:navHeight+"%",backgroundColor:'#1B1C24', ease: Power0.easeNone},"+=0.1")
-  
     
       var sceneMMlogo = new ScrollMagic.Scene({
         triggerElement: '.nav-col',
@@ -178,18 +163,15 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
       })
       .setTween(tlNavBackground)
         .addTo(controller);
- 
   }
 
 
-
   scrollHandler(){
-    var controller = this.styler.Controller;
     this.scrollSrv.scrollObs.subscribe(()=>{
       let pos = this.scrollSrv.pos;
       let height = window.innerHeight;
-      let proggress = pos<= height?(height - pos)/height : 0
-      proggress = 1-proggress
+      let proggress = pos<= height?(height - pos)/height : 0;
+      proggress = 1-proggress;
       if (pos>10) {
         $('.hero-background-text p').addClass('fade-out').removeClass('fade-in')
         $('.bottom-abs button').addClass('fade-out').removeClass('fade-in')
@@ -225,6 +207,5 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
         this.highlightedbutton = "";
       }
     })
-
   }
 }

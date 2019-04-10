@@ -18,7 +18,6 @@ declare var Power4;
 })
 export class MMLogoComponent implements OnInit,AfterViewInit {
 
-
   constructor(private scrollSrv:ScrollService,private zone:NgZone) { }
 
   ngOnInit() {
@@ -47,6 +46,7 @@ export class MMLogoComponent implements OnInit,AfterViewInit {
     let mWidth=23;
     let mLeftMar=6;
     let mWordLeftMar=2;    
+
     // line expand
     var tl0 = new TimelineMax();
     tl0
@@ -58,7 +58,6 @@ export class MMLogoComponent implements OnInit,AfterViewInit {
     tl1
     .to('#m-moustafa',1,{ease: Power3.easeInOut,top: '11%',height: '70%',left: '25%',width: '50%'},"+=2")
     .to('#m-moustafa',0.5,{top: '28%',height: 'auto',left: mLeftMar+'%',width: mWidth+'%'},"+=1")
-
     
     // go to left
     var tl2 = new TimelineMax();
@@ -75,8 +74,6 @@ export class MMLogoComponent implements OnInit,AfterViewInit {
     .to('#ohsen-word',1,{opacity:1,left:mLeftMar+mWordLeftMar+mWidth+50+"%"},"-=1")
     // === Word    
     
-
-
     tl0.play();
     tl1.play();
     tl2.play();
@@ -84,5 +81,4 @@ export class MMLogoComponent implements OnInit,AfterViewInit {
 
   }//tween()
   
-
 }

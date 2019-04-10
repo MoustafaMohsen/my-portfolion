@@ -7,24 +7,6 @@
   height: 100%;
   left: 0%;
   width: 100%;
-  /*
-    @media screen and (max-width:$break-l) {
-        left: 10%;
-        width: 80%;
-    }
-    @media screen and (max-width:$break-m) {
-        left: 5%;
-        width: 90%;
-    }
-    @media screen and (max-width:$break-s) {
-        left: 2.5%;
-        width: 95%;
-    }
-    @media screen and (max-width:$break-x) {
-        left: 0%;
-        width: 100%;
-    }
-    */
   position: absolute;
   margin-left: auto;
   margin-right: auto;

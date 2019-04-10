@@ -63,15 +63,6 @@ $fade-delay:4000ms *$disable-animation;
     }
 }
 
-@keyframes fadeIn-5 {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 0.5;
-    }
-}
 .bottom-abs{
     position: absolute !important;
     left: 50%;
@@ -79,30 +70,6 @@ $fade-delay:4000ms *$disable-animation;
     bottom: 5px;
     z-index: 3;
 }
-/*
-.arrow{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  span{
-    display: block;
-    width: 30px;
-    height: 30px;
-    border-bottom: 5px solid $secondary;
-    border-right: 5px solid $secondary;
-    transform: rotate(45deg);
-    margin: -10px;
-    animation: animate 2s infinite;
-  }
-  span:nth-child(2){
-    animation-delay: -0.2s;
-  }
-  span:nth-child(3){
-    animation-delay: -0.4s;
-  }
-}
-*/
 
 .scroll-arrows{
   button{
@@ -157,36 +124,6 @@ $fade-delay:4000ms *$disable-animation;
   }
 }
 
-
-
-
-
-@keyframes animate {
-  0%{
-      opacity: 0;
-      transform: rotate(45deg) translate(-20px,-20px);
-  }
-  50%{
-      opacity: 1;
-  }
-  100%{
-      opacity: 0;
-      transform: rotate(45deg) translate(20px,20px);
-  }
-}
-
-
-@keyframes scrolldow-image{
-  0%{
-    margin-top: 0%;
-  }
-  50%{
-    margin-top: 20%;
-  }
-  100%{
-    margin-top: 0%;
-  }
-}
 .down-icon{
   font-size: 15px;
   color:white;
@@ -387,7 +324,32 @@ $fade-delay:4000ms *$disable-animation;
       }//li
   }
 }
+@keyframes animate {
+  0%{
+      opacity: 0;
+      transform: rotate(45deg) translate(-20px,-20px);
+  }
+  50%{
+      opacity: 1;
+  }
+  100%{
+      opacity: 0;
+      transform: rotate(45deg) translate(20px,20px);
+  }
+}
 
+
+@keyframes scrolldow-image{
+  0%{
+    margin-top: 0%;
+  }
+  50%{
+    margin-top: 20%;
+  }
+  100%{
+    margin-top: 0%;
+  }
+}
 
 .fade-out{
   opacity: 0 !important;

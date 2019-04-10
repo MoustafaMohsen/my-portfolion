@@ -18,14 +18,12 @@ import {
   MatIconModule, MatExpansionModule, MatListModule,MatTooltipModule,MatSidenavModule
 } from '@angular/material';
 import { ReactiveFormsModule } from '@angular/forms';
-import { ImageGlareComponent } from './image-glare/image-glare.component';
 import { routes } from './routes';
 import {  AnimateOnScrollModule } from './animate-on-scroll';
 import { MMLogoComponent } from './hero-section/mmlogo/mmlogo.component';
 import { StickyHeaderDirective } from './directives/sticky-header.directive';
 import { OnView } from './directives/OnView.directive';
 // scroll animation
-//import { AnimateOnScrollModule } from 'ng2-animate-on-scroll';
 import {AngularStickyThingsModule} from '@w11k/angular-sticky-things';
 import { HttpClientModule } from '@angular/common/http';
 document.title = "Welcome"
@@ -47,12 +45,8 @@ const matrial = [
     WorkSectionComponent,
     ContactSectionComponent,
     FooterSectionComponent,
-    ImageGlareComponent,
+    //ImageGlareComponent,
     MMLogoComponent,
-
-    //test directive
-    //AppearDirective
-    //directives
     StickyHeaderDirective,
     OnView
 

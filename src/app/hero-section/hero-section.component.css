@@ -311,11 +311,56 @@
   }
 }
 
-.fade-out {
+.buttons-container {
   opacity: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.my-nav-div {
+  float: right;
+  -webkit-box-flex: unset;
+      -ms-flex-positive: unset;
+          flex-grow: unset;
+}
+
+.my-nav-div ul li {
+  font-family: 'Raleway','Cormorant Garamond', sans-serif;
+  margin: 4px 0;
+}
+
+.my-nav-div ul li .nav-button-a {
+  color: #F9F9F9;
+  font-size: 35px;
+  font-size: 1.1em;
+  float: right;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.my-nav-div ul li .nav-button-a:hover {
+  color: #16ADE3 !important;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
+}
+
+.my-nav-div ul li .active {
+  color: #16ADE3 !important;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.my-nav-div ul li:last-child .nav-button-span {
+  color: #e20d0d;
+  float: left;
+}
+
+.fade-out {
+  opacity: 0 !important;
 }
 
 .fade-in {
-  opacity: 1;
+  opacity: 1 !important;
 }
 /*# sourceMappingURL=hero-section.component.css.map */

@@ -225,10 +225,48 @@ $fade-delay:4000ms *$disable-animation;
       //left: 14%;
   }
 }
+.buttons-container {
+  opacity: 0;
+  transition: all 0.5s;
+}
+.my-nav-div{
+  float: right;
+  flex-grow: unset;
+  ul{
+      li{
+          font-family: 'Raleway','Cormorant Garamond', sans-serif;
+          margin: 4px 0;
+          .nav-button-a{
+              color: $my-white;
+              font-size: 35px;
+              font-size: 1.1em;
+              float: right;
+              &:hover{
+                  color: $secondary !important;
+                  transition: all 200ms ease-in-out;
+                  cursor: pointer;
+              }
+              transition: all 200ms ease-in-out;
+          }
+          .active{
+              color: $secondary !important;
+              transition: all 200ms ease-in-out;
+          }
+          &:last-child{
+              .nav-button-span{
+                  color: rgb(226, 13, 13);
+                  float: left;
+              }
+          }
+      }//li
+  }
+}
+
 
 .fade-out{
-  opacity: 0;
+  opacity: 0 !important;
 }
 .fade-in {
-  opacity: 1;
+  opacity: 1 !important;
 }
+

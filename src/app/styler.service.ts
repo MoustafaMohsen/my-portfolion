@@ -17,6 +17,15 @@ export class StylerService {
     }, delay);
   }
 
+  scrollByIdAndOffset(EleHandler:string,offset:number,delay=100) {
+    setTimeout(() => {
+      const pos = this.GetElementTopPosition(EleHandler);
+      window.scrollTo(0,pos+offset);
+      console.log('scroller',pos,"offset",offset);
+      
+    }, delay);
+  }
+
   focusById(elId:string,delay=600){
     
     setTimeout(() => {
@@ -81,6 +90,27 @@ export class StylerService {
     let WinHeight = this.getWindowHeight();      
     let bodyHeight = WinHeight - NavHeight ;
     return bodyHeight;
+  }
+
+  GetElementTopPosition(EleHandler:string){
+    return $(EleHandler).position().top
+  }
+  IsElementAfterView(EleHandler:string,offset:number){
+    const WinPos = window.pageYOffset;
+    const ElePos = this.GetElementTopPosition(EleHandler);
+    let AfterView = WinPos + offset >= ElePos ;
+    return AfterView;
+  }
+
+  ElementInView(arr:string[],offset:number){
+    let elements = []
+    for (let i = 0; i < arr.length; i++) {
+      const str = arr[i];
+      if (this.IsElementAfterView(str,offset)) {
+        elements.push(str);
+      }
+    }
+    return elements;
   }
   //
   

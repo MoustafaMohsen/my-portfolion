@@ -325,6 +325,21 @@
   transition: all 0.5s;
 }
 
+.my-navbar {
+  background-color: #1B1C24;
+  color: #F9F9F9 !important;
+  padding: 0px 5px 0px 0px;
+  min-height: 40px;
+  margin: 0;
+}
+
+@media screen and (max-width: 575.98px) {
+  .my-navbar {
+    min-height: 35px;
+    font-size: 8px;
+  }
+}
+
 .my-nav-div {
   float: right;
   -webkit-box-flex: unset;

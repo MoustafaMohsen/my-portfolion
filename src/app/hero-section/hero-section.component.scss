@@ -236,6 +236,19 @@ $fade-delay:4000ms *$disable-animation;
   opacity: 0;
   transition: all 0.5s;
 }
+.my-navbar{
+  background-color: $primary-3;
+  color: $my-white !important;
+  padding: 0px 5px 0px 0px;
+  min-height: 40px;
+  //fix row overflow
+  margin: 0;
+  @media screen and (max-width:$break-x) {
+      min-height: 35px;
+      font-size: 8px;   
+  }
+
+}
 .my-nav-div{
   float: right;
   flex-grow: unset;

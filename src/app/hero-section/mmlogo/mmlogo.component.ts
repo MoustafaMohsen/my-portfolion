@@ -32,7 +32,7 @@ export class MMLogoComponent implements OnInit,AfterViewInit {
   }
 
   get wordHeight(){
-    console.log("wordHeight");
+    //console.log("wordHeight");
     
     let wordBox = $('#word-box');
     let height = wordBox.height();

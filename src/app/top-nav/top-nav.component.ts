@@ -27,7 +27,7 @@ export class TopNavComponent implements OnInit {
       this.scrollObs.subscribe( 
         ()=>{
           let ids = ["#skills","#platforms","#work","#contact"];
-          let elementsInView = this.ElementInView(ids,150);
+          let elementsInView = this.styler.ElementInView(ids,150);
           if (elementsInView.length>0) {
             let Hightligh = elementsInView[elementsInView.length-1];
             if(Hightligh && Hightligh !== this.highlightedbutton){
@@ -46,36 +46,11 @@ export class TopNavComponent implements OnInit {
             });
             this.highlightedbutton = "";
           }
-
-
-
         }
       )
 
     });
   }// ngOnInit
-
-  IsElementAfterView(EleHandler:string,offset:number){
-    const WinPos = window.pageYOffset;
-    const ElePos = $(EleHandler).position().top;
-    let AfterView = WinPos + offset >= ElePos ;
-    return AfterView;
-  }
-
-  ElementInView(arr:string[],offset:number){
-    let elements = []
-    for (let i = 0; i < arr.length; i++) {
-      const str = arr[i];
-      if (this.IsElementAfterView(str,offset)) {
-        elements.push(str);
-      }
-    }
-    return elements;
-  }
-
-  scrollTo(){
-
-  }
 
 }
 class scrollObject{

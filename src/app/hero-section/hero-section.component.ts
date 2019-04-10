@@ -135,6 +135,8 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
   startanimation(){
     this.styler.Controller = new ScrollMagic.Controller();
     var controller = this.styler.Controller;
+    let windowWidth = window.innerWidth;
+    let navHeight = windowWidth < 500? 6 : 7 ;
 
     var tlLogo = new TimelineMax();
     tlLogo
@@ -152,8 +154,8 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
       // under line
       var tlUnderLine = new TimelineMax();
       tlUnderLine
-      .to('.underline-nav-center-container',1,{width:'100%', left:0, top:"6.8%", ease: Power0.easeNone})
-      .to('.underline-nav-center-container>div',1,{backgroundColor:'#16ADE3', ease: Power0.easeNone},"-=1")
+      .to('.underline-nav-center-container',1,{width:'100%', left:0, top:navHeight*0.95+"%", ease: Power0.easeNone})
+      .to('.underline-nav-center-container>div',1,{backgroundColor:'#16ADE3',borderRadius:'0px', ease: Power0.easeNone},"-=1")
     
       var sceneMMlogo = new ScrollMagic.Scene({
         triggerElement: '.nav-col',
@@ -166,7 +168,7 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
       // navbar
       var tlNavBackground = new TimelineMax();
       tlNavBackground
-      .to('.navbar-sticky',1,{height:'7%',backgroundColor:'#1B1C24', ease: Power0.easeNone},"+=0.1")
+      .to('.navbar-sticky',1,{height:navHeight+"%",backgroundColor:'#1B1C24', ease: Power0.easeNone},"+=0.1")
   
     
       var sceneMMlogo = new ScrollMagic.Scene({

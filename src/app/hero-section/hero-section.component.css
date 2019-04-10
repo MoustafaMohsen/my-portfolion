@@ -323,6 +323,7 @@
   opacity: 0;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  height: 100%;
 }
 
 .my-navbar {
@@ -331,6 +332,7 @@
   padding: 0px 5px 0px 0px;
   min-height: 40px;
   margin: 0;
+  height: 100%;
 }
 
 @media screen and (max-width: 575.98px) {

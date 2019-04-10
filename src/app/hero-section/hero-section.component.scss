@@ -235,6 +235,7 @@ $fade-delay:4000ms *$disable-animation;
 .buttons-container {
   opacity: 0;
   transition: all 0.5s;
+  height: 100%;
 }
 .my-navbar{
   background-color: $primary-3;
@@ -243,6 +244,7 @@ $fade-delay:4000ms *$disable-animation;
   min-height: 40px;
   //fix row overflow
   margin: 0;
+  height: 100%;
   @media screen and (max-width:$break-x) {
       min-height: 35px;
       font-size: 8px;   

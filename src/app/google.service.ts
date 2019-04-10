@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class GoogleService {
 
   constructor() { }
-    Script(traceId:string){      
+    Script(traceId:string){
       const srcScript = document.createElement('script') as HTMLScriptElement;
       srcScript.setAttribute("async","");
       srcScript.src="https://www.googletagmanager.com/gtag/js?id="+traceId;

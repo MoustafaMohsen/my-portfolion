@@ -7,6 +7,7 @@ declare var $ :any;
 export class StylerService {
 
   constructor() { }
+  Controller;
   scrollById(elId:string,delay=100) {
     setTimeout(() => {
       const element = document.getElementById(elId);

@@ -51,5 +51,11 @@ export class SkillsSectionComponent implements OnInit {
   }//typeEffect
 
 
+  SkillsStyle(){
+    let style={
+      'padding-top':window.innerHeight*0.11+'px'
+    }
+    return style;
+  }
 
 }//class

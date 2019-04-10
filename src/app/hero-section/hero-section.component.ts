@@ -112,22 +112,14 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
 
     var tlLogo = new TimelineMax();
     tlLogo
-    .to('#mmlogo',0.7,{scale:0.25, x:'-37.5%', top:"3.5%", ease: Power0.easeNone})
+    .to('#mmlogo',0.7,{scale:0.25, x:'-37.5%', top:"3.65%", ease: Power0.easeNone})
   
     var sceneMMlogo = new ScrollMagic.Scene({
       triggerElement: '.nav-col',
       triggerHook: 0,
       duration:'70%'
     })
-    //.setPin('#mmlogo')
     .setTween(tlLogo)
-      .addIndicators({
-        name:'mmlogo',
-        colorTrigger:'blue',
-        indent:200,
-        colorStart:'#75c695',
-        colorEnd:'green',
-      })
       .addTo(controller);
       // under line
       var tlUnderLine = new TimelineMax();
@@ -141,13 +133,6 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
         duration:'100%'
       })
       .setTween(tlUnderLine)
-        .addIndicators({
-          name:'center-container',
-          colorTrigger:'blue',
-          indent:200,
-          colorStart:'#75c695',
-          colorEnd:'green',
-        })
         .addTo(controller);
   
       // navbar
@@ -162,13 +147,6 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
         duration:'100%'
       })
       .setTween(tlNavBackground)
-        .addIndicators({
-          name:'tlNavBackground',
-          colorTrigger:'blue',
-          indent:200,
-          colorStart:'#75c695',
-          colorEnd:'green',
-        })
         .addTo(controller);
  
   }
@@ -190,7 +168,7 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
         $('.bottom-abs button').addClass('fade-in').removeClass('fade-out')
       }
 
-      if (proggress > 0.9) {
+      if (proggress > 0.95) {
         $('.buttons-container').addClass('fade-in').removeClass('fade-out')
       }else{
         $('.buttons-container').addClass('fade-out').removeClass('fade-in')

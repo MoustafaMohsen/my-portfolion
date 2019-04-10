@@ -311,6 +311,13 @@
   }
 }
 
+.logo-overlay {
+  width: 100%;
+  height: 88%;
+  position: absolute;
+  z-index: 4;
+}
+
 .buttons-container {
   opacity: 0;
   -webkit-transition: all 0.5s;

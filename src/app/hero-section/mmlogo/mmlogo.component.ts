@@ -45,7 +45,7 @@ export class MMLogoComponent implements OnInit,AfterViewInit {
 
   Tween(){
     let mWidth=23;
-    let mLeftMar=3;
+    let mLeftMar=6;
     let mWordLeftMar=2;    
     // line expand
     var tl0 = new TimelineMax();
@@ -72,7 +72,7 @@ export class MMLogoComponent implements OnInit,AfterViewInit {
     tl3
     // expand M letter 
     .to('#ostafa-word',1,{opacity:1,left:mLeftMar+mWordLeftMar+mWidth+"%"},"+=4")
-    .to('#ohsen-word',0.5,{opacity:1,left:mLeftMar+mWordLeftMar+mWidth+50+"%"},"-=1")
+    .to('#ohsen-word',1,{opacity:1,left:mLeftMar+mWordLeftMar+mWidth+50+"%"},"-=1")
     // === Word    
     
 

@@ -29,6 +29,7 @@
     "jquery": "^3.3.1",
     "ng2-animate-on-scroll": "^1.0.11",
     "rxjs": "~6.3.3",
+    "scrollmagic": "^2.0.6",
     "zone.js": "~0.8.28"
   },
   "devDependencies": {
@@ -39,6 +40,7 @@
     "@types/jasmine": "~3.3.7",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~10.12.18",
+    "@types/tweenjs": "^1.0.0",
     "codelyzer": "~4.5.0",
     "jasmine-core": "~3.3.0",
     "jasmine-spec-reporter": "~4.2.1",

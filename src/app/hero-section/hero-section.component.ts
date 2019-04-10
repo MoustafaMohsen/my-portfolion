@@ -95,12 +95,37 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
   }
 
   onLogoLoad(Func:Function){
+    console.log("onLogoLoad");
+    
     let src = `${window.location.href}/assets/img/m-logo.png`;
     var imge = new Image();
-    imge.onload = ()=>{
-      Func()
-    }
+    let that = this
+     $(imge).one("load", function() {
+      console.log(" $.one");
+      if(!that.imageLoaded)
+        Func();
+    })
+    .each(function() {
+      if(this.complete) {
+        console.log(" $.complete");
+        if(!that.imageLoaded)
+          setTimeout(() => {
+            Func();
+          }, 100);
+        //$(this).load(src); // For jQuery < 3.0 
+        // $(this).trigger('load'); // For jQuery >= 3.0 
+      }
+    });
+    
     imge.src = src;
+    imge.id = "pseudo-logo";
+    /*
+    let intervale = setInterval(()=>{
+      $('#pseudo-logo').load(()=>{
+
+      })
+    },100)
+    */
   }
 
   scrollDown(){
@@ -115,6 +140,7 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
     tlLogo
     .to('#mmlogo',0.6,{scale:0.5, x:'0%', top:"22%", ease: Power0.easeNone})
     .to('#mmlogo',0.4,{scale:0.25, x:'-37.5%', top:"3.65%", ease: Power0.easeNone})
+    .to('.logo-overlay',0.2,{display:'block'},"-=0.2")
   
     var sceneMMlogo = new ScrollMagic.Scene({
       triggerElement: '.nav-col',

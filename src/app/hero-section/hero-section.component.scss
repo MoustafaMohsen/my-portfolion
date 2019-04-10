@@ -230,6 +230,7 @@ $fade-delay:4000ms *$disable-animation;
   height: 88%;
   position: absolute;
   z-index: 4;
+  display: none;
 }
 .buttons-container {
   opacity: 0;

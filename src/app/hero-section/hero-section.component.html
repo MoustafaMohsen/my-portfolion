@@ -1,17 +1,19 @@
-<div class="row no-gutters hero-page" [ngStyle]="getheight()">
-  <div class="col-md col"></div>
+<div class="row justify-content-center no-gutters hero-page vh-100">
 
-  <div class="col-md-8 col-11 relative">
+  <div class="col-12 relative nav-col">
     <!---
 -->
- 
     <div class="hero-background-text" *ngIf="imageLoaded">
-      <p class="first-back">Hello I'm</p>
+      <p class="first-back" id="first-back">Hello I'm</p>
     </div>
 
     <div class="mmlogo" id="mmlogo" [ngStyle]="logoheight()">
       <app-mmlogo *ngIf="imageLoaded"></app-mmlogo>
     </div>
+    <div class="underline-nav-center-container">
+        <div class="underline-nav-center"></div>
+    </div>
+    
 
     <div class="hero-background-text" *ngIf="imageLoaded">
       <p class="second-back">
@@ -42,9 +44,12 @@
         <i class="fas fa-angle-down"></i>
       </button>
     </div>
+    
   </div>
 
-  <div class="col-md col"></div>
 </div>
+<div class="navbar-sticky">
 
+</div>
 <img class="hidden" src="./assets/img/m-logo.png" alt="Moustafa" id="logoload">
+

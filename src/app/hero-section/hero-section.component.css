@@ -7,10 +7,13 @@
   margin-top: auto;
   margin-bottom: auto;
   height: 300px;
-  position: relative;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  -webkit-transform: translateY(-50%) scale(1);
+          transform: translateY(-50%) scale(1);
+  left: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 5000;
 }
 
 @media screen and (max-width: 1199.98px) {
@@ -41,12 +44,18 @@
   opacity: 0;
   -webkit-animation: fadeIn 200ms 4000ms ease-in-out forwards;
           animation: fadeIn 200ms 4000ms ease-in-out forwards;
+  z-index: 3;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 .hero-background-text p {
   color: #F9F9F9;
   position: absolute;
   font-size: 3em;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .hero-background-text p.first-back {
@@ -83,6 +92,12 @@
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   bottom: 5px;
+  z-index: 3;
+}
+
+.bottom-abs button {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .down-icon {
@@ -215,5 +230,92 @@
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
+}
+
+.underline-nav-center {
+  position: absolute;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  top: 50%;
+  left: 0%;
+  width: 100%;
+  height: 2px;
+  background-color: #F9F9F9;
+  z-index: 5000 !important;
+  border-radius: 2px;
+  width: 0;
+  left: 50%;
+}
+
+.underline-nav-center-container {
+  position: fixed;
+  top: 50%;
+  height: 3px;
+  width: 90%;
+  left: 5%;
+  z-index: 5000 !important;
+}
+
+.navbar-sticky {
+  position: fixed;
+  background-color: #3F3F3F;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 2 !important;
+}
+
+.nav-col {
+  height: 100%;
+  background-color: #1B1C24;
+}
+
+@-webkit-keyframes nav-Container {
+  0% {
+    width: 0;
+    left: 50%;
+    height: 3px;
+  }
+  100% {
+    position: absolute;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    top: 50%;
+    left: 0%;
+    width: 100%;
+    height: 2px;
+    background-color: #F9F9F9;
+    z-index: 5000 !important;
+    border-radius: 2px;
+  }
+}
+
+@keyframes nav-Container {
+  0% {
+    width: 0;
+    left: 50%;
+    height: 3px;
+  }
+  100% {
+    position: absolute;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    top: 50%;
+    left: 0%;
+    width: 100%;
+    height: 2px;
+    background-color: #F9F9F9;
+    z-index: 5000 !important;
+    border-radius: 2px;
+  }
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+.fade-in {
+  opacity: 1;
 }
 /*# sourceMappingURL=hero-section.component.css.map */

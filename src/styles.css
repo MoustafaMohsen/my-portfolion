@@ -556,6 +556,10 @@ ul {
   position: relative;
 }
 
+.vh-100 {
+  height: 100vh;
+}
+
 .smaller-font {
   font-size: 0.8em;
 }

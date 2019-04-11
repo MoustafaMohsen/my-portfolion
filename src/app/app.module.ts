@@ -23,8 +23,6 @@ import {  AnimateOnScrollModule } from './animate-on-scroll';
 import { MMLogoComponent } from './hero-section/mmlogo/mmlogo.component';
 import { StickyHeaderDirective } from './directives/sticky-header.directive';
 import { OnView } from './directives/OnView.directive';
-// scroll animation
-import {AngularStickyThingsModule} from '@w11k/angular-sticky-things';
 import { HttpClientModule } from '@angular/common/http';
 document.title = "Welcome"
 
@@ -63,8 +61,6 @@ const matrial = [
       scrollOffset: [0, 64] // [x, y]
     }),
     AnimateOnScrollModule.forRoot(),
-    AngularStickyThingsModule
-
   ],
   providers: [],
   bootstrap: [AppComponent]

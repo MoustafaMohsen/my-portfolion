@@ -84,10 +84,10 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
   }
   disableScroll(){
     window.scrollTo(0,0);
-    document.body.style.cssText = "overflow: hidden;"
+    $(document.body).addClass('modal-open')
   }
   enableScroll(){
-    document.body.style.cssText = "overflow: unset;"
+    $(document.body).removeClass('modal-open')
   }
 
   onLogoLoad(Func:Function){    

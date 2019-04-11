@@ -32,6 +32,12 @@ $hide-time:500ms;
     $card-delay:0ms;
     //contact shape
     padding-bottom: 180px;
+    @media screen and (max-width:$break-m) {
+        padding-bottom: 100px;
+    }
+    @media screen and (max-width:$break-x) {
+        padding-bottom: 80px
+    }
     transition: all 200ms ease-in-out;
     .work-card-container{
         //padding: 20px;

@@ -30,7 +30,6 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
   windowLoaded=false;
   imageLoaded=false;
   highlightedbutton:string;
-  deviceInfo = null;
 
   constructor(private scrollSrv:ScrollService, private titleService:Title, googleSrv:GoogleService,public styler:StylerService,private zone:NgZone , private deviceService: DeviceDetectorService) {
     if(environment.production){
@@ -118,15 +117,6 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
   }
 
   startanimation(){
-    this.updatePageHeight();
-    // on scroll
-    window.addEventListener('scroll', ()=>{
-      this.updatePageHeight();
-    })
-    // on resize
-    window.addEventListener('resize', ()=>{
-      this.updatePageHeight();
-    })
 
     let windowWidth = window.innerWidth;
     let navHeight = windowWidth < 500? 6 : 7 ;
@@ -148,11 +138,12 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
     })
     .setTween(tlLogo)
       .addTo(controller);
+      const inHeight = window.innerHeight-56;
 
     // == under line
     var tlUnderLine = new TimelineMax();
     tlUnderLine
-    .to('.underline-nav-center-container',1,{width:'100%', left:0, top:navHeight*0.95+"%", ease: Power0.easeNone})
+    .to('.underline-nav-center-container',1,{width:'100%', left:0, top:navHeight*0.92+"%", ease: Power0.easeNone})
     .to('.underline-nav-center-container>div',1,{backgroundColor:'#16ADE3',borderRadius:'0px', ease: Power0.easeNone},"-=1")
   
     var sceneMMlogo = new ScrollMagic.Scene({
@@ -164,10 +155,21 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
       .addTo(controller);
   
       // == navbar
+      /**from
+       position: fixed;
+        background-color: #3F3F3F;
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: 100%;
+        z-index: 2 !important;
+       */
       var tlNavBackground = new TimelineMax();
       tlNavBackground
-      .to('.navbar-sticky',1,{height:navHeight+"%",backgroundColor:'#1B1C24', ease: Power0.easeNone},"+=0.1")
+      .fromTo('.navbar-sticky',1,{height:inHeight+"px"},{height:navHeight*0.01*inHeight+"px",backgroundColor:'#1B1C24', ease: Power0.easeNone},"+=0")
+      // .to('.navbar-sticky',1,{height:navHeight*0.01*window.innerHeight+"px",backgroundColor:'#1B1C24', ease: Power0.easeNone},"+=0")
     
+      $('#skills').addClass("chrome-mobile");
       var sceneMMlogo = new ScrollMagic.Scene({
         triggerElement: '.nav-col',
         triggerHook: 0,
@@ -178,24 +180,39 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
   }
 
 
-  last_PageHeightValue = window.innerHeight * 0.01;
+  // last_PageHeightValue = window.innerHeight * 0.01;
   updatePageHeight(){
-    let vh = window.innerHeight * 0.01;
-    if(vh!= this.last_PageHeightValue){
-      document.documentElement.style.setProperty('--vh', `${vh}px`);
-      console.log("updated height");
-    }
+    // let vh = window.innerHeight * 0.01;
+    // if(vh!= this.last_PageHeightValue){
+    //   document.documentElement.style.setProperty('--vh', `${vh}px`);
+    //   console.log("updated height");
+    // }
 
-    this.last_PageHeightValue = vh;
+    let vh = window.innerHeight * 0.01;
     const isMobile = this.deviceService.isMobile();
     const browser =this.deviceService.browser;
-
+    const inHeight = window.innerHeight;
+    if (isMobile && browser=="Chrome" || true) {
+      $(".hero-page").css("height",`${inHeight}px`)
+    }else{
+      $(".hero-page").css("height",`${inHeight}px`)
+    }
+    // document.documentElement.style.setProperty('--vh', `${vh}px`);
     // debuging code
     let height = $(".hero-page").innerHeight();
-    $("#indecator_mobile").html(`Height is ${height} , browser:${browser} , isMobile:${isMobile} , classes: "${$(".hero-page").hasClass("chrome-mobile")}"`)
+    $("#indecator_mobile").html(`Height is ${height}, vh:${vh}`)
 
   }
   scrollHandler(){
+    this.updatePageHeight();
+    // // on scroll
+    // window.addEventListener('scroll', ()=>{
+    //   this.updatePageHeight();
+    // })
+    // // on resize
+    // window.addEventListener('resize', ()=>{
+    //   this.updatePageHeight();
+    // })
     console.log("scrollHandler()" , window.innerHeight);
     this.scrollSrv.scrollObs.subscribe(()=>{
       let pos = this.scrollSrv.pos;

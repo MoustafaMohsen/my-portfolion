@@ -1,9 +1,9 @@
 .hero-page {
-  height: calc(var(--vh, 1vh) * 100);
-  -webkit-transition: height 50ms;
-  transition: height 50ms;
+  height: 100vh;
+  position: relative;
   margin-right: 0px !important;
   margin-left: 0px !important;
+  border: solid 10px red;
 }
 
 .mmlogo {
@@ -304,9 +304,9 @@
 .underline-nav-center-container {
   position: fixed;
   top: 50%;
+  left: 5%;
   height: 3px;
   width: 90%;
-  left: 5%;
   z-index: 4 !important;
 }
 
@@ -316,7 +316,6 @@
   width: 100%;
   top: 0;
   left: 0;
-  height: 100%;
   z-index: 2 !important;
 }
 

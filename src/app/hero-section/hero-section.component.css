@@ -6,6 +6,10 @@
   margin-left: 0px !important;
 }
 
+.hero-page .chrome-mobile {
+  height: calc(100vh - 56px);
+}
+
 .mmlogo {
   margin-top: auto;
   margin-bottom: auto;

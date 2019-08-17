@@ -1,4 +1,5 @@
 .hero-page {
+  height: calc(var(--vh, 1vh) * 100);
   margin-right: 0px !important;
   margin-left: 0px !important;
 }

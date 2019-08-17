@@ -166,12 +166,31 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
   }
 
 
+  updatePageHeight(){
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+    // debuging code
+    let height = $(".hero-page").innerHeight();
+    $("#indecator_mobile").html(`Height is ${height}`)
+
+  }
   scrollHandler(){
+    
+    setInterval(()=>{
+
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+      
+      let height = $(".hero-page").innerHeight();
+      $("#indecator_mobile").html(`Height is ${height}`)
+      // $(".hero-page").innerHeight();
+      // $(".hero-page").css("height",window.innerHeight+"px");
+    }
+    ,1000)
+    
     console.log("scrollHandler()");
-    $(".hero-page").css("height","900px");
     console.log("scrollHandler()" , window.innerHeight);
     this.scrollSrv.scrollObs.subscribe(()=>{
-      $("#indecator_mobile").html(`Height is ${window.innerHeight}`);
       let pos = this.scrollSrv.pos;
       let height = window.innerHeight;
       let proggress = pos<= height?(height - pos)/height : 0;

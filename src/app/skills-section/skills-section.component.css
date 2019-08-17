@@ -6,6 +6,10 @@
   padding: 125px 0 0;
 }
 
+.skills-section.chrome-mobile {
+  padding-top: 170px;
+}
+
 .skills-header {
   margin-bottom: 23px;
 }

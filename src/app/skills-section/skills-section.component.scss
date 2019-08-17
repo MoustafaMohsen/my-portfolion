@@ -3,6 +3,9 @@
 
 .skills-section{
     @include section-container;
+    &.chrome-mobile{
+        padding-top: 170px;
+    }
 }
 
 .skills-header{ 

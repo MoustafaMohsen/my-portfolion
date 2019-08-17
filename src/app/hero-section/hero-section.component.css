@@ -495,4 +495,15 @@
 .fade-in {
   opacity: 1 !important;
 }
+
+#indecator_mobile {
+  position: fixed;
+  height: 20px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: solid 1px red;
+  background: white;
+  z-index: 5000;
+}
 /*# sourceMappingURL=hero-section.component.css.map */

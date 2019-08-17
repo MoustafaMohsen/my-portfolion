@@ -358,3 +358,12 @@ $fade-delay:4000ms *$disable-animation;
   opacity: 1 !important;
 }
 
+
+#indecator_mobile{
+  position: fixed;
+  height: 20px;
+  width: fit-content;
+  border: solid 1px red;
+  background: white;
+  z-index: 5000;
+}

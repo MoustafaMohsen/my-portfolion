@@ -154,7 +154,7 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
       // == navbar
       var tlNavBackground = new TimelineMax();
       tlNavBackground
-      .to('.navbar-sticky',1,{height:navHeight+"%",backgroundColor:'#1B1C24', ease: Power0.easeNone},"+=0.2")
+      .to('.navbar-sticky',1,{height:navHeight+"%",backgroundColor:'#1B1C24', ease: Power0.easeNone},"+=0")
     
       var sceneMMlogo = new ScrollMagic.Scene({
         triggerElement: '.nav-col',

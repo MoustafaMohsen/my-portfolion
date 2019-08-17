@@ -117,6 +117,11 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
   }
 
   startanimation(){
+    const isMobile = this.deviceService.isMobile();
+    const browser =this.deviceService.browser;
+    if (isMobile && browser=="Chrome" || true) {
+      $('.bottom-abs').css("transform","translateX(-50%) translateY(-100%)");
+    }
 
     let windowWidth = window.innerWidth;
     let navHeight = windowWidth < 500? 6 : 7 ;
@@ -143,7 +148,7 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
     // == under line
     var tlUnderLine = new TimelineMax();
     tlUnderLine
-    .to('.underline-nav-center-container',1,{width:'100%', left:0, top:navHeight*0.92+"%", ease: Power0.easeNone})
+    .to('.underline-nav-center-container',1,{width:'100%', left:0, top:navHeight*0.94+"%", ease: Power0.easeNone})
     .to('.underline-nav-center-container>div',1,{backgroundColor:'#16ADE3',borderRadius:'0px', ease: Power0.easeNone},"-=1")
   
     var sceneMMlogo = new ScrollMagic.Scene({
@@ -166,10 +171,12 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
        */
       var tlNavBackground = new TimelineMax();
       tlNavBackground
-      .fromTo('.navbar-sticky',1,{height:inHeight+"px"},{height:navHeight*0.01*inHeight+"px",backgroundColor:'#1B1C24', ease: Power0.easeNone},"+=0")
-      // .to('.navbar-sticky',1,{height:navHeight*0.01*window.innerHeight+"px",backgroundColor:'#1B1C24', ease: Power0.easeNone},"+=0")
+      // .fromTo('.navbar-sticky',1,{height:inHeight+"px"},{height:navHeight*0.01*inHeight+"px",backgroundColor:'#1B1C24', ease: Power0.easeNone},"+=0")
+      .fromTo('.navbar-sticky',1,{height:"100vh"},{height:navHeight+"%",backgroundColor:'#1B1C24', ease: Power0.easeNone},"+=0.1")
+      
+      // .to('.navbar-sticky',1,{height:navHeight*0.01*window.innerHeight+"px",backgroundColor:'#1B1C24', ease: Power0.easeNone},"+=0.1")
     
-      $('#skills').addClass("chrome-mobile");
+      // $('#skills').addClass("chrome-mobile");
       var sceneMMlogo = new ScrollMagic.Scene({
         triggerElement: '.nav-col',
         triggerHook: 0,
@@ -204,7 +211,7 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
 
   }
   scrollHandler(){
-    this.updatePageHeight();
+    // this.updatePageHeight();
     // // on scroll
     // window.addEventListener('scroll', ()=>{
     //   this.updatePageHeight();

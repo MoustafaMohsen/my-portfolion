@@ -24,6 +24,8 @@ import { MMLogoComponent } from './hero-section/mmlogo/mmlogo.component';
 import { StickyHeaderDirective } from './directives/sticky-header.directive';
 import { OnView } from './directives/OnView.directive';
 import { HttpClientModule } from '@angular/common/http';
+import { DeviceDetectorModule } from 'ngx-device-detector';
+
 document.title = "Welcome"
 
 const matrial = [
@@ -61,6 +63,7 @@ const matrial = [
       scrollOffset: [0, 64] // [x, y]
     }),
     AnimateOnScrollModule.forRoot(),
+    DeviceDetectorModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

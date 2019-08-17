@@ -1,5 +1,7 @@
 .hero-page {
   height: calc(var(--vh, 1vh) * 100);
+  -webkit-transition: height 50ms;
+  transition: height 50ms;
   margin-right: 0px !important;
   margin-left: 0px !important;
 }

@@ -154,7 +154,7 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
       // == navbar
       var tlNavBackground = new TimelineMax();
       tlNavBackground
-      .to('.navbar-sticky',1,{height:navHeight+"%",backgroundColor:'#1B1C24', ease: Power0.easeNone},"+=0.1")
+      .to('.navbar-sticky',1,{height:navHeight+"%",backgroundColor:'#1B1C24', ease: Power0.easeNone},"+=0.2")
     
       var sceneMMlogo = new ScrollMagic.Scene({
         triggerElement: '.nav-col',
@@ -166,29 +166,30 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
   }
 
 
+  last_PageHeightValue = window.innerHeight * 0.01;
   updatePageHeight(){
     let vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
+    if(vh!= this.last_PageHeightValue){
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+      console.log("updated height");
+      
+    }
+    this.last_PageHeightValue = vh;
     // debuging code
     let height = $(".hero-page").innerHeight();
     $("#indecator_mobile").html(`Height is ${height}`)
 
   }
   scrollHandler(){
-    
-    setInterval(()=>{
-
-      let vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty('--vh', `${vh}px`);
-      
-      let height = $(".hero-page").innerHeight();
-      $("#indecator_mobile").html(`Height is ${height}`)
-      // $(".hero-page").innerHeight();
-      // $(".hero-page").css("height",window.innerHeight+"px");
-    }
-    ,1000)
-    
-    console.log("scrollHandler()");
+    this.updatePageHeight();
+    // on scroll
+    window.addEventListener('scroll', ()=>{
+      this.updatePageHeight();
+    })
+    // on resize
+    window.addEventListener('resize', ()=>{
+      this.updatePageHeight();
+    })
     console.log("scrollHandler()" , window.innerHeight);
     this.scrollSrv.scrollObs.subscribe(()=>{
       let pos = this.scrollSrv.pos;

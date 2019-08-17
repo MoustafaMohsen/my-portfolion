@@ -7,6 +7,7 @@ import { GoogleService } from '../google.service';
 import { StylerService } from '../styler.service';
 import { environment } from '../../environments/environment';
 import { ScrollService } from '../animate-on-scroll/src';
+import { DeviceDetectorService } from 'ngx-device-detector';
 
 //import * as ScrollMagic from 'scrollmagic';
 declare var ScrollMagic;
@@ -29,8 +30,9 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
   windowLoaded=false;
   imageLoaded=false;
   highlightedbutton:string;
+  deviceInfo = null;
 
-  constructor(private scrollSrv:ScrollService, private titleService:Title, googleSrv:GoogleService,public styler:StylerService,private zone:NgZone) {
+  constructor(private scrollSrv:ScrollService, private titleService:Title, googleSrv:GoogleService,public styler:StylerService,private zone:NgZone , private deviceService: DeviceDetectorService) {
     if(environment.production){
       googleSrv.Script(traceId);
     }
@@ -116,6 +118,16 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
   }
 
   startanimation(){
+    this.updatePageHeight();
+    // on scroll
+    window.addEventListener('scroll', ()=>{
+      this.updatePageHeight();
+    })
+    // on resize
+    window.addEventListener('resize', ()=>{
+      this.updatePageHeight();
+    })
+
     let windowWidth = window.innerWidth;
     let navHeight = windowWidth < 500? 6 : 7 ;
     
@@ -172,24 +184,18 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
     if(vh!= this.last_PageHeightValue){
       document.documentElement.style.setProperty('--vh', `${vh}px`);
       console.log("updated height");
-      
     }
+
     this.last_PageHeightValue = vh;
+    const isMobile = this.deviceService.isMobile();
+    const browser =this.deviceService.browser;
+
     // debuging code
     let height = $(".hero-page").innerHeight();
-    $("#indecator_mobile").html(`Height is ${height}`)
+    $("#indecator_mobile").html(`Height is ${height} , browser:${browser} , isMobile:${isMobile} , classes: "${$(".hero-page").hasClass("chrome-mobile")}"`)
 
   }
   scrollHandler(){
-    this.updatePageHeight();
-    // on scroll
-    window.addEventListener('scroll', ()=>{
-      this.updatePageHeight();
-    })
-    // on resize
-    window.addEventListener('resize', ()=>{
-      this.updatePageHeight();
-    })
     console.log("scrollHandler()" , window.innerHeight);
     this.scrollSrv.scrollObs.subscribe(()=>{
       let pos = this.scrollSrv.pos;

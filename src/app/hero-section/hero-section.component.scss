@@ -11,9 +11,6 @@ $fade-time:200ms *$disable-animation;
 $fade-delay:4000ms *$disable-animation;
 .hero-page{
     height: calc(var(--vh, 1vh) * 100);
-    & .chrome-mobile{
-      height: calc(100vh - 56px);
-    }
     transition: height 50ms;
     //height: 500px;
     margin-right: 0px !important;

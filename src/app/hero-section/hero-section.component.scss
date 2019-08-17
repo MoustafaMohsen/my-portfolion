@@ -76,6 +76,9 @@ $fade-delay:4000ms *$disable-animation;
     transform: translateX(-50%);
     bottom: 5px;
     z-index: 3;
+    &.chrome-mobile{
+      transform: translateX(-50%) translateY(-100%);
+    }
 }
 
 .scroll-arrows{

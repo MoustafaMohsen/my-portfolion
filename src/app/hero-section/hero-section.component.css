@@ -3,7 +3,6 @@
   position: relative;
   margin-right: 0px !important;
   margin-left: 0px !important;
-  border: solid 10px red;
 }
 
 .mmlogo {
@@ -78,6 +77,11 @@
           transform: translateX(-50%);
   bottom: 5px;
   z-index: 3;
+}
+
+.bottom-abs.chrome-mobile {
+  -webkit-transform: translateX(-50%) translateY(-100%);
+          transform: translateX(-50%) translateY(-100%);
 }
 
 .scroll-arrows button {

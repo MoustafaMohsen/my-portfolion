@@ -46,7 +46,7 @@ export const Availableimages = {
 
   site_reader_1: `${AppHost}${mocksPath}` + "site-reader_1.jpg",
   test:"https://www.gettyimages.ie/gi-resources/images/Homepage/Hero/UK/CMS_Creative_164657191_Kingfisher.jpg",
-  
+
   dotnet: `${AppHost}${PlatformsPath}` + "dotnet.png",
   wordpress: `${AppHost}${PlatformsPath}` + "wordpress.png",
   nodejs: `${AppHost}${PlatformsPath}` + "nodejs.png",
@@ -82,10 +82,10 @@ let skillsDescription=`I Speak`
 
 let platformsDescription=`I have working experience with different frameworks which allow me to work with the best suited framework for your project.`;
 
-let WorkDescription=`Here are some of my projects I'm passionate about, More at my 
+let WorkDescription=`Here are some of my projects I'm passionate about, More at my
 <a class="description-a" target="_blank" href="https://github.com/moustafamohsen"> GitHub </a>`
 
-let ContactDescription=`I can help you make your Idea or Web App come to life, just let me handle it 
+let ContactDescription=`I can help you make your Idea or Web App come to life, just let me handle it
 <br>
 <span class="highlight"><a class="highlight normalize-anchor" href="mailto:contact@moustafamohsen.com" >Contact@moustafamohsen.com</a></span>
 `
@@ -93,7 +93,7 @@ let ContactDescription=`I can help you make your Idea or Web App come to life, j
 let aboutMeCardDescription=
 `I'm Moustafa Mohsen, a 23-year-old creative full-stack developer and problem solver, with a 4-year background in building and implementing web applications, I've worked with many people and started my own business, Self-motivated because I'm genuinely passionate about programming, resolving challenges is thrilling.
 <br/><br/>
-If you would like to find out more about me or my work proccess please reach out by sending me an email at contact@moustafamohsen.com or using this contact form, Currently I'm available  for freelance work as well as contract hiring and am actively pursuing projects.`
+If you would like to find out more about me or my work proccess please reach out by sending me an email at contact@moustafamohsen.com or using this contact form, Currently I'm available  for freelance work as well as contract hiring and I'm actively pursuing projects.`
 
 //skills
 let skillsSmallImages = [Availableimages.php, Availableimages.sass];
@@ -128,7 +128,7 @@ let platformsBigImages = [
 
 
 let mainProjects: workCard[] = [
-  
+
   {
     title: "css-to-angular-animations",
     subtitle: "Node.js",
@@ -138,7 +138,7 @@ let mainProjects: workCard[] = [
 -converts the @keyframes to angular animations methods keyframes([...])
 -converts the css classes to angular styles methods style({...})
 -saves both angular animations and styles as as const in the output .ts file ready to use in your angular app.`,
-    backgroundImages:[Availableimages.ca_3],    
+    backgroundImages:[Availableimages.ca_3],
     backgroundClass: "fridge-notes-background",
     languages: "Html, CSS, C#, TypeScript",
     buttonText: "LEARN MORE",
@@ -217,46 +217,46 @@ let mainProjects: workCard[] = [
       }
     ]
   },
-  {
-    title: "Islamic Search",
-    subtitle: "Angular + ASP.NET CORE",
-    description: `Search any references or sources from different books, one place that connects all the different book references`,
-    innerDescription:
-`- uses Angular 7 as front end and Material Design concepts
-- ASP.NET Core 2.1, LINQ Query SQLite as Database in the backend
-- Many-to-many relationships database to store multiple references of multiple blocks of text
-- Angular Reactive Forms and Form Validation to check the references against local rules and a small database`,
-    backgroundImages:[Availableimages.is_1,Availableimages.is_2],    
-    backgroundClass: "fridge-notes-background",
-    languages: "Html, CSS, C#, TypeScript",
-    buttonText: "LEARN MORE",
-    resources_Images: [
-      Availableimages.workcard.angular,
-      Availableimages.workcard.aspcore,
-      Availableimages.workcard.mysql
-    ],
-    deployment_Images: [
-      Availableimages.workcard.github,
-      Availableimages.workcard.heroku
-    ],
-    buttonsText: [
-      {
-        link: "https://islamicsearch.moustafamohsen.com",
-        text: "Visit site",
-        type: "website"
-      },
-      {
-        link: "https://github.com/MoustafaMohsen/islamic-search",
-        text: "Github Front-end",
-        type: "project"
-      },
-      {
-        link: "https://github.com/MoustafaMohsen/islamic-search-api",
-        text: "Github Back-end",
-        type: "project"
-      }
-    ]
-  }
+//   {
+//     title: "Islamic Search",
+//     subtitle: "Angular + ASP.NET CORE",
+//     description: `Search any references or sources from different books, one place that connects all the different book references`,
+//     innerDescription:
+// `- uses Angular 7 as front end and Material Design concepts
+// - ASP.NET Core 2.1, LINQ Query SQLite as Database in the backend
+// - Many-to-many relationships database to store multiple references of multiple blocks of text
+// - Angular Reactive Forms and Form Validation to check the references against local rules and a small database`,
+//     backgroundImages:[Availableimages.is_1,Availableimages.is_2],
+//     backgroundClass: "fridge-notes-background",
+//     languages: "Html, CSS, C#, TypeScript",
+//     buttonText: "LEARN MORE",
+//     resources_Images: [
+//       Availableimages.workcard.angular,
+//       Availableimages.workcard.aspcore,
+//       Availableimages.workcard.mysql
+//     ],
+//     deployment_Images: [
+//       Availableimages.workcard.github,
+//       Availableimages.workcard.heroku
+//     ],
+//     buttonsText: [
+//       {
+//         link: "https://islamicsearch.moustafamohsen.com",
+//         text: "Visit site",
+//         type: "website"
+//       },
+//       {
+//         link: "https://github.com/MoustafaMohsen/islamic-search",
+//         text: "Github Front-end",
+//         type: "project"
+//       },
+//       {
+//         link: "https://github.com/MoustafaMohsen/islamic-search-api",
+//         text: "Github Back-end",
+//         type: "project"
+//       }
+//     ]
+//   }
 ];
 
 let otherProjects: workCard[] = [
@@ -301,7 +301,7 @@ let otherProjects: workCard[] = [
 - DateTime Converter helpers (e.g. Unix Time to DateTime and reverse)
 - Other functions like file Reader, Random string generator, Base64DecodeEncode, etc.
 - Updated every time I think a new function could be helpful in general`,
-    backgroundImages:[Availableimages.class_library_desktop],    
+    backgroundImages:[Availableimages.class_library_desktop],
     languages: "Html, CSS, C#, TypeScript",
     buttonText: "LEARN MORE",
     resources_Images: [
@@ -334,7 +334,7 @@ let otherProjects: workCard[] = [
 - Dynamic range that changes the relative index based on similarities found in previous matches
 - Ignore Custom words and not match it in the search results.
 `,
-    backgroundImages:[Availableimages.string_comaprator_desktop_1],    
+    backgroundImages:[Availableimages.string_comaprator_desktop_1],
     languages: "Html, CSS, C#, TypeScript",
     buttonText: "LEARN MORE",
     resources_Images: [
@@ -363,7 +363,7 @@ let otherProjects: workCard[] = [
 `- Custom Email Template
 - Uses SendGrid Email API
 - Response Result`,
-    backgroundImages:[Availableimages.email_verfication_desktop],    
+    backgroundImages:[Availableimages.email_verfication_desktop],
     languages: "Html, CSS, C#, TypeScript",
     buttonText: "LEARN MORE",
     resources_Images: [
@@ -394,7 +394,7 @@ let otherProjects: workCard[] = [
 - parse the the html content and find the specified id in the html file for save
 - returns a CustomHTMLObjectArray with refrences of each url used to generate this object
 - can save the original html text for each match`,
-    backgroundImages:[Availableimages.site_reader_1],    
+    backgroundImages:[Availableimages.site_reader_1],
     languages: "Html, CSS, C#, TypeScript",
     buttonText: "LEARN MORE",
     resources_Images: [
@@ -472,6 +472,6 @@ export const siteTitle:string="Moustafa Mohsen | Full stack web developer"
 export const traceId = "UA-135974249-1";
 
 
-let logMessage = `Email I you want my resume`
+let logMessage = `Email me If you want my resume: `
 
 console.log(logMessage,'contact@moustafamohsen.com');

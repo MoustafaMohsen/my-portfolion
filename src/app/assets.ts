@@ -62,10 +62,13 @@ export const Availableimages = {
   docker: `${AppHost}${ServicesPath}` + "docker.png",
   git: `${AppHost}${ServicesPath}` + "git.png",
   npm: `${AppHost}${ServicesPath}` + "npm.png",
+  linux: `${AppHost}${ServicesPath}` + "linux.png",
   npm_red: `${AppHost}${ServicesPath}` + "npm_red.png",
   nuget: `${AppHost}${ServicesPath}` + "nuget.png",
   rxjs: `${AppHost}${ServicesPath}` + "rxjs.png",
-  jquery: `${AppHost}${ServicesPath}` + "jquery.png"
+  jquery: `${AppHost}${ServicesPath}` + "jquery.png",
+  ionic: `${AppHost}${ServicesPath}` + "ionic.png",
+
 };
 
 // ================== variables
@@ -96,13 +99,12 @@ let aboutMeCardDescription=
 If you would like to find out more about me or my work proccess please reach out by sending me an email at contact@moustafamohsen.com or using this contact form, Currently I'm available  for freelance work as well as contract hiring and I'm actively pursuing projects.`
 
 //skills
-let skillsSmallImages = [Availableimages.php, Availableimages.sass];
+let skillsSmallImages = [Availableimages.html, Availableimages.css, Availableimages.sass,];
 let skillsBigImages = [
-  Availableimages.csharp,
-  Availableimages.ts,
+  Availableimages.php,
   Availableimages.js,
-  Availableimages.html,
-  Availableimages.css
+  Availableimages.ts,
+  Availableimages.csharp,
 ];
 
 //platfomrs
@@ -112,15 +114,20 @@ let platformsServicesImages = [
   Availableimages.nuget,
   Availableimages.docker,
   Availableimages.jquery,
-  Availableimages.rxjs
+  Availableimages.rxjs,
+  Availableimages.linux,
 ];
 
-let platformsSmallImages = [Availableimages.wordpress, Availableimages.nodejs];
+let platformsSmallImages = [
+  Availableimages.workcard.aspcore,
+  Availableimages.dotnet,];
 
 let platformsBigImages = [
   Availableimages.workcard.angular,
-  Availableimages.workcard.aspcore,
-  Availableimages.dotnet
+  Availableimages.ionic,
+  Availableimages.wordpress,
+  Availableimages.nodejs,
+
 ];
 
 

@@ -97,9 +97,9 @@ let ContactDescription=`I can help you make your Idea or Web App come to life, j
 `
 
 let aboutMeCardDescription=
-`I'm Moustafa Mohsen, a 23-year-old creative full-stack developer and problem solver, with a 4-year background in building and implementing web applications, I've worked with many people and started my own business, Self-motivated because I'm genuinely passionate about programming, resolving challenges is thrilling.
+`Agile developer with 5+ years of experience in PHP, 3+ in Ionic/Angular, always ready to pick up new technologies whenever needed.
 <br/><br/>
-If you would like to find out more about me or my work proccess please reach out by sending me an email at contact@moustafamohsen.com or using this contact form, Currently I'm available  for freelance work as well as contract hiring and I'm actively pursuing projects.`
+If you would like to find out more about me or my work proccess please reach out by sending me an email at contact@moustafamohsen.com or using this contact form, Currently I'm available for work.`
 
 //skills
 let skillsSmallImages = [Availableimages.html, Availableimages.css, Availableimages.sass,];

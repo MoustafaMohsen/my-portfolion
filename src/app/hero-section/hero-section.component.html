@@ -15,7 +15,7 @@
     <div class="underline-nav-center-container">
         <div class="underline-nav-center"></div>
     </div>
-    
+
     <div class="hero-background-text" *ngIf="imageLoaded">
       <p class="second-back">
         a <span class="highlight">Full stack web developer</span>
@@ -43,9 +43,9 @@
     >
       <div class="scroll-arrows">
         <button mat-button (click)="scrollDown()"><span></span><span></span><span></span></button>
-      </div> 
+      </div>
     </div>
-    
+
   </div>
 
 </div>
@@ -56,19 +56,22 @@
       <button mat-button class="col-auto align-self-center navbar-toggler my-nav-expand-button" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <i class="material-icons">menu</i>
       </button>
-      
-  
+
+
       <div class="col-auto collapse navbar-collapse my-nav-div" id="navbarNav">
           <ul class="navbar-nav">
           <li class="nav-item active">
-              <a class="nav-link nav-button-a" (click)="styler.scrollById('skills',0)" id="skills-link">Skills </a>
+              <a class="nav-link nav-button-a" (click)="styler.scrollById('skills',0)" id="skills-link">Skills</a>
           </li>
           <li class="nav-item">
             <a class="nav-link nav-button-a" (click)="styler.scrollByIdAndOffset('#platforms',-100)" id="platforms-link">Platforms</a>
         </li>
         <li class="nav-item">
             <a class="nav-link nav-button-a" (click)="styler.scrollByIdAndOffset('#work',-100)" id="work-link">Work</a>
-        </li>        
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-button-a" (click)="styler.scrollByIdAndOffset('#blog',-100)" id="blog-link">Blog</a>
+        </li>
         <li class="nav-item">
             <a class="nav-link nav-button-a" (click)="styler.scrollByIdAndOffset('#contact',-100)" id="contact-link">Contact</a>
         </li>

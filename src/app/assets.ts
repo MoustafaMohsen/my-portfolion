@@ -1,4 +1,4 @@
-import { workCard, WorkSection, PlatformsSection, SkillsSection, ContactSection, FooterSection } from "./models";
+import { workCard, WorkSection, PlatformsSection, SkillsSection, ContactSection, FooterSection, BlogSection } from "./models";
 //TODO: change email to some gmail account , it's visable
 //TODO: add your eduaction
 // app host
@@ -87,6 +87,9 @@ let platformsDescription=`I have working experience with different frameworks wh
 
 let WorkDescription=`Here are some of my projects I'm passionate about, More at my
 <a class="description-a" target="_blank" href="https://github.com/moustafamohsen"> GitHub </a>`
+
+let BlogDescription=`Here are some of my articles, read more at
+<a class="description-a" target="_blank" href="https://medium.com/directcode"> DirectCode </a>`
 
 let ContactDescription=`I can help you make your Idea or Web App come to life, just let me handle it
 <br>
@@ -442,6 +445,13 @@ export const workSection: WorkSection = {
   mainProjects: mainProjects,
   otherProjects: otherProjects
 };
+
+// export variables
+export const blogSection: BlogSection = {
+  title: "Blog",
+  description:BlogDescription
+};
+
 
 export const platformsSection: PlatformsSection = {
   title: "Platforms",

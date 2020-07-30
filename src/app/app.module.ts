@@ -25,6 +25,7 @@ import { StickyHeaderDirective } from './directives/sticky-header.directive';
 import { OnView } from './directives/OnView.directive';
 import { HttpClientModule } from '@angular/common/http';
 import { DeviceDetectorModule } from 'ngx-device-detector';
+import { BlogSectionComponent } from './blog-section/blog-section.component';
 
 document.title = "Welcome"
 
@@ -48,7 +49,8 @@ const matrial = [
     //ImageGlareComponent,
     MMLogoComponent,
     StickyHeaderDirective,
-    OnView
+    OnView,
+    BlogSectionComponent
 
   ],
   imports: [

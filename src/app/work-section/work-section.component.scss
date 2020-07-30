@@ -21,8 +21,9 @@ $hide-time:500ms;
 .work-section{
     @include section-container;
     padding-top:0px;
+    background-color: $my-white;
 }
-.section-header-title{ 
+.section-header-title{
     @include section-header;
 }
 .work-body{
@@ -59,29 +60,29 @@ $hide-time:500ms;
             }
 
             @media screen and (max-width:$break-m) {
-                padding: 20px 50px 20px; 
+                padding: 20px 50px 20px;
             }
 
             @media screen and (max-width:$break-s) {
-                padding: 5px 25px 5px;   
+                padding: 5px 25px 5px;
             }
 
             @media screen and (max-width:$break-x) {
-                padding: 5px 25px 5px; 
+                padding: 5px 25px 5px;
             }
             // Min heights
             // small
             min-height: 300px;
             @media screen and (min-width:$break-x) {
-                min-height: 300px;   
+                min-height: 300px;
             }
             // medium
             @media screen and (min-width:$break-s) {
-                min-height:350px;   
+                min-height:350px;
             }
             // large
             @media screen and (min-width:$break-m) {
-                min-height: 360px; 
+                min-height: 360px;
             }
 
             &:hover{
@@ -112,7 +113,7 @@ $hide-time:500ms;
                     top: 0;
                     left: 0;
                     width: 100%;
-                    height: 100%;    
+                    height: 100%;
                     z-index: 0;
                     background-color: rgba(0, 0, 0, 0.4);
                     transition: all ease-in-out $card-time $card-delay !important;
@@ -129,19 +130,19 @@ $hide-time:500ms;
                         color:$compelmentary;
                         width: fit-content;
                         @media screen and (max-width:$break-l) {
-                            font-size: 4.5rem; 
+                            font-size: 4.5rem;
                         }
                         @media screen and (max-width:$break-m) {
-                            font-size: 4rem;   
+                            font-size: 4rem;
                         }
                         @media screen and (max-width:$break-s) {
-                            font-size: 3.5rem;   
+                            font-size: 3.5rem;
                         }
                         @media screen and (max-width:$break-x) {
-                            font-size: 2.5rem;   
+                            font-size: 2.5rem;
                         }
                         @media screen and (max-width:300.98px) {
-                            font-size: 1.5rem;   
+                            font-size: 1.5rem;
                         }
                     }
                     .work-card-uderline{
@@ -151,7 +152,7 @@ $hide-time:500ms;
                         left: 0%;
                         background-color: $compelmentary;
                         transition: all $card-time ease-in-out !important;
-    
+
                     }
                 }
             }
@@ -179,13 +180,38 @@ $hide-time:500ms;
     }
 }
 
-.mar-top--20{
-    margin-top:-20px !important;
-    @media screen and (max-width:$break-m) {
-        margin-top:-10px !important;
-    }
-}
 
+.work-header{
+  position: relative;
+  margin-bottom: 85px;
+  background-color: $primary-3;
+  &::before{
+    content: "";
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    -webkit-transform: translateY(-99%);
+    transform: translateY(-99%);
+    clip-path: polygon(0 0, 0% 100%, 100% 100%);
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    background-color: $primary-3;
+  }
+  &::after{
+    content: "";
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    -webkit-transform: translateY(-0.5%);
+    transform: translateY(100%);
+    clip-path: polygon(0 0, 0 100%, 100% 0);
+    background-color: $primary-3;
+    z-index: 1;
+  }
+}
 /*
             .work-card-footer{
                 //@include hide-down;
@@ -281,7 +307,7 @@ $hide-time:500ms;
                         position: absolute;
                         background-color: $tertiary;
                         color: $primary;
-                        //padding: 1rem 0; 
+                        //padding: 1rem 0;
                         margin-right: auto;
                         margin-left: auto;
                         //width: 110%;
@@ -303,7 +329,7 @@ $hide-time:500ms;
 
                         p{
                             font-size: 1rem;
-    
+
                             display: table-cell;
                             text-align: center;
                             vertical-align: middle;
@@ -321,17 +347,17 @@ $fidge-notes-path:url('/./assets/img/Framworks and platforms/work-card/mocks/fri
     background-image: $fidge-notes-path;
 }
 
-section#work::before {
-    content: "";
-    width: 100%;
-    height: 100px;
-    position: absolute;
-    top: 0;
-    transform: translateY(-99%);
-    -webkit-clip-path: polygon(0 0, 0% 100%, 100% 100%);
-    clip-path: polygon(0 0, 0% 100%, 100% 100%);
-    background-color: $primary-3;
-}
+// section#work::before {
+//     content: "";
+//     width: 100%;
+//     height: 100px;
+//     position: absolute;
+//     top: 0;
+//     transform: translateY(-99%);
+//     -webkit-clip-path: polygon(0 0, 0% 100%, 100% 100%);
+//     clip-path: polygon(0 0, 0% 100%, 100% 100%);
+//     background-color: $primary-3;
+// }
 
 /*
 $break-x: 575.98px;
@@ -346,7 +372,7 @@ $break-l: 1199.98px;
     $small-card-time:200ms;
     .small-work-card-container{
         position:relative;
-        
+
         //margin-left: auto;
         //margin-right: auto;
 
@@ -354,25 +380,25 @@ $break-l: 1199.98px;
         height:450px;
         @media screen and (max-width:$break-l) {
             //width:450px;
-            height:350px;    
+            height:350px;
         }
         @media screen and (max-width:$break-m) {
             //width:350;
-            height:250px;    
+            height:250px;
         }
         @media screen and (max-width:$break-s) {
             //width:250px;
-            height:180px;    
+            height:180px;
         }
         @media screen and (max-width:$break-x) {
             //width:150px;
-            height:150px;    
+            height:150px;
         }
         @media screen and (max-width:300.98px) {
             //width:90%;
-            height:100px;    
+            height:100px;
         }
-        
+
         //image
         .small-work-card-background-image{
             background-size: cover;
@@ -389,7 +415,7 @@ $break-l: 1199.98px;
                 transition: all $small-card-time ease-in-out !important;
             }
         }
-    
+
         //body
         .small-work-card-body{
             margin-top: auto;
@@ -419,15 +445,15 @@ $break-l: 1199.98px;
                     }
                 }
             }
-        
+
             .small-work-card-footer{
                 transform: translate3d(0,100%,0);
                 opacity: 0;
                 transition: all $small-card-time ease-in-out;
-                
+
             }
         }//small-work-card-body
-    
+
         &:hover{
             .small-work-card-body{
                 .small-work-card-header{

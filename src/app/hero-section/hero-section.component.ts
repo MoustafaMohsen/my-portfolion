@@ -59,7 +59,7 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     this.onLogoLoad( ()=>this.logo$.next(true) );
     window.onpageshow  = ()=> this.window$.next(true);
-    this.zone.runOutsideAngular(()=>{  
+    this.zone.runOutsideAngular(()=>{
       setTimeout(() => {
         this.startanimation();
         this.scrollHandler();
@@ -91,7 +91,7 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
     $(document.body).removeClass('modal-open')
   }
 
-  onLogoLoad(Func:Function){    
+  onLogoLoad(Func:Function){
     let src = `${window.location.href}/assets/img/m-logo.png`;
     var imge = new Image();
     let that = this
@@ -125,7 +125,7 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
 
     let windowWidth = window.innerWidth;
     let navHeight = windowWidth < 500? 6 : 7 ;
-    
+
     this.styler.Controller = new ScrollMagic.Controller();
     var controller = this.styler.Controller;
 
@@ -135,7 +135,7 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
     .to('#mmlogo',0.6,{scale:0.5, x:'0%', top:"22%", ease: Power0.easeNone})
     .to('#mmlogo',0.4,{scale:0.25, x:'-37.5%', top:"3.65%", ease: Power0.easeNone})
     .to('.logo-overlay',0.2,{display:'block'},"-=0.2")
-  
+
     var sceneMMlogo = new ScrollMagic.Scene({
       triggerElement: '.nav-col',
       triggerHook: 0,
@@ -150,7 +150,7 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
     tlUnderLine
     .to('.underline-nav-center-container',1,{width:'100%', left:0, top:navHeight*0.94+"%", ease: Power0.easeNone})
     .to('.underline-nav-center-container>div',1,{backgroundColor:'#16ADE3',borderRadius:'0px', ease: Power0.easeNone},"-=1")
-  
+
     var sceneMMlogo = new ScrollMagic.Scene({
       triggerElement: '.nav-col',
       triggerHook: 0,
@@ -158,7 +158,7 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
     })
     .setTween(tlUnderLine)
       .addTo(controller);
-  
+
       // == navbar
       /**from
        position: fixed;
@@ -173,9 +173,9 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
       tlNavBackground
       // .fromTo('.navbar-sticky',1,{height:inHeight+"px"},{height:navHeight*0.01*inHeight+"px",backgroundColor:'#1B1C24', ease: Power0.easeNone},"+=0")
       .fromTo('.navbar-sticky',1,{height:"100vh"},{height:navHeight+"%",backgroundColor:'#1B1C24', ease: Power0.easeNone},"+=0.1")
-      
+
       // .to('.navbar-sticky',1,{height:navHeight*0.01*window.innerHeight+"px",backgroundColor:'#1B1C24', ease: Power0.easeNone},"+=0.1")
-    
+
       // $('#skills').addClass("chrome-mobile");
       var sceneMMlogo = new ScrollMagic.Scene({
         triggerElement: '.nav-col',
@@ -240,7 +240,7 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
         $('.buttons-container').addClass('fade-out').removeClass('fade-in')
       }
 
-      let ids = ["#skills","#platforms","#work","#contact"];
+      let ids = ["#skills","#platforms","#work","#blog","#contact"];
       let elementsInView = this.styler.ElementInView(ids,150);
       if (elementsInView.length>0) {
         let Hightligh = elementsInView[elementsInView.length-1];

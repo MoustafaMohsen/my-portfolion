@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "AAGA,AAAA,cAAc,CAAA;EACZ,MAAM,EAAE,UAAU;CACnB;;AAED,AAAA,OAAO,AAAA,aAAa,CAAA;EEJhB,KAAK,ED4BC,OAAO;EC1Bb,WAAW,EAAE,GAAG;EAEhB,KAAK,EAAE,IAAI;EAEX,gBAAgB,ED2BT,OAAO;EC1Bd,OAAO,EAAE,SAAS;EFDpB,OAAO,EAAC,GAAG;EACX,gBAAgB,EAAE,OAAO;EACzB,QAAQ,EAAE,QAAQ;CAWnB;;AAfD,AAKE,OALK,AAAA,aAAa,AAKjB,QAAQ,CAAC;EACR,OAAO,EAAE,EAAE;EACX,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,KAAK;EACb,QAAQ,EAAE,QAAQ;EAClB,GAAG,EAAE,CAAC;EACN,SAAS,EAAE,gBAAgB;EAC3B,SAAS,EAAE,mCAAmC;EAC9C,gBAAgB,ECgBT,OAAO;CDff;;AAEH,AAAA,qBAAqB,CAAA;EETjB,aAAa,EAAE,IAAI;CFWtB;;AACD,AAAA,YAAY,CAAA;EACV,UAAU,EAAE,OAAO;CACpB",
+    "sources": [
+        "blog-section.component.scss",
+        "../../_variables.scss",
+        "../styles/_shared-sections.scss",
+        "../../_variables.scss"
+    ],
+    "names": [],
+    "file": "blog-section.component.css"
+}

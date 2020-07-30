@@ -1,0 +1,22 @@
+<section class="row blog-section" id="blog">
+      <!--blog header-->
+      <div class="col-12 mar-top--20 blog-header after-before-height">
+        <div class="row justify-content-center">
+            <div class="col-12 align-self-center">
+                <h3 class="section-header-title" >{{title}} <span class="blue-underscore blue-underscore-hide-show">_</span></h3>
+            </div>
+
+        </div>
+        <!--blog description-->
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-sm-10 col-12 align-self-center">
+                <p class="header-description section-header-description" animateOnScroll (func)="typeEffect(_title,100)" beforeClass="opacity-0" animationName="fadeInUp animation-settings-1" [innerHTML]="description"></p>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="blog-container">
+      <div id="medium-widget"></div>
+    </div>
+</section>

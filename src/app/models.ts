@@ -50,6 +50,11 @@ export interface WorkSection {
   otherProjects: workCard[];
 }
 
+export interface BlogSection {
+  title: string;
+  description: string;
+}
+
 export interface PlatformsSection {
   title: string;
   description: string;

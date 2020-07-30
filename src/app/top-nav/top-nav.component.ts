@@ -24,9 +24,9 @@ export class TopNavComponent implements OnInit {
   ngOnInit() {
 
     this.zone.runOutsideAngular(()=>{
-      this.scrollObs.subscribe( 
+      this.scrollObs.subscribe(
         ()=>{
-          let ids = ["#skills","#platforms","#work","#contact"];
+          let ids = ["#skills","#platforms","#work","#blog","#contact"];
           let elementsInView = this.styler.ElementInView(ids,150);
           if (elementsInView.length>0) {
             let Hightligh = elementsInView[elementsInView.length-1];

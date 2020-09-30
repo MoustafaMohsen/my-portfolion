@@ -8,15 +8,9 @@ import { StylerService } from '../styler.service';
 import { environment } from '../../environments/environment';
 import { ScrollService } from '../animate-on-scroll/src';
 import { DeviceDetectorService } from 'ngx-device-detector';
+import { Power0, TimelineMax } from 'gsap';
 
-//import * as ScrollMagic from 'scrollmagic';
 declare var ScrollMagic;
-declare var TimelineMax;
-declare var Power0;
-declare var Power1;
-declare var Power2;
-declare var Power3;
-declare var Power4;
 
 @Component({
   selector: 'app-hero-section',
@@ -171,12 +165,8 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
        */
       var tlNavBackground = new TimelineMax();
       tlNavBackground
-      // .fromTo('.navbar-sticky',1,{height:inHeight+"px"},{height:navHeight*0.01*inHeight+"px",backgroundColor:'#1B1C24', ease: Power0.easeNone},"+=0")
       .fromTo('.navbar-sticky',1,{height:"100vh"},{height:navHeight+"%",backgroundColor:'#1B1C24', ease: Power0.easeNone},"+=0.1")
 
-      // .to('.navbar-sticky',1,{height:navHeight*0.01*window.innerHeight+"px",backgroundColor:'#1B1C24', ease: Power0.easeNone},"+=0.1")
-
-      // $('#skills').addClass("chrome-mobile");
       var sceneMMlogo = new ScrollMagic.Scene({
         triggerElement: '.nav-col',
         triggerHook: 0,
@@ -187,13 +177,7 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
   }
 
 
-  // last_PageHeightValue = window.innerHeight * 0.01;
   updatePageHeight(){
-    // let vh = window.innerHeight * 0.01;
-    // if(vh!= this.last_PageHeightValue){
-    //   document.documentElement.style.setProperty('--vh', `${vh}px`);
-    //   console.log("updated height");
-    // }
 
     let vh = window.innerHeight * 0.01;
     const isMobile = this.deviceService.isMobile();
@@ -204,22 +188,12 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
     }else{
       $(".hero-page").css("height",`${inHeight}px`)
     }
-    // document.documentElement.style.setProperty('--vh', `${vh}px`);
     // debuging code
     let height = $(".hero-page").innerHeight();
     $("#indecator_mobile").html(`Height is ${height}, vh:${vh}`)
 
   }
   scrollHandler(){
-    // this.updatePageHeight();
-    // // on scroll
-    // window.addEventListener('scroll', ()=>{
-    //   this.updatePageHeight();
-    // })
-    // // on resize
-    // window.addEventListener('resize', ()=>{
-    //   this.updatePageHeight();
-    // })
     console.log("scrollHandler()" , window.innerHeight);
     this.scrollSrv.scrollObs.subscribe(()=>{
       let pos = this.scrollSrv.pos;

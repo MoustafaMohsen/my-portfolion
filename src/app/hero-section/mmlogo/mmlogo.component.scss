@@ -96,7 +96,7 @@ $word-to-m-mar:2%;
             font-weight: 100;
             color: $my-white;
             opacity: 0;
-        
+
             left: $word-to-m-mar + $m-left-mar + $m-width +5%;
             top: 0;
         }
@@ -109,6 +109,9 @@ $word-to-m-mar:2%;
             left: $word-to-m-mar + $m-left-mar + $m-width +50% +5%;
             top: 0;
         }
+
+    }
+    .restart{
 
     }
 }

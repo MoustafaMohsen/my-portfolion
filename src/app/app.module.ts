@@ -26,6 +26,7 @@ import { OnView } from './directives/OnView.directive';
 import { HttpClientModule } from '@angular/common/http';
 import { DeviceDetectorModule } from 'ngx-device-detector';
 import { BlogSectionComponent } from './blog-section/blog-section.component';
+import { InViewportModule } from '@thisissoon/angular-inviewport';
 
 document.title = "Welcome"
 
@@ -65,7 +66,8 @@ const matrial = [
       scrollOffset: [0, 64] // [x, y]
     }),
     AnimateOnScrollModule.forRoot(),
-    DeviceDetectorModule.forRoot()
+    DeviceDetectorModule.forRoot(),
+    InViewportModule
   ],
   providers: [],
   bootstrap: [AppComponent]

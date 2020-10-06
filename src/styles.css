@@ -61,6 +61,7 @@ ul {
 .blue-underscore.blue-underscore-hide-show {
   -webkit-animation: blink-caret .5s step-end infinite;
           animation: blink-caret .5s step-end infinite;
+  color: #16ADE3;
 }
 
 .section-header-title {
@@ -576,20 +577,20 @@ ul {
 }
 
 @-webkit-keyframes blink-caret {
-  from, to {
-    color: transparent;
+  0%, 100% {
+    opacity: 0;
   }
   50% {
-    color: #16ADE3;
+    opacity: 1;
   }
 }
 
 @keyframes blink-caret {
-  from, to {
-    color: transparent;
+  0%, 100% {
+    opacity: 0;
   }
   50% {
-    color: #16ADE3;
+    opacity: 1;
   }
 }
 

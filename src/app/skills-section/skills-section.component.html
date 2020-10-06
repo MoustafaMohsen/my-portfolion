@@ -1,20 +1,20 @@
 <!--=========== Skills section =============-->
-<section class="row skills-section" id="skills" [ngStyle]="SkillsStyle()">
+<section class="row skills-section" id="skills" [ngStyle]="SkillsStyle()" snInViewport (inViewportChange)="onInViewportChange($event)">
     <!--== Header ==-->
     <div class="col-12 skills-header">
         <!--skills title-->
         <div class="row justify-content-center">
             <div class="col-lg-3 col-md-3 col-sm-6 col-7 align-self-center">
-                <h3 class="section-header-title" >{{title}} <span class="blue-underscore blue-underscore-hide-show">_</span></h3>
-                
+              <h3 class="section-header-title" ><span id="skills-title-type" #titleElement></span> <span class="blue-underscore blue-underscore-hide-show">_</span></h3>
+
             </div>
-            
+
         </div>
 
         <!--skills description-->
         <div class="row justify-content-center">
-            <div class="col-lg-8 col-sm-10 col-12 align-self-center">
-                <p class="header-description section-header-description" animateOnScroll (func)="typeEffect(_title,100)" beforeClass="opacity-0" animationName="fadeInUp animation-settings-1">{{description}}</p>
+            <div class="col-lg-8 col-sm-10 col-12 align-self-center" snInViewport (inViewportChange)="onDescriptionViewport($event)">
+              <p class="header-description section-header-description" ><span #descriptionElement></span><span class="blue-underscore blue-underscore-hide-show">_</span></p>
 
             </div>
         </div>
@@ -24,29 +24,27 @@
     <div class="col-12 skills-body">
 
 
-        <div class="row no-gutters justify-content-around skills-main-images" animateOnScroll beforeClass="opacity-0" 
-        animationName="fadeIn animation-settings-2">
+        <div class="row no-gutters justify-content-around skills-main-images" snInViewport (inViewportChange)="onMainImagesViewport($event)">
 
             <div class="col-2" *ngFor="let image of bigImages">
                 <div class="skills-main-image-container">
                     <img  class="skills-main-image"  [src]="image" alt="">
                 </div>
             </div>
-                                
+
         </div>
 
-        <div class="row no-gutters justify-content-center skills-small-images" animateOnScroll beforeClass="opacity-0" 
-        animationName="fadeIn animation-settings-2">
+        <div class="row no-gutters justify-content-center skills-small-images" snInViewport (inViewportChange)="onSmallImagesViewport($event)">
 
             <div class="col-lg-1 col-md-2 col-sm-2 col-2" *ngFor="let image of smallImages">
                 <div class="skills-small-image-container">
                     <img  class="skills-small-image"  [src]="image" alt="">
                 </div>
             </div>
-            
+
         </div>
 
-        
+
     </div>
 
 </section>

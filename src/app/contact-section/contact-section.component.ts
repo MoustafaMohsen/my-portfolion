@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, ElementRef, NgZone, OnInit, ViewChild } from "@angular/core";
 import {
   FormControl,
   FormBuilder,
@@ -9,7 +9,8 @@ import { contactSection } from "../assets";
 import { AboutMeCard, Ipdata } from "../models";
 import { HttpClient } from "@angular/common/http";
 import { MatSnackBar } from "@angular/material";
-import { throwError } from "rxjs";
+import { TweenAnimate, TweenAnimation } from "../models";
+import Typewriter from 'typewriter-effect/dist/core';
 
 @Component({
   selector: "app-contact-section",
@@ -19,7 +20,11 @@ import { throwError } from "rxjs";
 export class ContactSectionComponent implements OnInit {
   FormSize = 1;
   contactForm: FormGroup;
-  constructor(formBuilder: FormBuilder, private http:HttpClient, private snake:MatSnackBar) {
+  @ViewChild('contact') ContactEle: ElementRef;
+  @ViewChild('titleElement') TitleEle: ElementRef;
+  @ViewChild('descriptionElement') descriptionEle: ElementRef;
+
+  constructor(formBuilder: FormBuilder, private http:HttpClient, private snake:MatSnackBar, private zone: NgZone) {
     this.contactForm = formBuilder.group({
       name: ["", [Validators.required]],
       email: ["", [Validators.required,Validators.email]],
@@ -40,6 +45,73 @@ export class ContactSectionComponent implements OnInit {
     this.aboutMe = contactSection.aboutMeCard;
     this.email= contactSection.email;
   } //ngOnInit
+
+  ngAfterViewInit(): void {
+    this.zone.runOutsideAngular(() => {
+      setTimeout(() => {
+        this.ContactCardFadeInUp.Tween();
+      }, 100);
+    })
+  }
+  inview = false;
+  onInViewportChange(inViewport: boolean) {
+    this.inview = inViewport;
+    let hasClass = this.ContactEle.nativeElement.classList.contains("active-contact")
+    if (inViewport && !hasClass) {
+      this.ContactEle.nativeElement.classList.add("active-contact");
+    }else{
+      this.ContactEle.nativeElement.classList.remove("active-contact");
+    }
+  }
+
+
+  // description
+  DescriptionFadeInUp = new TweenAnimate();
+  onDescriptionViewport(inViewport: boolean) {
+    this.DescriptionFadeInUp.inView = inViewport;
+    if (inViewport && !this.DescriptionFadeInUp.didRun) {
+
+      this.DescriptionFadeInUp.typewriter = new Typewriter(this.TitleEle.nativeElement, {
+        loop: false,
+        cursor: "",
+        autoStart: false,
+        // delay:'Natural',
+      });
+
+      this.DescriptionFadeInUp.typewriter2 = new Typewriter(this.descriptionEle.nativeElement, {
+        loop: false,
+        cursor: "",
+        autoStart: false,
+        // delay:50,
+      });
+
+    }
+
+    if (inViewport) {
+      this.zone.runOutsideAngular(() => {
+        if (this.DescriptionFadeInUp.didRun === false) {
+          this.DescriptionFadeInUp.typewriter.typeString(this._title).start();
+          this.DescriptionFadeInUp.typewriter2.typeString(this.description).start();
+        }
+      });
+      this.DescriptionFadeInUp.didRun = true;
+    }
+
+    if (!inViewport && this.DescriptionFadeInUp.didRun) {
+      this.zone.runOutsideAngular(() => {
+      });
+    }
+  }
+
+  // Main Images
+  ContactCardFadeInUp = new TweenAnimate('#contact .contact-card-container', TweenAnimation.FadeInUp);
+  onContactCardViewport(inViewport: boolean) {
+    this.ContactCardFadeInUp.inView = inViewport;
+    if (this.ContactCardFadeInUp.inView) {
+      this.zone.runOutsideAngular(() => { this.ContactCardFadeInUp.play() })
+    }
+  }
+
   submit() {
     if (this.loading) {
       return;
@@ -58,7 +130,7 @@ export class ContactSectionComponent implements OnInit {
         if ( filterThreats && this.isAny(data.threat) ) {
           // block access for attackers
           let errorMessage="Service error, please use email instead";
-          this.snake.open(errorMessage,'X',{duration:10000})  
+          this.snake.open(errorMessage,'X',{duration:10000})
           return ;
         }
 

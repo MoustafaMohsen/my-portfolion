@@ -30,6 +30,10 @@
   }
 }
 
+.platforms-body .platforms-main-images {
+  opacity: 0;
+}
+
 .platforms-body .platforms-main-images .platforms-main-image-container .platforms-main-image {
   width: 100%;
 }

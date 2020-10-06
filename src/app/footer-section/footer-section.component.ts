@@ -19,4 +19,8 @@ export class FooterSectionComponent implements OnInit {
     this.linkedin = footerSection.linkedin
   }
 
+  inview = false;
+  onInViewportChange(inViewport: boolean) {
+    this.inview = inViewport;
+  }
 }

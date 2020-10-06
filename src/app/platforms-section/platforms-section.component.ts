@@ -1,5 +1,9 @@
-import { Component, OnInit,HostListener } from '@angular/core';
+import { StylerService } from './../styler.service';
+import { Component, OnInit, HostListener, NgZone, ViewChild, ElementRef } from '@angular/core';
 import { Availableimages, platformsSection } from "../assets";
+import { TweenAnimate, TweenAnimation } from '../models';
+import Typewriter from 'typewriter-effect/dist/core';
+
 @Component({
   selector: 'app-platforms-section',
   templateUrl: './platforms-section.component.html',
@@ -7,50 +11,104 @@ import { Availableimages, platformsSection } from "../assets";
 })
 export class PlatformsSectionComponent implements OnInit {
 
-  constructor() { }
-  title:string="";
-  _title:string="";
-  description:string;
-  servicesImages:string[];
-  smallImages:string[];
-  smallImagesTitle:string;
-  bigImages:string[];
+  @ViewChild('titleElement') TitleEle: ElementRef;
+  @ViewChild('descriptionElement') descriptionEle: ElementRef;
+  constructor(private zone: NgZone, private stylerService: StylerService) { }
+  // title: string = "";
+  _title: string = "";
+  description: string;
+  servicesImages: string[];
+  smallImages: string[];
+  smallImagesTitle: string;
+  bigImages: string[];
   ngOnInit() {
 
     this._title = platformsSection.title;
-    this.description=platformsSection.description;
+    this.description = platformsSection.description;
 
-    this.servicesImages=platformsSection.servicesImages;
+    this.servicesImages = platformsSection.servicesImages;
     this.smallImagesTitle = platformsSection.smallImagesTitle;
-    this.smallImages=platformsSection.smallImages;
+    this.smallImages = platformsSection.smallImages;
 
-    this.bigImages=platformsSection.bigImages;
+    this.bigImages = platformsSection.bigImages;
 
   }
 
-  
+  ngAfterViewInit(): void {
+    this.zone.runOutsideAngular(() => {
+      setTimeout(() => {
+        // this.DescriptionFadeInUp.Tween();
+        this.MainImagesFadeInUp.Tween();
+        this.SmallImagesFadeInUp.Tween();
+        this.OtherImagesFadeInUp.Tween();
+      }, 100);
+    })
+  }
 
-  typeEffect(_title,interval){
-    var stringToArray=(input:string):string[]=>{
-      if (input===null)
-        return [];
-      return input.split('');
+  // description
+  DescriptionFadeInUp = new TweenAnimate();
+  onDescriptionViewport(inViewport: boolean) {
+    this.DescriptionFadeInUp.inView = inViewport;
+    if (inViewport&&!this.DescriptionFadeInUp.didRun) {
+
+      this.DescriptionFadeInUp.typewriter = new Typewriter(this.TitleEle.nativeElement, {
+        loop: false,
+        cursor: "",
+        autoStart: false,
+      });
+
+      this.DescriptionFadeInUp.typewriter2 = new Typewriter(this.descriptionEle.nativeElement, {
+        loop: false,
+        cursor: "",
+        autoStart: false,
+      });
     }
 
-    let chars = stringToArray(_title);
-    chars = chars.reverse();
-
-    let i = chars.length - 1;
-    if(i>0){
-      let inter = setInterval(()=>{
-        this.title = this.title + chars[i];
-        if (i==0) {
-          clearInterval(inter);
+    if (inViewport) {
+      this.zone.runOutsideAngular(() => {
+        // this.DescriptionFadeInUp.play()
+        if (this.DescriptionFadeInUp.didRun === false) {
+          this.DescriptionFadeInUp.typewriter.typeString(this._title).start();
+          this.DescriptionFadeInUp.typewriter2.typeString(this.description).start();
         }
-        i--;
-      },interval);
+      });
+      this.DescriptionFadeInUp.didRun = true;
     }
-  }//typeEffect
+
+    if (!inViewport && this.DescriptionFadeInUp.didRun) {
+      this.zone.runOutsideAngular(() => {
+        // this.DescriptionFadeInUp.reverse();
+      });
+    }
+  }
+
+  // Main Images
+  MainImagesFadeInUp = new TweenAnimate('#platforms .platforms-main-images', TweenAnimation.FadeInUp);
+  onMainImagesViewport(inViewport: boolean) {
+    this.MainImagesFadeInUp.inView = inViewport;
+    if (this.MainImagesFadeInUp.inView) {
+      this.zone.runOutsideAngular(() => { this.MainImagesFadeInUp.play() })
+    }
+  }
+
+  // Small Images
+  SmallImagesFadeInUp = new TweenAnimate('#platforms .platforms-small-images', TweenAnimation.FadeInUp);
+  onSmallImagesViewport(inViewport: boolean) {
+    this.SmallImagesFadeInUp.inView = inViewport;
+    if (this.SmallImagesFadeInUp.inView) {
+      this.zone.runOutsideAngular(() => { this.SmallImagesFadeInUp.play() })
+    }
+  }
+
+  // Other Images
+  OtherImagesFadeInUp = new TweenAnimate('#platforms .other-services-images', TweenAnimation.FadeInUp);
+  onOtherImagesViewport(inViewport: boolean) {
+    this.OtherImagesFadeInUp.inView = inViewport;
+    if (this.OtherImagesFadeInUp.inView) {
+      this.zone.runOutsideAngular(() => { this.OtherImagesFadeInUp.play() })
+    }
+  }
 
 
 }//class
+

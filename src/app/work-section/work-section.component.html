@@ -1,19 +1,18 @@
 <!--============== Work section ==============-->
-<section class="row work-section relative after-before-height" id="work">
+<section class="row work-section relative after-before-height" id="work" snInViewport (inViewportChange)="onInViewportChange($event)">
 
     <!--work header-->
     <div class="col-12 work-header after-before-height">
         <div class="row justify-content-center">
             <div class="col-12 align-self-center">
-                <h3 class="section-header-title" >{{title}} <span class="blue-underscore blue-underscore-hide-show">_</span></h3>
+              <h3 class="section-header-title" ><span id="work-title-type" #titleElement></span> <span class="blue-underscore blue-underscore-hide-show">_</span></h3>
             </div>
 
         </div>
         <!--work description-->
         <div class="row justify-content-center">
-            <div class="col-lg-8 col-sm-10 col-12 align-self-center">
-                <p class="header-description section-header-description" animateOnScroll (func)="typeEffect(_title,100)" beforeClass="opacity-0" animationName="fadeInUp animation-settings-1" [innerHTML]="description"></p>
-
+            <div class="col-lg-8 col-sm-10 col-12 align-self-center" snInViewport (inViewportChange)="onDescriptionViewport($event)">
+              <p class="header-description section-header-description" ><span #descriptionElement></span><span class="blue-underscore blue-underscore-hide-show">_</span></p>
             </div>
         </div>
     </div>

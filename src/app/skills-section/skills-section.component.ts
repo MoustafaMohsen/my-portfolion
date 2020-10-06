@@ -1,6 +1,9 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, ElementRef, NgZone, OnInit, ViewChild } from "@angular/core";
 import { Availableimages, skillsSection } from "../assets";
 import { DeviceDetectorService } from 'ngx-device-detector';
+import * as $ from 'jquery';
+import { TweenAnimate, TweenAnimation } from "../models";
+import Typewriter from 'typewriter-effect/dist/core';
 
 @Component({
   selector: "app-skills-section",
@@ -8,7 +11,10 @@ import { DeviceDetectorService } from 'ngx-device-detector';
   styleUrls: ["./skills-section.component.css"]
 })
 export class SkillsSectionComponent implements OnInit {
-  constructor( private deviceService: DeviceDetectorService) {}
+  constructor( private deviceService: DeviceDetectorService, private zone: NgZone) {}
+
+  @ViewChild('titleElement') TitleEle: ElementRef;
+  @ViewChild('descriptionElement') descriptionEle: ElementRef;
 
   title: string="";
   _title: string="";
@@ -29,28 +35,90 @@ export class SkillsSectionComponent implements OnInit {
 
   }//ngOnInit
 
-  
-  typeEffect(_title,interval){
-    var stringToArray=(input:string):string[]=>{
-      if (input===null)
-        return [];
-      return input.split('');
+  ngAfterViewInit(): void {
+    this.zone.runOutsideAngular(() => {
+      setTimeout(() => {
+        // this.DescriptionFadeInUp.Tween();
+        this.MainImagesFadeInUp.Tween();
+        this.SmallImagesFadeInUp.Tween();
+        this.OtherImagesFadeInUp.Tween();
+      }, 100);
+    })
+  }
+
+
+  inview = false;
+  onInViewportChange(inViewport: boolean) {
+    this.inview = inViewport;
+  }
+
+
+  // description
+  DescriptionFadeInUp = new TweenAnimate();
+  onDescriptionViewport(inViewport: boolean) {
+    this.DescriptionFadeInUp.inView = inViewport;
+    if (inViewport&&!this.DescriptionFadeInUp.didRun) {
+
+      this.DescriptionFadeInUp.typewriter = new Typewriter(this.TitleEle.nativeElement, {
+        loop: false,
+        cursor: "",
+        autoStart: false,
+        // delay:'Natural',
+      });
+
+      this.DescriptionFadeInUp.typewriter2 = new Typewriter(this.descriptionEle.nativeElement, {
+        loop: false,
+        cursor: "",
+        autoStart: false,
+        // delay:50,
+      });
+
     }
 
-    let chars = stringToArray(_title);
-    chars = chars.reverse();
-
-    let i = chars.length - 1;
-    if(i>0){
-      let inter = setInterval(()=>{
-        this.title = this.title + chars[i];
-        if (i==0) {
-          clearInterval(inter);
+    if (inViewport) {
+      this.zone.runOutsideAngular(() => {
+        // this.DescriptionFadeInUp.play()
+        if (this.DescriptionFadeInUp.didRun === false) {
+          this.DescriptionFadeInUp.typewriter.typeString(this._title).start();
+          this.DescriptionFadeInUp.typewriter2.typeString(this.description).start();
         }
-        i--;
-      },interval);
+      });
+      this.DescriptionFadeInUp.didRun = true;
     }
-  }//typeEffect
+
+    if (!inViewport && this.DescriptionFadeInUp.didRun) {
+      this.zone.runOutsideAngular(() => {
+        // this.DescriptionFadeInUp.reverse();
+      });
+    }
+  }
+
+  // Main Images
+  MainImagesFadeInUp = new TweenAnimate('#skills .skills-main-images', TweenAnimation.FadeInUp);
+  onMainImagesViewport(inViewport: boolean) {
+    this.MainImagesFadeInUp.inView = inViewport;
+    if (this.MainImagesFadeInUp.inView) {
+      this.zone.runOutsideAngular(() => { this.MainImagesFadeInUp.play() })
+    }
+  }
+
+  // Small Images
+  SmallImagesFadeInUp = new TweenAnimate('#skills .skills-small-images', TweenAnimation.FadeInUp);
+  onSmallImagesViewport(inViewport: boolean) {
+    this.SmallImagesFadeInUp.inView = inViewport;
+    if (this.SmallImagesFadeInUp.inView) {
+      this.zone.runOutsideAngular(() => { this.SmallImagesFadeInUp.play() })
+    }
+  }
+
+  // Other Images
+  OtherImagesFadeInUp = new TweenAnimate('#skills .other-services-images', TweenAnimation.FadeInUp);
+  onOtherImagesViewport(inViewport: boolean) {
+    this.OtherImagesFadeInUp.inView = inViewport;
+    if (this.OtherImagesFadeInUp.inView) {
+      this.zone.runOutsideAngular(() => { this.OtherImagesFadeInUp.play() })
+    }
+  }
 
 
   SkillsStyle(){

@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, NgZone, OnInit, ViewChild } from '@angular/core';
 import { blogSection } from '../assets';
+import { TweenAnimate, TweenAnimation } from "../models";
+import Typewriter from 'typewriter-effect/dist/core';
 
 declare var MediumWidget
 
@@ -10,42 +12,66 @@ declare var MediumWidget
 })
 export class BlogSectionComponent implements OnInit {
 
-  title:string="";
-  _title:string="";
-  description:string;
+  title: string = "";
+  _title: string = "";
+  description: string;
+  @ViewChild('titleElement') TitleEle: ElementRef;
+  @ViewChild('descriptionElement') descriptionEle: ElementRef;
 
-  constructor() { }
+  constructor(private zone: NgZone) { }
 
   ngOnInit() {
 
-    MediumWidget.Init({renderTo: '#medium-widget', params: {"resource":"https://medium.com/directcode",postsPerLine:4,limit:4,picture:"big",fields:["description","author","claps"],ratio:"landscape"}});
+    MediumWidget.Init({ renderTo: '#medium-widget', params: { "resource": "https://medium.com/directcode", postsPerLine: 4, limit: 4, picture: "big", fields: ["description", "author", "claps"], ratio: "landscape" } });
 
-    this._title=blogSection.title;
-    this.description=blogSection.description;
+    this._title = blogSection.title;
+    this.description = blogSection.description;
 
   }
 
-  typeEffect(_title,interval){
-    var stringToArray=(input:string):string[]=>{
-      if (input===null)
-        return [];
-      return input.split('');
+  inview = false;
+  onInViewportChange(inViewport: boolean) {
+    this.inview = inViewport;
+  }
+
+  // description
+  DescriptionFadeInUp = new TweenAnimate();
+  onDescriptionViewport(inViewport: boolean) {
+    this.DescriptionFadeInUp.inView = inViewport;
+    if (inViewport && !this.DescriptionFadeInUp.didRun) {
+
+      this.DescriptionFadeInUp.typewriter = new Typewriter(this.TitleEle.nativeElement, {
+        loop: false,
+        cursor: "",
+        autoStart: false,
+        // delay:'Natural',
+      });
+
+      this.DescriptionFadeInUp.typewriter2 = new Typewriter(this.descriptionEle.nativeElement, {
+        loop: false,
+        cursor: "",
+        autoStart: false,
+        // delay:50,
+      });
+
     }
 
-    let chars = stringToArray(_title);
-    chars = chars.reverse();
-
-    let i = chars.length - 1;
-    if(i>0){
-      let inter = setInterval(()=>{
-        this.title = this.title + chars[i];
-        if (i==0) {
-          clearInterval(inter);
+    if (inViewport) {
+      this.zone.runOutsideAngular(() => {
+        // this.DescriptionFadeInUp.play()
+        if (this.DescriptionFadeInUp.didRun === false) {
+          this.DescriptionFadeInUp.typewriter.typeString(this._title).start();
+          this.DescriptionFadeInUp.typewriter2.typeString(this.description).start();
         }
-        i--;
-      },interval);
+      });
+      this.DescriptionFadeInUp.didRun = true;
     }
-  }//typeEffect
 
+    if (!inViewport && this.DescriptionFadeInUp.didRun) {
+      this.zone.runOutsideAngular(() => {
+        // this.DescriptionFadeInUp.reverse();
+      });
+    }
+  }
 
 }

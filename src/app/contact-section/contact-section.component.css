@@ -217,8 +217,6 @@ section#contact.active-contact::before {
   height: 100px;
   -webkit-transform: translateY(-99%);
           transform: translateY(-99%);
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
 }
 
 @media screen and (min-width: 1199.98px) {

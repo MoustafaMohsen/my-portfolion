@@ -61,6 +61,11 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
     })
   }
 
+  inview = false;
+  onInViewportChange(inViewport: boolean) {
+    this.inview = inViewport;
+  }
+
   getheight(){
     let style={
       height:window.innerHeight+'px'

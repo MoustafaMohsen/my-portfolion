@@ -146,5 +146,102 @@ export declare module Ipdata {
   }
 
 }
+export interface ITypewriterOptions {
+  strings?: Array<string>,
+  cursor: string,
+  delay: 'natural' | number,
+  deleteSpeed: 'natural' | number,
+  loop: boolean,
+  autoStart: boolean,
+  devMode: boolean,
+  wrapperClassName: string,
+  cursorClassName: string,
+}
+
+export interface ITypewriter {
+  constructor(container: string | HTMLElement, options: ITypewriterOptions);
+
+  start(): ITypewriter;
+  stop(): ITypewriter;
+  pause(): ITypewriter;
+  pauseFor(ms: number): ITypewriter;
+  typeString(string: string): ITypewriter;
+  deleteAll(speed?: 'natural' | number): ITypewriter;
+  changeDeleteSpeed(speed: number): ITypewriter;
+  changeDelay(delay: number): ITypewriter;
+  deleteChars(amount: number): ITypewriter;
+  callFunction(callback: Function, thisArg: Object): ITypewriter;
+}
 
 
+
+
+import { Power3, TimelineMax } from 'gsap';
+
+export enum TweenAnimation {
+  FadeInUp,
+  fadeOutDown,
+  FadeIn,
+  FadeOut
+}
+export class TweenAnimate {
+  constructor(private selector?: string, private animation?: TweenAnimation ) {
+  }
+
+  animations = {
+    fadeOutDown: { opacity: '0', transform: 'translate3d(0, 100%, 0)' },
+    fadeInUp: { opacity: '1', transform: 'translate3d(0, 0, 0)' },
+    fadeIn: { opacity: '1' },
+    fadeOut: { opacity: '0' },
+  }
+  tl0: TimelineMax;
+  Dur1 = 1;
+  Delay1 = 0;
+  inView = false;
+  didRun = false;
+  typewriter
+  typewriter2
+  Tween() {
+    this.tl0 = new TimelineMax();
+
+    switch (this.animation) {
+      case TweenAnimation.FadeInUp:
+        this.tl0.fromTo(this.selector, this.Dur1, this.animations.fadeOutDown, this.animations.fadeInUp).pause();
+        break;
+      case TweenAnimation.fadeOutDown:
+        this.tl0.fromTo(this.selector, this.Dur1, this.animations.fadeInUp, this.animations.fadeOutDown).pause();
+        break;
+      case TweenAnimation.FadeIn:
+        this.tl0.fromTo(this.selector, this.Dur1, this.animations.fadeOut, this.animations.fadeIn).pause();
+        break;
+      case TweenAnimation.FadeOut:
+        this.tl0.fromTo(this.selector, this.Dur1, this.animations.fadeIn, this.animations.fadeOut).pause();
+        break;
+      default:
+        break;
+    }
+  }
+
+  async play(speed = 1) {
+    return new Promise((resolve, reject) => {
+      this.tl0.play().timeScale(speed).eventCallback("onComplete", () => { resolve() });
+    })
+  }
+
+  async reverse(speed = 1) {
+    return new Promise((resolve, reject) => {
+      this.tl0.reverse().timeScale(speed).eventCallback("onComplete", () => { resolve() });
+    })
+  }
+
+  restart(rest = 0.1) {
+    return new Promise((resolve, reject) => {
+      this.reverse(5).then(() => {
+        setTimeout(() => {
+          this.play().then(() => { resolve() });
+        }, (rest) * 1000);
+      });
+    })
+
+  }
+}

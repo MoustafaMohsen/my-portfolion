@@ -22,14 +22,14 @@ export class StylerService {
       const pos = this.GetElementTopPosition(EleHandler);
       window.scrollTo(0,pos+offset);
       console.log('scroller',pos,"offset",offset);
-      
+
     }, delay);
   }
 
   focusById(elId:string,delay=600){
-    
+
     setTimeout(() => {
-      const element = document.getElementById(elId);      
+      const element = document.getElementById(elId);
       if(element === null)
         return
       element.focus();
@@ -37,7 +37,7 @@ export class StylerService {
   }
 
   click(elId:string,delay=600){
-    
+
     setTimeout(() => {
       const element = document.getElementById(elId);
       if(element === null)
@@ -45,8 +45,8 @@ export class StylerService {
       element.click();
     }, delay);
   }
-  
-  
+
+
   CopyToClipboardById(containerid) {
     if (window.getSelection) {
       if (window.getSelection().empty) {
@@ -87,7 +87,7 @@ export class StylerService {
 
   CalcBodyHeight(){
     let NavHeight = this.getNavHeight();
-    let WinHeight = this.getWindowHeight();      
+    let WinHeight = this.getWindowHeight();
     let bodyHeight = WinHeight - NavHeight ;
     return bodyHeight;
   }
@@ -113,5 +113,27 @@ export class StylerService {
     return elements;
   }
   //
-  
+
+  typeEffect(property, newText, interval = 100, _this) {
+    var stringToArray = (input: string): string[] => {
+      if (input === null)
+        return [];
+      return input.split('');
+    }
+
+    let chars = stringToArray(newText);
+    chars = chars.reverse();
+
+    let i = chars.length - 1;
+    if (i > 0) {
+      let inter = setInterval(() => {
+        _this[property] = _this[property] + chars[i];
+        if (i == 0) {
+          clearInterval(inter);
+        }
+        i--;
+        return inter;
+      }, interval);
+    }
+  }//typeEffect
 }

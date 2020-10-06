@@ -1,214 +1,211 @@
 @import "../../../_variables";
 @import "../../styles/_shared-sections";
-$disable-animation:1;
-$line-delay:000ms *$disable-animation;
+$disable-animation: 1;
+$line-delay: 000ms * $disable-animation;
 
-$line-time:500ms *$disable-animation;
+$line-time: 500ms * $disable-animation;
 
-$m-Delay:1000ms *$disable-animation + $line-delay;
+$m-Delay: 1000ms * $disable-animation + $line-delay;
 
-$m-time:2000ms *$disable-animation;
+$m-time: 2000ms * $disable-animation;
 
-$w-delay:$m-Delay+$m-time+500ms *$disable-animation;
-$w-time:500ms *$disable-animation;
+$w-delay: $m-Delay + $m-time + 500ms * $disable-animation;
+$w-time: 500ms * $disable-animation;
 
-$my-white:#FEFEFE;
+$my-white: #fefefe;
 
-$m-width:23%;
-$m-left-mar:5%;
-$word-to-m-mar:2%;
+$m-width: 23%;
+$m-left-mar: 5%;
+$word-to-m-mar: 2%;
 
 @mixin word-part {
-    position: absolute;
-    font-family: Dosis;
-    font-weight: 100;
-    color: $my-white;
-    top: 0%;
-    animation: fadeIn $w-time $w-delay ease-in-out;
-    animation-fill-mode: forwards;
-    opacity: 0;
+  position: absolute;
+  font-family: Dosis;
+  font-weight: 100;
+  color: $my-white;
+  top: 0%;
+  animation: fadeIn $w-time $w-delay ease-in-out;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }
 
 @mixin m-letter-part {
-    position: absolute;
-    animation-fill-mode: forwards;
-    top: 11%;
-    left: 0%;
-    width: 50%;
-    height: 0%;
+  position: absolute;
+  animation-fill-mode: forwards;
+  top: 11%;
+  left: 0%;
+  width: 50%;
+  height: 0%;
 }
 @mixin line-middle {
-    position: absolute;
-    animation-fill-mode: forwards;
-    top: 50%;
-    left: 0%;
-    width: 100%;
-    height: 2px;
-    background-color: $my-white;
-    border-radius: 2px;
+  position: absolute;
+  animation-fill-mode: forwards;
+  top: 50%;
+  left: 0%;
+  width: 100%;
+  height: 2px;
+  background-color: $my-white;
+  border-radius: 2px;
 }
 
-.hero-page{
-    height: 500px;
+.hero-page {
+  height: 500px;
 }
-.nav-container{
-    top: 0%;
+.nav-container {
+  top: 0%;
+  height: 100%;
+  left: 0%;
+  width: 100%;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  .underline-nav-center {
+    animation: nav-Container $line-time $line-delay ease-in-out;
+    @include line-middle;
+    height: 0px;
+  }
+  .img-box {
+    position: absolute;
+    width: 100%;
     height: 100%;
-    left: 0%;
-    width: 100%;
+    #m-moustafa {
+      position: absolute;
+      top: 50%;
+      left: 25%;
+      height: 0;
+      width: 50%;
+    }
+    #m-mohsen {
+      position: absolute;
+      top: 50%;
+      left: 25%;
+      height: 0;
+      width: 50%;
+    }
+  }
+
+  .word-box {
+    position: relative;
+    height: 17.5%;
+    top: 50%;
+    transform: translateY(-96%);
+    #ostafa-word {
+      position: absolute;
+      font-family: Dosis;
+      font-weight: 100;
+      color: $my-white;
+      opacity: 0;
+
+      left: $word-to-m-mar + $m-left-mar + $m-width + 5%;
+      top: 0;
+    }
+    #ohsen-word {
+      position: absolute;
+      font-family: Dosis;
+      font-weight: 100;
+      color: $my-white;
+      opacity: 0;
+      left: $word-to-m-mar + $m-left-mar + $m-width + 50% +5%;
+      top: 0;
+    }
+  }
+  .restart {
     position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    .underline-nav-center{
-        animation: nav-Container $line-time $line-delay ease-in-out;
-        @include line-middle;
-        height: 0px;
-    }
-    .img-box{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        #m-moustafa{
-            position: absolute;
-            top: 50%;
-            left: 25%;
-            height: 0;
-            width: 50%;
-        }
-        #m-mohsen{
-            position: absolute;
-            top: 50%;
-            left: 25%;
-            height: 0;
-            width: 50%;
-
-        }
-    }
-
-    .word-box{
-        position: relative;
-        height: 17.5%;
-        top: 50%;
-        transform: translateY(-96%);
-        #ostafa-word{
-            position: absolute;
-            font-family: Dosis;
-            font-weight: 100;
-            color: $my-white;
-            opacity: 0;
-
-            left: $word-to-m-mar + $m-left-mar + $m-width +5%;
-            top: 0;
-        }
-        #ohsen-word{
-            position: absolute;
-            font-family: Dosis;
-            font-weight: 100;
-            color: $my-white;
-            opacity: 0;
-            left: $word-to-m-mar + $m-left-mar + $m-width +50% +5%;
-            top: 0;
-        }
-
-    }
-    .restart{
-
-    }
+    right: 4%;
+    top: 0px;
+    color: white;
+  }
 }
 
-.part-word{
-    font-size: 1em;
-    line-height:1em;
+.part-word {
+  font-size: 1em;
+  line-height: 1em;
 }
-@keyframes nav-Container{
-    0%{
-        width: 0;
-        left: 50%;
-        height: 3px;
-    }
-    100%{
-        @include line-middle;
-    }
-}
-
-.m-moustafa-animation{
-    animation: m-moustafa-anim $m-time $m-Delay ease-in-out;
+@keyframes nav-Container {
+  0% {
+    width: 0;
+    left: 50%;
+    height: 3px;
+  }
+  100% {
+    @include line-middle;
+  }
 }
 
-.m-mohsen-animation{
-    animation: m-mohsen-anim $m-time $m-Delay ease-in-out;
+.m-moustafa-animation {
+  animation: m-moustafa-anim $m-time $m-Delay ease-in-out;
 }
 
+.m-mohsen-animation {
+  animation: m-mohsen-anim $m-time $m-Delay ease-in-out;
+}
 
 @mixin start-part {
-    top: 50%;
-    height: 0;
-    left: 25%;
-    width: 50%;
+  top: 50%;
+  height: 0;
+  left: 25%;
+  width: 50%;
 }
 @mixin middle-part {
-    top: 11%;
-    height: 70%;
-    left: 25%;
-    width: 50%;
+  top: 11%;
+  height: 70%;
+  left: 25%;
+  width: 50%;
 }
 @mixin final-part {
-    width: $m-width;
-    top: 28%;
-    height: auto;
+  width: $m-width;
+  top: 28%;
+  height: auto;
 }
 
-@keyframes m-moustafa-anim{
-    0%{
-        @include start-part;
-    }
-    30%{
-        @include middle-part;
-    }
-    80%{
-        @include middle-part;
-    }
+@keyframes m-moustafa-anim {
+  0% {
+    @include start-part;
+  }
+  30% {
+    @include middle-part;
+  }
+  80% {
+    @include middle-part;
+  }
 
-    100%{
-        @include final-part;
-        left: $m-left-mar;
-    }
+  100% {
+    @include final-part;
+    left: $m-left-mar;
+  }
 }
 
-
-@keyframes m-mohsen-anim{
-    0%{
-        @include start-part;
-    }
-    30%{
-        @include middle-part;
-    }
-    80%{
-        @include middle-part;
-    }
-    100%{
-        @include final-part;
-        left: $m-left-mar+50%;
-    }
+@keyframes m-mohsen-anim {
+  0% {
+    @include start-part;
+  }
+  30% {
+    @include middle-part;
+  }
+  80% {
+    @include middle-part;
+  }
+  100% {
+    @include final-part;
+    left: $m-left-mar + 50%;
+  }
 }
-
-
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
+  from {
+    opacity: 0;
+  }
 
-    to {
-        opacity: 1;
-    }
+  to {
+    opacity: 1;
+  }
 }
 
-.hide-elements{
-    display: none !important;
+.hide-elements {
+  display: none !important;
 }
 
-.show-elements{
-    display: block;
-    transition: all ease-in-out 1000ms;
+.show-elements {
+  display: block;
+  transition: all ease-in-out 1000ms;
 }

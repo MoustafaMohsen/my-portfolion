@@ -5,7 +5,7 @@
     @include section-container;
     padding-top: 20px;
 }
-.contact-header{ 
+.contact-header{
     @include section-header;
 }
 .contact-body{
@@ -103,7 +103,7 @@
                 .about-small-title{
                     p{
                         font-size: $title-font-size *0.5;
-                        
+
                     }
                 }
 
@@ -139,7 +139,7 @@
                 }
                 .name-input-form{
                     height: $form-height;
-                    
+
                 }
                 .email-input-form{
                     height: $form-height;
@@ -176,7 +176,7 @@
                         transition: $transition-duration;
                     }
                     @media screen and (max-width:$break-x) {
-                        width: 100% !important;  
+                        width: 100% !important;
                     }
                 }
 
@@ -207,7 +207,6 @@ section#contact::before {
 section#contact.active-contact::before {
     height: 100px;
     transform: translateY(-99%);
-    transition: all 1s ease-in-out;
     @media screen and (min-width:$break-l) {
         height: 150px !important;
     }
@@ -215,10 +214,10 @@ section#contact.active-contact::before {
         height: 140px !important;
     }
     @media screen and (max-width:$break-m) {
-        height: 120px !important;  
+        height: 120px !important;
     }
     @media screen and (max-width:$break-s) {
-        height: 100px !important;   
+        height: 100px !important;
     }
     @media screen and (max-width:$break-x) {
         height: 60px !important;

@@ -5,7 +5,7 @@
     @include section-container;
     padding-top:0px;
 }
-.platforms-header{ 
+.platforms-header{
     @include section-header;
     margin-bottom: 0;
 }
@@ -18,12 +18,12 @@
     transition: all 200ms ease-in-out;
     @media screen and (max-width:$break-x) {
         padding-top: 60px;
-        padding-bottom: 40px;  
+        padding-bottom: 40px;
     }
     .platforms-main-images{
-    
+        opacity: 0;
         .platforms-main-image-container{
-        
+
             .platforms-main-image{
                 width: 100%;
             }//platforms-main-image
@@ -33,9 +33,9 @@
     }//platforms-main-images
 
     .platforms-small-images{
-    
+
         .platforms-small-image-container{
-        
+
             .platforms-small-image{
                 width: 100%;
                 margin-top: 30px;

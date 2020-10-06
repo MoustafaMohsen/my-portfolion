@@ -1,31 +1,31 @@
 <!--============== Contact Me section ================-->
 
-<section class="row contact-section relative" id="contact" animateOnScroll animationName="active-contact">
+<section class="row contact-section relative" id="contact" #contact animateOnScroll animationName="active-contact" snInViewport (inViewportChange)="onInViewportChange($event)">
     <div class="col-12 justify-content-center contact-header">
-        
+
         <!--contact header-->
         <div class="row justify-content-center">
             <div class="col-12 align-self-center">
-                <h3 class="section-header-title" >{{title}} <span class="blue-underscore blue-underscore-hide-show">_</span></h3>
-                
+              <h3 class="section-header-title" ><span id="blog-title-type" #titleElement></span> <span class="blue-underscore blue-underscore-hide-show">_</span></h3>
+
             </div>
-            
+
         </div>
 
         <!--contact description-->
         <div class="row justify-content-center">
-            <div class="col-lg-8 col-sm-10 col-12  align-self-center">
-                <p class="header-description section-header-description" animateOnScroll (func)="typeEffect(_title,100)" beforeClass="opacity-0" animationName="fadeInUp animation-settings-1" [innerHTML]="description"></p>
+          <div class="col-lg-8 col-sm-10 col-12 align-self-center" snInViewport (inViewportChange)="onDescriptionViewport($event)">
+            <p class="header-description section-header-description" ><span #descriptionElement></span><span class="blue-underscore blue-underscore-hide-show">_</span></p>
 
-            </div>
+          </div>
         </div>
 
     </div>
 
 
-    <div class="col-12 contact-body">
+    <div class="col-12 contact-body" snInViewport (inViewportChange)="onContactCardViewport($event)">
 
-        <div class="row justify-content-center contact-card-container"  animateOnScroll beforeClass="opacity-0" animationName="fadeInUp animation-settings-2">
+        <div class="row justify-content-center contact-card-container">
 
             <div class="col-lg-10 col-sm-11 col-11">
                 <div class="row justify-content-center contact-card mar-0">
@@ -50,7 +50,7 @@
 
                         <form method="POST" class="about-form row" id="contact_form" [formGroup]="contactForm">
 
-                            <!-- 
+                            <!--
                                 <div class="name-input-form">
                                     <div class="input-lable"><span>Name*</span></div>
                                     <div class="input-text"></div>
@@ -61,7 +61,7 @@
                                 <input autocomplete="off" name="name" formControlName="name" class="input-text" matInput placeholder="Name *">
                             </mat-form-field>
 
-                            <!-- 
+                            <!--
                                 <div class="email-input-form" >
                                     <div class="input-lable"><span>Email*</span></div>
                                     <input class="input-text" formControlName="name" type="text">
@@ -72,7 +72,7 @@
                             </mat-form-field>
 
 
-                            <!--  
+                            <!--
                                 <div class="message-input-form">
                                     <div class="input-lable"><span>Message*</span></div>
                                     <div class="input-area"></div>
@@ -80,10 +80,10 @@
                             -->
 
                             <mat-form-field class="col-12 my-input-form message-input-form">
-                                <textarea autocomplete="off" name="message" formControlName="message" class="input-area" matInput 
+                                <textarea autocomplete="off" name="message" formControlName="message" class="input-area" matInput
                                 placeholder="Message *"></textarea>
                             </mat-form-field>
-    
+
                             <input type="hidden" name="data" id="contact_form_data">
 
                             <div class="col-12">
@@ -103,13 +103,13 @@
                         </div>
 
                     </div>
-                        
+
 
                 </div>
             </div>
-        
+
         </div>
-        
+
     </div>
-        
+
 </section>

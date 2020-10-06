@@ -141,6 +141,7 @@ ul{
     animation:
     //typing 3.5s steps(30, end),
     blink-caret .5s step-end infinite;
+    color:$secondary
 }
 
 .section-header-title{
@@ -560,8 +561,12 @@ ul{
 }
 
 @keyframes blink-caret {
-    from, to { color:transparent }
-    50% {  color:$secondary }
+    0%, 100% {
+      opacity: 0;
+     }
+    50% {
+      opacity: 1;
+     }
 }//blink-caret
 
 

@@ -80,7 +80,7 @@ export class MMLogoComponent implements OnInit, AfterViewInit {
     this.tl1 = new TimelineMax();
     this.tl1
       .to('#m-moustafa', this.Dur2,
-        { ease: Power3.easeInOut, top: '11%', height: '60%', left: '25%', width: '50%' }, "+=" + this.Delay2)
+        { ease: Power3.easeInOut, top: '11%', height: '70%', left: '25%', width: '50%' }, "+=" + this.Delay2)
 
       .to('#m-moustafa', this.Dur3,
         { top: '28%', height: 'auto', left: mLeftMar + '%', width: mWidth + '%' }, "+=" + this.Delay3)
@@ -89,7 +89,7 @@ export class MMLogoComponent implements OnInit, AfterViewInit {
     this.tl2 = new TimelineMax();
     this.tl2
       .to('#m-mohsen', this.Dur2,
-        { ease: Power3.easeInOut, top: '11%', height: '60%', left: '25%', width: '50%' }, "+=" + this.Delay2)
+        { ease: Power3.easeInOut, top: '11%', height: '70%', left: '25%', width: '50%' }, "+=" + this.Delay2)
 
       .to('#m-mohsen', this.Dur3,
         { top: '28%', height: 'auto', left: mLeftMar + 50 + '%', width: mWidth + '%' }, "+=" + this.Delay3)

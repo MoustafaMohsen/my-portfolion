@@ -7,7 +7,7 @@ import Typewriter from 'typewriter-effect/dist/core';
 @Component({
   selector: 'app-platforms-section',
   templateUrl: './platforms-section.component.html',
-  styleUrls: ['./platforms-section.component.css']
+  styleUrls: ['./platforms-section.component.scss']
 })
 export class PlatformsSectionComponent implements OnInit {
 

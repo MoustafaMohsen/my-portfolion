@@ -15,7 +15,7 @@ declare var ScrollMagic;
 @Component({
   selector: 'app-hero-section',
   templateUrl: './hero-section.component.html',
-  styleUrls: ['./hero-section.component.css']
+  styleUrls: ['./hero-section.component.scss']
 })
 export class HeroSectionComponent implements OnInit, AfterViewInit {
   logo$:Subject<boolean> = new Subject();

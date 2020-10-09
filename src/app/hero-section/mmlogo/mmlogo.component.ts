@@ -6,7 +6,7 @@ import { Power3, TimelineMax } from 'gsap';
 @Component({
   selector: 'app-mmlogo',
   templateUrl: './mmlogo.component.html',
-  styleUrls: ['./mmlogo.component.css']
+  styleUrls: ['./mmlogo.component.scss']
 })
 export class MMLogoComponent implements OnInit, AfterViewInit {
 

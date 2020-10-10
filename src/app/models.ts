@@ -1,3 +1,5 @@
+import Typewriter from 'typewriter-effect/dist/core';
+
 export class workDialog {
   title?: string;
   description?: string;
@@ -20,7 +22,7 @@ export interface workCard {
   title: string;
   subtitle?: string;
   description: string;
-  innerDescription?:string;
+  innerDescription?: string;
   resources_Images: string[];
   deployment_Images: string[];
   backgroundClass?: string;
@@ -75,74 +77,74 @@ export interface ContactSection {
   title: string;
   description: string;
   aboutMeCard: AboutMeCard;
-  email:string;
-  formspreeapikey:string;
-  formEmail:string;
-  filterThreats:boolean
+  email: string;
+  formspreeapikey: string;
+  formEmail: string;
+  filterThreats: boolean
 }
-export interface FooterSection{
-  github:string;
-  linkedin:string;
-  rights:string;
+export interface FooterSection {
+  github: string;
+  linkedin: string;
+  rights: string;
 }
 
 export declare module Ipdata {
 
   export interface Language {
-      name: string;
-      native: string;
+    name: string;
+    native: string;
   }
 
   export interface Currency {
-      name: string;
-      code: string;
-      symbol: string;
-      native: string;
-      plural: string;
+    name: string;
+    code: string;
+    symbol: string;
+    native: string;
+    plural: string;
   }
 
   export interface TimeZone {
-      name: string;
-      abbr: string;
-      offset: string;
-      is_dst: boolean;
-      current_time: Date;
+    name: string;
+    abbr: string;
+    offset: string;
+    is_dst: boolean;
+    current_time: Date;
   }
 
   export interface Threat {
-      is_tor?: boolean;
-      is_proxy?: boolean;
-      is_anonymous?: boolean;
-      is_known_attacker?: boolean;
-      is_known_abuser?: boolean;
-      is_threat?: boolean;
-      is_bogon?: boolean;
+    is_tor?: boolean;
+    is_proxy?: boolean;
+    is_anonymous?: boolean;
+    is_known_attacker?: boolean;
+    is_known_abuser?: boolean;
+    is_threat?: boolean;
+    is_bogon?: boolean;
   }
 
   export interface Ipdata {
-      ip: string;
-      is_eu: boolean;
-      city: string;
-      region: string;
-      region_code: string;
-      country_name: string;
-      country_code: string;
-      continent_name: string;
-      continent_code: string;
-      latitude: number;
-      longitude: number;
-      asn: string;
-      organisation: string;
-      postal: string;
-      calling_code: string;
-      flag: string;
-      emoji_flag: string;
-      emoji_unicode: string;
-      languages: Language[];
-      currency: Currency;
-      time_zone: TimeZone;
-      threat: Threat;
-      count: string;
+    ip: string;
+    is_eu: boolean;
+    city: string;
+    region: string;
+    region_code: string;
+    country_name: string;
+    country_code: string;
+    continent_name: string;
+    continent_code: string;
+    latitude: number;
+    longitude: number;
+    asn: string;
+    organisation: string;
+    postal: string;
+    calling_code: string;
+    flag: string;
+    emoji_flag: string;
+    emoji_unicode: string;
+    languages: Language[];
+    currency: Currency;
+    time_zone: TimeZone;
+    threat: Threat;
+    count: string;
   }
 
 }
@@ -171,12 +173,13 @@ export interface ITypewriter {
   changeDelay(delay: number): ITypewriter;
   deleteChars(amount: number): ITypewriter;
   callFunction(callback: Function, thisArg: Object): ITypewriter;
+  state
 }
 
 
 
 
-import { Power3, TimelineMax } from 'gsap';
+import { Power0, Power3, TimelineMax } from 'gsap';
 
 export enum TweenAnimation {
   FadeInUp,
@@ -185,7 +188,7 @@ export enum TweenAnimation {
   FadeOut
 }
 export class TweenAnimate {
-  constructor(private selector?: string, private animation?: TweenAnimation ) {
+  constructor(private selector?: string, private animation?: TweenAnimation) {
   }
 
   animations = {
@@ -199,8 +202,8 @@ export class TweenAnimate {
   Delay1 = 0;
   inView = false;
   didRun = false;
-  typewriter : ITypewriter;
-  typewriter2 : ITypewriter;
+  typewriter: ITypewriter;
+  typewriter2: ITypewriter;
   typeText = "";
   Tween(tween?: TimelineMax) {
     if (tween) {
@@ -228,9 +231,10 @@ export class TweenAnimate {
   }
 
   async play(speed = 1) {
-    return new Promise((resolve, reject) => {
+    let tl0Return = new Promise((resolve, reject) => {
       this.tl0.play().timeScale(speed).eventCallback("onComplete", () => { resolve() });
-    })
+    });
+    return tl0Return;
   }
 
   async reverse(speed = 1) {
@@ -239,7 +243,7 @@ export class TweenAnimate {
     })
   }
 
-  restart(rest = 0.1 , speed = 5) {
+  restart(rest = 0.1, speed = 5) {
     return new Promise((resolve, reject) => {
       this.reverse(speed).then(() => {
         setTimeout(() => {
@@ -247,6 +251,76 @@ export class TweenAnimate {
         }, (rest) * 1000);
       });
     })
+
+  }
+
+  clipperTweenClass: TweenAnimate;
+  revealerTweenClass: TweenAnimate;
+  secondText: TweenAnimate;
+
+  revealTextAnimation(textElement, revealerElement, RevealeTextEle, typewriterDelay = 'natural') {
+    this.clipperTweenClass = new TweenAnimate();
+    this.revealerTweenClass = new TweenAnimate();
+    this.secondText = new TweenAnimate();
+    let ease = Power0.easeIn;
+    let ease2 = Power3.easeOut;
+    var clipper = new TimelineMax();
+    clipper
+      .from(textElement, 0, { "clip-path": "inset(0% 100% 0% 0%)", ease })
+      .to(textElement, 0.95, { "clip-path": "inset(0% 0% 0% 0%)", ease: ease2 })
+      .to(textElement, 1, { "clip-path": "inset(0% 0% 0% 0%)", ease: ease2 })
+      .pause()
+    this.clipperTweenClass.Tween(clipper);
+
+    // == logo
+    var revealer = new TimelineMax();
+    revealer
+      .from(revealerElement, 0, { "width": "0%", ease })
+      .to(revealerElement, 0.95, { "width": "100%", transform: "scaleX(1)", "transform-origin": "100% 0%", ease: ease2 })
+      .to(revealerElement, 1, { transform: "scaleX(0)", ease: ease2 })
+      .pause()
+
+    this.revealerTweenClass.Tween(revealer);
+
+    // type effect
+    this.secondText.typewriter = new Typewriter(RevealeTextEle, {
+      loop: false,
+      cursor: "",
+      autoStart: false,
+      delay: typewriterDelay,
+      skipAddStyles: true,
+    });
+
+
+  }
+  playRevealTextAnimation(Delay = 0, speed = 2, typewriterPauseFor = 500) {
+    setTimeout(() => {
+      this.clipperTweenClass.didRun = this.revealerTweenClass.didRun = this.secondText.didRun = true
+      this.clipperTweenClass.play(speed);
+      this.revealerTweenClass.play(speed);
+      this.secondText.typeText = "Full Stack Web Developer"
+      this.secondText.typewriter.pauseFor(typewriterPauseFor).typeString(this.secondText.typeText).start();
+
+    }, Delay * 1000);
+
+  }
+
+  reverseRevealTextAnimation(Delay = 0, speed = 2, typewriterPauseFor = 500) {
+    setTimeout(() => {
+      this.clipperTweenClass.didRun = this.revealerTweenClass.didRun = this.secondText.didRun = true
+      this.clipperTweenClass.reverse(speed);
+      this.revealerTweenClass.reverse(speed);
+      this.secondText.typewriter.state.eventLoop = null;
+      this.secondText.typewriter.state.eventQueue = [];
+
+      this.secondText.typewriter
+        // .pause()
+        // .stop()
+        .changeDeleteSpeed(1)
+        .deleteAll(0)
+        .start();
+
+    }, Delay * 1000);
 
   }
 }

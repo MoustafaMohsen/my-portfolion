@@ -1,18 +1,20 @@
-
-
-  <div class="nav-container">
-    <div class="img-box">
-      <img src="./assets/img/m-logo-800x400.png" alt="Moustafa" id="m-moustafa">
-      <img src="./assets/img/m-logo-800x400.png" alt="Moustafa" id="m-mohsen">
-    </div>
-
-    <div class="word-box" id="word-box">
-      <span class="part-word" id="ostafa-word" [ngStyle]="wordHeight"><p class="the-text">oustafa</p><div class="revealer"></div></span>
-      <span class="part-word" id="ohsen-word"  [ngStyle]="wordHeight"><p class="the-text">ohsen</p><div class="revealer"></div></span>
-
-    </div>
-
-    <button mat-icon-button class="restart " (click)="restart(1)"><span class="lnr lnr-redo"></span></button>
+<div class="nav-container">
+  <div class="img-box">
+    <img src="./assets/img/m-logo-800x400.png" alt="Moustafa" id="m-moustafa">
+    <img src="./assets/img/m-logo-800x400.png" alt="Moustafa" id="m-mohsen">
   </div>
 
+  <div class="word-box" id="word-box">
+    <span class="part-word" id="ostafa-word" [ngStyle]="wordHeight">
+      <p class="the-text">oustafa</p>
+      <div class="revealer"></div>
+    </span>
+    <span class="part-word" id="ohsen-word" [ngStyle]="wordHeight">
+      <p class="the-text">ohsen</p>
+      <div class="revealer"></div>
+    </span>
 
+  </div>
+
+  <button mat-icon-button class="restart " (click)="restart(1)"><span class="lnr lnr-redo"></span></button>
+</div>

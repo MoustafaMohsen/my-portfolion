@@ -1,4 +1,8 @@
 import { Injectable } from '@angular/core';
+import { Linear, Power0, Power2, Power3, TimelineMax } from 'gsap';
+import { ITypewriter, TweenAnimate } from './models';
+import Typewriter from 'typewriter-effect/dist/core';
+
 declare var $ :any;
 
 @Injectable({
@@ -8,6 +12,8 @@ export class StylerService {
 
   constructor() { }
   Controller;
+  textAnimations = new TweenAnimate();
+
   scrollById(elId:string,delay=100) {
     setTimeout(() => {
       const element = document.getElementById(elId);

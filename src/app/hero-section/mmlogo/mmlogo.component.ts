@@ -3,6 +3,7 @@ import * as $ from "jquery";
 import { ScrollService } from 'src/app/animate-on-scroll/src';
 import { Power3, TimelineMax } from 'gsap';
 import { TweenAnimate } from 'src/app/models';
+import { StylerService } from './../../styler.service';
 
 @Component({
   selector: 'app-mmlogo',
@@ -11,7 +12,7 @@ import { TweenAnimate } from 'src/app/models';
 })
 export class MMLogoComponent implements OnInit, AfterViewInit {
 
-  constructor(private scrollSrv: ScrollService, private zone: NgZone) { }
+  constructor(private scrollSrv: ScrollService, private zone: NgZone, private styler: StylerService) { }
 
   ngOnInit() {
   }
@@ -37,7 +38,6 @@ export class MMLogoComponent implements OnInit, AfterViewInit {
   tl0: TimelineMax;
   tl1: TimelineMax;
   tl2: TimelineMax;
-  tl3: TimelineMax;
   // in seconds
   Dur1 = 1;
   Delay1 = 0;
@@ -96,62 +96,58 @@ export class MMLogoComponent implements OnInit, AfterViewInit {
     // M ===
 
     // Word ===
-    this.tl3 = new TimelineMax();
-    this.tl3
     // expand M letter
-    .set('#ostafa-word',
-      {css:{ opacity: 1, left: mLeftMar + mWordLeftMar + mWidth + "%" }})
-
-    .set('#ohsen-word',
-      {css:{ opacity: 1, left: mLeftMar + mWordLeftMar + mWidth + 50 + "%" }})
+    let osW = $('#ostafa-word')
+    osW.css({ opacity: 1, left: mLeftMar + mWordLeftMar + mWidth + "%" });
+    let ohW = $('#ohsen-word');
+    ohW.css({ opacity: 1, left: mLeftMar + mWordLeftMar + mWidth + 50 + "%" });
 
 
     // === Word
 
     this.play();
   }//tween()
-  clipperTweenClass:TweenAnimate;
-  revealerTweenClass:TweenAnimate;
+  clipperTweenClass: TweenAnimate;
+  revealerTweenClass: TweenAnimate;
 
-  play(speed = 1) {
+  play(speed = 1, delay = 0) {
     this.tl0.play().timeScale(speed);
     this.tl1.play().timeScale(speed);
-    this.tl2.play().timeScale(speed);
-    this.tl3.play().timeScale(speed);
+    this.tl2.play().timeScale(speed).timeScale(speed).eventCallback("onComplete", () => {
+
+      this.styler.textAnimations.playRevealTextAnimation(delay)
+    });
 
   }
 
+  timeOuts = [];
   async reverse(speed = 1) {
-    console.log("tl0", this.tl0.progress());
-    console.log("tl1", this.tl1.progress());
-    console.log("tl2", this.tl2.progress());
-    console.log("tl3", this.tl3.progress());
+    for (let i = 0; i < this.timeOuts.length; i++) {
+      const timeoutRef = this.timeOuts[i];
+      clearTimeout(timeoutRef);
 
-
+    }
+    this.timeOuts = [];
     return new Promise((resolve, reject) => {
-      this.tl3.reverse().timeScale(speed);
-      console.log("tl3");
+      this.styler.textAnimations.reverseRevealTextAnimation();
 
-      setTimeout(() => {
-        this.tl2.reverse().timeScale(speed);
-        this.tl1.reverse().timeScale(speed);
-        console.log("tl1,tl2");
+      this.tl2.reverse().timeScale(speed);
+      this.tl1.reverse().timeScale(speed);
+      this.timeOuts[this.timeOuts.length] = setTimeout(() => {
+        this.tl0.reverse().timeScale(speed);
+        console.log("tl0");
 
-        setTimeout(() => {
-          this.tl0.reverse().timeScale(speed);
-          console.log("tl0");
+        this.timeOuts[this.timeOuts.length] = setTimeout(() => {
+          resolve();
+        }, (this.tl0.progress() * ((this.Dur1) * 1000)) / speed);
+      }, (this.tl2.progress() * ((this.Dur2 + this.Dur3 + this.Delay2) * 1000)) / speed);
 
-          setTimeout(() => {
-            resolve();
-          }, (this.tl0.progress() * ((this.Dur1) * 1000)) / speed);
-        }, (this.tl2.progress() * ((this.Dur2 + this.Dur3 + this.Delay2) * 1000)) / speed);
 
-      }, (this.tl3.progress() * (this.Dur4 * 1000))/speed);
     })
 
   }
 
-  restart(rest = 0.1,speed = 5) {
+  restart(rest = 0.1, speed = 5) {
     this.reverse(speed).then(() => {
       setTimeout(() => {
         this.play();

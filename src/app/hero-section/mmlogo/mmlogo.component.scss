@@ -89,12 +89,15 @@ $word-to-m-mar: 2%;
     height: 17.5%;
     top: 50%;
     transform: translateY(-96%);
+    .revealer{
+      height: 62px;
+    }
     #ostafa-word {
       position: absolute;
       font-family: Dosis;
       font-weight: 100;
       color: $my-white;
-      opacity: 0;
+      opacity: 1;
 
       left: $word-to-m-mar + $m-left-mar + $m-width + 5%;
       top: 0;
@@ -104,7 +107,7 @@ $word-to-m-mar: 2%;
       font-family: Dosis;
       font-weight: 100;
       color: $my-white;
-      opacity: 0;
+      opacity: 1;
       left: $word-to-m-mar + $m-left-mar + $m-width + 50% +5%;
       top: 0;
     }

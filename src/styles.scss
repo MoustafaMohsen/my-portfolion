@@ -545,6 +545,34 @@ ul{
 
 
 // =========================== General animations =========================== //
+
+.revealer-container{
+  z-index: 3;
+  position: absolute;
+  color: white;
+  font-size: 2em;
+}
+.the-text{
+  position: relative;
+  color: #FFF;
+  white-space: nowrap;
+  clip-path: inset(0% 100% 0% 0%);
+  cursor: default;
+}
+.revealer{
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $tertiary;
+  transform: scaleX(1);
+  width: 0;
+  transform-origin: 0 50%;
+  pointer-events: none;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;

@@ -2,6 +2,7 @@ import { Component, OnInit, AfterViewInit, NgZone, OnChanges } from '@angular/co
 import * as $ from "jquery";
 import { ScrollService } from 'src/app/animate-on-scroll/src';
 import { Power3, TimelineMax } from 'gsap';
+import { TweenAnimate } from 'src/app/models';
 
 @Component({
   selector: 'app-mmlogo',
@@ -23,7 +24,6 @@ export class MMLogoComponent implements OnInit, AfterViewInit {
   }
 
   get wordHeight() {
-    //console.log("wordHeight");
 
     let wordBox = $('#word-box');
     let height = wordBox.height();
@@ -98,16 +98,20 @@ export class MMLogoComponent implements OnInit, AfterViewInit {
     // Word ===
     this.tl3 = new TimelineMax();
     this.tl3
-      // expand M letter
-      .to('#ostafa-word', this.Dur4,
-        { opacity: 1, left: mLeftMar + mWordLeftMar + mWidth + "%" }, "+=" + this.Delay4)
+    // expand M letter
+    .set('#ostafa-word',
+      {css:{ opacity: 1, left: mLeftMar + mWordLeftMar + mWidth + "%" }})
 
-      .to('#ohsen-word', this.Dur4,
-        { opacity: 1, left: mLeftMar + mWordLeftMar + mWidth + 50 + "%" }, "-=" + this.Dur4)
+    .set('#ohsen-word',
+      {css:{ opacity: 1, left: mLeftMar + mWordLeftMar + mWidth + 50 + "%" }})
+
+
     // === Word
 
     this.play();
   }//tween()
+  clipperTweenClass:TweenAnimate;
+  revealerTweenClass:TweenAnimate;
 
   play(speed = 1) {
     this.tl0.play().timeScale(speed);

@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit, NgZone } from '@angular/core';
+import { Component, OnInit, AfterViewInit, NgZone, ElementRef, ViewChild } from '@angular/core';
 import * as $ from 'jquery';
 import { Title } from '@angular/platform-browser';
 import { siteTitle, traceId } from '../assets';
@@ -8,7 +8,9 @@ import { StylerService } from '../styler.service';
 import { environment } from '../../environments/environment';
 import { ScrollService } from '../animate-on-scroll/src';
 import { DeviceDetectorService } from 'ngx-device-detector';
-import { Power0, TimelineMax } from 'gsap';
+import { Linear, Power0, Power2, Power3, TimelineMax } from 'gsap';
+import { ITypewriter, TweenAnimate } from '../models';
+import Typewriter from 'typewriter-effect/dist/core';
 
 declare var ScrollMagic;
 
@@ -25,6 +27,7 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
   imageLoaded=false;
   highlightedbutton:string;
 
+  @ViewChild('secondTextEle') secondTextEle:ElementRef;
   constructor(private scrollSrv:ScrollService, private titleService:Title, googleSrv:GoogleService,public styler:StylerService,private zone:NgZone , private deviceService: DeviceDetectorService) {
     if(environment.production){
       googleSrv.Script(traceId);
@@ -64,6 +67,16 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
   inview = false;
   onInViewportChange(inViewport: boolean) {
     this.inview = inViewport;
+    // if (inViewport ) {
+    //   this.window$.subscribe(()=>{
+    //     this.zone.runOutsideAngular(()=>{
+    //       this.revealerTweenClass.play();
+    //       setInterval(() => {
+    //         this.revealerTweenClass.restart()
+    //       }, 5000);
+    //     })
+    //   })
+    // }
   }
 
   getheight(){
@@ -113,6 +126,50 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
 
   scrollDown(){
     this.styler.scrollById("skills",0)
+  }
+  clipperTweenClass = new TweenAnimate();
+  revealerTweenClass = new TweenAnimate();
+  secondText = new TweenAnimate();
+
+  revealTextAnimation(textElement,revealerElement){
+    let Delay = 5; // in seconds
+
+    let ease = Power0.easeIn;
+    let ease2 = Power3.easeOut;
+    var clipper = new TimelineMax();
+    clipper
+    .from(textElement,0,{"clip-path": "inset(0% 100% 0% 0%)", ease})
+    .to(textElement,0.95,{"clip-path": "inset(0% 0% 0% 0%)", ease:ease2})
+    .to(textElement,1,{"clip-path": "inset(0% 0% 0% 0%)", ease:ease2})
+    .pause()
+    this.clipperTweenClass.Tween(clipper);
+
+    // == logo
+    var revealer = new TimelineMax();
+    revealer
+    .from(revealerElement,0,{"width":"0%", ease})
+    .to(revealerElement,0.95,{"width":"100%", transform:"scaleX(1)", "transform-origin":"100% 0%", ease:ease2})
+    .to(revealerElement,1,{transform:"scaleX(0)", ease:ease2})
+    .pause()
+
+    this.revealerTweenClass.Tween(revealer);
+
+    // type effect
+    this.secondText.typewriter = new Typewriter(this.secondTextEle.nativeElement, {
+      loop: false,
+      cursor: "",
+      autoStart: false,
+      // delay:'natural',
+    });
+    setTimeout(() => {
+      this.clipperTweenClass.didRun = this.revealerTweenClass.didRun = this.secondText.didRun = true
+      this.clipperTweenClass.play(2);
+      this.revealerTweenClass.play(2);
+      this.secondText.typeText = "Full Stack Web Developer"
+      this.secondText.typewriter.pauseFor(500).typeString(this.secondText.typeText).start();
+
+    }, Delay*1000);
+
   }
 
   startanimation(){
@@ -179,6 +236,10 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
       })
       .setTween(tlNavBackground)
         .addTo(controller);
+
+      let text = document.getElementsByClassName('the-text');
+      let revealer = document.getElementsByClassName('revealer');
+      this.revealTextAnimation(text,revealer);
   }
 
 

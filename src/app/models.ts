@@ -199,9 +199,14 @@ export class TweenAnimate {
   Delay1 = 0;
   inView = false;
   didRun = false;
-  typewriter
-  typewriter2
-  Tween() {
+  typewriter : ITypewriter;
+  typewriter2 : ITypewriter;
+  typeText = "";
+  Tween(tween?: TimelineMax) {
+    if (tween) {
+      this.tl0 = tween;
+      return;
+    }
     this.tl0 = new TimelineMax();
 
     switch (this.animation) {
@@ -234,9 +239,9 @@ export class TweenAnimate {
     })
   }
 
-  restart(rest = 0.1) {
+  restart(rest = 0.1 , speed = 5) {
     return new Promise((resolve, reject) => {
-      this.reverse(5).then(() => {
+      this.reverse(speed).then(() => {
         setTimeout(() => {
           this.play().then(() => { resolve() });
         }, (rest) * 1000);

@@ -6,7 +6,12 @@
       <!---
   -->
       <div class="hero-background-text" *ngIf="imageLoaded">
-        <p class="first-back" id="first-back">Hello I'm</p>
+
+        <div class="background-text first-back" id="first-back">
+          <span class="the-text">Hello I'm</span>
+          <div class="revealer"></div>
+        </div>
+
       </div>
 
       <div class="mmlogo" id="mmlogo" [ngStyle]="logoheight()">
@@ -18,8 +23,8 @@
       </div>
 
       <div class="hero-background-text" *ngIf="imageLoaded">
-        <p class="second-back">
-          a <span class="highlight">Full stack web developer</span>
+        <p class="background-text second-back">
+          <span class="highlight" id="second-back" #secondTextEle>{{secondText.typeText}}</span><span class="blue-underscore blue-underscore-hide-show">_</span>
         </p>
       </div>
 

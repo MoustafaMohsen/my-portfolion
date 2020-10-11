@@ -55,12 +55,14 @@ export class PlatformsSectionComponent implements OnInit {
         loop: false,
         cursor: "",
         autoStart: false,
+        delay:75
       });
 
       this.DescriptionFadeInUp.typewriter2 = new Typewriter(this.descriptionEle.nativeElement, {
         loop: false,
         cursor: "",
         autoStart: false,
+        delay:75
       });
     }
 

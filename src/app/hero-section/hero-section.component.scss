@@ -288,7 +288,7 @@ $fade-delay:4000ms *$disable-animation;
   box-shadow:  0px 5px 17px -1px #16ade3;
   height: 100%;
   &.flicker{
-    animation:flicker2 5s 5 alternate;
+    animation:flicker2 5s infinite alternate;
   }
 }
 .my-navbar{

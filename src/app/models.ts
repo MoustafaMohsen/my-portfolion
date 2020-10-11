@@ -258,7 +258,7 @@ export class TweenAnimate {
   revealerTweenClass: TweenAnimate;
   secondText: TweenAnimate;
 
-  revealTextAnimation(textElement, revealerElement, RevealeTextEle, typewriterDelay = 'natural') {
+  revealTextAnimation(textElement, revealerElement, RevealeTextEle, typewriterDelay = 75) {
     this.clipperTweenClass = new TweenAnimate();
     this.revealerTweenClass = new TweenAnimate();
     this.secondText = new TweenAnimate();

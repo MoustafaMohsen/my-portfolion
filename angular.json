@@ -46,7 +46,7 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "outputPath": "docs",
-              "buildOptimizer": true
+              "buildOptimizer": false
             }
           }
         },

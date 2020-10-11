@@ -134,8 +134,8 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
   startanimation() {
     const isMobile = this.deviceService.isMobile();
     const browser = this.deviceService.browser;
-    if (isMobile && browser == "Chrome" || true) {
-      $('.bottom-abs').css("transform", "translateX(-50%) translateY(-100%)");
+    if (isMobile && browser == "Chrome") {
+      $('.bottom-abs').css("transform", "translateX(-50%) translateY(0%)");
     }
 
     let windowWidth = window.innerWidth;
@@ -203,23 +203,13 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
 
 
   updatePageHeight() {
-
-    let vh = window.innerHeight * 0.01;
-    const isMobile = this.deviceService.isMobile();
-    const browser = this.deviceService.browser;
     const inHeight = window.innerHeight;
-    if (isMobile && browser == "Chrome" || true) {
-      $(".hero-page").css("height", `${inHeight}px`)
-    } else {
-      $(".hero-page").css("height", `${inHeight}px`)
-    }
-    // debuging code
-    let height = $(".hero-page").innerHeight();
-    $("#indecator_mobile").html(`Height is ${height}, vh:${vh}`)
-
+    $(".hero-page").css("height", `${inHeight}px`)
   }
   scrollHandler() {
+    var navbar = new TimelineMax();
     console.log("scrollHandler()", window.innerHeight);
+
     this.scrollSrv.scrollObs.subscribe(() => {
       let pos = this.scrollSrv.pos;
       let height = window.innerHeight;
@@ -238,6 +228,14 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
       } else {
         $('.buttons-container').addClass('fade-out').removeClass('fade-in')
       }
+
+      if (proggress >= 1) {
+        $('.buttons-container').addClass('flicker')
+      } else {
+        $('.buttons-container').addClass('flicker').removeClass('fade-in')
+      }
+
+      console.log("proggress",proggress);
 
       let ids = ["#skills", "#platforms", "#work", "#blog", "#contact"];
       let elementsInView = this.styler.ElementInView(ids, 150);

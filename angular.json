@@ -42,11 +42,11 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": false,
+              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "outputPath": "docs",
-              "buildOptimizer": false
+              "buildOptimizer": true
             }
           }
         },

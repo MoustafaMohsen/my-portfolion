@@ -39,11 +39,11 @@ export class MMLogoComponent implements OnInit, AfterViewInit {
   tl1: TimelineMax;
   tl2: TimelineMax;
   // in seconds
-  Dur1 = 1;
+  Dur1 = 0.5;
   Delay1 = 0;
 
-  Dur2 = 1;
-  Delay2 = 2;
+  Dur2 = 0.5;
+  Delay2 = 1;
 
   Dur3 = 0.5;
   Delay3 = 1;
@@ -82,8 +82,8 @@ export class MMLogoComponent implements OnInit, AfterViewInit {
       .to('#m-moustafa', this.Dur2,
         { ease: Power3.easeInOut, top: '11%', height: '70%', left: '25%', width: '50%' }, "+=" + this.Delay2)
 
-      .to('#m-moustafa', this.Dur3,
-        { top: '28%', height: 'auto', left: mLeftMar + '%', width: mWidth + '%' }, "+=" + this.Delay3)
+        .to('#m-moustafa', this.Dur3,
+        { top: '28%', height: '41%', left: mLeftMar + '%', width: mWidth + '%' }, "+=" + this.Delay3)
 
     // go to left
     this.tl2 = new TimelineMax();
@@ -92,7 +92,7 @@ export class MMLogoComponent implements OnInit, AfterViewInit {
         { ease: Power3.easeInOut, top: '11%', height: '70%', left: '25%', width: '50%' }, "+=" + this.Delay2)
 
       .to('#m-mohsen', this.Dur3,
-        { top: '28%', height: 'auto', left: mLeftMar + 50 + '%', width: mWidth + '%' }, "+=" + this.Delay3)
+        { top: '28%', height: '41%', left: mLeftMar + 50 + '%', width: mWidth + '%' }, "+=" + this.Delay3)
     // M ===
 
     // Word ===

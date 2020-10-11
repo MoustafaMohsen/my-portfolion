@@ -129,18 +129,21 @@ export class MMLogoComponent implements OnInit, AfterViewInit {
     }
     this.timeOuts = [];
     return new Promise((resolve, reject) => {
-      this.styler.textAnimations.reverseRevealTextAnimation();
-
-      this.tl2.reverse().timeScale(speed);
-      this.tl1.reverse().timeScale(speed);
+      this.styler.textAnimations.reverseRevealTextAnimation(0,5);
       this.timeOuts[this.timeOuts.length] = setTimeout(() => {
-        this.tl0.reverse().timeScale(speed);
-        console.log("tl0");
 
+        this.tl2.reverse().timeScale(speed);
+        this.tl1.reverse().timeScale(speed);
         this.timeOuts[this.timeOuts.length] = setTimeout(() => {
-          resolve();
-        }, (this.tl0.progress() * ((this.Dur1) * 1000)) / speed);
-      }, (this.tl2.progress() * ((this.Dur2 + this.Dur3 + this.Delay2) * 1000)) / speed);
+          this.tl0.reverse().timeScale(speed);
+          console.log("tl0");
+
+          this.timeOuts[this.timeOuts.length] = setTimeout(() => {
+            resolve();
+          }, (this.tl0.progress() * ((this.Dur1) * 1000)) / speed);
+        }, (this.tl2.progress() * ((this.Dur2 + this.Dur3 + this.Delay2) * 1000)) / speed);
+      }, this.styler.textAnimations.revealerTweenClass.tl0.progress() * (((3) * 1000)) / speed );
+
 
 
     })

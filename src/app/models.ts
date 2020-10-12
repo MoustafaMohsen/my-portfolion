@@ -232,14 +232,14 @@ export class TweenAnimate {
 
   async play(speed = 1) {
     let tl0Return = new Promise((resolve, reject) => {
-      this.tl0.play().timeScale(speed).eventCallback("onComplete", () => { resolve() });
+      this.tl0.timeScale(speed).play().eventCallback("onComplete", () => { resolve() });
     });
     return tl0Return;
   }
 
   async reverse(speed = 1) {
     return new Promise((resolve, reject) => {
-      this.tl0.reverse().timeScale(speed).eventCallback("onComplete", () => { resolve() });
+      this.tl0.timeScale(speed).reverse().eventCallback("onComplete", () => { resolve() });
     })
   }
 

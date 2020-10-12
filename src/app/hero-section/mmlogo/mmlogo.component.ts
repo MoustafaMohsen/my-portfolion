@@ -111,9 +111,9 @@ export class MMLogoComponent implements OnInit, AfterViewInit {
   revealerTweenClass: TweenAnimate;
 
   play(speed = 1, delay = 0) {
-    this.tl0.play().timeScale(speed);
-    this.tl1.play().timeScale(speed);
-    this.tl2.play().timeScale(speed).timeScale(speed).eventCallback("onComplete", () => {
+    this.tl0.timeScale(speed).play();
+    this.tl1.timeScale(speed).play();
+    this.tl2.timeScale(speed).play().eventCallback("onComplete", () => {
 
       this.styler.textAnimations.playRevealTextAnimation(delay)
     });
@@ -132,10 +132,10 @@ export class MMLogoComponent implements OnInit, AfterViewInit {
       this.styler.textAnimations.reverseRevealTextAnimation(0,5);
       this.timeOuts[this.timeOuts.length] = setTimeout(() => {
 
-        this.tl2.reverse().timeScale(speed);
-        this.tl1.reverse().timeScale(speed);
+        this.tl2.timeScale(speed).reverse();
+        this.tl1.timeScale(speed).reverse();
         this.timeOuts[this.timeOuts.length] = setTimeout(() => {
-          this.tl0.reverse().timeScale(speed);
+          this.tl0.timeScale(speed).reverse();
           console.log("tl0");
 
           this.timeOuts[this.timeOuts.length] = setTimeout(() => {

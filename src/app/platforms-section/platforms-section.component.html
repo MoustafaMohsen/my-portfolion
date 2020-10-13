@@ -1,71 +1,76 @@
 <!--=========== Platforms section =============-->
-<section class="row platforms-section relative after-before-height" id="platforms">
-    <!--== header ==-->
-    <div class="col-12 platforms-header relative after-before-height" id="platforms-header">
-        <div class="row justify-content-center">
-            <div class="col-12 align-self-center">
-                <h3 class="section-header-title" ><span id="platforms-title-type" #titleElement></span> <span class="blue-underscore blue-underscore-hide-show">_</span></h3>
+<section class="row -no-gutters platforms-section relative after-before-height" id="platforms">
+  <!--== header ==-->
+  <div class="col-12 platforms-header relative after-before-height" id="platforms-header">
+    <div class="before-element"></div>
+    <div class="row justify-content-center">
+      <div class="col-12 align-self-center">
+        <h3 class="section-header-title"><span id="platforms-title-type" #titleElement></span> <span class="blue-underscore blue-underscore-hide-show">_</span></h3>
 
-            </div>
-
-        </div>
-        <!--platforms description-->
-        <div class="row justify-content-center">
-            <div class="col-lg-8 col-sm-10 col-12  align-self-center" snInViewport (inViewportChange)="onDescriptionViewport($event)">
-                <p class="header-description section-header-description" ><span #descriptionElement></span><span class="blue-underscore blue-underscore-hide-show">_</span></p>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="col-12 platforms-body">
-
-        <div class="row justify-content-around platforms-main-images" snInViewport (inViewportChange)="onMainImagesViewport($event)">
-
-            <div class="col-lg-2 col-sm-3 col-4" *ngFor="let image of bigImages">
-                <div class="platforms-main-image-container">
-                    <img  class="platforms-main-image" [src]="image" alt="">
-                </div>
-            </div>
-
-
-
-        </div>
-
-        <div class="row justify-content-center platforms-small-images" snInViewport (inViewportChange)="onSmallImagesViewport($event)">
-
-            <div class="col-lg-1 col-sm-2 col-2" *ngFor="let image of smallImages">
-                <div class="platforms-small-image-container">
-                    <img  class="platforms-small-image"
-                    [src]="image" alt="">
-                </div>
-            </div>
-
-        </div>
-
-        <div class="row justify-content-around other-services-text">
-                <div class="col-lg-10 col-sm-11 col-12"><p [innerHTML]="smallImagesTitle"></p></div>
-
-        </div>
-
-        <!-- other services images -->
-        <div class="row justify-content-around other-services-images" snInViewport (inViewportChange)="onOtherImagesViewport($event)">
-                <div class="col-lg-10 col-sm-11 col-12">
-                    <div class="row">
-
-                        <div class="col-12">
-
-                            <div class="other-services-image-container " *ngFor="let image of servicesImages">
-                                <img [src]="image" alt="">
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-        </div>
+      </div>
 
     </div>
+    <!--platforms description-->
+    <div class="row justify-content-center">
+      <div class="col-lg-8 col-sm-10 col-12  align-self-center" snInViewport (inViewportChange)="onDescriptionViewport($event)">
+        <p class="header-description section-header-description"><span #descriptionElement></span><span class="blue-underscore blue-underscore-hide-show">_</span></p>
+
+      </div>
+    </div>
+    <div class="after-element"></div>
+
+  </div>
+
+  <div class="col-12 platforms-body">
+
+    <div class="row justify-content-around platforms-main-images" snInViewport (inViewportChange)="onMainImagesViewport($event)">
+
+      <div class="col-lg-2 col-sm-3 col-4" *ngFor="let image of bigImages">
+        <div class="platforms-main-image-container">
+          <img class="platforms-main-image" [src]="image" alt="">
+        </div>
+      </div>
+
+
+
+    </div>
+
+    <div class="row justify-content-center platforms-small-images" snInViewport (inViewportChange)="onSmallImagesViewport($event)">
+
+      <div class="col-lg-1 col-sm-2 col-2" *ngFor="let image of smallImages">
+        <div class="platforms-small-image-container">
+          <img class="platforms-small-image"
+            [src]="image" alt="">
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row justify-content-around other-services-text">
+      <div class="col-lg-10 col-sm-11 col-12">
+        <p [innerHTML]="smallImagesTitle"></p>
+      </div>
+
+    </div>
+
+    <!-- other services images -->
+    <div class="row justify-content-around other-services-images" snInViewport (inViewportChange)="onOtherImagesViewport($event)">
+      <div class="col-lg-10 col-sm-11 col-12">
+        <div class="row">
+
+          <div class="col-12">
+
+            <div class="other-services-image-container " *ngFor="let image of servicesImages">
+              <img [src]="image" alt="">
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
 
 </section>

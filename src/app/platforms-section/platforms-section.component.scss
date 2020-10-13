@@ -53,10 +53,10 @@
         margin: 0;
     }
 }
-section#platforms::before {
+section .platforms-header .before-element {
     content: "";
     width: 100%;
-    height: 100px;
+    height: 150px;
     position: absolute;
     top: 0;
     left: 0;
@@ -64,10 +64,10 @@ section#platforms::before {
     clip-path: polygon(0 0, 0% 100%, 100% 100%);
     background-color: $primary-3;
 }
-section #platforms-header::after {
+section .platforms-header .after-element {
     content: "";
     width: 100%;
-    height: 100px;
+    height: 150px;
     position: absolute;
     top: 100%;
     left: 0;

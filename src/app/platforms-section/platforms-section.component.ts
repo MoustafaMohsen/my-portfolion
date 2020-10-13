@@ -3,7 +3,9 @@ import { Component, OnInit, HostListener, NgZone, ViewChild, ElementRef } from '
 import { Availableimages, platformsSection } from "../assets";
 import { TweenAnimate, TweenAnimation } from '../models';
 import Typewriter from 'typewriter-effect/dist/core';
-
+import { gsap, TimelineMax } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { CSSRulePlugin } from "gsap/CSSRulePlugin";
 @Component({
   selector: 'app-platforms-section',
   templateUrl: './platforms-section.component.html',
@@ -31,6 +33,26 @@ export class PlatformsSectionComponent implements OnInit {
     this.smallImages = platformsSection.smallImages;
 
     this.bigImages = platformsSection.bigImages;
+    let st: gsap.plugins.ScrollTriggerStaticVars = {
+      trigger: "#platforms-header",
+      start: "center bottom",
+      end: "center center",
+      scrub: 4,
+      markers: false,
+    };
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    new TimelineMax().from("section .platforms-header .before-element",1 , {
+      scrollTrigger: st,
+      "clip-path": "polygon(0 100%, 0% 100%, 100% 100%)"
+    });
+
+    new TimelineMax().from("section .platforms-header .after-element",1 , {
+      scrollTrigger: st,
+      "clip-path": "polygon(0 0, 0 1%, 100% 0)"
+    });
+
 
   }
 
@@ -49,20 +71,20 @@ export class PlatformsSectionComponent implements OnInit {
   DescriptionFadeInUp = new TweenAnimate();
   onDescriptionViewport(inViewport: boolean) {
     this.DescriptionFadeInUp.inView = inViewport;
-    if (inViewport&&!this.DescriptionFadeInUp.didRun) {
+    if (inViewport && !this.DescriptionFadeInUp.didRun) {
 
       this.DescriptionFadeInUp.typewriter = new Typewriter(this.TitleEle.nativeElement, {
         loop: false,
         cursor: "",
         autoStart: false,
-        delay:75
+        delay: 75
       });
 
       this.DescriptionFadeInUp.typewriter2 = new Typewriter(this.descriptionEle.nativeElement, {
         loop: false,
         cursor: "",
         autoStart: false,
-        delay:75
+        delay: 75
       });
     }
 

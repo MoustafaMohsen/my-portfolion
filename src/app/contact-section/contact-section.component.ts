@@ -11,6 +11,8 @@ import { HttpClient } from "@angular/common/http";
 import { MatSnackBar } from "@angular/material";
 import { TweenAnimate, TweenAnimation } from "../models";
 import Typewriter from 'typewriter-effect/dist/core';
+import { gsap, TimelineMax } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 @Component({
   selector: "app-contact-section",
@@ -20,14 +22,13 @@ import Typewriter from 'typewriter-effect/dist/core';
 export class ContactSectionComponent implements OnInit {
   FormSize = 1;
   contactForm: FormGroup;
-  @ViewChild('contact') ContactEle: ElementRef;
   @ViewChild('titleElement') TitleEle: ElementRef;
   @ViewChild('descriptionElement') descriptionEle: ElementRef;
 
-  constructor(formBuilder: FormBuilder, private http:HttpClient, private snake:MatSnackBar, private zone: NgZone) {
+  constructor(formBuilder: FormBuilder, private http: HttpClient, private snake: MatSnackBar, private zone: NgZone) {
     this.contactForm = formBuilder.group({
       name: ["", [Validators.required]],
-      email: ["", [Validators.required,Validators.email]],
+      email: ["", [Validators.required, Validators.email]],
       message: ["", [Validators.required]]
     });
   }
@@ -37,13 +38,28 @@ export class ContactSectionComponent implements OnInit {
   description: string;
   email: string;
   aboutMe: AboutMeCard;
-  loading:boolean=false;
+  loading: boolean = false;
 
   ngOnInit() {
     this._title = contactSection.title;
     this.description = contactSection.description;
     this.aboutMe = contactSection.aboutMeCard;
-    this.email= contactSection.email;
+    this.email = contactSection.email;
+
+    gsap.registerPlugin(ScrollTrigger);
+    const stContact: gsap.plugins.ScrollTriggerStaticVars = {
+      trigger: "#contact-header",
+      start: "center bottom",
+      end: "center center",
+      scrub: 4,
+      markers: false,
+    };
+
+    new TimelineMax().from("#contact-header .before-element", 1, {
+      scrollTrigger: stContact,
+      "clip-path:": "(50% 0, 100% 0, 100% 100%, 0 100%, 0 0)",
+    });
+
   } //ngOnInit
 
   ngAfterViewInit(): void {
@@ -51,17 +67,12 @@ export class ContactSectionComponent implements OnInit {
       setTimeout(() => {
         this.ContactCardFadeInUp.Tween();
       }, 100);
-    })
+
+    });
   }
   inview = false;
   onInViewportChange(inViewport: boolean) {
     this.inview = inViewport;
-    let hasClass = this.ContactEle.nativeElement.classList.contains("active-contact")
-    if (inViewport && !hasClass) {
-      this.ContactEle.nativeElement.classList.add("active-contact");
-    }else{
-      this.ContactEle.nativeElement.classList.remove("active-contact");
-    }
   }
 
 
@@ -120,36 +131,36 @@ export class ContactSectionComponent implements OnInit {
       this.contactForm.markAsDirty();
       return;
     }
-    this.loading=true
+    this.loading = true
     this.getIp().subscribe(
-      response=>{
+      response => {
         let data = response as Ipdata.Ipdata
-        this.loading=true;
+        this.loading = true;
 
         let filterThreats = contactSection.filterThreats;
-        if ( filterThreats && this.isAny(data.threat) ) {
+        if (filterThreats && this.isAny(data.threat)) {
           // block access for attackers
-          let errorMessage="Service error, please use email instead";
-          this.snake.open(errorMessage,'X',{duration:10000})
-          return ;
+          let errorMessage = "Service error, please use email instead";
+          this.snake.open(errorMessage, 'X', { duration: 10000 })
+          return;
         }
 
-        let successMessage="Sending Message";
-        this.snake.open(successMessage,'X',{duration:10000});
+        let successMessage = "Sending Message";
+        this.snake.open(successMessage, 'X', { duration: 10000 });
 
         //submit form
         this.submitForm(JSON.stringify(data));
 
       },
-      err=>{
-        let errorMessage="Service error, please use email instead";
-        this.snake.open(errorMessage,'X',{duration:10000})
-        this.loading=true;
+      err => {
+        let errorMessage = "Service error, please use email instead";
+        this.snake.open(errorMessage, 'X', { duration: 10000 })
+        this.loading = true;
       }
     )
   }
 
-  isAny(obj){
+  isAny(obj) {
     for (const state in obj) {
       let value = obj[state];
       if (value && typeof value === "boolean") {
@@ -184,13 +195,13 @@ export class ContactSectionComponent implements OnInit {
     }
   } //typeEffect
 
-  getIp(){
-    let key=contactSection.formspreeapikey;
-    let lookupUrl=`https://api.ipdata.co/es?api-key=${key}`;
+  getIp() {
+    let key = contactSection.formspreeapikey;
+    let lookupUrl = `https://api.ipdata.co/es?api-key=${key}`;
     return this.http.get(lookupUrl)
   }
 
-  submitForm(clientdata:string){
+  submitForm(clientdata: string) {
     let url = `https://formspree.io/${contactSection.formEmail}`;
     let form = document.getElementById('contact_form') as HTMLFormElement;
     form.action = url;

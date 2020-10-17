@@ -183,10 +183,11 @@ $hide-time:500ms;
 
 .work-header{
   position: relative;
-  margin-bottom: 9em;
-  background-color: $primary-3;
+  margin-bottom: 0;
+  background-color: none;
+  overflow: hidden;
   &::before{
-    content: "";
+    // content: "";
     width: 100%;
     height: 100px;
     position: absolute;
@@ -199,7 +200,7 @@ $hide-time:500ms;
     background-color: $primary-3;
   }
   &::after{
-    content: "";
+    // content: "";
     width: 100%;
     height: 100px;
     position: absolute;
@@ -210,6 +211,24 @@ $hide-time:500ms;
     clip-path: polygon(0 0, 0 100%, 100% 0);
     background-color: $primary-3;
     z-index: 1;
+  }
+
+  .work-header-text{
+    z-index: 4;
+    position: relative;
+    width: 100%;
+  }
+  .header-background{
+    width: 110%;
+    height: 270px;
+    position: absolute;
+    left: -5%;
+    right: 0;
+    top: 50%;
+    bottom: 0;
+    transform: rotate(-6deg) translateY(-50%);
+    background-color: $primary-3;
+    z-index: 3;
   }
 }
 $fidge-notes-path:url('/./assets/img/Framworks and platforms/work-card/mocks/fridgenotes-desktop.png');

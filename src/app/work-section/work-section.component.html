@@ -2,16 +2,17 @@
 <section class="row work-section relative after-before-height" id="work" snInViewport (inViewportChange)="onInViewportChange($event)">
 
     <!--work header-->
-    <div class="col-12 work-header after-before-height">
-        <div class="row justify-content-center">
+    <div class="col-12 work-header after-before-height row no-gutters justify-content-center align-content-center" id="workHeader">
+      <div class="header-background" id="workHeaderBackground"></div>
+        <div class="row work-header-text justify-content-center">
             <div class="col-12 align-self-center">
               <h3 class="section-header-title" ><span id="work-title-type" #titleElement></span> <span class="blue-underscore blue-underscore-hide-show">_</span></h3>
             </div>
 
         </div>
         <!--work description-->
-        <div class="row justify-content-center">
-            <div class="col-lg-8 col-sm-10 col-12 align-self-center" snInViewport (inViewportChange)="onDescriptionViewport($event)">
+        <div class="col-lg-8 col-sm-10 col-12 align-self-center row work-header-text justify-content-center">
+            <div class="col-12 align-self-center" snInViewport (inViewportChange)="onDescriptionViewport($event)">
               <p class="header-description section-header-description" ><span #descriptionElement></span><span class="blue-underscore blue-underscore-hide-show">_</span></p>
             </div>
         </div>

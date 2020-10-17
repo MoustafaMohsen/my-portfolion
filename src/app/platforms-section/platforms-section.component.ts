@@ -5,7 +5,6 @@ import { TweenAnimate, TweenAnimation } from '../models';
 import Typewriter from 'typewriter-effect/dist/core';
 import { gsap, TimelineMax } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { CSSRulePlugin } from "gsap/CSSRulePlugin";
 @Component({
   selector: 'app-platforms-section',
   templateUrl: './platforms-section.component.html',
@@ -33,7 +32,10 @@ export class PlatformsSectionComponent implements OnInit {
     this.smallImages = platformsSection.smallImages;
 
     this.bigImages = platformsSection.bigImages;
-    let st: gsap.plugins.ScrollTriggerStaticVars = {
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    const stPlatforms: gsap.plugins.ScrollTriggerStaticVars = {
       trigger: "#platforms-header",
       start: "center bottom",
       end: "center center",
@@ -41,17 +43,17 @@ export class PlatformsSectionComponent implements OnInit {
       markers: false,
     };
 
-    gsap.registerPlugin(ScrollTrigger);
-
     new TimelineMax().from("section .platforms-header .before-element",1 , {
-      scrollTrigger: st,
+      scrollTrigger: stPlatforms,
       "clip-path": "polygon(0 100%, 0% 100%, 100% 100%)"
     });
 
     new TimelineMax().from("section .platforms-header .after-element",1 , {
-      scrollTrigger: st,
+      scrollTrigger: stPlatforms,
       "clip-path": "polygon(0 0, 0 1%, 100% 0)"
     });
+
+
 
 
   }

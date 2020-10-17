@@ -3,6 +3,7 @@ import { Availableimages, workSection } from '../assets';
 import { workCard } from '../models';
 import { TweenAnimate, TweenAnimation } from "../models";
 import Typewriter from 'typewriter-effect/dist/core';
+import { gsap, TimelineMax } from "gsap";
 
 @Component({
   selector: 'app-work-section',
@@ -37,13 +38,45 @@ export class WorkSectionComponent implements OnInit {
     this.smallCards = workSection.otherProjects;
   }//ngOnInit
 
+  ngAfterViewInit(){
+    const stWork: gsap.plugins.ScrollTriggerStaticVars = {
+      trigger: "#workHeader",
+      start: "center bottom",
+      end: "center center",
+      scrub: 4,
+      markers: false,
+    };
+
+    const ele = document.getElementById("workHeaderBackground");
+    const height =  ele.getBoundingClientRect().height;
+
+    new TimelineMax().from("#workHeaderBackground",1 , {
+      scrollTrigger: stWork,
+      'transform': "rotate(0deg) translateY(-50%)"
+    });
+
+
+    this.setWorkHeaderHeight();
+
+    new TimelineMax().to("#workHeader",1 , {
+      scrollTrigger: stWork,
+      'height': height+"px"
+    });
+  }
+
   inview = false;
   onInViewportChange(inViewport: boolean) {
     this.inview = inViewport;
-    console.log("work", this.inview);
-
   }
 
+
+
+  setWorkHeaderHeight(){
+    var headerEle = $("#workHeader");
+    let bgEle = document.getElementById("workHeaderBackground").getBoundingClientRect().height
+    let height = $("#workHeaderBackground").get(0).getBoundingClientRect().height
+    headerEle.height(height + 50);
+  }
   // description
   DescriptionFadeInUp = new TweenAnimate();
   onDescriptionViewport(inViewport: boolean) {

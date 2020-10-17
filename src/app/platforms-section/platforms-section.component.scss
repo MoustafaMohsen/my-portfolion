@@ -13,8 +13,8 @@
 .platforms-body{
     background-color:$compelmentary;
     @include section-body;
-    padding-top: 100px;
-    padding-bottom: 80px;
+    padding-top: 135px;
+    padding-bottom: 0;
     transition: all 200ms ease-in-out;
     @media screen and (max-width:$break-x) {
         padding-top: 60px;

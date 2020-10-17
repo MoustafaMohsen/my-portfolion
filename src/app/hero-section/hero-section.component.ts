@@ -207,9 +207,7 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
     $(".hero-page").css("height", `${inHeight}px`)
   }
   scrollHandler() {
-    var navbar = new TimelineMax();
-    console.log("scrollHandler()", window.innerHeight);
-
+    // var navbar = new TimelineMax();
     this.scrollSrv.scrollObs.subscribe(() => {
       let pos = this.scrollSrv.pos;
       let height = window.innerHeight;
@@ -234,8 +232,6 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
       } else {
         $('.buttons-container').addClass('flicker').removeClass('fade-in')
       }
-
-      console.log("proggress",proggress);
 
       let ids = ["#skills", "#platforms", "#work", "#blog", "#contact"];
       let elementsInView = this.styler.ElementInView(ids, 150);

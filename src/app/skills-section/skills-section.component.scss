@@ -8,7 +8,7 @@
     }
 }
 
-.skills-header{ 
+.skills-header{
     @include section-header;
 }
 
@@ -17,16 +17,16 @@
     @include section-body;
 
     padding-top: 100px;
-    padding-bottom: 100px;
+    padding-bottom: calc( 135px - 2em );
     transition: all 200ms ease-in-out;
     @media screen and (max-width:$break-x) {
         padding-top: 40px;
         padding-bottom: 60px;
     }
     .skills-main-images{
-    
+
         .skills-main-image-container{
-        
+
             .skills-main-image{
                 width: 100%;
             }//skills-main-image
@@ -36,9 +36,9 @@
     }//skills-main-images
 
     .skills-small-images{
-    
+
         .skills-small-image-container{
-        
+
             .skills-small-image{
                 width: 100%;
                 padding-left: 5px;

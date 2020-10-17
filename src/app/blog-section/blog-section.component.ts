@@ -2,6 +2,7 @@ import { Component, ElementRef, NgZone, OnInit, ViewChild } from '@angular/core'
 import { blogSection } from '../assets';
 import { TweenAnimate, TweenAnimation } from "../models";
 import Typewriter from 'typewriter-effect/dist/core';
+import { TimelineMax } from "gsap";
 
 declare var MediumWidget
 
@@ -26,6 +27,19 @@ export class BlogSectionComponent implements OnInit {
 
     this._title = blogSection.title;
     this.description = blogSection.description;
+
+    const stBlog: gsap.plugins.ScrollTriggerStaticVars = {
+      trigger: "#blog-header",
+      start: "center bottom",
+      end: "center center",
+      scrub: 4,
+      markers: false,
+    };
+
+    new TimelineMax().from("#blog-header .before-element",1 , {
+      scrollTrigger: stBlog,
+      "clip-path": "polygon(100% 100%, 0% 100%, 100% 100%)",
+    });
 
   }
 

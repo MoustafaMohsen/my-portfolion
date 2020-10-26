@@ -93,6 +93,7 @@ $hide-time:500ms;
                 }
                 .work-card-background-image .work-card-background-overlay{
                     background-color: rgba(0, 0, 0, 0.7);
+                    backdrop-filter: blur(0px);
                 }
             }
             //on hover
@@ -118,6 +119,7 @@ $hide-time:500ms;
                     height: 100%;
                     z-index: 0;
                     background-color: rgba(0, 0, 0, 0.4);
+                    backdrop-filter: blur(5px);
                     transition: all ease-in-out $card-time $card-delay !important;
                 }
             }
@@ -292,6 +294,7 @@ $fidge-notes-path:url('/./assets/img/Framworks and platforms/work-card/mocks/fri
                 width: 100%;
                 background-color: $primary;
                 opacity: 0.5;
+                backdrop-filter: blur(1px);
                 transition: all $small-card-time ease-in-out !important;
             }
         }

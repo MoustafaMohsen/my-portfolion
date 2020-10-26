@@ -1,4 +1,5 @@
 @import "../../_variables";
+@import "../../_mixins-master";
 @import "../styles/_shared-sections";
 
 .platforms-section{
@@ -17,8 +18,8 @@
     padding-bottom: 0;
     transition: all 200ms ease-in-out;
     @media screen and (max-width:$break-x) {
-        padding-top: 60px;
-        padding-bottom: 40px;
+        padding-top: 75px;
+        padding-bottom: 00px;
     }
     .platforms-main-images{
         opacity: 0;
@@ -63,6 +64,9 @@ section .platforms-header .before-element {
     transform: translateY(-99%);
     clip-path: polygon(0 0, 0% 100%, 100% 100%);
     background-color: $primary-3;
+    @include max-tablet{
+      height:85px;
+    }
 }
 section .platforms-header .after-element {
     content: "";
@@ -75,6 +79,9 @@ section .platforms-header .after-element {
     clip-path: polygon(0 0, 0 100%, 100% 0);
     background-color: $primary-3;
     z-index: 1;
+    @include max-tablet{
+      height:85px;
+    }
 }
 
 .other-services-images{

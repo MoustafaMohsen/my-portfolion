@@ -1,4 +1,5 @@
 @import "../../_variables";
+@import "../../_mixins-master";
 @import "../styles/_shared-sections";
 
 $hide-time:500ms;
@@ -22,6 +23,7 @@ $hide-time:500ms;
     @include section-container;
     padding-top:0px;
     background-color: $my-white;
+    margin-top: -20px;
 }
 .section-header-title{
     @include section-header;
@@ -219,7 +221,7 @@ $hide-time:500ms;
     width: 100%;
   }
   .header-background{
-    width: 110%;
+    width: 130%;
     height: 270px;
     position: absolute;
     left: -5%;
@@ -229,6 +231,9 @@ $hide-time:500ms;
     transform: rotate(-6deg) translateY(-50%);
     background-color: $primary-3;
     z-index: 3;
+    @include max-tablet{
+      transform: rotate(-10deg) translateY(-50%);
+    }
   }
 }
 $fidge-notes-path:url('/./assets/img/Framworks and platforms/work-card/mocks/fridgenotes-desktop.png');

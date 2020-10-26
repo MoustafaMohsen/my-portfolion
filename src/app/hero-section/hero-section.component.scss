@@ -382,6 +382,29 @@ $iterations: infinite;
 
 }
 
+#heroSvgBackground{
+  display: none;// TODO: enable svg background
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  height: calc( 100% + 50px);
+  animation: scrollUp 5s linear infinite normal both;
+  #smallGrid{
+    path{
+      stroke:$tertiary;
+    }
+  }
+}
+
+
+@keyframes scrollUp {
+	from {
+    top: 0;
+	}
+	to {
+    top: -50px;
+	}
+}
 
 @keyframes clip-text {
 	from {

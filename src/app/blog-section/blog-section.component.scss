@@ -1,4 +1,5 @@
 @import "../../_variables";
+@import "../../_mixins-master";
 @import "../styles/_shared-sections";
 
 #medium-widget{
@@ -29,6 +30,9 @@ section.blog-section{
     transform: translateY(-99%);
     clip-path: polygon(100% 0, 0% 100%, 100% 100%);
     background-color: $primary-3;
+    @include max-tablet{
+      height: 100px;
+    }
   }
 }
 .section-header-title{

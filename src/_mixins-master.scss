@@ -1,0 +1,285 @@
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1) {
+	font-size: ($sizeValue * 16) * 1px;
+	font-size: $sizeValue * 1rem;
+}
+
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Clearfix
+@mixin clearfix() {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+// Clear after (not all clearfix need this also)
+@mixin clearfix-after() {
+	clear: both;
+}
+
+// Image aspect
+@mixin aspect-image($scale) {
+	width: 100%;
+	padding-top: $scale*100%;
+	position: relative;
+	>div,>.background-image{
+		position: absolute;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		background-size: cover;
+		background-position: center;
+	}
+}
+
+// Column width with margin
+@mixin column-width($numberColumns: 3) {
+	width: map-get($columns, $numberColumns) - (($columns__margin * ($numberColumns - 1)) / $numberColumns);
+}
+
+@mixin shadow($level: 1, $background: black) {
+	@if $level==1 {
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba($background, 0.24)
+	}
+
+	@else if $level==2 {
+		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba($background, 0.23)
+	}
+
+	@else if $level==3 {
+		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba($background, 0.23)
+	}
+
+	@else if $level==4 {
+		box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba($background, 0.22)
+	}
+
+	@else if $level==5 {
+		box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba($background, 0.22)
+	}
+}
+
+@mixin widget-card($level: 1, $background: black) {
+	@include shadow($level, $background);
+}
+
+
+@mixin mobile-s {
+	@media screen and (min-width: #{$break-xxx}) {
+		@content;
+	}
+}
+
+@mixin mobile {
+	@media screen and (min-width: #{$break-xx}) {
+		@content;
+	}
+}
+
+@mixin tablet-s {
+	@media screen and (min-width: #{$break-x}) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media screen and (min-width: #{$break-s}) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media screen and (min-width: #{$break-m}) {
+		@content;
+	}
+}
+
+@mixin screen {
+	@media screen and (min-width: #{$break-l}) {
+		@content;
+	}
+}
+
+
+
+// Max Width
+@mixin max-mobile-s {
+	@media screen and (max-width: #{$break-xxx}) {
+		@content;
+	}
+}
+
+@mixin max-mobile {
+	@media screen and (max-width: #{$break-xx}) {
+		@content;
+	}
+}
+
+@mixin max-tablet-s {
+	@media screen and (max-width: #{$break-x}) {
+		@content;
+	}
+}
+
+@mixin max-tablet {
+	@media screen and (max-width: #{$break-s}) {
+		@content;
+	}
+}
+
+@mixin max-desktop {
+	@media screen and (max-width: #{$break-m}) {
+		@content;
+	}
+}
+
+@mixin max-screen {
+	@media screen and (max-width: #{$break-l}) {
+		@content;
+	}
+}
+
+//@mixin base-media-font($base-size:1em, $ss:1, $s:$ss, $sm:$s, $m:$sm, $d:$m, $l:$d) {
+
+@mixin base-media-font($base-size, $ss, $s, $sm, $m, $d, $l) {
+	font-size: $base-size * $ss;
+
+	@include mobile-s {}
+
+	@include mobile {
+		font-size: $base-size * $s;
+	}
+
+	@include tablet-s {
+		font-size: $base-size * $sm;
+	}
+
+	@include tablet {
+		font-size: $base-size * $m;
+	}
+
+	@include desktop {
+		font-size: $base-size * $d;
+	}
+
+	@include screen {
+		font-size: $base-size * $l;
+	}
+}
+
+@function strip-unit($value) {
+	@return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size, $is-line-height:0) {
+	$u1: unit($min-vw);
+	$u2: unit($max-vw);
+	$u3: unit($min-font-size);
+	$u4: unit($max-font-size);
+
+	@if $u1==$u2 and $u1==$u3 and $u1==$u4 {
+		& {
+			@if $is-line-height>0 {
+				line-height: $min-font-size;
+			}
+			@else {
+				font-size: $min-font-size;
+			}
+
+			@media screen and (min-width: $min-vw) {
+
+				@if $is-line-height==1 {
+					line-height: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+				}
+				@else if $is-line-height==0 {
+					font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+				}
+				@else if $is-line-height==2 {
+					height: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+				}
+			}
+
+			@media screen and (min-width: $max-vw) {
+				@if $is-line-height==1 {
+					line-height: $max-font-size;
+				}
+				@else if $is-line-height==0 {
+					font-size: $max-font-size;
+				}
+				@else if $is-line-height==2 {
+					height: $max-font-size;
+				}
+			}
+		}
+	}
+}
+
+
+
+@mixin hide-at($ss, $s, $sm, $m, $d, $l) {
+	display: $ss;
+
+	@include mobile-s {}
+
+	@include mobile {
+		display: $s;
+	}
+
+	@include tablet-s {
+		display: $sm;
+	}
+
+	@include tablet {
+		display: $m;
+	}
+
+	@include desktop {
+		display: $d;
+	}
+
+	@include screen {
+		display: $l;
+	}
+}
+
+$break-xxx: 299.98px;// < small mobile
+$break-xx: 369.98px; // < mobile
+$break-x: 575.98px;	//  < tablets and wide mobiles
+$break-s: 767.98px; //  < tablets to sceens
+$break-m: 991.98px;	// 	< normal sceeens
+$break-l: 1199.98px;// 	< wide screens
+
+@include mobile-s {} //299.98px xs
+
+@include mobile {} //369.98px xs
+
+@include tablet-s {} //575.98 xs 
+
+@include tablet {} //767.98px sm
+
+@include desktop {} //991.98px md
+
+@include screen {} //1199.98px lg
+
+
+@include max-mobile-s {} //299.98px xs
+
+@include max-mobile {} //369.98px xs
+
+@include max-tablet-s {} //575.98 xs 
+
+@include max-tablet {} //767.98px sm
+
+@include max-desktop {} //991.98px md
+
+@include max-screen {} //1199.98px lg
+// xs (for phones - screens less than 768px wide)
+// sm (for tablets - screens equal to or greater than 768px wide)
+// md (for small laptops - screens equal to or greater than 992px wide)
+// lg (for laptops and desktops - screens equal to or greater than 1200px wide)

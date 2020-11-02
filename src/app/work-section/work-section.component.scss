@@ -96,7 +96,6 @@ $hide-time:500ms;
                     backdrop-filter: blur(0px);
                 }
             }
-            //on hover
 
             .work-card-background-image{
                 //content: "";
@@ -292,9 +291,8 @@ $fidge-notes-path:url('/./assets/img/Framworks and platforms/work-card/mocks/fri
             .small-work-card-background-overlay{
                 height: 100%;
                 width: 100%;
-                background-color: $primary;
-                opacity: 0.5;
-                backdrop-filter: blur(1px);
+                background-color: rgba(0, 0, 0, 0.4);
+                backdrop-filter: blur(5px);
                 transition: all $small-card-time ease-in-out !important;
             }
         }
@@ -352,10 +350,12 @@ $fidge-notes-path:url('/./assets/img/Framworks and platforms/work-card/mocks/fri
                     transition: all $small-card-time ease-in-out ;
                 }
             }
-
-            .small-work-card-background-overlay{
-                transition: all $small-card-time ease-in-out !important;
-                opacity: 0.8 !important;
+            .small-work-card-background-image{
+              .small-work-card-background-overlay{
+                  transition: all $small-card-time ease-in-out;
+                  background-color: rgba(0, 0, 0, 0.7);
+                  backdrop-filter: blur(0px);
+              }
             }
         }
     }//small card container

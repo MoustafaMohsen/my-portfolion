@@ -9,8 +9,6 @@ import { environment } from '../../environments/environment';
 import { ScrollService } from '../animate-on-scroll/src';
 import { DeviceDetectorService } from 'ngx-device-detector';
 import { Linear, Power0, Power2, Power3, TimelineMax } from 'gsap';
-import { ITypewriter, TweenAnimate } from '../models';
-import Typewriter from 'typewriter-effect/dist/core';
 
 declare var ScrollMagic;
 

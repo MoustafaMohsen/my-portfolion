@@ -15,11 +15,11 @@
     background-color:$compelmentary;
     @include section-body;
     padding-top: 135px;
-    padding-bottom: 0;
+    padding-bottom: 5rem;
     transition: all 200ms ease-in-out;
     @media screen and (max-width:$break-x) {
         padding-top: 75px;
-        padding-bottom: 00px;
+        padding-bottom: 3rem;
     }
     .platforms-main-images{
         opacity: 0;

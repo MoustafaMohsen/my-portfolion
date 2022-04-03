@@ -55,9 +55,12 @@ export const Availableimages = {
   css: `${AppHost}${ProgramingPath}` + "css.png",
   sass: `${AppHost}${ProgramingPath}` + "sass.png",
   js: `${AppHost}${ProgramingPath}` + "js.png",
+  python: `${AppHost}${ProgramingPath}` + "python.png",
   ts: `${AppHost}${ProgramingPath}` + "ts.png",
   html: `${AppHost}${ProgramingPath}` + "html.png",
   php: `${AppHost}${ProgramingPath}` + "php.png",
+  solidity_wide: `${AppHost}${ProgramingPath}` + "solidity-wide.png",
+  solidity: `${AppHost}${ProgramingPath}` + "solidity.png",
 
   docker: `${AppHost}${ServicesPath}` + "docker.png",
   git: `${AppHost}${ServicesPath}` + "git.png",
@@ -68,6 +71,7 @@ export const Availableimages = {
   rxjs: `${AppHost}${ServicesPath}` + "rxjs.png",
   jquery: `${AppHost}${ServicesPath}` + "jquery.png",
   ionic: `${AppHost}${ServicesPath}` + "ionic.png",
+  postgresql: `${AppHost}${ServicesPath}` + "postgresql-logo.png",
 
 };
 
@@ -81,7 +85,7 @@ setTimeout(() => {
 }, 3000);
 */
 
-let skillsDescription=`I Speak`
+let skillsDescription=`I worked with many languages and Platforms in my carrier, but I'm proficient in`
 
 let platformsDescription=`I have working experience with different frameworks which allow me to work with the best suited framework for your project.`;
 
@@ -91,22 +95,28 @@ let WorkDescription=`Here are some of my projects I'm passionate about, More at 
 let BlogDescription=`Here are some of my articles, read more at
 <a class="description-a" target="_blank" href="https://medium.com/directcode"> DirectCode </a>`
 
-let ContactDescription=`I can help you make your Idea or Web App come to life, just let me handle it
+let ContactDescription=` See my projects at
+<a class="description-a" target="_blank" href="https://github.com/moustafamohsen"> GitHub </a>
+<br>
+Available for contract
 <br>
 <span class="highlight"><a class="highlight normalize-anchor" href="mailto:contact@moustafamohsen.com" >Contact@moustafamohsen.com</a></span>
 `
 
 let aboutMeCardDescription=
-`Agile developer with 5+ years of experience in PHP, 3+ in Ionic/Angular, always ready to pick up new technologies whenever needed.
+`Agile developer with 7+ years of experience in PHP, 4+ in Ionic/Angular, and 4+ in Nodejs
 <br/><br/>
-If you would like to find out more about me or my work proccess please reach out by sending me an email at contact@moustafamohsen.com or using this contact form, Currently I'm available for work.`
+If you would like to find out more about me or my work proccess please reach out by sending me an email at contact@moustafamohsen.com or using this contact form, Currently I'm available for contract.`
 
 //skills
-let skillsSmallImages = [Availableimages.html, Availableimages.css, Availableimages.sass,];
+let skillsSmallImages = [
+  Availableimages.solidity,
+  Availableimages.python,
+];
 let skillsBigImages = [
   Availableimages.php,
-  Availableimages.js,
   Availableimages.ts,
+  Availableimages.js,
   Availableimages.csharp,
 ];
 
@@ -118,17 +128,19 @@ let platformsServicesImages = [
   Availableimages.docker,
   Availableimages.jquery,
   Availableimages.rxjs,
-  Availableimages.linux,
+  // Availableimages.linux,
 ];
 
 let platformsSmallImages = [
   Availableimages.workcard.aspcore,
-  Availableimages.dotnet,];
+  Availableimages.dotnet,
+  Availableimages.wordpress,
+  Availableimages.ionic,
+];
 
 let platformsBigImages = [
   Availableimages.workcard.angular,
-  Availableimages.ionic,
-  Availableimages.wordpress,
+  Availableimages.postgresql,
   Availableimages.nodejs,
 
 ];

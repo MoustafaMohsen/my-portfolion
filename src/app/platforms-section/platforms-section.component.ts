@@ -12,8 +12,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 })
 export class PlatformsSectionComponent implements OnInit {
 
-  @ViewChild('titleElement') TitleEle: ElementRef;
-  @ViewChild('descriptionElement') descriptionEle: ElementRef;
+  @ViewChild('titleElement', { static: true }) TitleEle: ElementRef;
+  @ViewChild('descriptionElement', { static: true }) descriptionEle: ElementRef;
   constructor(private zone: NgZone, private stylerService: StylerService) { }
   // title: string = "";
   _title: string = "";

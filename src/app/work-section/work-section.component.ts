@@ -13,8 +13,8 @@ import { gsap, TimelineMax } from "gsap";
 
 export class WorkSectionComponent implements OnInit {
 
-  @ViewChild('titleElement') TitleEle: ElementRef;
-  @ViewChild('descriptionElement') descriptionEle: ElementRef;
+  @ViewChild('titleElement', { static: true }) TitleEle: ElementRef;
+  @ViewChild('descriptionElement', { static: true }) descriptionEle: ElementRef;
 
   constructor(private zone: NgZone) { }
 

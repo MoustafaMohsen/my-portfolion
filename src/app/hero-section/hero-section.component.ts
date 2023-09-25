@@ -25,7 +25,7 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
   imageLoaded = false;
   highlightedbutton: string;
 
-  @ViewChild('secondTextEle') secondTextEle: ElementRef;
+  @ViewChild('secondTextEle', { static: false }) secondTextEle: ElementRef;
   constructor(private scrollSrv: ScrollService, private titleService: Title, googleSrv: GoogleService, public styler: StylerService, private zone: NgZone, private deviceService: DeviceDetectorService) {
     if (environment.production) {
       googleSrv.Script(traceId);

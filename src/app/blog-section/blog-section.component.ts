@@ -16,8 +16,8 @@ export class BlogSectionComponent implements OnInit {
   title: string = "";
   _title: string = "";
   description: string;
-  @ViewChild('titleElement') TitleEle: ElementRef;
-  @ViewChild('descriptionElement') descriptionEle: ElementRef;
+  @ViewChild('titleElement', { static: true }) TitleEle: ElementRef;
+  @ViewChild('descriptionElement', { static: true }) descriptionEle: ElementRef;
 
   constructor(private zone: NgZone) { }
 

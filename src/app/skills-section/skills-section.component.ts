@@ -13,8 +13,8 @@ import Typewriter from 'typewriter-effect/dist/core';
 export class SkillsSectionComponent implements OnInit {
   constructor( private deviceService: DeviceDetectorService, private zone: NgZone) {}
 
-  @ViewChild('titleElement') TitleEle: ElementRef;
-  @ViewChild('descriptionElement') descriptionEle: ElementRef;
+  @ViewChild('titleElement', { static: true }) TitleEle: ElementRef;
+  @ViewChild('descriptionElement', { static: true }) descriptionEle: ElementRef;
 
   title: string="";
   _title: string="";

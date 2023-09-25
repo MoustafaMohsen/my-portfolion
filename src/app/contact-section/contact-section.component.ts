@@ -22,8 +22,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 export class ContactSectionComponent implements OnInit {
   FormSize = 1;
   contactForm: FormGroup;
-  @ViewChild('titleElement') TitleEle: ElementRef;
-  @ViewChild('descriptionElement') descriptionEle: ElementRef;
+  @ViewChild('titleElement', { static: true }) TitleEle: ElementRef;
+  @ViewChild('descriptionElement', { static: true }) descriptionEle: ElementRef;
 
   constructor(formBuilder: FormBuilder, private http: HttpClient, private snake: MatSnackBar, private zone: NgZone) {
     this.contactForm = formBuilder.group({

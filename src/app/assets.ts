@@ -85,9 +85,9 @@ setTimeout(() => {
 }, 3000);
 */
 
-let skillsDescription=`I worked with many languages and Platforms in my carrier, but I'm proficient in`
+let skillsDescription=`I worked with many languages and Platforms in my career, some of them are...`
 
-let platformsDescription=`I have working experience with different frameworks which allow me to work with the best suited framework for your project.`;
+let platformsDescription=`I have also experince with manu platforms and frameworks, such...`;
 
 let WorkDescription=`Here are some of my projects I'm passionate about, More at my
 <a class="description-a" target="_blank" href="https://github.com/moustafamohsen"> GitHub </a>`
@@ -496,7 +496,7 @@ export const footerSection:FooterSection={
   linkedin:"https://www.linkedin.com/in/moustafamohsen/",
   rights: `©${new Date().getFullYear()} Moustafa Mohsen`
 }
-export const siteTitle:string="Moustafa Mohsen | Full stack web developer"
+export const siteTitle:string="Moustafa Mohsen | Software Engineer"
 
 export const traceId = "UA-135974249-1";
 

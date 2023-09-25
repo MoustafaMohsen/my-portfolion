@@ -298,7 +298,7 @@ export class TweenAnimate {
       this.clipperTweenClass.didRun = this.revealerTweenClass.didRun = this.secondText.didRun = true
       this.clipperTweenClass.play(speed);
       this.revealerTweenClass.play(speed);
-      this.secondText.typeText = "Full Stack Web Developer"
+      this.secondText.typeText = "Software Engineer"
       this.secondText.typewriter.pauseFor(typewriterPauseFor).typeString(this.secondText.typeText).start();
 
     }, Delay * 1000);
